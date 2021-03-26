@@ -1,3 +1,2 @@
 venv/
-markdowns/*/
-!markdowns/*/.gitkeep
+
