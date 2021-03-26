@@ -113,13 +113,13 @@ the number of tokens required by the service.
 
 
 json object as follows:
-{
+```{
 "from": <consumer-address>,
 "to": <receiver-address>,
 "numTokens": <tokens-amount-in-base>
 "dataToken": <data-token-contract-address>,
 "nonce": <nonce-used-in-consumer-signature>
-}
+}```
 
 <a name="routes.consume.download"></a>
 #### download
