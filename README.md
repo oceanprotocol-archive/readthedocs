@@ -10,4 +10,12 @@ pip install -r requirements.txt
 git submodule update --init --recursive
 git submodule update --recursive --remote
 python generate_markdowns.py
+deactivate
+```
+
+```
+npx @docusaurus/init@latest init ocean_read_the_docs classic
+cp -r markdowns/ website/src/pages/
+
+npm start
 ```
