@@ -1,9 +1,3 @@
-# Table of Contents
-
-* [app.auth\_util](#app.auth_util)
-  * [get\_signer\_address](#app.auth_util.get_signer_address)
-  * [compare\_eth\_addresses](#app.auth_util.compare_eth_addresses)
-
 <a name="app.auth_util"></a>
 # app.auth\_util
 

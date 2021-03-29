@@ -1,7 +1,3 @@
-# Table of Contents
-
-* [events.request](#events.request)
-
 <a name="events.request"></a>
 # events.request
 

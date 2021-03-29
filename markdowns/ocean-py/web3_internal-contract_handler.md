@@ -1,12 +1,3 @@
-# Table of Contents
-
-* [web3\_internal.contract\_handler](#web3_internal.contract_handler)
-  * [ContractHandler](#web3_internal.contract_handler.ContractHandler)
-    * [get](#web3_internal.contract_handler.ContractHandler.get)
-    * [get\_concise\_contract](#web3_internal.contract_handler.ContractHandler.get_concise_contract)
-    * [set](#web3_internal.contract_handler.ContractHandler.set)
-    * [has](#web3_internal.contract_handler.ContractHandler.has)
-
 <a name="web3_internal.contract_handler"></a>
 # web3\_internal.contract\_handler
 

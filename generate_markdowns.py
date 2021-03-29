@@ -47,7 +47,7 @@ def generate_markdowns(path, output_dir):
 
         file_name = markdowns_to_generate[i].replace('.', '-') + '.md'
 
-        command = 'pydoc-markdown -I {0} -m {1} --render-toc > markdowns/{2}/{3}' \
+        command = 'pydoc-markdown -I {0} -m {1} > markdowns/{2}/{3}' \
                     .format(path, markdowns_to_generate[i],
         output_dir,file_name)
 

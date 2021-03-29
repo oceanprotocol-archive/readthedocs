@@ -1,11 +1,3 @@
-# Table of Contents
-
-* [data\_store.auth\_tokens](#data_store.auth_tokens)
-  * [AuthTokensStorage](#data_store.auth_tokens.AuthTokensStorage)
-    * [write\_token](#data_store.auth_tokens.AuthTokensStorage.write_token)
-    * [update\_token](#data_store.auth_tokens.AuthTokensStorage.update_token)
-    * [read\_token](#data_store.auth_tokens.AuthTokensStorage.read_token)
-
 <a name="data_store.auth_tokens"></a>
 # data\_store.auth\_tokens
 

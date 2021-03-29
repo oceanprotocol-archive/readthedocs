@@ -1,8 +1,3 @@
-# Table of Contents
-
-* [assets.asset\_resolver](#assets.asset_resolver)
-  * [resolve\_asset](#assets.asset_resolver.resolve_asset)
-
 <a name="assets.asset_resolver"></a>
 # assets.asset\_resolver
 

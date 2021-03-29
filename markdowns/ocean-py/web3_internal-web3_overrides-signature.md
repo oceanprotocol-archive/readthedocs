@@ -1,9 +1,3 @@
-# Table of Contents
-
-* [web3\_internal.web3\_overrides.signature](#web3_internal.web3_overrides.signature)
-  * [SignatureFix](#web3_internal.web3_overrides.signature.SignatureFix)
-    * [\_\_init\_\_](#web3_internal.web3_overrides.signature.SignatureFix.__init__)
-
 <a name="web3_internal.web3_overrides.signature"></a>
 # web3\_internal.web3\_overrides.signature
 

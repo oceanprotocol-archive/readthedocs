@@ -1,9 +1,3 @@
-# Table of Contents
-
-* [ocean.ocean\_exchange](#ocean.ocean_exchange)
-  * [OceanExchange](#ocean.ocean_exchange.OceanExchange)
-    * [\_\_init\_\_](#ocean.ocean_exchange.OceanExchange.__init__)
-
 <a name="ocean.ocean_exchange"></a>
 # ocean.ocean\_exchange
 

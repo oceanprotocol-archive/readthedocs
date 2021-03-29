@@ -1,19 +1,3 @@
-# Table of Contents
-
-* [web3\_internal.contract\_base](#web3_internal.contract_base)
-  * [ContractBase](#web3_internal.contract_base.ContractBase)
-    * [\_\_init\_\_](#web3_internal.contract_base.ContractBase.__init__)
-    * [\_\_str\_\_](#web3_internal.contract_base.ContractBase.__str__)
-    * [address](#web3_internal.contract_base.ContractBase.address)
-    * [events](#web3_internal.contract_base.ContractBase.events)
-    * [to\_checksum\_address](#web3_internal.contract_base.ContractBase.to_checksum_address)
-    * [get\_tx\_receipt](#web3_internal.contract_base.ContractBase.get_tx_receipt)
-    * [get\_event\_signature](#web3_internal.contract_base.ContractBase.get_event_signature)
-    * [subscribe\_to\_event](#web3_internal.contract_base.ContractBase.subscribe_to_event)
-    * [send\_transaction](#web3_internal.contract_base.ContractBase.send_transaction)
-    * [deploy](#web3_internal.contract_base.ContractBase.deploy)
-    * [getLogs](#web3_internal.contract_base.ContractBase.getLogs)
-
 <a name="web3_internal.contract_base"></a>
 # web3\_internal.contract\_base
 

@@ -1,9 +1,3 @@
-# Table of Contents
-
-* [ocean.ocean](#ocean.ocean)
-  * [Ocean](#ocean.ocean.Ocean)
-    * [\_\_init\_\_](#ocean.ocean.Ocean.__init__)
-
 <a name="ocean.ocean"></a>
 # ocean.ocean
 

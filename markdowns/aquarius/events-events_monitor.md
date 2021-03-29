@@ -1,8 +1,3 @@
-# Table of Contents
-
-* [events.events\_monitor](#events.events_monitor)
-  * [EventsMonitor](#events.events_monitor.EventsMonitor)
-
 <a name="events.events_monitor"></a>
 # events.events\_monitor
 

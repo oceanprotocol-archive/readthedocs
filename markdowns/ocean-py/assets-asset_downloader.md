@@ -1,8 +1,3 @@
-# Table of Contents
-
-* [assets.asset\_downloader](#assets.asset_downloader)
-  * [download\_asset\_files](#assets.asset_downloader.download_asset_files)
-
 <a name="assets.asset_downloader"></a>
 # assets.asset\_downloader
 

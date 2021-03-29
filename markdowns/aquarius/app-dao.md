@@ -1,9 +1,3 @@
-# Table of Contents
-
-* [app.dao](#app.dao)
-  * [Dao](#app.dao.Dao)
-    * [run\_es\_query](#app.dao.Dao.run_es_query)
-
 <a name="app.dao"></a>
 # app.dao
 

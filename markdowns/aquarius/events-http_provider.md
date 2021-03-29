@@ -1,8 +1,3 @@
-# Table of Contents
-
-* [events.http\_provider](#events.http_provider)
-  * [CustomHTTPProvider](#events.http_provider.CustomHTTPProvider)
-
 <a name="events.http_provider"></a>
 # events.http\_provider
 

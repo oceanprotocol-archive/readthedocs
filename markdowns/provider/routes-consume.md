@@ -1,11 +1,3 @@
-# Table of Contents
-
-* [routes.consume](#routes.consume)
-  * [encrypt](#routes.consume.encrypt)
-  * [fileinfo](#routes.consume.fileinfo)
-  * [initialize](#routes.consume.initialize)
-  * [download](#routes.consume.download)
-
 <a name="routes.consume"></a>
 # routes.consume
 

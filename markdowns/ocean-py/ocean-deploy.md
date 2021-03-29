@@ -1,8 +1,3 @@
-# Table of Contents
-
-* [ocean.deploy](#ocean.deploy)
-  * [deploy\_fake\_OCEAN](#ocean.deploy.deploy_fake_OCEAN)
-
 <a name="ocean.deploy"></a>
 # ocean.deploy
 

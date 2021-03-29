@@ -1,11 +1,3 @@
-# Table of Contents
-
-* [web3\_internal.web3\_overrides.contract](#web3_internal.web3_overrides.contract)
-  * [CustomContractFunction](#web3_internal.web3_overrides.contract.CustomContractFunction)
-    * [\_\_init\_\_](#web3_internal.web3_overrides.contract.CustomContractFunction.__init__)
-    * [transact](#web3_internal.web3_overrides.contract.CustomContractFunction.transact)
-  * [transact\_with\_contract\_function](#web3_internal.web3_overrides.contract.transact_with_contract_function)
-
 <a name="web3_internal.web3_overrides.contract"></a>
 # web3\_internal.web3\_overrides.contract
 

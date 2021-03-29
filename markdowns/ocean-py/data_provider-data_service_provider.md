@@ -1,22 +1,3 @@
-# Table of Contents
-
-* [data\_provider.data\_service\_provider](#data_provider.data_service_provider)
-  * [DataServiceProvider](#data_provider.data_service_provider.DataServiceProvider)
-    * [get\_http\_client](#data_provider.data_service_provider.DataServiceProvider.get_http_client)
-    * [set\_http\_client](#data_provider.data_service_provider.DataServiceProvider.set_http_client)
-    * [get\_order\_requirements](#data_provider.data_service_provider.DataServiceProvider.get_order_requirements)
-    * [download\_service](#data_provider.data_service_provider.DataServiceProvider.download_service)
-    * [start\_compute\_job](#data_provider.data_service_provider.DataServiceProvider.start_compute_job)
-    * [stop\_compute\_job](#data_provider.data_service_provider.DataServiceProvider.stop_compute_job)
-    * [restart\_compute\_job](#data_provider.data_service_provider.DataServiceProvider.restart_compute_job)
-    * [delete\_compute\_job](#data_provider.data_service_provider.DataServiceProvider.delete_compute_job)
-    * [compute\_job\_status](#data_provider.data_service_provider.DataServiceProvider.compute_job_status)
-    * [compute\_job\_result](#data_provider.data_service_provider.DataServiceProvider.compute_job_result)
-    * [get\_url](#data_provider.data_service_provider.DataServiceProvider.get_url)
-    * [get\_service\_endpoints](#data_provider.data_service_provider.DataServiceProvider.get_service_endpoints)
-    * [get\_provider\_address](#data_provider.data_service_provider.DataServiceProvider.get_provider_address)
-    * [write\_file](#data_provider.data_service_provider.DataServiceProvider.write_file)
-
 <a name="data_provider.data_service_provider"></a>
 # data\_provider.data\_service\_provider
 

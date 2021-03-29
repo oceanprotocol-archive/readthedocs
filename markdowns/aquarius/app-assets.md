@@ -1,16 +1,3 @@
-# Table of Contents
-
-* [app.assets](#app.assets)
-  * [get\_assets\_ids](#app.assets.get_assets_ids)
-  * [get\_ddo](#app.assets.get_ddo)
-  * [get\_asset\_ddos](#app.assets.get_asset_ddos)
-  * [get\_metadata](#app.assets.get_metadata)
-  * [get\_assets\_names](#app.assets.get_assets_names)
-  * [query\_ddo](#app.assets.query_ddo)
-  * [validate](#app.assets.validate)
-  * [validate\_remote](#app.assets.validate_remote)
-  * [encrypt\_ddo](#app.assets.encrypt_ddo)
-
 <a name="app.assets"></a>
 # app.assets
 

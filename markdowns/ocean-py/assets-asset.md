@@ -1,9 +1,3 @@
-# Table of Contents
-
-* [assets.asset](#assets.asset)
-  * [Asset](#assets.asset.Asset)
-    * [update\_compute\_privacy](#assets.asset.Asset.update_compute_privacy)
-
 <a name="assets.asset"></a>
 # assets.asset
 

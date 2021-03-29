@@ -1,8 +1,3 @@
-# Table of Contents
-
-* [events.metadata\_updater](#events.metadata_updater)
-  * [MetadataUpdater](#events.metadata_updater.MetadataUpdater)
-
 <a name="events.metadata_updater"></a>
 # events.metadata\_updater
 

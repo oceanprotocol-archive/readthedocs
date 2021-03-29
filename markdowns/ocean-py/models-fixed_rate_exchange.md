@@ -1,8 +1,3 @@
-# Table of Contents
-
-* [models.fixed\_rate\_exchange](#models.fixed_rate_exchange)
-  * [FixedRateExchange](#models.fixed_rate_exchange.FixedRateExchange)
-
 <a name="models.fixed_rate_exchange"></a>
 # models.fixed\_rate\_exchange
 

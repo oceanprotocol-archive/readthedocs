@@ -1,9 +1,3 @@
-# Table of Contents
-
-* [web3\_internal.wallet](#web3_internal.wallet)
-  * [Wallet](#web3_internal.wallet.Wallet)
-    * [\_\_init\_\_](#web3_internal.wallet.Wallet.__init__)
-
 <a name="web3_internal.wallet"></a>
 # web3\_internal.wallet
 

@@ -1,12 +1,3 @@
-# Table of Contents
-
-* [models.dtfactory](#models.dtfactory)
-  * [DTFactory](#models.dtfactory.DTFactory)
-    * [verify\_data\_token](#models.dtfactory.DTFactory.verify_data_token)
-    * [get\_token\_registered\_event](#models.dtfactory.DTFactory.get_token_registered_event)
-    * [get\_token\_minter](#models.dtfactory.DTFactory.get_token_minter)
-    * [get\_token\_address](#models.dtfactory.DTFactory.get_token_address)
-
 <a name="models.dtfactory"></a>
 # models.dtfactory
 

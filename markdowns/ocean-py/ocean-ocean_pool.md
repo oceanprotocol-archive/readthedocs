@@ -1,19 +1,3 @@
-# Table of Contents
-
-* [ocean.ocean\_pool](#ocean.ocean_pool)
-  * [OceanPool](#ocean.ocean_pool.OceanPool)
-    * [\_\_init\_\_](#ocean.ocean_pool.OceanPool.__init__)
-    * [create](#ocean.ocean_pool.OceanPool.create)
-    * [get\_token\_address](#ocean.ocean_pool.OceanPool.get_token_address)
-    * [add\_data\_token\_liquidity](#ocean.ocean_pool.OceanPool.add_data_token_liquidity)
-    * [add\_OCEAN\_liquidity](#ocean.ocean_pool.OceanPool.add_OCEAN_liquidity)
-    * [remove\_data\_token\_liquidity](#ocean.ocean_pool.OceanPool.remove_data_token_liquidity)
-    * [remove\_OCEAN\_liquidity](#ocean.ocean_pool.OceanPool.remove_OCEAN_liquidity)
-    * [buy\_data\_tokens](#ocean.ocean_pool.OceanPool.buy_data_tokens)
-    * [sell\_data\_tokens](#ocean.ocean_pool.OceanPool.sell_data_tokens)
-    * [get\_token\_price](#ocean.ocean_pool.OceanPool.get_token_price)
-    * [add\_liquidity\_finalized](#ocean.ocean_pool.OceanPool.add_liquidity_finalized)
-
 <a name="ocean.ocean_pool"></a>
 # ocean.ocean\_pool
 

@@ -1,22 +1,3 @@
-# Table of Contents
-
-* [ocean.ocean\_compute](#ocean.ocean_compute)
-  * [OceanCompute](#ocean.ocean_compute.OceanCompute)
-    * [\_\_init\_\_](#ocean.ocean_compute.OceanCompute.__init__)
-    * [build\_cluster\_attributes](#ocean.ocean_compute.OceanCompute.build_cluster_attributes)
-    * [build\_container\_attributes](#ocean.ocean_compute.OceanCompute.build_container_attributes)
-    * [build\_server\_attributes](#ocean.ocean_compute.OceanCompute.build_server_attributes)
-    * [build\_service\_provider\_attributes](#ocean.ocean_compute.OceanCompute.build_service_provider_attributes)
-    * [build\_service\_privacy\_attributes](#ocean.ocean_compute.OceanCompute.build_service_privacy_attributes)
-    * [create\_compute\_service\_attributes](#ocean.ocean_compute.OceanCompute.create_compute_service_attributes)
-    * [check\_output\_dict](#ocean.ocean_compute.OceanCompute.check_output_dict)
-    * [create\_compute\_service\_descriptor](#ocean.ocean_compute.OceanCompute.create_compute_service_descriptor)
-    * [start](#ocean.ocean_compute.OceanCompute.start)
-    * [status](#ocean.ocean_compute.OceanCompute.status)
-    * [result](#ocean.ocean_compute.OceanCompute.result)
-    * [stop](#ocean.ocean_compute.OceanCompute.stop)
-    * [restart](#ocean.ocean_compute.OceanCompute.restart)
-
 <a name="ocean.ocean_compute"></a>
 # ocean.ocean\_compute
 

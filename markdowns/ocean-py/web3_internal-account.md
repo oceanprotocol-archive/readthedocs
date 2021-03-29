@@ -1,9 +1,3 @@
-# Table of Contents
-
-* [web3\_internal.account](#web3_internal.account)
-  * [Account](#web3_internal.account.Account)
-    * [\_\_init\_\_](#web3_internal.account.Account.__init__)
-
 <a name="web3_internal.account"></a>
 # web3\_internal.account
 

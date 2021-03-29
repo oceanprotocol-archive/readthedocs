@@ -1,7 +1,3 @@
-# Table of Contents
-
-* [routes](#routes)
-
 <a name="routes"></a>
 # routes
 
