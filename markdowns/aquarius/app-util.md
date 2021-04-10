@@ -1,6 +1,6 @@
 ---
 title:app-util
-slug:/docs/aquarius/app-util
+slug:/read-the-docs/aquarius/app-util
 section:aquarius
 ---
 <a name="app.util"></a>

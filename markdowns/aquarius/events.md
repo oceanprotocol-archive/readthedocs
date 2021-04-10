@@ -1,6 +1,6 @@
 ---
 title:events
-slug:/docs/aquarius/events
+slug:/read-the-docs/aquarius/events
 section:aquarius
 ---
 <a name="events"></a>

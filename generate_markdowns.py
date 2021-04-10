@@ -59,7 +59,7 @@ def generate_markdowns(path, output_dir):
         title = markdowns_to_generate[i].replace('.', '-')
         file_name = title + '.md'
         file_path = 'markdowns/{0}/{1}'.format(output_dir, file_name)
-        slug = '/docs/' + output_dir + '/' + title
+        slug = '/read-the-docs/' + output_dir + '/' + title
         prepend_gatsby_header(file_path, title, slug, output_dir)
 
         command = 'pydoc-markdown -I {0} -m {1} >> {2}' \

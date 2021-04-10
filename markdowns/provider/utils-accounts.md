@@ -1,6 +1,6 @@
 ---
 title:utils-accounts
-slug:/docs/provider/utils-accounts
+slug:/read-the-docs/provider/utils-accounts
 section:provider
 ---
 <a name="utils.accounts"></a>

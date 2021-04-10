@@ -1,6 +1,6 @@
 ---
 title:app
-slug:/docs/aquarius/app
+slug:/read-the-docs/aquarius/app
 section:aquarius
 ---
 <a name="app"></a>

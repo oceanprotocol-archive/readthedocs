@@ -1,6 +1,6 @@
 ---
 title:ocean-ocean_exchange
-slug:/docs/ocean-py/ocean-ocean_exchange
+slug:/read-the-docs/ocean-py/ocean-ocean_exchange
 section:ocean-py
 ---
 <a name="ocean.ocean_exchange"></a>

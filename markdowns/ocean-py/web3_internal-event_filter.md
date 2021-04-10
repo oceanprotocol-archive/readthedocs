@@ -1,6 +1,6 @@
 ---
 title:web3_internal-event_filter
-slug:/docs/ocean-py/web3_internal-event_filter
+slug:/read-the-docs/ocean-py/web3_internal-event_filter
 section:ocean-py
 ---
 <a name="web3_internal.event_filter"></a>

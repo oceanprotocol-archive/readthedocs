@@ -1,6 +1,6 @@
 ---
 title:assets-asset_downloader
-slug:/docs/ocean-py/assets-asset_downloader
+slug:/read-the-docs/ocean-py/assets-asset_downloader
 section:ocean-py
 ---
 <a name="assets.asset_downloader"></a>

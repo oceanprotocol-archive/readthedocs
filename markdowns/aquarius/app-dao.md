@@ -1,6 +1,6 @@
 ---
 title:app-dao
-slug:/docs/aquarius/app-dao
+slug:/read-the-docs/aquarius/app-dao
 section:aquarius
 ---
 <a name="app.dao"></a>

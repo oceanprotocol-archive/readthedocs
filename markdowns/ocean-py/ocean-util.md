@@ -1,6 +1,6 @@
 ---
 title:ocean-util
-slug:/docs/ocean-py/ocean-util
+slug:/read-the-docs/ocean-py/ocean-util
 section:ocean-py
 ---
 <a name="ocean.util"></a>

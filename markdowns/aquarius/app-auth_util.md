@@ -1,6 +1,6 @@
 ---
 title:app-auth_util
-slug:/docs/aquarius/app-auth_util
+slug:/read-the-docs/aquarius/app-auth_util
 section:aquarius
 ---
 <a name="app.auth_util"></a>

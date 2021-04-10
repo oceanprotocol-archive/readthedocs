@@ -1,6 +1,6 @@
 ---
 title:data_provider-data_service_provider
-slug:/docs/ocean-py/data_provider-data_service_provider
+slug:/read-the-docs/ocean-py/data_provider-data_service_provider
 section:ocean-py
 ---
 <a name="data_provider.data_service_provider"></a>

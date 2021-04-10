@@ -1,6 +1,6 @@
 ---
 title:events-http_provider
-slug:/docs/aquarius/events-http_provider
+slug:/read-the-docs/aquarius/events-http_provider
 section:aquarius
 ---
 <a name="events.http_provider"></a>

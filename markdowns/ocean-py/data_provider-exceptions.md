@@ -1,6 +1,6 @@
 ---
 title:data_provider-exceptions
-slug:/docs/ocean-py/data_provider-exceptions
+slug:/read-the-docs/ocean-py/data_provider-exceptions
 section:ocean-py
 ---
 <a name="data_provider.exceptions"></a>

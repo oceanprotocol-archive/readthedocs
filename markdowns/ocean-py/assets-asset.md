@@ -1,14 +1,14 @@
 ---
 title:assets-asset
-slug:/docs/ocean-py/assets-asset
-section:content
+slug:/read-the-docs/ocean-py/assets-asset
+section:ocean-py
 ---
 <a name="assets.asset"></a>
 # assets.asset
 
 <a name="assets.asset.Asset"></a>
 ## Asset Objects
-    
+
 ```python
 class Asset(DDO)
 ```

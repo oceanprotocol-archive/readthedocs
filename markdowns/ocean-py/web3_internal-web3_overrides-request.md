@@ -1,6 +1,6 @@
 ---
 title:web3_internal-web3_overrides-request
-slug:/docs/ocean-py/web3_internal-web3_overrides-request
+slug:/read-the-docs/ocean-py/web3_internal-web3_overrides-request
 section:ocean-py
 ---
 <a name="web3_internal.web3_overrides.request"></a>

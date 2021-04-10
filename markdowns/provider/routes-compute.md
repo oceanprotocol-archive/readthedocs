@@ -1,6 +1,6 @@
 ---
 title:routes-compute
-slug:/docs/provider/routes-compute
+slug:/read-the-docs/provider/routes-compute
 section:provider
 ---
 <a name="routes.compute"></a>

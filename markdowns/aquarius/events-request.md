@@ -1,6 +1,6 @@
 ---
 title:events-request
-slug:/docs/aquarius/events-request
+slug:/read-the-docs/aquarius/events-request
 section:aquarius
 ---
 <a name="events.request"></a>

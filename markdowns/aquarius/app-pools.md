@@ -1,6 +1,6 @@
 ---
 title:app-pools
-slug:/docs/aquarius/app-pools
+slug:/read-the-docs/aquarius/app-pools
 section:aquarius
 ---
 <a name="app.pools"></a>

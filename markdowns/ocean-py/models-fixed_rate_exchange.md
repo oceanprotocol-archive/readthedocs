@@ -1,6 +1,6 @@
 ---
 title:models-fixed_rate_exchange
-slug:/docs/ocean-py/models-fixed_rate_exchange
+slug:/read-the-docs/ocean-py/models-fixed_rate_exchange
 section:ocean-py
 ---
 <a name="models.fixed_rate_exchange"></a>

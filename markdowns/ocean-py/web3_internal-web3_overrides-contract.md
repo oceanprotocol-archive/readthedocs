@@ -1,6 +1,6 @@
 ---
 title:web3_internal-web3_overrides-contract
-slug:/docs/ocean-py/web3_internal-web3_overrides-contract
+slug:/read-the-docs/ocean-py/web3_internal-web3_overrides-contract
 section:ocean-py
 ---
 <a name="web3_internal.web3_overrides.contract"></a>

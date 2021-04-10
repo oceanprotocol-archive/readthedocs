@@ -1,6 +1,6 @@
 ---
 title:assets-asset_resolver
-slug:/docs/ocean-py/assets-asset_resolver
+slug:/read-the-docs/ocean-py/assets-asset_resolver
 section:ocean-py
 ---
 <a name="assets.asset_resolver"></a>

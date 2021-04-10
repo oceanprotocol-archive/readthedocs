@@ -1,6 +1,6 @@
 ---
 title:utils
-slug:/docs/provider/utils
+slug:/read-the-docs/provider/utils
 section:provider
 ---
 <a name="utils"></a>

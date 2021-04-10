@@ -1,6 +1,6 @@
 ---
 title:routes-consume
-slug:/docs/provider/routes-consume
+slug:/read-the-docs/provider/routes-consume
 section:provider
 ---
 <a name="routes.consume"></a>

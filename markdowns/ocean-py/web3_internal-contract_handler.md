@@ -1,6 +1,6 @@
 ---
 title:web3_internal-contract_handler
-slug:/docs/ocean-py/web3_internal-contract_handler
+slug:/read-the-docs/ocean-py/web3_internal-contract_handler
 section:ocean-py
 ---
 <a name="web3_internal.contract_handler"></a>

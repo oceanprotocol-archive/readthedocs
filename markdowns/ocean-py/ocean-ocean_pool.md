@@ -1,6 +1,6 @@
 ---
 title:ocean-ocean_pool
-slug:/docs/ocean-py/ocean-ocean_pool
+slug:/read-the-docs/ocean-py/ocean-ocean_pool
 section:ocean-py
 ---
 <a name="ocean.ocean_pool"></a>

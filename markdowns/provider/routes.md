@@ -1,6 +1,6 @@
 ---
 title:routes
-slug:/docs/provider/routes
+slug:/read-the-docs/provider/routes
 section:provider
 ---
 <a name="routes"></a>

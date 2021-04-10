@@ -1,6 +1,6 @@
 ---
 title:ocean-ocean_compute
-slug:/docs/ocean-py/ocean-ocean_compute
+slug:/read-the-docs/ocean-py/ocean-ocean_compute
 section:ocean-py
 ---
 <a name="ocean.ocean_compute"></a>

@@ -1,6 +1,6 @@
 ---
 title:app-assets
-slug:/docs/aquarius/app-assets
+slug:/read-the-docs/aquarius/app-assets
 section:aquarius
 ---
 <a name="app.assets"></a>

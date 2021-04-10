@@ -1,6 +1,6 @@
 ---
 title:models-algorithm_metadata
-slug:/docs/ocean-py/models-algorithm_metadata
+slug:/read-the-docs/ocean-py/models-algorithm_metadata
 section:ocean-py
 ---
 <a name="models.algorithm_metadata"></a>

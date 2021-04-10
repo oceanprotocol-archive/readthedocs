@@ -1,6 +1,6 @@
 ---
 title:events-events_monitor
-slug:/docs/aquarius/events-events_monitor
+slug:/read-the-docs/aquarius/events-events_monitor
 section:aquarius
 ---
 <a name="events.events_monitor"></a>

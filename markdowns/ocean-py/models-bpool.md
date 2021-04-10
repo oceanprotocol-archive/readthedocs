@@ -1,6 +1,6 @@
 ---
 title:models-bpool
-slug:/docs/ocean-py/models-bpool
+slug:/read-the-docs/ocean-py/models-bpool
 section:ocean-py
 ---
 <a name="models.bpool"></a>
