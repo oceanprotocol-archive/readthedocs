@@ -1,7 +1,7 @@
 ---
-title:ocean-ocean_auth
-slug:/read-the-docs/ocean-py/ocean-ocean_auth
-section:ocean-py
+title: ocean-ocean_auth
+slug: /read-the-docs/ocean-py/ocean-ocean_auth
+section: ocean-py
 ---
 <a name="ocean.ocean_auth"></a>
 # ocean.ocean\_auth

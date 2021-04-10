@@ -1,7 +1,7 @@
 ---
-title:models-dtfactory
-slug:/read-the-docs/ocean-py/models-dtfactory
-section:ocean-py
+title: models-dtfactory
+slug: /read-the-docs/ocean-py/models-dtfactory
+section: ocean-py
 ---
 <a name="models.dtfactory"></a>
 # models.dtfactory

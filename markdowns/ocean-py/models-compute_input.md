@@ -1,7 +1,7 @@
 ---
-title:models-compute_input
-slug:/read-the-docs/ocean-py/models-compute_input
-section:ocean-py
+title: models-compute_input
+slug: /read-the-docs/ocean-py/models-compute_input
+section: ocean-py
 ---
 <a name="models.compute_input"></a>
 # models.compute\_input

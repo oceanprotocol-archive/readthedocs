@@ -1,7 +1,7 @@
 ---
-title:app-pools
-slug:/read-the-docs/aquarius/app-pools
-section:aquarius
+title: app-pools
+slug: /read-the-docs/aquarius/app-pools
+section: aquarius
 ---
 <a name="app.pools"></a>
 # app.pools

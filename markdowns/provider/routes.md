@@ -1,7 +1,7 @@
 ---
-title:routes
-slug:/read-the-docs/provider/routes
-section:provider
+title: routes
+slug: /read-the-docs/provider/routes
+section: provider
 ---
 <a name="routes"></a>
 # routes

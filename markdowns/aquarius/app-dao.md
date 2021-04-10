@@ -1,7 +1,7 @@
 ---
-title:app-dao
-slug:/read-the-docs/aquarius/app-dao
-section:aquarius
+title: app-dao
+slug: /read-the-docs/aquarius/app-dao
+section: aquarius
 ---
 <a name="app.dao"></a>
 # app.dao

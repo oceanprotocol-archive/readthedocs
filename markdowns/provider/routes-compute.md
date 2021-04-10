@@ -1,7 +1,7 @@
 ---
-title:routes-compute
-slug:/read-the-docs/provider/routes-compute
-section:provider
+title: routes-compute
+slug: /read-the-docs/provider/routes-compute
+section: provider
 ---
 <a name="routes.compute"></a>
 # routes.compute

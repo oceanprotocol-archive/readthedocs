@@ -1,7 +1,7 @@
 ---
-title:app-assets
-slug:/read-the-docs/aquarius/app-assets
-section:aquarius
+title: app-assets
+slug: /read-the-docs/aquarius/app-assets
+section: aquarius
 ---
 <a name="app.assets"></a>
 # app.assets

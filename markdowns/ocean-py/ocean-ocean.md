@@ -1,7 +1,7 @@
 ---
-title:ocean-ocean
-slug:/read-the-docs/ocean-py/ocean-ocean
-section:ocean-py
+title: ocean-ocean
+slug: /read-the-docs/ocean-py/ocean-ocean
+section: ocean-py
 ---
 <a name="ocean.ocean"></a>
 # ocean.ocean

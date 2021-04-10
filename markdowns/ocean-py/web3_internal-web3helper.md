@@ -1,7 +1,7 @@
 ---
-title:web3_internal-web3helper
-slug:/read-the-docs/ocean-py/web3_internal-web3helper
-section:ocean-py
+title: web3_internal-web3helper
+slug: /read-the-docs/ocean-py/web3_internal-web3helper
+section: ocean-py
 ---
 <a name="web3_internal.web3helper"></a>
 # web3\_internal.web3helper

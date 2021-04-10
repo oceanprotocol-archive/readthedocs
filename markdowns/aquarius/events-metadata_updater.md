@@ -1,7 +1,7 @@
 ---
-title:events-metadata_updater
-slug:/read-the-docs/aquarius/events-metadata_updater
-section:aquarius
+title: events-metadata_updater
+slug: /read-the-docs/aquarius/events-metadata_updater
+section: aquarius
 ---
 <a name="events.metadata_updater"></a>
 # events.metadata\_updater

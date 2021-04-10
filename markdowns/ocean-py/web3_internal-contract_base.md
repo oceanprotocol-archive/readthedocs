@@ -1,7 +1,7 @@
 ---
-title:web3_internal-contract_base
-slug:/read-the-docs/ocean-py/web3_internal-contract_base
-section:ocean-py
+title: web3_internal-contract_base
+slug: /read-the-docs/ocean-py/web3_internal-contract_base
+section: ocean-py
 ---
 <a name="web3_internal.contract_base"></a>
 # web3\_internal.contract\_base

@@ -1,7 +1,7 @@
 ---
-title:ocean-deploy
-slug:/read-the-docs/ocean-py/ocean-deploy
-section:ocean-py
+title: ocean-deploy
+slug: /read-the-docs/ocean-py/ocean-deploy
+section: ocean-py
 ---
 <a name="ocean.deploy"></a>
 # ocean.deploy

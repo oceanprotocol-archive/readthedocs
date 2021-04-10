@@ -1,7 +1,7 @@
 ---
-title:app-util
-slug:/read-the-docs/aquarius/app-util
-section:aquarius
+title: app-util
+slug: /read-the-docs/aquarius/app-util
+section: aquarius
 ---
 <a name="app.util"></a>
 # app.util

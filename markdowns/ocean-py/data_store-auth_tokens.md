@@ -1,7 +1,7 @@
 ---
-title:data_store-auth_tokens
-slug:/read-the-docs/ocean-py/data_store-auth_tokens
-section:ocean-py
+title: data_store-auth_tokens
+slug: /read-the-docs/ocean-py/data_store-auth_tokens
+section: ocean-py
 ---
 <a name="data_store.auth_tokens"></a>
 # data\_store.auth\_tokens

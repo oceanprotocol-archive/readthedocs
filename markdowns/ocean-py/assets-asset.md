@@ -1,7 +1,7 @@
 ---
-title:assets-asset
-slug:/read-the-docs/ocean-py/assets-asset
-section:ocean-py
+title: assets-asset
+slug: /read-the-docs/ocean-py/assets-asset
+section: ocean-py
 ---
 <a name="assets.asset"></a>
 # assets.asset

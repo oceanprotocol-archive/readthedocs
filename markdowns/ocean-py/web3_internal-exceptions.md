@@ -1,7 +1,7 @@
 ---
-title:web3_internal-exceptions
-slug:/read-the-docs/ocean-py/web3_internal-exceptions
-section:ocean-py
+title: web3_internal-exceptions
+slug: /read-the-docs/ocean-py/web3_internal-exceptions
+section: ocean-py
 ---
 <a name="web3_internal.exceptions"></a>
 # web3\_internal.exceptions

@@ -13,7 +13,7 @@ def prepend_gatsby_header(file_path, title, slug, section):
     '''
 
     with open(file_path, 'w') as out_file:
-        header = '---\ntitle:{0}\nslug:{1}\nsection:{2}\n---\n'.format(title, slug, section)
+        header = '---\ntitle: {0}\nslug: {1}\nsection: {2}\n---\n'.format(title, slug, section)
         out_file.write(header)
 
     return
