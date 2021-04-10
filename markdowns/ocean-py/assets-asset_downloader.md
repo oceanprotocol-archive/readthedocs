@@ -1,8 +1,8 @@
-# Table of Contents
-
-* [assets.asset\_downloader](#assets.asset_downloader)
-  * [download\_asset\_files](#assets.asset_downloader.download_asset_files)
-
+---
+title:assets-asset_downloader
+slug:/docs/ocean-py/assets-asset_downloader
+section:ocean-py
+---
 <a name="assets.asset_downloader"></a>
 # assets.asset\_downloader
 

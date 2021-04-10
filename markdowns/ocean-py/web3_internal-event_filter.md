@@ -1,9 +1,8 @@
-# Table of Contents
-
-* [web3\_internal.event\_filter](#web3_internal.event_filter)
-  * [EventFilter](#web3_internal.event_filter.EventFilter)
-    * [\_\_init\_\_](#web3_internal.event_filter.EventFilter.__init__)
-
+---
+title:web3_internal-event_filter
+slug:/docs/ocean-py/web3_internal-event_filter
+section:ocean-py
+---
 <a name="web3_internal.event_filter"></a>
 # web3\_internal.event\_filter
 

@@ -1,7 +1,8 @@
-# Table of Contents
-
-* [ocean](#ocean)
-
+---
+title:ocean
+slug:/docs/ocean-py/ocean
+section:ocean-py
+---
 <a name="ocean"></a>
 # ocean
 

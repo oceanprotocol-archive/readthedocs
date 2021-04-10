@@ -1,7 +1,8 @@
-# Table of Contents
-
-* [routes](#routes)
-
+---
+title:routes
+slug:/docs/provider/routes
+section:provider
+---
 <a name="routes"></a>
 # routes
 

@@ -1,12 +1,8 @@
-# Table of Contents
-
-* [web3\_internal.utils](#web3_internal.utils)
-  * [generate\_multi\_value\_hash](#web3_internal.utils.generate_multi_value_hash)
-  * [prepare\_prefixed\_hash](#web3_internal.utils.prepare_prefixed_hash)
-  * [add\_ethereum\_prefix\_and\_hash\_msg](#web3_internal.utils.add_ethereum_prefix_and_hash_msg)
-  * [to\_32byte\_hex](#web3_internal.utils.to_32byte_hex)
-  * [split\_signature](#web3_internal.utils.split_signature)
-
+---
+title:web3_internal-utils
+slug:/docs/ocean-py/web3_internal-utils
+section:ocean-py
+---
 <a name="web3_internal.utils"></a>
 # web3\_internal.utils
 

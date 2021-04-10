@@ -1,7 +1,8 @@
-# Table of Contents
-
-* [web3\_internal.constants](#web3_internal.constants)
-
+---
+title:web3_internal-constants
+slug:/docs/ocean-py/web3_internal-constants
+section:ocean-py
+---
 <a name="web3_internal.constants"></a>
 # web3\_internal.constants
 

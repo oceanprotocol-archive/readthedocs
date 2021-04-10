@@ -1,19 +1,8 @@
-# Table of Contents
-
-* [ocean.ocean\_assets](#ocean.ocean_assets)
-  * [OceanAssets](#ocean.ocean_assets.OceanAssets)
-    * [\_\_init\_\_](#ocean.ocean_assets.OceanAssets.__init__)
-    * [create](#ocean.ocean_assets.OceanAssets.create)
-    * [resolve](#ocean.ocean_assets.OceanAssets.resolve)
-    * [search](#ocean.ocean_assets.OceanAssets.search)
-    * [query](#ocean.ocean_assets.OceanAssets.query)
-    * [order](#ocean.ocean_assets.OceanAssets.order)
-    * [pay\_for\_service](#ocean.ocean_assets.OceanAssets.pay_for_service)
-    * [download](#ocean.ocean_assets.OceanAssets.download)
-    * [validate](#ocean.ocean_assets.OceanAssets.validate)
-    * [owner](#ocean.ocean_assets.OceanAssets.owner)
-    * [owner\_assets](#ocean.ocean_assets.OceanAssets.owner_assets)
-
+---
+title:ocean-ocean_assets
+slug:/docs/ocean-py/ocean-ocean_assets
+section:ocean-py
+---
 <a name="ocean.ocean_assets"></a>
 # ocean.ocean\_assets
 

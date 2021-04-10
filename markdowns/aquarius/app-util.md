@@ -1,8 +1,8 @@
-# Table of Contents
-
-* [app.util](#app.util)
-  * [get\_timestamp](#app.util.get_timestamp)
-
+---
+title:app-util
+slug:/docs/aquarius/app-util
+section:aquarius
+---
 <a name="app.util"></a>
 # app.util
 

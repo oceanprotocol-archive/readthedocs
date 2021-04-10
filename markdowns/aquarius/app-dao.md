@@ -1,9 +1,8 @@
-# Table of Contents
-
-* [app.dao](#app.dao)
-  * [Dao](#app.dao.Dao)
-    * [run\_es\_query](#app.dao.Dao.run_es_query)
-
+---
+title:app-dao
+slug:/docs/aquarius/app-dao
+section:aquarius
+---
 <a name="app.dao"></a>
 # app.dao
 

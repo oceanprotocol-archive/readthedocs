@@ -1,10 +1,8 @@
-# Table of Contents
-
-* [web3\_internal.web3\_provider](#web3_internal.web3_provider)
-  * [Web3Provider](#web3_internal.web3_provider.Web3Provider)
-    * [init\_web3](#web3_internal.web3_provider.Web3Provider.init_web3)
-    * [get\_web3](#web3_internal.web3_provider.Web3Provider.get_web3)
-
+---
+title:web3_internal-web3_provider
+slug:/docs/ocean-py/web3_internal-web3_provider
+section:ocean-py
+---
 <a name="web3_internal.web3_provider"></a>
 # web3\_internal.web3\_provider
 

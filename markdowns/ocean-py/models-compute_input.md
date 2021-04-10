@@ -1,9 +1,8 @@
-# Table of Contents
-
-* [models.compute\_input](#models.compute_input)
-  * [ComputeInput](#models.compute_input.ComputeInput)
-    * [\_\_init\_\_](#models.compute_input.ComputeInput.__init__)
-
+---
+title:models-compute_input
+slug:/docs/ocean-py/models-compute_input
+section:ocean-py
+---
 <a name="models.compute_input"></a>
 # models.compute\_input
 

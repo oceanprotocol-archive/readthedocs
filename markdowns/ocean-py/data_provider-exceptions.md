@@ -1,8 +1,8 @@
-# Table of Contents
-
-* [data\_provider.exceptions](#data_provider.exceptions)
-  * [InvalidURLException](#data_provider.exceptions.InvalidURLException)
-
+---
+title:data_provider-exceptions
+slug:/docs/ocean-py/data_provider-exceptions
+section:ocean-py
+---
 <a name="data_provider.exceptions"></a>
 # data\_provider.exceptions
 

@@ -1,8 +1,8 @@
-# Table of Contents
-
-* [events.http\_provider](#events.http_provider)
-  * [CustomHTTPProvider](#events.http_provider.CustomHTTPProvider)
-
+---
+title:events-http_provider
+slug:/docs/aquarius/events-http_provider
+section:aquarius
+---
 <a name="events.http_provider"></a>
 # events.http\_provider
 

@@ -1,9 +1,8 @@
-# Table of Contents
-
-* [ocean.ocean\_services](#ocean.ocean_services)
-  * [OceanServices](#ocean.ocean_services.OceanServices)
-    * [create\_access\_service](#ocean.ocean_services.OceanServices.create_access_service)
-
+---
+title:ocean-ocean_services
+slug:/docs/ocean-py/ocean-ocean_services
+section:ocean-py
+---
 <a name="ocean.ocean_services"></a>
 # ocean.ocean\_services
 

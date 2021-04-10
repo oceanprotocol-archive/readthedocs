@@ -1,12 +1,8 @@
-# Table of Contents
-
-* [web3\_internal.event\_listener](#web3_internal.event_listener)
-  * [EventListener](#web3_internal.event_listener.EventListener)
-    * [\_\_init\_\_](#web3_internal.event_listener.EventListener.__init__)
-    * [make\_event\_filter](#web3_internal.event_listener.EventListener.make_event_filter)
-    * [listen\_once](#web3_internal.event_listener.EventListener.listen_once)
-    * [watch\_one\_event](#web3_internal.event_listener.EventListener.watch_one_event)
-
+---
+title:web3_internal-event_listener
+slug:/docs/ocean-py/web3_internal-event_listener
+section:ocean-py
+---
 <a name="web3_internal.event_listener"></a>
 # web3\_internal.event\_listener
 

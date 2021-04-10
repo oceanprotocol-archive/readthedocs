@@ -1,10 +1,8 @@
-# Table of Contents
-
-* [web3\_internal.exceptions](#web3_internal.exceptions)
-  * [OceanKeeperContractsNotFound](#web3_internal.exceptions.OceanKeeperContractsNotFound)
-  * [OceanDIDNotFound](#web3_internal.exceptions.OceanDIDNotFound)
-  * [OceanInvalidTransaction](#web3_internal.exceptions.OceanInvalidTransaction)
-
+---
+title:web3_internal-exceptions
+slug:/docs/ocean-py/web3_internal-exceptions
+section:ocean-py
+---
 <a name="web3_internal.exceptions"></a>
 # web3\_internal.exceptions
 

@@ -1,9 +1,8 @@
-# Table of Contents
-
-* [models.algorithm\_metadata](#models.algorithm_metadata)
-  * [AlgorithmMetadata](#models.algorithm_metadata.AlgorithmMetadata)
-    * [\_\_init\_\_](#models.algorithm_metadata.AlgorithmMetadata.__init__)
-
+---
+title:models-algorithm_metadata
+slug:/docs/ocean-py/models-algorithm_metadata
+section:ocean-py
+---
 <a name="models.algorithm_metadata"></a>
 # models.algorithm\_metadata
 

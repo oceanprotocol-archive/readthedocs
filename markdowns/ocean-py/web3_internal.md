@@ -1,7 +1,8 @@
-# Table of Contents
-
-* [web3\_internal](#web3_internal)
-
+---
+title:web3_internal
+slug:/docs/ocean-py/web3_internal
+section:ocean-py
+---
 <a name="web3_internal"></a>
 # web3\_internal
 

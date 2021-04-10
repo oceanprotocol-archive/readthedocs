@@ -1,9 +1,8 @@
-# Table of Contents
-
-* [ocean.ocean](#ocean.ocean)
-  * [Ocean](#ocean.ocean.Ocean)
-    * [\_\_init\_\_](#ocean.ocean.Ocean.__init__)
-
+---
+title:ocean-ocean
+slug:/docs/ocean-py/ocean-ocean
+section:ocean-py
+---
 <a name="ocean.ocean"></a>
 # ocean.ocean
 

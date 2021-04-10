@@ -1,7 +1,8 @@
-# Table of Contents
-
-* [events.request](#events.request)
-
+---
+title:events-request
+slug:/docs/aquarius/events-request
+section:aquarius
+---
 <a name="events.request"></a>
 # events.request
 

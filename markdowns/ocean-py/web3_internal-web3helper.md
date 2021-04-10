@@ -1,13 +1,8 @@
-# Table of Contents
-
-* [web3\_internal.web3helper](#web3_internal.web3helper)
-  * [Web3Helper](#web3_internal.web3helper.Web3Helper)
-    * [get\_network\_name](#web3_internal.web3helper.Web3Helper.get_network_name)
-    * [get\_network\_id](#web3_internal.web3helper.Web3Helper.get_network_id)
-    * [sign\_hash](#web3_internal.web3helper.Web3Helper.sign_hash)
-    * [ec\_recover](#web3_internal.web3helper.Web3Helper.ec_recover)
-    * [get\_ether\_balance](#web3_internal.web3helper.Web3Helper.get_ether_balance)
-
+---
+title:web3_internal-web3helper
+slug:/docs/ocean-py/web3_internal-web3helper
+section:ocean-py
+---
 <a name="web3_internal.web3helper"></a>
 # web3\_internal.web3helper
 

@@ -1,8 +1,8 @@
-# Table of Contents
-
-* [events.events\_monitor](#events.events_monitor)
-  * [EventsMonitor](#events.events_monitor.EventsMonitor)
-
+---
+title:events-events_monitor
+slug:/docs/aquarius/events-events_monitor
+section:aquarius
+---
 <a name="events.events_monitor"></a>
 # events.events\_monitor
 

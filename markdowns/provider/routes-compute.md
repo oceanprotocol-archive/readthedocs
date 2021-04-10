@@ -1,11 +1,8 @@
-# Table of Contents
-
-* [routes.compute](#routes.compute)
-  * [computeDelete](#routes.compute.computeDelete)
-  * [computeStop](#routes.compute.computeStop)
-  * [computeStatus](#routes.compute.computeStatus)
-  * [computeStart](#routes.compute.computeStart)
-
+---
+title:routes-compute
+slug:/docs/provider/routes-compute
+section:provider
+---
 <a name="routes.compute"></a>
 # routes.compute
 

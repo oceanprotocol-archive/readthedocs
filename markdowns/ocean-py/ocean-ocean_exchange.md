@@ -1,9 +1,8 @@
-# Table of Contents
-
-* [ocean.ocean\_exchange](#ocean.ocean_exchange)
-  * [OceanExchange](#ocean.ocean_exchange.OceanExchange)
-    * [\_\_init\_\_](#ocean.ocean_exchange.OceanExchange.__init__)
-
+---
+title:ocean-ocean_exchange
+slug:/docs/ocean-py/ocean-ocean_exchange
+section:ocean-py
+---
 <a name="ocean.ocean_exchange"></a>
 # ocean.ocean\_exchange
 

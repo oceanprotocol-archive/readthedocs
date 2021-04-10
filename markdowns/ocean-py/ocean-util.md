@@ -1,10 +1,8 @@
-# Table of Contents
-
-* [ocean.util](#ocean.util)
-  * [get\_web3\_connection\_provider](#ocean.util.get_web3_connection_provider)
-  * [to\_base](#ocean.util.to_base)
-  * [from\_base](#ocean.util.from_base)
-
+---
+title:ocean-util
+slug:/docs/ocean-py/ocean-util
+section:ocean-py
+---
 <a name="ocean.util"></a>
 # ocean.util
 

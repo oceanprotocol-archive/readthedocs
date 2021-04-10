@@ -7,6 +7,17 @@ from pkgutil import iter_modules
 from setuptools import find_packages
 from tqdm import tqdm
 
+def prepend_gatsby_header(file_path, title, slug, section):
+    '''
+    Adds title, description and slug to the file.
+    '''
+
+    with open(file_path, 'w') as out_file:
+        header = '---\ntitle:{0}\nslug:{1}\nsection:{2}\n---\n'.format(title, slug, section)
+        out_file.write(header)
+
+    return
+
 def find_modules(path):
     '''
     Funtion to list all the modules in a repository.
@@ -45,11 +56,14 @@ def generate_markdowns(path, output_dir):
 
     for i in tqdm(range(len(markdowns_to_generate))):
 
-        file_name = markdowns_to_generate[i].replace('.', '-') + '.md'
+        title = markdowns_to_generate[i].replace('.', '-')
+        file_name = title + '.md'
+        file_path = 'markdowns/{0}/{1}'.format(output_dir, file_name)
+        slug = '/docs/' + output_dir + '/' + title
+        prepend_gatsby_header(file_path, title, slug, output_dir)
 
-        command = 'pydoc-markdown -I {0} -m {1} --render-toc > markdowns/{2}/{3}' \
-                    .format(path, markdowns_to_generate[i],
-        output_dir,file_name)
+        command = 'pydoc-markdown -I {0} -m {1} >> {2}' \
+                    .format(path, markdowns_to_generate[i], file_path)
 
         os.system(command)
 

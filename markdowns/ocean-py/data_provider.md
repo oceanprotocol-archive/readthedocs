@@ -1,7 +1,8 @@
-# Table of Contents
-
-* [data\_provider](#data_provider)
-
+---
+title:data_provider
+slug:/docs/ocean-py/data_provider
+section:ocean-py
+---
 <a name="data_provider"></a>
 # data\_provider
 

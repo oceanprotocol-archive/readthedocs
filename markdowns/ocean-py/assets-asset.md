@@ -1,15 +1,14 @@
-# Table of Contents
-
-* [assets.asset](#assets.asset)
-  * [Asset](#assets.asset.Asset)
-    * [update\_compute\_privacy](#assets.asset.Asset.update_compute_privacy)
-
+---
+title:assets-asset
+slug:/docs/ocean-py/assets-asset
+section:content
+---
 <a name="assets.asset"></a>
 # assets.asset
 
 <a name="assets.asset.Asset"></a>
 ## Asset Objects
-
+    
 ```python
 class Asset(DDO)
 ```

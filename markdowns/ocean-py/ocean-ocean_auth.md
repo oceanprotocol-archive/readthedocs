@@ -1,14 +1,8 @@
-# Table of Contents
-
-* [ocean.ocean\_auth](#ocean.ocean_auth)
-  * [OceanAuth](#ocean.ocean_auth.OceanAuth)
-    * [\_\_init\_\_](#ocean.ocean_auth.OceanAuth.__init__)
-    * [get](#ocean.ocean_auth.OceanAuth.get)
-    * [check](#ocean.ocean_auth.OceanAuth.check)
-    * [store](#ocean.ocean_auth.OceanAuth.store)
-    * [restore](#ocean.ocean_auth.OceanAuth.restore)
-    * [is\_stored](#ocean.ocean_auth.OceanAuth.is_stored)
-
+---
+title:ocean-ocean_auth
+slug:/docs/ocean-py/ocean-ocean_auth
+section:ocean-py
+---
 <a name="ocean.ocean_auth"></a>
 # ocean.ocean\_auth
 

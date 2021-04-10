@@ -1,9 +1,8 @@
-# Table of Contents
-
-* [web3\_internal.account](#web3_internal.account)
-  * [Account](#web3_internal.account.Account)
-    * [\_\_init\_\_](#web3_internal.account.Account.__init__)
-
+---
+title:web3_internal-account
+slug:/docs/ocean-py/web3_internal-account
+section:ocean-py
+---
 <a name="web3_internal.account"></a>
 # web3\_internal.account
 

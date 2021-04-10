@@ -1,10 +1,8 @@
-# Table of Contents
-
-* [app.pools](#app.pools)
-  * [get\_liquidity\_history](#app.pools.get_liquidity_history)
-  * [get\_current\_liquidity\_stats](#app.pools.get_current_liquidity_stats)
-  * [get\_user\_balances](#app.pools.get_user_balances)
-
+---
+title:app-pools
+slug:/docs/aquarius/app-pools
+section:aquarius
+---
 <a name="app.pools"></a>
 # app.pools
 

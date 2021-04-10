@@ -1,7 +1,8 @@
-# Table of Contents
-
-* [web3\_internal.web3\_overrides.request](#web3_internal.web3_overrides.request)
-
+---
+title:web3_internal-web3_overrides-request
+slug:/docs/ocean-py/web3_internal-web3_overrides-request
+section:ocean-py
+---
 <a name="web3_internal.web3_overrides.request"></a>
 # web3\_internal.web3\_overrides.request
 

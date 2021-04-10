@@ -1,8 +1,8 @@
-# Table of Contents
-
-* [ocean.deploy](#ocean.deploy)
-  * [deploy\_fake\_OCEAN](#ocean.deploy.deploy_fake_OCEAN)
-
+---
+title:ocean-deploy
+slug:/docs/ocean-py/ocean-deploy
+section:ocean-py
+---
 <a name="ocean.deploy"></a>
 # ocean.deploy
 

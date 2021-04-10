@@ -1,8 +1,8 @@
-# Table of Contents
-
-* [events.metadata\_updater](#events.metadata_updater)
-  * [MetadataUpdater](#events.metadata_updater.MetadataUpdater)
-
+---
+title:events-metadata_updater
+slug:/docs/aquarius/events-metadata_updater
+section:aquarius
+---
 <a name="events.metadata_updater"></a>
 # events.metadata\_updater
 
