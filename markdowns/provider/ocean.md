@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<a name="ocean"></a>
-# ocean
-=======
 ---
 title: ocean
-slug: /read-the-docs/ocean-py/ocean
-section: ocean.py
-sub_section: ocean_lib.ocean
+slug: /read-the-docs/provider/ocean
+section: provider
+sub_section: ocean
 ---
 Ocean module.
 
@@ -27,9 +23,8 @@ The Ocean class is the entry point into Ocean Protocol.
 
 Initialize Ocean class.
 
-Usage: Make a new Ocean instance
-
-`ocean = Ocean({...})`
+>> # Make a new Ocean instance
+>> ocean = Ocean({...})
 
 This class provides the main top-level functions in ocean protocol:
 * Publish assets metadata and associated services
@@ -38,17 +33,15 @@ This class provides the main top-level functions in ocean protocol:
 * The DID is registered on-chain with a URL of the metadata store
 to retrieve the DDO from
 
-`asset = ocean.assets.create(metadata, publisher_wallet)`
+>> asset = ocean.assets.create(metadata, publisher_wallet)
 
 * Discover/Search assets via the current configured metadata store (Aquarius)
-
-`assets_list = ocean.assets.search('search text')`
+>> assets_list = ocean.assets.search('search text')
 
 An instance of Ocean is parameterized by a `Config` instance.
 
 **Arguments**:
 
-- `config`: `Config` instance
-- `data_provider`: `DataServiceProvider` instance
->>>>>>> gatsby
+- `config`: Config instance
+- `data_provider`: DataServiceProvider instance
 

@@ -1,11 +1,17 @@
+<<<<<<< HEAD:markdowns/ocean-py/web3_internal-utils.md
+<a name="web3_internal.utils"></a>
+# web3\_internal.utils
+
+<a name="web3_internal.utils.generate_multi_value_hash"></a>
+=======
 ---
 title: utils
-slug: /read-the-docs/provider/utils
-section: provider
+slug: /read-the-docs/aquarius/utils
+section: aquarius
 sub_section: web3_internal
 ---
-
-#### generate_multi_value_hash
+>>>>>>> gatsby:markdowns/aquarius/utils.md
+#### generate\_multi\_value\_hash
 
 ```python
 def generate_multi_value_hash(types, values)
@@ -24,7 +30,7 @@ hence the use of `soliditySha3`.
 
 bytes
 
-#### prepare_prefixed_hash
+#### prepare\_prefixed\_hash
 
 ```python
 def prepare_prefixed_hash(msg_hash)
@@ -32,11 +38,13 @@ def prepare_prefixed_hash(msg_hash)
 
 **Arguments**:
 
-- `msg_hash`:
+- `msg_hash`: 
 
 **Returns**:
 
-#### add_ethereum_prefix_and_hash_msg
+
+
+#### add\_ethereum\_prefix\_and\_hash\_msg
 
 ```python
 def add_ethereum_prefix_and_hash_msg(text)
@@ -52,7 +60,7 @@ This method of adding the ethereum prefix seems to be used in web3.personal.sign
 
 hash of prefixed text according to the recommended ethereum prefix
 
-#### to_32byte_hex
+#### to\_32byte\_hex
 
 ```python
 def to_32byte_hex(web3, val)
@@ -60,12 +68,14 @@ def to_32byte_hex(web3, val)
 
 **Arguments**:
 
-- `web3`:
-- `val`:
+- `web3`: 
+- `val`: 
 
 **Returns**:
 
-#### split_signature
+
+
+#### split\_signature
 
 ```python
 def split_signature(web3, signature)
@@ -73,7 +83,10 @@ def split_signature(web3, signature)
 
 **Arguments**:
 
-- `web3`:
+- `web3`: 
 - `signature`: signed message hash, hex str
 
 **Returns**:
+
+
+
