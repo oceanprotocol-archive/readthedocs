@@ -1,0 +1,1 @@
+{    renderer: {      type: markdown,      descriptive_class_title: false,      render_toc: false,   add_method_class_prefix : false,   classdef_code_block : true,   signature_with_def : true,   code_lang : true,render_module_header : false,   insert_header_anchors : false}}

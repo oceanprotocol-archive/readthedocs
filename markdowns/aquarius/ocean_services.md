@@ -4,13 +4,9 @@ slug: /read-the-docs/aquarius/ocean_services
 section: aquarius
 sub_section: ocean
 ---
-<a name="ocean.ocean_services"></a>
-# ocean.ocean\_services
-
 Ocean module.
 
-<a name="ocean.ocean_services.OceanServices"></a>
-## OceanServices Objects
+## OceanServices
 
 ```python
 class OceanServices()
@@ -18,12 +14,11 @@ class OceanServices()
 
 Ocean services class.
 
-<a name="ocean.ocean_services.OceanServices.create_access_service"></a>
 #### create\_access\_service
 
 ```python
  | @staticmethod
- | create_access_service(attributes, provider_uri=None)
+ | def create_access_service(attributes, provider_uri=None)
 ```
 
 Publish an asset with an `Access` service according to the supplied attributes.

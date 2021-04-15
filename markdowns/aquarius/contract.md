@@ -4,30 +4,24 @@ slug: /read-the-docs/aquarius/contract
 section: aquarius
 sub_section: web3_internal.web3_overrides
 ---
-<a name="web3_internal.web3_overrides.contract"></a>
-# web3\_internal.web3\_overrides.contract
-
-<a name="web3_internal.web3_overrides.contract.CustomContractFunction"></a>
-## CustomContractFunction Objects
+## CustomContractFunction
 
 ```python
 class CustomContractFunction()
 ```
 
-<a name="web3_internal.web3_overrides.contract.CustomContractFunction.__init__"></a>
 #### \_\_init\_\_
 
 ```python
- | __init__(contract_function)
+ | def __init__(contract_function)
 ```
 
 Initializes CustomContractFunction.
 
-<a name="web3_internal.web3_overrides.contract.CustomContractFunction.transact"></a>
 #### transact
 
 ```python
- | transact(transaction)
+ | def transact(transaction)
 ```
 
 Customize calling smart contract transaction functions.
@@ -48,11 +42,10 @@ Note: will fallback to `eth_sendTransaction` if `passphrase` is not provided in 
 
 hex str transaction hash
 
-<a name="web3_internal.web3_overrides.contract.transact_with_contract_function"></a>
 #### transact\_with\_contract\_function
 
 ```python
-transact_with_contract_function(address, web3, function_name=None, transaction=None, contract_abi=None, fn_abi=None, *args, **kwargs, *, ,)
+def transact_with_contract_function(address, web3, function_name=None, transaction=None, contract_abi=None, fn_abi=None, *args, **kwargs, *, ,)
 ```
 
 Helper function for interacting with a contract function by sending a

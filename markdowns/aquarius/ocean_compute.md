@@ -4,11 +4,7 @@ slug: /read-the-docs/aquarius/ocean_compute
 section: aquarius
 sub_section: ocean
 ---
-<a name="ocean.ocean_compute"></a>
-# ocean.ocean\_compute
-
-<a name="ocean.ocean_compute.OceanCompute"></a>
-## OceanCompute Objects
+## OceanCompute
 
 ```python
 @enforce_types_shim
@@ -17,21 +13,19 @@ class OceanCompute()
 
 Ocean assets class.
 
-<a name="ocean.ocean_compute.OceanCompute.__init__"></a>
 #### \_\_init\_\_
 
 ```python
- | __init__(ocean_auth, config, data_provider)
+ | def __init__(ocean_auth, config, data_provider)
 ```
 
 Initialises OceanCompute class.
 
-<a name="ocean.ocean_compute.OceanCompute.build_cluster_attributes"></a>
 #### build\_cluster\_attributes
 
 ```python
  | @staticmethod
- | build_cluster_attributes(cluster_type, url)
+ | def build_cluster_attributes(cluster_type, url)
 ```
 
 Builds cluster attributes.
@@ -45,12 +39,11 @@ Builds cluster attributes.
 
 
 
-<a name="ocean.ocean_compute.OceanCompute.build_container_attributes"></a>
 #### build\_container\_attributes
 
 ```python
  | @staticmethod
- | build_container_attributes(image, tag, entrypoint)
+ | def build_container_attributes(image, tag, entrypoint)
 ```
 
 Builds container attributes.
@@ -65,12 +58,11 @@ Builds container attributes.
 
 
 
-<a name="ocean.ocean_compute.OceanCompute.build_server_attributes"></a>
 #### build\_server\_attributes
 
 ```python
  | @staticmethod
- | build_server_attributes(server_id, server_type, cpu, gpu, memory, disk, max_run_time)
+ | def build_server_attributes(server_id, server_type, cpu, gpu, memory, disk, max_run_time)
 ```
 
 Builds server attributes.
@@ -89,12 +81,11 @@ Builds server attributes.
 
 
 
-<a name="ocean.ocean_compute.OceanCompute.build_service_provider_attributes"></a>
 #### build\_service\_provider\_attributes
 
 ```python
  | @staticmethod
- | build_service_provider_attributes(provider_type, description, cluster, containers, servers)
+ | def build_service_provider_attributes(provider_type, description, cluster, containers, servers)
 ```
 
 Return a dict with attributes describing the details of compute resources in this service
@@ -111,12 +102,11 @@ Return a dict with attributes describing the details of compute resources in thi
 
 
 
-<a name="ocean.ocean_compute.OceanCompute.build_service_privacy_attributes"></a>
 #### build\_service\_privacy\_attributes
 
 ```python
  | @staticmethod
- | build_service_privacy_attributes(trusted_algorithms: list = None, allow_raw_algorithm: bool = False, allow_all_published_algorithms: bool = False, allow_network_access: bool = False)
+ | def build_service_privacy_attributes(trusted_algorithms: list = None, allow_raw_algorithm: bool = False, allow_all_published_algorithms: bool = False, allow_network_access: bool = False)
 ```
 
 **Arguments**:
@@ -131,12 +121,11 @@ The list of `trusted_algorithms` will be ignored in this case.
 
 dict
 
-<a name="ocean.ocean_compute.OceanCompute.create_compute_service_attributes"></a>
 #### create\_compute\_service\_attributes
 
 ```python
  | @staticmethod
- | create_compute_service_attributes(timeout: int, creator: str, date_published: str, provider_attributes: dict = None, privacy_attributes: dict = None)
+ | def create_compute_service_attributes(timeout: int, creator: str, date_published: str, provider_attributes: dict = None, privacy_attributes: dict = None)
 ```
 
 Creates compute service attributes.
@@ -153,12 +142,11 @@ Creates compute service attributes.
 
 dict with `main` key and value contain the minimum required attributes of a compute service
 
-<a name="ocean.ocean_compute.OceanCompute.check_output_dict"></a>
 #### check\_output\_dict
 
 ```python
  | @staticmethod
- | check_output_dict(output_def, consumer_address, data_provider, config=None)
+ | def check_output_dict(output_def, consumer_address, data_provider, config=None)
 ```
 
 Validate the `output_def` dict and fills in defaults for missing values.
@@ -174,11 +162,10 @@ Validate the `output_def` dict and fills in defaults for missing values.
 
 dict a valid `output_def` object
 
-<a name="ocean.ocean_compute.OceanCompute.create_compute_service_descriptor"></a>
 #### create\_compute\_service\_descriptor
 
 ```python
- | create_compute_service_descriptor(attributes)
+ | def create_compute_service_descriptor(attributes)
 ```
 
 Return a service descriptor (tuple) for service of type ServiceTypes.CLOUD_COMPUTE
@@ -188,11 +175,10 @@ and having the required attributes and service endpoint.
 
 - `attributes`: dict as created in `create_compute_service_attributes`
 
-<a name="ocean.ocean_compute.OceanCompute.start"></a>
 #### start
 
 ```python
- | start(input_datasets: list, consumer_wallet: Wallet, nonce: Optional[int] = None, algorithm_did: Optional[str] = None, algorithm_meta: Optional[AlgorithmMetadata] = None, algorithm_tx_id: str = None, algorithm_data_token: str = None, output: dict = None, job_id: str = None)
+ | def start(input_datasets: list, consumer_wallet: Wallet, nonce: Optional[int] = None, algorithm_did: Optional[str] = None, algorithm_meta: Optional[AlgorithmMetadata] = None, algorithm_tx_id: str = None, algorithm_data_token: str = None, output: dict = None, job_id: str = None)
 ```
 
 Start a remote compute job on the asset files.
@@ -220,11 +206,10 @@ stopped (if supported by the provider's  backend)
 
 str -- id of compute job being executed
 
-<a name="ocean.ocean_compute.OceanCompute.status"></a>
 #### status
 
 ```python
- | status(did, job_id, wallet)
+ | def status(did, job_id, wallet)
 ```
 
 Gets job status.
@@ -239,11 +224,10 @@ Gets job status.
 
 dict the status for an existing compute job, keys are (ok, status, statusText)
 
-<a name="ocean.ocean_compute.OceanCompute.result"></a>
 #### result
 
 ```python
- | result(did, job_id, wallet)
+ | def result(did, job_id, wallet)
 ```
 
 Gets job result.
@@ -258,11 +242,10 @@ Gets job result.
 
 dict the results/logs urls for an existing compute job, keys are (did, urls, logs)
 
-<a name="ocean.ocean_compute.OceanCompute.stop"></a>
 #### stop
 
 ```python
- | stop(did, job_id, wallet)
+ | def stop(did, job_id, wallet)
 ```
 
 Attempt to stop the running compute job.

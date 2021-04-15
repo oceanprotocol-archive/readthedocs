@@ -2,13 +2,9 @@
 title: exceptions
 slug: /read-the-docs/ocean-py/exceptions
 section: ocean.py
-sub_section: web3_internal
+sub_section: ocean_lib.web3_internal
 ---
-<a name="web3_internal.exceptions"></a>
-# web3\_internal.exceptions
-
-<a name="web3_internal.exceptions.OceanKeeperContractsNotFound"></a>
-## OceanKeeperContractsNotFound Objects
+## OceanKeeperContractsNotFound
 
 ```python
 class OceanKeeperContractsNotFound(Exception)
@@ -16,8 +12,7 @@ class OceanKeeperContractsNotFound(Exception)
 
 Raised when is not possible to find the keeper contracts abi.
 
-<a name="web3_internal.exceptions.OceanDIDNotFound"></a>
-## OceanDIDNotFound Objects
+## OceanDIDNotFound
 
 ```python
 class OceanDIDNotFound(Exception)
@@ -25,8 +20,7 @@ class OceanDIDNotFound(Exception)
 
 Raised when a requested DID or a DID in the chain cannot be found.
 
-<a name="web3_internal.exceptions.OceanInvalidTransaction"></a>
-## OceanInvalidTransaction Objects
+## OceanInvalidTransaction
 
 ```python
 class OceanInvalidTransaction(Exception)

@@ -2,42 +2,35 @@
 title: bpool
 slug: /read-the-docs/ocean-py/bpool
 section: ocean.py
-sub_section: models
+sub_section: ocean_lib.models
 ---
-<a name="models.bpool"></a>
-# models.bpool
-
-<a name="models.bpool.BPool"></a>
-## BPool Objects
+## BPool
 
 ```python
 @enforce_types_shim
 class BPool(BToken)
 ```
 
-<a name="models.bpool.BPool.__init__"></a>
 #### \_\_init\_\_
 
 ```python
- | __init__(*args, **kwargs)
+ | def __init__(*args, **kwargs)
 ```
 
 Initialises BPool object.
 
-<a name="models.bpool.BPool.__str__"></a>
 #### \_\_str\_\_
 
 ```python
- | __str__()
+ | def __str__()
 ```
 
 Formats with attributes as key, value pairs.
 
-<a name="models.bpool.BPool.isFinalized"></a>
 #### isFinalized
 
 ```python
- | isFinalized() -> bool
+ | def isFinalized() -> bool
 ```
 
 Returns true if state is finalized.
@@ -47,11 +40,10 @@ fees of this pool are immutable. In the `finalized` state, `SWAP`,
 `JOIN`, and `EXIT` are public. `CONTROL` capabilities are disabled.
 (https://docs.balancer.finance/smart-contracts/api#access-control)
 
-<a name="models.bpool.BPool.isBound"></a>
 #### isBound
 
 ```python
- | isBound(token_address: str) -> bool
+ | def isBound(token_address: str) -> bool
 ```
 
 Returns True if the token is bound.
@@ -62,79 +54,71 @@ of other tokens. However, disabling `isSwapPublic` will disable any
 interaction with this token in practice (assuming there are no existing
 tokens in the pool, which can always `exitPool`).
 
-<a name="models.bpool.BPool.getNumTokens"></a>
 #### getNumTokens
 
 ```python
- | getNumTokens() -> int
+ | def getNumTokens() -> int
 ```
 
 How many tokens are bound to this pool.
 
-<a name="models.bpool.BPool.getCurrentTokens"></a>
 #### getCurrentTokens
 
 ```python
- | getCurrentTokens() -> typing.List[str]
+ | def getCurrentTokens() -> typing.List[str]
 ```
 
 @return -- list of [token_addr:str]
 
-<a name="models.bpool.BPool.getFinalTokens"></a>
 #### getFinalTokens
 
 ```python
- | getFinalTokens() -> typing.List[str]
+ | def getFinalTokens() -> typing.List[str]
 ```
 
 @return -- list of [token_addr:str]
 
-<a name="models.bpool.BPool.getNormalizedWeight"></a>
 #### getNormalizedWeight
 
 ```python
- | getNormalizedWeight(token_address: str) -> int
+ | def getNormalizedWeight(token_address: str) -> int
 ```
 
 The normalized weight of a token. The combined normalized weights of
 all tokens will sum up to 1. (Note: the actual sum may be 1 plus or
 minus a few wei due to division precision loss)
 
-<a name="models.bpool.BPool.getController"></a>
 #### getController
 
 ```python
- | getController() -> str
+ | def getController() -> str
 ```
 
 Get the "controller" address, which can call `CONTROL` functions like
 `rebind`, `setSwapFee`, or `finalize`.
 
-<a name="models.bpool.BPool.setSwapFee"></a>
 #### setSwapFee
 
 ```python
- | setSwapFee(swapFee_base: int, from_wallet: Wallet)
+ | def setSwapFee(swapFee_base: int, from_wallet: Wallet)
 ```
 
 Caller must be controller. Pool must NOT be finalized.
 
-<a name="models.bpool.BPool.setPublicSwap"></a>
 #### setPublicSwap
 
 ```python
- | setPublicSwap(public: bool, from_wallet: Wallet)
+ | def setPublicSwap(public: bool, from_wallet: Wallet)
 ```
 
 Makes `isPublicSwap` return `_publicSwap`. Requires caller to be
 controller and pool not to be finalized. Finalized pools always have
 public swap.
 
-<a name="models.bpool.BPool.finalize"></a>
 #### finalize
 
 ```python
- | finalize(from_wallet: Wallet)
+ | def finalize(from_wallet: Wallet)
 ```
 
 This makes the pool **finalized**. This is a one-way transition. `bind`,
@@ -142,11 +126,10 @@ This makes the pool **finalized**. This is a one-way transition. `bind`,
 `ERR_IS_FINALIZED` after pool is finalized. This also switches
 `isSwapPublic` to true.
 
-<a name="models.bpool.BPool.bind"></a>
 #### bind
 
 ```python
- | bind(token_address: str, balance_base: int, weight_base: int, from_wallet: Wallet)
+ | def bind(token_address: str, balance_base: int, weight_base: int, from_wallet: Wallet)
 ```
 
 Binds the token with address `token`. Tokens will be pushed/pulled from
@@ -163,31 +146,28 @@ Possible errors:
 -`ERR_MAX_TOKENS` -- Only 8 tokens are allowed per pool
 -unspecified error thrown by token
 
-<a name="models.bpool.BPool.rebind"></a>
 #### rebind
 
 ```python
- | rebind(token_address: str, balance_base: int, weight_base: int, from_wallet: Wallet)
+ | def rebind(token_address: str, balance_base: int, weight_base: int, from_wallet: Wallet)
 ```
 
 Changes the parameters of an already-bound token. Performs the same
 validation on the parameters.
 
-<a name="models.bpool.BPool.unbind"></a>
 #### unbind
 
 ```python
- | unbind(token_address: str, from_wallet: Wallet)
+ | def unbind(token_address: str, from_wallet: Wallet)
 ```
 
 Unbinds a token, clearing all of its parameters. Exit fee is charged
 and the remaining balance is sent to caller.
 
-<a name="models.bpool.BPool.gulp"></a>
 #### gulp
 
 ```python
- | gulp(token_address: str, from_wallet: Wallet)
+ | def gulp(token_address: str, from_wallet: Wallet)
 ```
 
 This syncs the internal `balance` of `token` within a pool with the
@@ -202,11 +182,10 @@ to the pool. So if a shared pool (which is immutable) does not have a
 given token, any airdrops in that token will be locked in the pool
 forever.
 
-<a name="models.bpool.BPool.joinPool"></a>
 #### joinPool
 
 ```python
- | joinPool(poolAmountOut_base: int, maxAmountsIn_base: typing.List[int], from_wallet: Wallet)
+ | def joinPool(poolAmountOut_base: int, maxAmountsIn_base: typing.List[int], from_wallet: Wallet)
 ```
 
 Join the pool, getting `poolAmountOut` pool tokens. This will pull some
@@ -214,22 +193,20 @@ of each of the currently trading tokens in the pool, meaning you must
 have called `approve` for each token for this pool. These values are
 limited by the array of `maxAmountsIn` in the order of the pool tokens.
 
-<a name="models.bpool.BPool.exitPool"></a>
 #### exitPool
 
 ```python
- | exitPool(poolAmountIn_base: int, minAmountsOut_base: typing.List[int], from_wallet: Wallet)
+ | def exitPool(poolAmountIn_base: int, minAmountsOut_base: typing.List[int], from_wallet: Wallet)
 ```
 
 Exit the pool, paying `poolAmountIn` pool tokens and getting some of
 each of the currently trading tokens in return. These values are
 limited by the array of `minAmountsOut` in the order of the pool tokens.
 
-<a name="models.bpool.BPool.swapExactAmountIn"></a>
 #### swapExactAmountIn
 
 ```python
- | swapExactAmountIn(tokenIn_address: str, tokenAmountIn_base: int, tokenOut_address: str, minAmountOut_base: int, maxPrice_base: int, from_wallet: Wallet)
+ | def swapExactAmountIn(tokenIn_address: str, tokenAmountIn_base: int, tokenOut_address: str, minAmountOut_base: int, maxPrice_base: int, from_wallet: Wallet)
 ```
 
 Trades an exact `tokenAmountIn` of `tokenIn` taken from the caller by
@@ -244,116 +221,104 @@ the call. (These values are what are limited by the arguments; you are
 guaranteed `tokenAmountOut >= minAmountOut` and
 `spotPriceAfter <= maxPrice)`.
 
-<a name="models.bpool.BPool.joinswapExternAmountIn"></a>
 #### joinswapExternAmountIn
 
 ```python
- | joinswapExternAmountIn(tokenIn_address: str, tokenAmountIn_base: int, minPoolAmountOut_base: int, from_wallet: Wallet)
+ | def joinswapExternAmountIn(tokenIn_address: str, tokenAmountIn_base: int, minPoolAmountOut_base: int, from_wallet: Wallet)
 ```
 
 Pay `tokenAmountIn` of token `tokenIn` to join the pool, getting
 `poolAmountOut` of the pool shares.
 
-<a name="models.bpool.BPool.joinswapPoolAmountOut"></a>
 #### joinswapPoolAmountOut
 
 ```python
- | joinswapPoolAmountOut(tokenIn_address: str, poolAmountOut_base: int, maxAmountIn_base: int, from_wallet: Wallet)
+ | def joinswapPoolAmountOut(tokenIn_address: str, poolAmountOut_base: int, maxAmountIn_base: int, from_wallet: Wallet)
 ```
 
 Specify `poolAmountOut` pool shares that you want to get, and a token
 `tokenIn` to pay with. This costs `maxAmountIn` tokens (these went
 into the pool).
 
-<a name="models.bpool.BPool.exitswapPoolAmountIn"></a>
 #### exitswapPoolAmountIn
 
 ```python
- | exitswapPoolAmountIn(tokenOut_address: str, poolAmountIn_base: int, minAmountOut_base: int, from_wallet: Wallet)
+ | def exitswapPoolAmountIn(tokenOut_address: str, poolAmountIn_base: int, minAmountOut_base: int, from_wallet: Wallet)
 ```
 
 Pay `poolAmountIn` pool shares into the pool, getting `tokenAmountOut`
 of the given token `tokenOut` out of the pool.
 
-<a name="models.bpool.BPool.exitswapExternAmountOut"></a>
 #### exitswapExternAmountOut
 
 ```python
- | exitswapExternAmountOut(tokenOut_address: str, tokenAmountOut_base: int, maxPoolAmountIn_base: int, from_wallet: Wallet)
+ | def exitswapExternAmountOut(tokenOut_address: str, tokenAmountOut_base: int, maxPoolAmountIn_base: int, from_wallet: Wallet)
 ```
 
 Specify `tokenAmountOut` of token `tokenOut` that you want to get out
 of the pool. This costs `poolAmountIn` pool shares (these went into
 the pool).
 
-<a name="models.bpool.BPool.calcSpotPrice"></a>
 #### calcSpotPrice
 
 ```python
- | calcSpotPrice(tokenBalanceIn_base: int, tokenWeightIn_base: int, tokenBalanceOut_base: int, tokenWeightOut_base: int, swapFee_base: int) -> int
+ | def calcSpotPrice(tokenBalanceIn_base: int, tokenWeightIn_base: int, tokenBalanceOut_base: int, tokenWeightOut_base: int, swapFee_base: int) -> int
 ```
 
 Returns spotPrice_base.
 
-<a name="models.bpool.BPool.calcOutGivenIn"></a>
 #### calcOutGivenIn
 
 ```python
- | calcOutGivenIn(tokenBalanceIn_base: int, tokenWeightIn_base: int, tokenBalanceOut: int, tokenWeightOut_base: int, tokenAmountIn_base: int, swapFee_base: int) -> int
+ | def calcOutGivenIn(tokenBalanceIn_base: int, tokenWeightIn_base: int, tokenBalanceOut: int, tokenWeightOut_base: int, tokenAmountIn_base: int, swapFee_base: int) -> int
 ```
 
 Returns tokenAmountOut_base.
 
-<a name="models.bpool.BPool.calcInGivenOut"></a>
 #### calcInGivenOut
 
 ```python
- | calcInGivenOut(tokenBalanceIn_base: int, tokenWeightIn_base: int, tokenBalanceOut_base: int, tokenWeightOut_base: int, tokenAmountOut_base: int, swapFee_base: int) -> int
+ | def calcInGivenOut(tokenBalanceIn_base: int, tokenWeightIn_base: int, tokenBalanceOut_base: int, tokenWeightOut_base: int, tokenAmountOut_base: int, swapFee_base: int) -> int
 ```
 
 Returns tokenAmountIn_base.
 
-<a name="models.bpool.BPool.calcPoolOutGivenSingleIn"></a>
 #### calcPoolOutGivenSingleIn
 
 ```python
- | calcPoolOutGivenSingleIn(tokenBalanceIn_base: int, tokenWeightIn_base: int, poolSupply_base: int, totalWeight_base: int, tokenAmountIn_base: int, swapFee_base: int) -> int
+ | def calcPoolOutGivenSingleIn(tokenBalanceIn_base: int, tokenWeightIn_base: int, poolSupply_base: int, totalWeight_base: int, tokenAmountIn_base: int, swapFee_base: int) -> int
 ```
 
 Returns poolAmountOut_base.
 
-<a name="models.bpool.BPool.calcSingleInGivenPoolOut"></a>
 #### calcSingleInGivenPoolOut
 
 ```python
- | calcSingleInGivenPoolOut(tokenBalanceIn_base: int, tokenWeightIn_base: int, poolSupply_base: int, totalWeight_base: int, poolAmountOut_base: int, swapFee_base: int) -> int
+ | def calcSingleInGivenPoolOut(tokenBalanceIn_base: int, tokenWeightIn_base: int, poolSupply_base: int, totalWeight_base: int, poolAmountOut_base: int, swapFee_base: int) -> int
 ```
 
 Returns tokenAmountIn_base.
 
-<a name="models.bpool.BPool.calcSingleOutGivenPoolIn"></a>
 #### calcSingleOutGivenPoolIn
 
 ```python
- | calcSingleOutGivenPoolIn(tokenBalanceOut_base: int, tokenWeightOut_base: int, poolSupply_base: int, totalWeight_base: int, poolAmountIn_base: int, swapFee_base: int) -> int
+ | def calcSingleOutGivenPoolIn(tokenBalanceOut_base: int, tokenWeightOut_base: int, poolSupply_base: int, totalWeight_base: int, poolAmountIn_base: int, swapFee_base: int) -> int
 ```
 
 Returns tokenAmountOut_base.
 
-<a name="models.bpool.BPool.calcPoolInGivenSingleOut"></a>
 #### calcPoolInGivenSingleOut
 
 ```python
- | calcPoolInGivenSingleOut(tokenBalanceOut_base: int, tokenWeightOut_base: int, poolSupply_base: int, totalWeight_base: int, tokenAmountOut_base: int, swapFee_base: int) -> int
+ | def calcPoolInGivenSingleOut(tokenBalanceOut_base: int, tokenWeightOut_base: int, poolSupply_base: int, totalWeight_base: int, tokenAmountOut_base: int, swapFee_base: int) -> int
 ```
 
 Returns poolAmountIn_base.
 
-<a name="models.bpool.BPool.get_liquidity_logs"></a>
 #### get\_liquidity\_logs
 
 ```python
- | get_liquidity_logs(event_name, web3, from_block, to_block=None, user_address=None, this_pool_only=True)
+ | def get_liquidity_logs(event_name, web3, from_block, to_block=None, user_address=None, this_pool_only=True)
 ```
 
 **Arguments**:

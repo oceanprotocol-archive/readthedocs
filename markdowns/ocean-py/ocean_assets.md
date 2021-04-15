@@ -2,15 +2,11 @@
 title: ocean_assets
 slug: /read-the-docs/ocean-py/ocean_assets
 section: ocean.py
-sub_section: ocean
+sub_section: ocean_lib.ocean
 ---
-<a name="ocean.ocean_assets"></a>
-# ocean.ocean\_assets
-
 Ocean module.
 
-<a name="ocean.ocean_assets.OceanAssets"></a>
-## OceanAssets Objects
+## OceanAssets
 
 ```python
 @enforce_types_shim
@@ -19,20 +15,18 @@ class OceanAssets()
 
 Ocean assets class.
 
-<a name="ocean.ocean_assets.OceanAssets.__init__"></a>
 #### \_\_init\_\_
 
 ```python
- | __init__(config, data_provider, ddo_registry_address)
+ | def __init__(config, data_provider, ddo_registry_address)
 ```
 
 Initialises OceanAssets object.
 
-<a name="ocean.ocean_assets.OceanAssets.create"></a>
 #### create
 
 ```python
- | create(metadata: dict, publisher_wallet: Wallet, service_descriptors: list = None, owner_address: str = None, data_token_address: str = None, provider_uri=None, dt_name: str = None, dt_symbol: str = None, dt_blob: str = None, dt_cap: float = None) -> (Asset, None)
+ | def create(metadata: dict, publisher_wallet: Wallet, service_descriptors: list = None, owner_address: str = None, data_token_address: str = None, provider_uri=None, dt_name: str = None, dt_symbol: str = None, dt_blob: str = None, dt_cap: float = None) -> (Asset, None)
 ```
 
 Register an asset on-chain.
@@ -62,11 +56,10 @@ to be stored with the ERC20 DataToken contract for any purpose.
 
 DDO instance
 
-<a name="ocean.ocean_assets.OceanAssets.resolve"></a>
 #### resolve
 
 ```python
- | resolve(did: str) -> Asset
+ | def resolve(did: str) -> Asset
 ```
 
 When you pass a did retrieve the ddo associated.
@@ -79,11 +72,10 @@ When you pass a did retrieve the ddo associated.
 
 Asset instance
 
-<a name="ocean.ocean_assets.OceanAssets.search"></a>
 #### search
 
 ```python
- | search(text: str, sort=None, offset=100, page=1, aquarius_url=None) -> list
+ | def search(text: str, sort=None, offset=100, page=1, aquarius_url=None) -> list
 ```
 
 Search an asset in oceanDB using aquarius.
@@ -101,11 +93,10 @@ provided take the default
 
 List of assets that match with the query
 
-<a name="ocean.ocean_assets.OceanAssets.query"></a>
 #### query
 
 ```python
- | query(query: dict, sort=None, offset=100, page=1, aquarius_url=None) -> []
+ | def query(query: dict, sort=None, offset=100, page=1, aquarius_url=None) -> []
 ```
 
 Search an asset in oceanDB using search query.
@@ -124,11 +115,10 @@ provided take the default
 
 List of assets that match with the query.
 
-<a name="ocean.ocean_assets.OceanAssets.order"></a>
 #### order
 
 ```python
- | order(did: str, consumer_address: str, service_index: Optional[int] = None, service_type: str = None) -> OrderRequirements
+ | def order(did: str, consumer_address: str, service_index: Optional[int] = None, service_type: str = None) -> OrderRequirements
 ```
 
 Request a specific service from an asset, returns the service requirements that
@@ -145,12 +135,11 @@ must be met prior to consuming the service.
 
 OrderRequirements instance -- named tuple (amount, data_token_address, receiver_address, nonce),
 
-<a name="ocean.ocean_assets.OceanAssets.pay_for_service"></a>
 #### pay\_for\_service
 
 ```python
  | @staticmethod
- | pay_for_service(amount: float, token_address: str, did: str, service_id: int, fee_receiver: str, from_wallet: Wallet, consumer: str = None) -> str
+ | def pay_for_service(amount: float, token_address: str, did: str, service_id: int, fee_receiver: str, from_wallet: Wallet, consumer: str = None) -> str
 ```
 
 Submits the payment for chosen service in DataTokens.
@@ -169,11 +158,10 @@ Submits the payment for chosen service in DataTokens.
 
 hex str id of transfer transaction
 
-<a name="ocean.ocean_assets.OceanAssets.download"></a>
 #### download
 
 ```python
- | download(did: str, service_index: int, consumer_wallet: Wallet, order_tx_id: str, destination: str, index: Optional[int] = None) -> str
+ | def download(did: str, service_index: int, consumer_wallet: Wallet, order_tx_id: str, destination: str, index: Optional[int] = None) -> str
 ```
 
 Consume the asset data.
@@ -198,11 +186,10 @@ This method downloads and saves the asset datafiles to disk.
 
 str path to saved files
 
-<a name="ocean.ocean_assets.OceanAssets.validate"></a>
 #### validate
 
 ```python
- | validate(metadata: dict) -> bool
+ | def validate(metadata: dict) -> bool
 ```
 
 Validate that the metadata is ok to be stored in aquarius.
@@ -215,11 +202,10 @@ Validate that the metadata is ok to be stored in aquarius.
 
 bool
 
-<a name="ocean.ocean_assets.OceanAssets.owner"></a>
 #### owner
 
 ```python
- | owner(did: str) -> str
+ | def owner(did: str) -> str
 ```
 
 Return the owner of the asset.
@@ -232,11 +218,10 @@ Return the owner of the asset.
 
 the ethereum address of the owner/publisher of given asset did, hex-str
 
-<a name="ocean.ocean_assets.OceanAssets.owner_assets"></a>
 #### owner\_assets
 
 ```python
- | owner_assets(owner_address: str) -> list
+ | def owner_assets(owner_address: str) -> list
 ```
 
 List of Asset objects published by ownerAddress

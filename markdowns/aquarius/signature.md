@@ -4,11 +4,7 @@ slug: /read-the-docs/aquarius/signature
 section: aquarius
 sub_section: web3_internal.web3_overrides
 ---
-<a name="web3_internal.web3_overrides.signature"></a>
-# web3\_internal.web3\_overrides.signature
-
-<a name="web3_internal.web3_overrides.signature.SignatureFix"></a>
-## SignatureFix Objects
+## SignatureFix
 
 ```python
 @enforce_types_shim
@@ -18,11 +14,10 @@ class SignatureFix(Signature)
 Hack the Signature class to allow rebuilding of signature with a
 v value of 27 or 28 instead of 0 or 1
 
-<a name="web3_internal.web3_overrides.signature.SignatureFix.__init__"></a>
 #### \_\_init\_\_
 
 ```python
- | __init__(signature_bytes=None, vrs=None, backend=None) -> None
+ | def __init__(signature_bytes=None, vrs=None, backend=None) -> None
 ```
 
 Initialises SignatureFix object.

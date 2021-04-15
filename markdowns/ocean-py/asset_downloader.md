@@ -2,17 +2,13 @@
 title: asset_downloader
 slug: /read-the-docs/ocean-py/asset_downloader
 section: ocean.py
-sub_section: assets
+sub_section: ocean_lib.assets
 ---
-<a name="assets.asset_downloader"></a>
-# assets.asset\_downloader
-
-<a name="assets.asset_downloader.download_asset_files"></a>
 #### download\_asset\_files
 
 ```python
 @enforce_types_shim
-download_asset_files(service_index: int, asset: Asset, consumer_wallet: Wallet, destination: str, token_address: str, order_tx_id: str, data_provider: Type[DataServiceProvider], index: Optional[int] = None)
+def download_asset_files(service_index: int, asset: Asset, consumer_wallet: Wallet, destination: str, token_address: str, order_tx_id: str, data_provider: Type[DataServiceProvider], index: Optional[int] = None)
 ```
 
 Download asset data files or result files from a compute job.

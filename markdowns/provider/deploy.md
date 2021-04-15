@@ -4,17 +4,13 @@ slug: /read-the-docs/provider/deploy
 section: provider
 sub_section: ocean
 ---
-<a name="ocean.deploy"></a>
-# ocean.deploy
-
 Used for deploying fake OCEAN
 isort:skip_file
 
-<a name="ocean.deploy.deploy_fake_OCEAN"></a>
 #### deploy\_fake\_OCEAN
 
 ```python
-deploy_fake_OCEAN()
+def deploy_fake_OCEAN()
 ```
 
 Does the following:

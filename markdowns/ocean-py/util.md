@@ -2,16 +2,12 @@
 title: util
 slug: /read-the-docs/ocean-py/util
 section: ocean.py
-sub_section: ocean
+sub_section: ocean_lib.ocean
 ---
-<a name="ocean.util"></a>
-# ocean.util
-
-<a name="ocean.util.get_web3_connection_provider"></a>
 #### get\_web3\_connection\_provider
 
 ```python
-get_web3_connection_provider(network_url)
+def get_web3_connection_provider(network_url)
 ```
 
 Return the suitable web3 provider based on the network_url.
@@ -39,22 +35,20 @@ Web3 py has an issue when making some requests to `rinkeby`
 
 provider : HTTPProvider
 
-<a name="ocean.util.to_base"></a>
 #### to\_base
 
 ```python
 @enforce_types_shim
-to_base(amt: float, dec: int) -> int
+def to_base(amt: float, dec: int) -> int
 ```
 
 Returns value in e.g. wei (taking e.g. ETH as input).
 
-<a name="ocean.util.from_base"></a>
 #### from\_base
 
 ```python
 @enforce_types_shim
-from_base(num_base: int, dec: int) -> float
+def from_base(num_base: int, dec: int) -> float
 ```
 
 Returns value in e.g. ETH (taking e.g. wei as input).

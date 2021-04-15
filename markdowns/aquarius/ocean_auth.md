@@ -4,13 +4,9 @@ slug: /read-the-docs/aquarius/ocean_auth
 section: aquarius
 sub_section: ocean
 ---
-<a name="ocean.ocean_auth"></a>
-# ocean.ocean\_auth
-
 Ocean module.
 
-<a name="ocean.ocean_auth.OceanAuth"></a>
-## OceanAuth Objects
+## OceanAuth
 
 ```python
 class OceanAuth()
@@ -29,20 +25,18 @@ ocean module to handle auth tokens.
 
 Token format is "signature-timestamp".
 
-<a name="ocean.ocean_auth.OceanAuth.__init__"></a>
 #### \_\_init\_\_
 
 ```python
- | __init__(storage_path)
+ | def __init__(storage_path)
 ```
 
 Initialises OceanAuth object.
 
-<a name="ocean.ocean_auth.OceanAuth.get"></a>
 #### get
 
 ```python
- | get(wallet)
+ | def get(wallet)
 ```
 
 **Arguments**:
@@ -53,11 +47,10 @@ Initialises OceanAuth object.
 
 hex str the token generated/signed by the users wallet
 
-<a name="ocean.ocean_auth.OceanAuth.check"></a>
 #### check
 
 ```python
- | check(token)
+ | def check(token)
 ```
 
 **Arguments**:
@@ -68,11 +61,10 @@ hex str the token generated/signed by the users wallet
 
 hex str ethereum address
 
-<a name="ocean.ocean_auth.OceanAuth.store"></a>
 #### store
 
 ```python
- | store(wallet)
+ | def store(wallet)
 ```
 
 **Arguments**:
@@ -84,11 +76,10 @@ hex str ethereum address
 
 token that was generated and stored for this users wallet
 
-<a name="ocean.ocean_auth.OceanAuth.restore"></a>
 #### restore
 
 ```python
- | restore(wallet)
+ | def restore(wallet)
 ```
 
 **Arguments**:
@@ -101,11 +92,10 @@ token that was generated and stored for this users wallet
 hex str the token retreived from storage
 None if no token found for this users wallet
 
-<a name="ocean.ocean_auth.OceanAuth.is_stored"></a>
 #### is\_stored
 
 ```python
- | is_stored(wallet)
+ | def is_stored(wallet)
 ```
 
 **Arguments**:

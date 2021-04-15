@@ -2,23 +2,18 @@
 title: asset
 slug: /read-the-docs/ocean-py/asset
 section: ocean.py
-sub_section: assets
+sub_section: ocean_lib.assets
 ---
-<a name="assets.asset"></a>
-# assets.asset
-
-<a name="assets.asset.Asset"></a>
-## Asset Objects
+## Asset
 
 ```python
 class Asset(DDO)
 ```
 
-<a name="assets.asset.Asset.update_compute_privacy"></a>
 #### update\_compute\_privacy
 
 ```python
- | update_compute_privacy(trusted_algorithms: list, allow_all: bool, allow_raw_algorithm: bool)
+ | def update_compute_privacy(trusted_algorithms: list, allow_all: bool, allow_raw_algorithm: bool)
 ```
 
 Set the `trusted_algorithms` on the compute service.

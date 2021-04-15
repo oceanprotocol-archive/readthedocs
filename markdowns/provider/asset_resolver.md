@@ -4,16 +4,12 @@ slug: /read-the-docs/provider/asset_resolver
 section: provider
 sub_section: assets
 ---
-<a name="assets.asset_resolver"></a>
-# assets.asset\_resolver
-
 DID Resolver module.
 
-<a name="assets.asset_resolver.resolve_asset"></a>
 #### resolve\_asset
 
 ```python
-resolve_asset(did, metadata_store_url=None, token_address=None)
+def resolve_asset(did, metadata_store_url=None, token_address=None)
 ```
 
 Resolve a DID to an URL/DDO or later an internal/external DID.

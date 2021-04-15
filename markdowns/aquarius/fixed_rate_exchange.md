@@ -4,11 +4,7 @@ slug: /read-the-docs/aquarius/fixed_rate_exchange
 section: aquarius
 sub_section: models
 ---
-<a name="models.fixed_rate_exchange"></a>
-# models.fixed\_rate\_exchange
-
-<a name="models.fixed_rate_exchange.FixedRateExchange"></a>
-## FixedRateExchange Objects
+## FixedRateExchange
 
 ```python
 @enforce_types_shim

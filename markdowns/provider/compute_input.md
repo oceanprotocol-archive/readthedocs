@@ -4,21 +4,16 @@ slug: /read-the-docs/provider/compute_input
 section: provider
 sub_section: models
 ---
-<a name="models.compute_input"></a>
-# models.compute\_input
-
-<a name="models.compute_input.ComputeInput"></a>
-## ComputeInput Objects
+## ComputeInput
 
 ```python
 class ComputeInput()
 ```
 
-<a name="models.compute_input.ComputeInput.__init__"></a>
 #### \_\_init\_\_
 
 ```python
- | __init__(did, transfer_tx_id, service_id)
+ | def __init__(did, transfer_tx_id, service_id)
 ```
 
 Initialise and validate arguments.

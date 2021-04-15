@@ -4,11 +4,7 @@ slug: /read-the-docs/provider/wallet
 section: provider
 sub_section: web3_internal
 ---
-<a name="web3_internal.wallet"></a>
-# web3\_internal.wallet
-
-<a name="web3_internal.wallet.Wallet"></a>
-## Wallet Objects
+## Wallet
 
 ```python
 @enforce_types_shim
@@ -26,11 +22,10 @@ key and password safe and they are never sent outside. Another advantage of this
 we can interact directly with remote network nodes without having to run a local parity
 node since we only send the raw transaction hash so the user info is safe.
 
-<a name="web3_internal.wallet.Wallet.__init__"></a>
 #### \_\_init\_\_
 
 ```python
- | __init__(web3, private_key: Optional[str] = None, encrypted_key: dict = None, password: Optional[str] = None, address: Optional[str] = None)
+ | def __init__(web3, private_key: Optional[str] = None, encrypted_key: dict = None, password: Optional[str] = None, address: Optional[str] = None)
 ```
 
 Initialises Wallet object.

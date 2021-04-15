@@ -2,23 +2,18 @@
 title: auth_tokens
 slug: /read-the-docs/ocean-py/auth_tokens
 section: ocean.py
-sub_section: data_store
+sub_section: ocean_lib.data_store
 ---
-<a name="data_store.auth_tokens"></a>
-# data\_store.auth\_tokens
-
-<a name="data_store.auth_tokens.AuthTokensStorage"></a>
-## AuthTokensStorage Objects
+## AuthTokensStorage
 
 ```python
 class AuthTokensStorage(StorageBase)
 ```
 
-<a name="data_store.auth_tokens.AuthTokensStorage.write_token"></a>
 #### write\_token
 
 ```python
- | write_token(address, signed_token, created_at)
+ | def write_token(address, signed_token, created_at)
 ```
 
 Store signed token for session management.
@@ -29,11 +24,10 @@ Store signed token for session management.
 - `signed_token`: hex str the signed token
 - `created_at`: date-time of token creation
 
-<a name="data_store.auth_tokens.AuthTokensStorage.update_token"></a>
 #### update\_token
 
 ```python
- | update_token(address, signed_token, created_at)
+ | def update_token(address, signed_token, created_at)
 ```
 
 Update/replace the stored signed token for the given ethereum address.
@@ -44,11 +38,10 @@ Update/replace the stored signed token for the given ethereum address.
 - `signed_token`: hex str the signed token
 - `created_at`: date-time of token creation
 
-<a name="data_store.auth_tokens.AuthTokensStorage.read_token"></a>
 #### read\_token
 
 ```python
- | read_token(address)
+ | def read_token(address)
 ```
 
 Retrieve stored signed token for the given ethereum address

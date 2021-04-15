@@ -2,8 +2,5 @@
 title: btoken
 slug: /read-the-docs/ocean-py/btoken
 section: ocean.py
-sub_section: models
+sub_section: ocean_lib.models
 ---
-<a name="models.btoken"></a>
-# models.btoken
-

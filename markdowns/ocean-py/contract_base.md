@@ -2,15 +2,11 @@
 title: contract_base
 slug: /read-the-docs/ocean-py/contract_base
 section: ocean.py
-sub_section: web3_internal
+sub_section: ocean_lib.web3_internal
 ---
-<a name="web3_internal.contract_base"></a>
-# web3\_internal.contract\_base
-
 All contracts inherit from this base class.
 
-<a name="web3_internal.contract_base.ContractBase"></a>
-## ContractBase Objects
+## ContractBase
 
 ```python
 @enforce_types_shim
@@ -19,42 +15,38 @@ class ContractBase(object)
 
 Base class for all contract objects.
 
-<a name="web3_internal.contract_base.ContractBase.__init__"></a>
 #### \_\_init\_\_
 
 ```python
- | __init__(address: Optional[str], abi_path=None)
+ | def __init__(address: Optional[str], abi_path=None)
 ```
 
 Initialises Contract Base object.
 
 The contract name attribute and abi_path are required.
 
-<a name="web3_internal.contract_base.ContractBase.__str__"></a>
 #### \_\_str\_\_
 
 ```python
- | __str__()
+ | def __str__()
 ```
 
 Returns contract name @ address.
 
-<a name="web3_internal.contract_base.ContractBase.address"></a>
 #### address
 
 ```python
  | @property
- | address() -> str
+ | def address() -> str
 ```
 
 Return the ethereum address of the solidity contract deployed in current network.
 
-<a name="web3_internal.contract_base.ContractBase.events"></a>
 #### events
 
 ```python
  | @property
- | events()
+ | def events()
 ```
 
 Expose the underlying contract's events.
@@ -63,12 +55,11 @@ Expose the underlying contract's events.
 
 
 
-<a name="web3_internal.contract_base.ContractBase.to_checksum_address"></a>
 #### to\_checksum\_address
 
 ```python
  | @staticmethod
- | to_checksum_address(address: str)
+ | def to_checksum_address(address: str)
 ```
 
 Validate the address provided.
@@ -81,12 +72,11 @@ Validate the address provided.
 
 address, hex str
 
-<a name="web3_internal.contract_base.ContractBase.get_tx_receipt"></a>
 #### get\_tx\_receipt
 
 ```python
  | @staticmethod
- | get_tx_receipt(tx_hash: str, timeout=20)
+ | def get_tx_receipt(tx_hash: str, timeout=20)
 ```
 
 Get the receipt of a tx.
@@ -100,11 +90,10 @@ Get the receipt of a tx.
 
 Tx receipt
 
-<a name="web3_internal.contract_base.ContractBase.get_event_signature"></a>
 #### get\_event\_signature
 
 ```python
- | get_event_signature(event_name)
+ | def get_event_signature(event_name)
 ```
 
 Return signature of event definition to use in the call to eth_getLogs.
@@ -120,11 +109,10 @@ The signature reflects the event name and argument types.
 
 
 
-<a name="web3_internal.contract_base.ContractBase.subscribe_to_event"></a>
 #### subscribe\_to\_event
 
 ```python
- | subscribe_to_event(event_name: str, timeout, event_filter, callback=None, timeout_callback=None, args=None, wait=False, from_block="latest", to_block="latest")
+ | def subscribe_to_event(event_name: str, timeout, event_filter, callback=None, timeout_callback=None, args=None, wait=False, from_block="latest", to_block="latest")
 ```
 
 Create a listener for the event `event_name` on this contract.
@@ -145,11 +133,10 @@ Create a listener for the event `event_name` on this contract.
 
 event if blocking is True and an event is received, otherwise returns None
 
-<a name="web3_internal.contract_base.ContractBase.send_transaction"></a>
 #### send\_transaction
 
 ```python
- | send_transaction(fn_name: str, fn_args, from_wallet: Wallet, transact: dict = None) -> str
+ | def send_transaction(fn_name: str, fn_args, from_wallet: Wallet, transact: dict = None) -> str
 ```
 
 Calls a smart contract function.
@@ -167,12 +154,11 @@ Uses either `personal_sendTransaction` (if passphrase is available) or `ether_se
 
 
 
-<a name="web3_internal.contract_base.ContractBase.deploy"></a>
 #### deploy
 
 ```python
  | @classmethod
- | deploy(cls, web3, deployer_wallet: Wallet, abi_path: str = "", *args)
+ | def deploy(cls, web3, deployer_wallet: Wallet, abi_path: str = "", *args)
 ```
 
 Deploy the DataTokenTemplate and DTFactory contracts to the current network.
@@ -187,11 +173,10 @@ Deploy the DataTokenTemplate and DTFactory contracts to the current network.
 
 smartcontract address of this contract
 
-<a name="web3_internal.contract_base.ContractBase.getLogs"></a>
 #### getLogs
 
 ```python
- | getLogs(event, web3, argument_filters: Optional[Dict[str, Any]] = None, fromBlock: Optional[BlockIdentifier] = None, toBlock: Optional[BlockIdentifier] = None, blockHash: Optional[HexBytes] = None)
+ | def getLogs(event, web3, argument_filters: Optional[Dict[str, Any]] = None, fromBlock: Optional[BlockIdentifier] = None, toBlock: Optional[BlockIdentifier] = None, blockHash: Optional[HexBytes] = None)
 ```
 
 Get events for this contract instance using eth_getLogs API.

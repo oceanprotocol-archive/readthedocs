@@ -4,13 +4,9 @@ slug: /read-the-docs/provider/account
 section: provider
 sub_section: web3_internal
 ---
-<a name="web3_internal.account"></a>
-# web3\_internal.account
-
 Accounts module.
 
-<a name="web3_internal.account.Account"></a>
-## Account Objects
+## Account
 
 ```python
 class Account()
@@ -18,11 +14,10 @@ class Account()
 
 Class representing an account.
 
-<a name="web3_internal.account.Account.__init__"></a>
 #### \_\_init\_\_
 
 ```python
- | __init__(address=None, password=None, key_file=None, encrypted_key=None, private_key=None)
+ | def __init__(address=None, password=None, key_file=None, encrypted_key=None, private_key=None)
 ```
 
 Hold account address, password and either keyfile path, encrypted key or private key.

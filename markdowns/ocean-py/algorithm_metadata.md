@@ -2,23 +2,18 @@
 title: algorithm_metadata
 slug: /read-the-docs/ocean-py/algorithm_metadata
 section: ocean.py
-sub_section: models
+sub_section: ocean_lib.models
 ---
-<a name="models.algorithm_metadata"></a>
-# models.algorithm\_metadata
-
-<a name="models.algorithm_metadata.AlgorithmMetadata"></a>
-## AlgorithmMetadata Objects
+## AlgorithmMetadata
 
 ```python
 class AlgorithmMetadata()
 ```
 
-<a name="models.algorithm_metadata.AlgorithmMetadata.__init__"></a>
 #### \_\_init\_\_
 
 ```python
- | __init__(metadata_dict)
+ | def __init__(metadata_dict)
 ```
 
 Initialises AlgorithmMetadata object.

@@ -2,11 +2,16 @@
 Usage: python generate_markdowns.py
 '''
 import sys
-import os
+import argparse
 from pkgutil import iter_modules
 from pathlib import Path
 from setuptools import find_packages
 from tqdm import tqdm
+import subprocess
+
+parser = argparse.ArgumentParser(description='Process some integers.')
+parser.add_argument('-l','--list', nargs='+', help='<Required> Set flag', required=True)
+parser.add_argument('-P','--print-command', default=False, action=argparse.BooleanOptionalAction)
 
 def prepend_gatsby_header(file_path, title, slug, section, sub_section):
     '''
@@ -57,7 +62,7 @@ def find_modules2(path):
                     modules.append({'package':pkg,'module':info.name})
     return modules
 
-def generate_markdowns(section_name, path, output_dir):
+def generate_markdowns(section_name: str, path: str, output_dir: str, output_commad: bool, generate_markdown: bool):
     '''
     Iterates over each repository to build the .md files.
     '''
@@ -74,7 +79,11 @@ def generate_markdowns(section_name, path, output_dir):
             if not (i['package'] + '.'+ i['module']).find(skip_word) != -1:
                 markdowns_to_generate.append(i)
 
+    config = ''
+    f = open("config.txt", "r")
+    config = f.read()
 
+    # markdowns_to_generate = [markdowns_to_generate[0]]
     for i in tqdm(range(len(markdowns_to_generate))):
 
         title = markdowns_to_generate[i]['module'].replace('.', '-')
@@ -86,15 +95,28 @@ def generate_markdowns(section_name, path, output_dir):
         sub_section_name =  markdowns_to_generate[i]['package']
         prepend_gatsby_header(file_path, title, slug, section_name, sub_section_name)
 
+
         module_path = markdowns_to_generate[i]['package'] + '.' + markdowns_to_generate[i]['module']
-        command = 'pydoc-markdown -I {0} -m {1} >> {2}' \
-                    .format(path, module_path, file_path)
+        command = '''pydoc-markdown -I {0} -m {1} '{2}' >> {3}''' \
+                    .format(path, module_path, config, file_path)
+        if output_commad:
+            print(command)
 
-        os.system(command)
+        if generate_markdown:
+            with open(file_path, 'a') as fp:
+                subprocess.call(['pydoc-markdown', '-I', path, '-m', module_path, config], stdout=fp)
 
-markdown_repos = [{'path':'aquarius/ocean_lib', 'output_dir': 'aquarius', 'section': 'aquarius'},
-            {'path':'ocean.py/ocean_lib', 'output_dir': 'ocean-py', 'section': 'ocean.py'},
-            {'path':'provider/ocean_lib', 'output_dir': 'provider', 'section': 'provider'}]
+markdown_repos = {'aquarius': {'path':'aquarius/ocean_lib', 'output_dir': 'aquarius', 'section': 'aquarius'},
+            'ocean.py': {'path':'ocean.py', 'output_dir': 'ocean-py', 'section': 'ocean.py'},
+        'provider': {'path':'provider/ocean_lib', 'output_dir': 'provider', 'section': 'provider'}}
 
-for markdown_repo in markdown_repos:
-    generate_markdowns(markdown_repo['section'],markdown_repo['path'], markdown_repo['output_dir'])
+if __name__ == '__main__':
+    args = parser.parse_args()
+
+    markdowns_to_be_generated = list(set(args.list) & set(markdown_repos.keys()))
+    print("Starting to generate markdowns for {0}".format(markdowns_to_be_generated))
+
+    for repository_info in markdowns_to_be_generated:
+        markdown_repo = markdown_repos[repository_info]
+        generate_markdowns(markdown_repo['section'], markdown_repo['path'],
+                            markdown_repo['output_dir'], args.print_command, True)

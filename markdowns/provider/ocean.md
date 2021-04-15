@@ -4,13 +4,9 @@ slug: /read-the-docs/provider/ocean
 section: provider
 sub_section: ocean
 ---
-<a name="ocean.ocean"></a>
-# ocean.ocean
-
 Ocean module.
 
-<a name="ocean.ocean.Ocean"></a>
-## Ocean Objects
+## Ocean
 
 ```python
 @enforce_types_shim
@@ -19,11 +15,10 @@ class Ocean()
 
 The Ocean class is the entry point into Ocean Protocol.
 
-<a name="ocean.ocean.Ocean.__init__"></a>
 #### \_\_init\_\_
 
 ```python
- | __init__(config=None, data_provider=None)
+ | def __init__(config=None, data_provider=None)
 ```
 
 Initialize Ocean class.

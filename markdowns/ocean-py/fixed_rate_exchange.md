@@ -2,13 +2,9 @@
 title: fixed_rate_exchange
 slug: /read-the-docs/ocean-py/fixed_rate_exchange
 section: ocean.py
-sub_section: models
+sub_section: ocean_lib.models
 ---
-<a name="models.fixed_rate_exchange"></a>
-# models.fixed\_rate\_exchange
-
-<a name="models.fixed_rate_exchange.FixedRateExchange"></a>
-## FixedRateExchange Objects
+## FixedRateExchange
 
 ```python
 @enforce_types_shim

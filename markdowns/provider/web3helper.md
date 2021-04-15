@@ -4,13 +4,9 @@ slug: /read-the-docs/provider/web3helper
 section: provider
 sub_section: web3_internal
 ---
-<a name="web3_internal.web3helper"></a>
-# web3\_internal.web3helper
-
 Web3Helper module to provide convenient functions.
 
-<a name="web3_internal.web3helper.Web3Helper"></a>
-## Web3Helper Objects
+## Web3Helper
 
 ```python
 class Web3Helper(object)
@@ -18,12 +14,11 @@ class Web3Helper(object)
 
 This class provides convenient web3 functions.
 
-<a name="web3_internal.web3helper.Web3Helper.get_network_name"></a>
 #### get\_network\_name
 
 ```python
  | @staticmethod
- | get_network_name(network_id=None)
+ | def get_network_name(network_id=None)
 ```
 
 Return the network name based on the current ethereum network id.
@@ -38,12 +33,11 @@ Return `ganache` for every network id that is not mapped.
 
 Network name, str
 
-<a name="web3_internal.web3helper.Web3Helper.get_network_id"></a>
 #### get\_network\_id
 
 ```python
  | @staticmethod
- | get_network_id()
+ | def get_network_id()
 ```
 
 Return the ethereum network id calling the `web3.version.network` method.
@@ -52,12 +46,11 @@ Return the ethereum network id calling the `web3.version.network` method.
 
 Network id, int
 
-<a name="web3_internal.web3helper.Web3Helper.sign_hash"></a>
 #### sign\_hash
 
 ```python
  | @staticmethod
- | sign_hash(msg_hash, wallet: Wallet)
+ | def sign_hash(msg_hash, wallet: Wallet)
 ```
 
 This method use `personal_sign`for signing a message. This will always prepend the
@@ -72,12 +65,11 @@ This method use `personal_sign`for signing a message. This will always prepend t
 
 signature
 
-<a name="web3_internal.web3helper.Web3Helper.ec_recover"></a>
 #### ec\_recover
 
 ```python
  | @staticmethod
- | ec_recover(message, signed_message)
+ | def ec_recover(message, signed_message)
 ```
 
 This method does not prepend the message with the prefix `\x19Ethereum Signed Message:\n32`.
@@ -93,12 +85,11 @@ produced for an ethereum-prefixed message.
 
 
 
-<a name="web3_internal.web3helper.Web3Helper.get_ether_balance"></a>
 #### get\_ether\_balance
 
 ```python
  | @staticmethod
- | get_ether_balance(address)
+ | def get_ether_balance(address)
 ```
 
 Get balance of an ethereum address.

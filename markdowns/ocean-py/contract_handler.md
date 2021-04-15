@@ -2,13 +2,9 @@
 title: contract_handler
 slug: /read-the-docs/ocean-py/contract_handler
 section: ocean.py
-sub_section: web3_internal
+sub_section: ocean_lib.web3_internal
 ---
-<a name="web3_internal.contract_handler"></a>
-# web3\_internal.contract\_handler
-
-<a name="web3_internal.contract_handler.ContractHandler"></a>
-## ContractHandler Objects
+## ContractHandler
 
 ```python
 class ContractHandler(object)
@@ -31,12 +27,11 @@ Manages loading contracts and also keeps a cache of loaded contracts.
   # 1. (contract_name)                   : (contract, concise_contract)
   # 2. (contract_name, contract_address) : (contract, concise_contract)
 
-<a name="web3_internal.contract_handler.ContractHandler.get"></a>
 #### get
 
 ```python
  | @staticmethod
- | get(name, address=None)
+ | def get(name, address=None)
 ```
 
 Return the Contract instance for a given name.
@@ -50,12 +45,11 @@ Return the Contract instance for a given name.
 
 Contract instance
 
-<a name="web3_internal.contract_handler.ContractHandler.get_concise_contract"></a>
 #### get\_concise\_contract
 
 ```python
  | @staticmethod
- | get_concise_contract(name, address=None)
+ | def get_concise_contract(name, address=None)
 ```
 
 Return the Concise Contract instance for a given name.
@@ -69,12 +63,11 @@ Return the Concise Contract instance for a given name.
 
 Concise Contract instance
 
-<a name="web3_internal.contract_handler.ContractHandler.set"></a>
 #### set
 
 ```python
  | @staticmethod
- | set(name, contract)
+ | def set(name, contract)
 ```
 
 Set a Contract instance for a contract name.
@@ -84,12 +77,11 @@ Set a Contract instance for a contract name.
 - `name`: Contract name, str
 - `contract`: Contract instance
 
-<a name="web3_internal.contract_handler.ContractHandler.has"></a>
 #### has
 
 ```python
  | @staticmethod
- | has(name, address=None)
+ | def has(name, address=None)
 ```
 
 Check if a contract is the ContractHandler contracts.

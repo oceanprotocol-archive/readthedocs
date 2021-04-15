@@ -4,11 +4,7 @@ slug: /read-the-docs/provider/ocean_pool
 section: provider
 sub_section: ocean
 ---
-<a name="ocean.ocean_pool"></a>
-# ocean.ocean\_pool
-
-<a name="ocean.ocean_pool.OceanPool"></a>
-## OceanPool Objects
+## OceanPool
 
 ```python
 @enforce_types_shim
@@ -27,20 +23,18 @@ has only two tokens and one of the tokens is always the OCEAN token.
 Note that the OCEAN token address is supplied to the init method. The Ocean instance
 reads the OCEAN token address from the `address_file` config option (see Config.py).
 
-<a name="ocean.ocean_pool.OceanPool.__init__"></a>
 #### \_\_init\_\_
 
 ```python
- | __init__(ocean_token_address: str, bfactory_address: str)
+ | def __init__(ocean_token_address: str, bfactory_address: str)
 ```
 
 Initialises Ocean Pool.
 
-<a name="ocean.ocean_pool.OceanPool.create"></a>
 #### create
 
 ```python
- | create(data_token_address: str, data_token_amount: float, OCEAN_amount: float, from_wallet: Wallet, data_token_weight: float = balancer_constants.INIT_WEIGHT_DT, swap_fee: float = balancer_constants.DEFAULT_SWAP_FEE) -> BPool
+ | def create(data_token_address: str, data_token_amount: float, OCEAN_amount: float, from_wallet: Wallet, data_token_weight: float = balancer_constants.INIT_WEIGHT_DT, swap_fee: float = balancer_constants.DEFAULT_SWAP_FEE) -> BPool
 ```
 
 Create a new pool with bound datatoken and OCEAN token then finalize it.
@@ -62,20 +56,18 @@ Balances of both data tokens and OCEAN tokens must be sufficient in the
 
 BPool instance
 
-<a name="ocean.ocean_pool.OceanPool.get_token_address"></a>
 #### get\_token\_address
 
 ```python
- | get_token_address(pool_address: str, pool: BPool = None, validate=True) -> str
+ | def get_token_address(pool_address: str, pool: BPool = None, validate=True) -> str
 ```
 
 Returns the address of this pool's datatoken.
 
-<a name="ocean.ocean_pool.OceanPool.add_data_token_liquidity"></a>
 #### add\_data\_token\_liquidity
 
 ```python
- | add_data_token_liquidity(pool_address: str, amount_base: int, from_wallet: Wallet) -> str
+ | def add_data_token_liquidity(pool_address: str, amount_base: int, from_wallet: Wallet) -> str
 ```
 
 Add `amount_base` number of data tokens to the pool `pool_address`. In return the wallet owner
@@ -94,11 +86,10 @@ the datatoken. To add liquidity of the OCEAN token, use the `add_OCEAN_liquidity
 
 str transaction id/hash
 
-<a name="ocean.ocean_pool.OceanPool.add_OCEAN_liquidity"></a>
 #### add\_OCEAN\_liquidity
 
 ```python
- | add_OCEAN_liquidity(pool_address: str, amount_base: int, from_wallet: Wallet) -> str
+ | def add_OCEAN_liquidity(pool_address: str, amount_base: int, from_wallet: Wallet) -> str
 ```
 
 Add `amount_base` number of OCEAN tokens to the pool `pool_address`. In return the wallet owner
@@ -114,11 +105,10 @@ will get a number of pool shares/tokens
 
 str transaction id/hash
 
-<a name="ocean.ocean_pool.OceanPool.remove_data_token_liquidity"></a>
 #### remove\_data\_token\_liquidity
 
 ```python
- | remove_data_token_liquidity(pool_address: str, amount_base: int, max_pool_shares_base: int, from_wallet: Wallet) -> str
+ | def remove_data_token_liquidity(pool_address: str, amount_base: int, max_pool_shares_base: int, from_wallet: Wallet) -> str
 ```
 
 Remove `amount_base` number of data tokens from the pool `pool_address`. The wallet owner
@@ -136,11 +126,10 @@ will get that amount of data tokens. At the same time a number of pool shares/to
 
 str transaction id/hash
 
-<a name="ocean.ocean_pool.OceanPool.remove_OCEAN_liquidity"></a>
 #### remove\_OCEAN\_liquidity
 
 ```python
- | remove_OCEAN_liquidity(pool_address: str, amount_base: int, max_pool_shares_base: int, from_wallet: Wallet) -> str
+ | def remove_OCEAN_liquidity(pool_address: str, amount_base: int, max_pool_shares_base: int, from_wallet: Wallet) -> str
 ```
 
 Remove `amount_base` number of OCEAN tokens from the pool `pool_address`. The wallet owner
@@ -158,11 +147,10 @@ will get that amount of OCEAN tokens. At the same time a number of pool shares/t
 
 str transaction id/hash
 
-<a name="ocean.ocean_pool.OceanPool.buy_data_tokens"></a>
 #### buy\_data\_tokens
 
 ```python
- | buy_data_tokens(pool_address: str, amount: float, max_OCEAN_amount: float, from_wallet: Wallet) -> str
+ | def buy_data_tokens(pool_address: str, amount: float, max_OCEAN_amount: float, from_wallet: Wallet) -> str
 ```
 
 Buy data tokens from this pool, paying `max_OCEAN_amount_base` of OCEAN tokens.
@@ -183,11 +171,10 @@ The transaction fails if total spent exceeds `max_OCEAN_amount_base`.
 
 str transaction id/hash
 
-<a name="ocean.ocean_pool.OceanPool.sell_data_tokens"></a>
 #### sell\_data\_tokens
 
 ```python
- | sell_data_tokens(pool_address: str, amount_base: int, min_OCEAN_amount_base: int, from_wallet: Wallet) -> str
+ | def sell_data_tokens(pool_address: str, amount_base: int, min_OCEAN_amount_base: int, from_wallet: Wallet) -> str
 ```
 
 Sell data tokens into this pool, receive `min_OCEAN_amount_base` of OCEAN tokens.
@@ -208,11 +195,10 @@ The transaction fails if total income does not reach `min_OCEAN_amount_base`
 
 str transaction id/hash
 
-<a name="ocean.ocean_pool.OceanPool.get_token_price"></a>
 #### get\_token\_price
 
 ```python
- | get_token_price(pool_address: str) -> float
+ | def get_token_price(pool_address: str) -> float
 ```
 
 **Arguments**:
@@ -223,11 +209,10 @@ str transaction id/hash
 
 int price of data token in terms of OCEAN tokens
 
-<a name="ocean.ocean_pool.OceanPool.add_liquidity_finalized"></a>
 #### add\_liquidity\_finalized
 
 ```python
- | add_liquidity_finalized(pool_address: str, bpt_amount_base: int, max_data_token_amount_base: int, max_OCEAN_amount_base: int, from_wallet: Wallet) -> str
+ | def add_liquidity_finalized(pool_address: str, bpt_amount_base: int, max_data_token_amount_base: int, max_OCEAN_amount_base: int, from_wallet: Wallet) -> str
 ```
 
 Add liquidity to a pool that's been finalized.

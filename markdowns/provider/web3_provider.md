@@ -4,11 +4,7 @@ slug: /read-the-docs/provider/web3_provider
 section: provider
 sub_section: web3_internal
 ---
-<a name="web3_internal.web3_provider"></a>
-# web3\_internal.web3\_provider
-
-<a name="web3_internal.web3_provider.Web3Provider"></a>
-## Web3Provider Objects
+## Web3Provider
 
 ```python
 class Web3Provider(object)
@@ -16,12 +12,11 @@ class Web3Provider(object)
 
 Provides the Web3 instance.
 
-<a name="web3_internal.web3_provider.Web3Provider.init_web3"></a>
 #### init\_web3
 
 ```python
  | @staticmethod
- | init_web3(network_url=None, provider=None)
+ | def init_web3(network_url=None, provider=None)
 ```
 
 One of `network_url` or `provider` is required.
@@ -37,12 +32,11 @@ If `provider` is given, `network_url` will be ignored.
 
 
 
-<a name="web3_internal.web3_provider.Web3Provider.get_web3"></a>
 #### get\_web3
 
 ```python
  | @staticmethod
- | get_web3(network_url=None, provider=None)
+ | def get_web3(network_url=None, provider=None)
 ```
 
 Return the web3 instance to interact with the ethereum client.
