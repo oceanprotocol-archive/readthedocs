@@ -43,6 +43,7 @@ provider : HTTPProvider
 #### to\_base
 
 ```python
+@enforce_types_shim
 to_base(amt: float, dec: int) -> int
 ```
 
@@ -52,6 +53,7 @@ Returns value in e.g. wei (taking e.g. ETH as input).
 #### from\_base
 
 ```python
+@enforce_types_shim
 from_base(num_base: int, dec: int) -> float
 ```
 

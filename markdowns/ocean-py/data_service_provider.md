@@ -13,6 +13,7 @@ Provider module.
 ## DataServiceProvider Objects
 
 ```python
+@enforce_types_shim
 class DataServiceProvider()
 ```
 

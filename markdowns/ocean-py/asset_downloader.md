@@ -11,7 +11,8 @@ sub_section: assets
 #### download\_asset\_files
 
 ```python
-download_asset_files(service_index: int, asset: Asset, consumer_wallet: Wallet, destination: str, token_address: str, order_tx_id: str, data_provider: DataServiceProvider, index: [int, None] = None)
+@enforce_types_shim
+download_asset_files(service_index: int, asset: Asset, consumer_wallet: Wallet, destination: str, token_address: str, order_tx_id: str, data_provider: Type[DataServiceProvider], index: Optional[int] = None)
 ```
 
 Download asset data files or result files from a compute job.
@@ -24,7 +25,7 @@ Download asset data files or result files from a compute job.
 - `destination`: Path, str
 - `token_address`: hex str the address of the DataToken smart contract
 - `order_tx_id`: hex str the transaction hash of the startOrder tx
-- `data_provider`: DataServiceProvider instance
+- `data_provider`: DataServiceProvider class object
 - `index`: Index of the document that is going to be downloaded, int
 
 **Returns**:

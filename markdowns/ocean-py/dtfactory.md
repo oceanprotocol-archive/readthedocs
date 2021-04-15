@@ -11,6 +11,7 @@ sub_section: models
 ## DTFactory Objects
 
 ```python
+@enforce_types_shim
 class DTFactory(ContractBase)
 ```
 

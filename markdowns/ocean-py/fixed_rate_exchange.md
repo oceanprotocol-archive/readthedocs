@@ -11,6 +11,7 @@ sub_section: models
 ## FixedRateExchange Objects
 
 ```python
+@enforce_types_shim
 class FixedRateExchange(ContractBase)
 ```
 

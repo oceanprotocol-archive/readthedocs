@@ -8,6 +8,7 @@ sub_section: ocean
 # ocean.deploy
 
 Used for deploying fake OCEAN
+isort:skip_file
 
 <a name="ocean.deploy.deploy_fake_OCEAN"></a>
 #### deploy\_fake\_OCEAN

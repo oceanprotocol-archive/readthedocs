@@ -11,6 +11,7 @@ sub_section: models
 ## BPool Objects
 
 ```python
+@enforce_types_shim
 class BPool(BToken)
 ```
 

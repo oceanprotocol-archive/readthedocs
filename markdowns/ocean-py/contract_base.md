@@ -13,6 +13,7 @@ All contracts inherit from this base class.
 ## ContractBase Objects
 
 ```python
+@enforce_types_shim
 class ContractBase(object)
 ```
 
@@ -22,7 +23,7 @@ Base class for all contract objects.
 #### \_\_init\_\_
 
 ```python
- | __init__(address: [str, None], abi_path=None)
+ | __init__(address: Optional[str], abi_path=None)
 ```
 
 Initialises Contract Base object.

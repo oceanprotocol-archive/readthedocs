@@ -13,6 +13,7 @@ Ocean module.
 ## Ocean Objects
 
 ```python
+@enforce_types_shim
 class Ocean()
 ```
 

@@ -4,6 +4,7 @@ Usage: python generate_markdowns.py
 import sys
 import os
 from pkgutil import iter_modules
+from pathlib import Path
 from setuptools import find_packages
 from tqdm import tqdm
 
@@ -78,6 +79,8 @@ def generate_markdowns(section_name, path, output_dir):
 
         title = markdowns_to_generate[i]['module'].replace('.', '-')
         file_name = title + '.md'
+        Path("markdowns/{0}/".format(output_dir)).mkdir(parents=True, exist_ok=True)
+
         file_path = 'markdowns/{0}/{1}'.format(output_dir, file_name)
         slug = '/read-the-docs/' + output_dir + '/' + title
         sub_section_name =  markdowns_to_generate[i]['package']
@@ -89,9 +92,9 @@ def generate_markdowns(section_name, path, output_dir):
 
         os.system(command)
 
-markdown_repos = [{'path':'aquarius/aquarius', 'output_dir': 'aquarius', 'section': 'aquarius'},
+markdown_repos = [{'path':'aquarius/ocean_lib', 'output_dir': 'aquarius', 'section': 'aquarius'},
             {'path':'ocean.py/ocean_lib', 'output_dir': 'ocean-py', 'section': 'ocean.py'},
-            {'path':'provider/ocean_provider', 'output_dir': 'provider', 'section': 'provider'}]
+            {'path':'provider/ocean_lib', 'output_dir': 'provider', 'section': 'provider'}]
 
 for markdown_repo in markdown_repos:
     generate_markdowns(markdown_repo['section'],markdown_repo['path'], markdown_repo['output_dir'])

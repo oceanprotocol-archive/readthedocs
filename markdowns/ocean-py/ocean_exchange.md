@@ -11,6 +11,7 @@ sub_section: ocean
 ## OceanExchange Objects
 
 ```python
+@enforce_types_shim
 class OceanExchange()
 ```
 

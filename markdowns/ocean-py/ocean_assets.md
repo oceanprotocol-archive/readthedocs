@@ -13,6 +13,7 @@ Ocean module.
 ## OceanAssets Objects
 
 ```python
+@enforce_types_shim
 class OceanAssets()
 ```
 
@@ -127,7 +128,7 @@ List of assets that match with the query.
 #### order
 
 ```python
- | order(did: str, consumer_address: str, service_index: [int, None] = None, service_type: str = None) -> OrderRequirements
+ | order(did: str, consumer_address: str, service_index: Optional[int] = None, service_type: str = None) -> OrderRequirements
 ```
 
 Request a specific service from an asset, returns the service requirements that
@@ -172,7 +173,7 @@ hex str id of transfer transaction
 #### download
 
 ```python
- | download(did: str, service_index: int, consumer_wallet: Wallet, order_tx_id: str, destination: str, index: [int, None] = None) -> str
+ | download(did: str, service_index: int, consumer_wallet: Wallet, order_tx_id: str, destination: str, index: Optional[int] = None) -> str
 ```
 
 Consume the asset data.

@@ -11,6 +11,7 @@ sub_section: ocean
 ## OceanPool Objects
 
 ```python
+@enforce_types_shim
 class OceanPool()
 ```
 

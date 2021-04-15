@@ -11,6 +11,7 @@ sub_section: web3_internal
 ## Wallet Objects
 
 ```python
+@enforce_types_shim
 class Wallet()
 ```
 
@@ -29,7 +30,7 @@ node since we only send the raw transaction hash so the user info is safe.
 #### \_\_init\_\_
 
 ```python
- | __init__(web3, private_key: typing.Union[str, None] = None, encrypted_key: dict = None, password: typing.Union[str, None] = None, address: typing.Union[str, None] = None)
+ | __init__(web3, private_key: Optional[str] = None, encrypted_key: dict = None, password: Optional[str] = None, address: Optional[str] = None)
 ```
 
 Initialises Wallet object.

@@ -11,6 +11,7 @@ sub_section: web3_internal.web3_overrides
 ## SignatureFix Objects
 
 ```python
+@enforce_types_shim
 class SignatureFix(Signature)
 ```
 

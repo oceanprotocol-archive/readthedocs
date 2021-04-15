@@ -11,6 +11,7 @@ sub_section: ocean
 ## OceanCompute Objects
 
 ```python
+@enforce_types_shim
 class OceanCompute()
 ```
 
@@ -191,7 +192,7 @@ and having the required attributes and service endpoint.
 #### start
 
 ```python
- | start(input_datasets: list, consumer_wallet: Wallet, nonce: [int, None] = None, algorithm_did: [str, None] = None, algorithm_meta: [AlgorithmMetadata, None] = None, algorithm_tx_id: str = None, algorithm_data_token: str = None, output: dict = None, job_id: str = None)
+ | start(input_datasets: list, consumer_wallet: Wallet, nonce: Optional[int] = None, algorithm_did: Optional[str] = None, algorithm_meta: Optional[AlgorithmMetadata] = None, algorithm_tx_id: str = None, algorithm_data_token: str = None, output: dict = None, job_id: str = None)
 ```
 
 Start a remote compute job on the asset files.
@@ -275,23 +276,4 @@ Attempt to stop the running compute job.
 **Returns**:
 
 dict the status for the stopped compute job, keys are (ok, status, statusText)
-
-<a name="ocean.ocean_compute.OceanCompute.restart"></a>
-#### restart
-
-```python
- | restart(did, job_id, wallet)
-```
-
-Attempt to restart the compute job by stopping it first, then starting a new job.
-
-**Arguments**:
-
-- `did`: str id of the asset offering the compute service of this job
-- `job_id`: str id of the compute job
-- `wallet`: Wallet instance
-
-**Returns**:
-
-str -- id of the new compute job
 
