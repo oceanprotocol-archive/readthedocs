@@ -3,6 +3,7 @@ Usage: python generate_markdowns.py
 '''
 import argparse
 import fnmatch
+import logging
 import os
 import sys
 import subprocess
@@ -13,7 +14,15 @@ from tqdm import tqdm
 
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument('-l','--list', nargs='+', help='<Required> Set flag', required=True)
-parser.add_argument('-P','--print-command', default=False, action=argparse.BooleanOptionalAction)
+parser.add_argument("-v", "--verbose", help="increase output verbosity",
+                    action="store_true")
+
+args = parser.parse_args()
+
+if args.verbose:
+    logging.basicConfig(level=logging.DEBUG)
+else:
+    logging.basicConfig(level=logging.INFO)
 
 def prepend_gatsby_header(file_path, title, slug, section, sub_section, module):
     '''
@@ -46,11 +55,17 @@ def find_modules(path):
                     modules.add(pkg + '.' + info.name)
     return modules
 
-def filter_modules(module_list):
+def filter_modules(module_list:[str], doc_ignore_path: str):
     '''
     The function removes the modules that are found in `ignore_files`
     '''
-    ignore_files = ['**test**', 'ocean_lib']
+    ignore_files = []
+    if os.path.isfile(doc_ignore_path):
+        with open(doc_ignore_path) as doc_ignore_file:
+            ignore_files = [line.rstrip('\n') for line in doc_ignore_file]
+    else:
+        logging.warning("File [%s] not found", doc_ignore_path)
+
     matches = set()
 
     for module in module_list:
@@ -59,22 +74,24 @@ def filter_modules(module_list):
             if fnmatch.fnmatch(file_path, ignore):
                 matches.add(module)
     
+    logging.debug('Modules to be ignored: [%s]', ", ".join(matches))
+
     result = list(set(module_list) - matches)
     return result
 
-def generate_markdowns(section_name: str, path: str, output_dir: str, output_commad: bool, generate_markdown: bool):
+def generate_markdowns(section_name: str, path: str, output_dir: str, doc_ignore_path: str, generate_markdown: bool):
     '''
     Iterates over each repository to build the .md files.
     '''
-    print("Generating markdowns for [{0}]".format(path))
+    logging.info("Generating markdowns for [%s]", path)
     result = list(find_modules(path))
     # result2 = list(find_modules2(path))
 
-    markdowns_to_generate = filter_modules(result)
+    markdowns_to_generate = filter_modules(result, doc_ignore_path)
 
     config = ''
-    f = open("config.txt", "r")
-    config = f.read()
+    with open("config.txt", "r") as f:
+        config = f.read()
 
     # markdowns_to_generate = [markdowns_to_generate[0]]
     for i in tqdm(range(len(markdowns_to_generate))):
@@ -94,25 +111,22 @@ def generate_markdowns(section_name: str, path: str, output_dir: str, output_com
         module_path = markdowns_to_generate[i]
         command = '''pydoc-markdown -I {0} -m {1} '{2}' >> {3}''' \
                     .format(path, module_path, config, file_path)
-        if output_commad:
-            print(command)
-
+        
         if generate_markdown:
             with open(file_path, 'a') as fp:
                 subprocess.call(['pydoc-markdown', '-I', path, '-m', module_path, config], stdout=fp)
 
-markdown_repos = {'aquarius': {'path':'aquarius/ocean_lib', 'output_dir': 'aquarius', 'section': 'aquarius'},
-            'ocean.py': {'path':'ocean.py', 'output_dir': 'ocean-py', 'section': 'ocean.py'},
-        'provider': {'path':'provider/ocean_lib', 'output_dir': 'provider', 'section': 'provider'}}
+markdown_repos = {'aquarius': {'docignore_file_path': 'aquarius/.docignore','path':'aquarius/ocean_lib', 'output_dir': 'aquarius', 'section': 'aquarius'},
+            'ocean.py': {'docignore_file_path': 'ocean.py/.docignore','path':'ocean.py', 'output_dir': 'ocean-py', 'section': 'ocean.py'},
+        'provider': {'docignore_file_path': 'provider/.docignore','path':'provider/ocean_lib', 'output_dir': 'provider', 'section': 'provider'}}
 
 
 if __name__ == '__main__':
-    args = parser.parse_args()
 
     markdowns_to_be_generated = list(set(args.list) & set(markdown_repos.keys()))
-    print("Starting to generate markdowns for {0}".format(markdowns_to_be_generated))
+    logging.info("Starting to generate markdowns for %s", markdowns_to_be_generated)
 
     for repository_info in markdowns_to_be_generated:
         markdown_repo = markdown_repos[repository_info]
-        generate_markdowns(markdown_repo['section'], markdown_repo['path'],
-                            markdown_repo['output_dir'], args.print_command, True)
+        generate_markdowns(markdown_repo['section'], markdown_repo['path'], markdown_repo['output_dir'],
+                            markdown_repo['docignore_file_path'], True)
