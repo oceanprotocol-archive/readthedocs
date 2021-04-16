@@ -3,6 +3,7 @@ title: config_provider
 slug: /read-the-docs/ocean-py/config_provider
 section: ocean.py
 sub_section: ocean_lib
+module: ocean_lib.config_provider
 ---
 ## ConfigProvider
 

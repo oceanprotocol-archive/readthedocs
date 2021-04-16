@@ -1,25 +1,28 @@
 '''
 Usage: python generate_markdowns.py
 '''
-import sys
 import argparse
+import fnmatch
+import os
+import sys
+import subprocess
 from pkgutil import iter_modules
 from pathlib import Path
 from setuptools import find_packages
 from tqdm import tqdm
-import subprocess
 
 parser = argparse.ArgumentParser(description='Process some integers.')
 parser.add_argument('-l','--list', nargs='+', help='<Required> Set flag', required=True)
 parser.add_argument('-P','--print-command', default=False, action=argparse.BooleanOptionalAction)
 
-def prepend_gatsby_header(file_path, title, slug, section, sub_section):
+def prepend_gatsby_header(file_path, title, slug, section, sub_section, module):
     '''
     Adds title, description and slug to the file.
     '''
 
     with open(file_path, 'w') as out_file:
-        header = '---\ntitle: {0}\nslug: {1}\nsection: {2}\nsub_section: {3}\n---\n'.format(title, slug, section, sub_section)
+        header = '---\ntitle: {0}\nslug: {1}\nsection: {2}\nsub_section: {3}\nmodule: {4}\n---\n' \
+            .format(title, slug, section, sub_section, module)
         out_file.write(header)
 
     return
@@ -43,24 +46,21 @@ def find_modules(path):
                     modules.add(pkg + '.' + info.name)
     return modules
 
-def find_modules2(path):
+def filter_modules(module_list):
     '''
-    Funtion to list all the modules in a repository.
+    The function removes the modules that are found in `ignore_files`
     '''
-    modules = []
-    packages =  find_packages(path)
-    for pkg in packages:
-        # modules[pkg] = []
-        pkgpath = path + '/' + pkg.replace('.', '/')
-        if sys.version_info.major == 2 or (sys.version_info.major == 3 and sys.version_info.minor < 6):
-            for _, name, ispkg in iter_modules([pkgpath]):
-                if not ispkg:
-                    modules.append({'package':pkg,'module':name})
-        else:
-            for info in iter_modules([pkgpath]):
-                if not info.ispkg:
-                    modules.append({'package':pkg,'module':info.name})
-    return modules
+    ignore_files = ['**test**', 'ocean_lib']
+    matches = set()
+
+    for module in module_list:
+        for ignore in ignore_files:
+            file_path =  os.path.join(*module.split('.'))
+            if fnmatch.fnmatch(file_path, ignore):
+                matches.add(module)
+    
+    result = list(set(module_list) - matches)
+    return result
 
 def generate_markdowns(section_name: str, path: str, output_dir: str, output_commad: bool, generate_markdown: bool):
     '''
@@ -68,16 +68,9 @@ def generate_markdowns(section_name: str, path: str, output_dir: str, output_com
     '''
     print("Generating markdowns for [{0}]".format(path))
     result = list(find_modules(path))
-    result2 = list(find_modules2(path))
+    # result2 = list(find_modules2(path))
 
-    skip_list = ['test']
-
-    markdowns_to_generate = []
-
-    for i in result2:
-        for skip_word in skip_list:
-            if not (i['package'] + '.'+ i['module']).find(skip_word) != -1:
-                markdowns_to_generate.append(i)
+    markdowns_to_generate = filter_modules(result)
 
     config = ''
     f = open("config.txt", "r")
@@ -86,17 +79,19 @@ def generate_markdowns(section_name: str, path: str, output_dir: str, output_com
     # markdowns_to_generate = [markdowns_to_generate[0]]
     for i in tqdm(range(len(markdowns_to_generate))):
 
-        title = markdowns_to_generate[i]['module'].replace('.', '-')
+        title = markdowns_to_generate[i].split('.')[-1]
         file_name = title + '.md'
         Path("markdowns/{0}/".format(output_dir)).mkdir(parents=True, exist_ok=True)
 
         file_path = 'markdowns/{0}/{1}'.format(output_dir, file_name)
         slug = '/read-the-docs/' + output_dir + '/' + title
-        sub_section_name =  markdowns_to_generate[i]['package']
-        prepend_gatsby_header(file_path, title, slug, section_name, sub_section_name)
 
+        module_path = markdowns_to_generate[i].split('.')
+        sub_section_name =  module_path[-2] if len(module_path) > 1 else module_path[-1]
 
-        module_path = markdowns_to_generate[i]['package'] + '.' + markdowns_to_generate[i]['module']
+        prepend_gatsby_header(file_path, title, slug, section_name, sub_section_name, markdowns_to_generate[i])
+
+        module_path = markdowns_to_generate[i]
         command = '''pydoc-markdown -I {0} -m {1} '{2}' >> {3}''' \
                     .format(path, module_path, config, file_path)
         if output_commad:
@@ -109,6 +104,7 @@ def generate_markdowns(section_name: str, path: str, output_dir: str, output_com
 markdown_repos = {'aquarius': {'path':'aquarius/ocean_lib', 'output_dir': 'aquarius', 'section': 'aquarius'},
             'ocean.py': {'path':'ocean.py', 'output_dir': 'ocean-py', 'section': 'ocean.py'},
         'provider': {'path':'provider/ocean_lib', 'output_dir': 'provider', 'section': 'provider'}}
+
 
 if __name__ == '__main__':
     args = parser.parse_args()

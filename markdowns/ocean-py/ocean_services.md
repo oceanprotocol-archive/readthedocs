@@ -2,7 +2,8 @@
 title: ocean_services
 slug: /read-the-docs/ocean-py/ocean_services
 section: ocean.py
-sub_section: ocean_lib.ocean
+sub_section: ocean
+module: ocean_lib.ocean.ocean_services
 ---
 Ocean module.
 

@@ -3,6 +3,7 @@ title: web3_provider
 slug: /read-the-docs/provider/web3_provider
 section: provider
 sub_section: web3_internal
+module: web3_internal.web3_provider
 ---
 ## Web3Provider
 

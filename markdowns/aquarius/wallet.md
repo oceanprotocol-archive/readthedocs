@@ -3,6 +3,7 @@ title: wallet
 slug: /read-the-docs/aquarius/wallet
 section: aquarius
 sub_section: web3_internal
+module: web3_internal.wallet
 ---
 ## Wallet
 

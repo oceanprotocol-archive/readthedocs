@@ -3,6 +3,7 @@ title: asset_resolver
 slug: /read-the-docs/aquarius/asset_resolver
 section: aquarius
 sub_section: assets
+module: assets.asset_resolver
 ---
 DID Resolver module.
 

@@ -3,6 +3,7 @@ title: ocean_exchange
 slug: /read-the-docs/provider/ocean_exchange
 section: provider
 sub_section: ocean
+module: ocean.ocean_exchange
 ---
 ## OceanExchange
 

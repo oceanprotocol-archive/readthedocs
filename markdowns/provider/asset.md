@@ -3,6 +3,7 @@ title: asset
 slug: /read-the-docs/provider/asset
 section: provider
 sub_section: assets
+module: assets.asset
 ---
 ## Asset
 

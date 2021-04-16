@@ -3,6 +3,7 @@ title: ocean_services
 slug: /read-the-docs/aquarius/ocean_services
 section: aquarius
 sub_section: ocean
+module: ocean.ocean_services
 ---
 Ocean module.
 

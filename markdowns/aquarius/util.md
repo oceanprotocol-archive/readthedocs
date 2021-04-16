@@ -3,6 +3,7 @@ title: util
 slug: /read-the-docs/aquarius/util
 section: aquarius
 sub_section: ocean
+module: ocean.util
 ---
 #### get\_web3\_connection\_provider
 

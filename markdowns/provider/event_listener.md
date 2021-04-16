@@ -3,6 +3,7 @@ title: event_listener
 slug: /read-the-docs/provider/event_listener
 section: provider
 sub_section: web3_internal
+module: web3_internal.event_listener
 ---
 ## EventListener
 

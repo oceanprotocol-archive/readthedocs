@@ -3,6 +3,7 @@ title: exceptions
 slug: /read-the-docs/provider/exceptions
 section: provider
 sub_section: web3_internal
+module: web3_internal.exceptions
 ---
 ## OceanKeeperContractsNotFound
 

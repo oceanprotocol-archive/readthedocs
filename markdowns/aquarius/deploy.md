@@ -3,6 +3,7 @@ title: deploy
 slug: /read-the-docs/aquarius/deploy
 section: aquarius
 sub_section: ocean
+module: ocean.deploy
 ---
 Used for deploying fake OCEAN
 isort:skip_file

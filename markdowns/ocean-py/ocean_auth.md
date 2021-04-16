@@ -2,7 +2,8 @@
 title: ocean_auth
 slug: /read-the-docs/ocean-py/ocean_auth
 section: ocean.py
-sub_section: ocean_lib.ocean
+sub_section: ocean
+module: ocean_lib.ocean.ocean_auth
 ---
 Ocean module.
 

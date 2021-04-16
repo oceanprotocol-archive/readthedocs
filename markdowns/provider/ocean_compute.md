@@ -3,6 +3,7 @@ title: ocean_compute
 slug: /read-the-docs/provider/ocean_compute
 section: provider
 sub_section: ocean
+module: ocean.ocean_compute
 ---
 ## OceanCompute
 

@@ -3,6 +3,7 @@ title: web3_provider
 slug: /read-the-docs/aquarius/web3_provider
 section: aquarius
 sub_section: web3_internal
+module: web3_internal.web3_provider
 ---
 ## Web3Provider
 

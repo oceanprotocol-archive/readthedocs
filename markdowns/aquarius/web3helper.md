@@ -3,6 +3,7 @@ title: web3helper
 slug: /read-the-docs/aquarius/web3helper
 section: aquarius
 sub_section: web3_internal
+module: web3_internal.web3helper
 ---
 Web3Helper module to provide convenient functions.
 

@@ -3,6 +3,7 @@ title: ocean_compute
 slug: /read-the-docs/aquarius/ocean_compute
 section: aquarius
 sub_section: ocean
+module: ocean.ocean_compute
 ---
 ## OceanCompute
 

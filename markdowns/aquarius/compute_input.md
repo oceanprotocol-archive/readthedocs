@@ -3,6 +3,7 @@ title: compute_input
 slug: /read-the-docs/aquarius/compute_input
 section: aquarius
 sub_section: models
+module: models.compute_input
 ---
 ## ComputeInput
 

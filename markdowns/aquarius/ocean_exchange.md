@@ -3,6 +3,7 @@ title: ocean_exchange
 slug: /read-the-docs/aquarius/ocean_exchange
 section: aquarius
 sub_section: ocean
+module: ocean.ocean_exchange
 ---
 ## OceanExchange
 

@@ -2,7 +2,8 @@
 title: contract
 slug: /read-the-docs/provider/contract
 section: provider
-sub_section: web3_internal.web3_overrides
+sub_section: web3_overrides
+module: web3_internal.web3_overrides.contract
 ---
 ## CustomContractFunction
 

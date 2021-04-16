@@ -3,6 +3,7 @@ title: ocean_assets
 slug: /read-the-docs/provider/ocean_assets
 section: provider
 sub_section: ocean
+module: ocean.ocean_assets
 ---
 Ocean module.
 

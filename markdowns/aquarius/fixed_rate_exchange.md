@@ -3,6 +3,7 @@ title: fixed_rate_exchange
 slug: /read-the-docs/aquarius/fixed_rate_exchange
 section: aquarius
 sub_section: models
+module: models.fixed_rate_exchange
 ---
 ## FixedRateExchange
 

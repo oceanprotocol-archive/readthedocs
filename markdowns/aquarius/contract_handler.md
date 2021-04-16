@@ -3,6 +3,7 @@ title: contract_handler
 slug: /read-the-docs/aquarius/contract_handler
 section: aquarius
 sub_section: web3_internal
+module: web3_internal.contract_handler
 ---
 ## ContractHandler
 
