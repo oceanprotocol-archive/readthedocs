@@ -3,6 +3,7 @@ title: bpool
 slug: /read-the-docs/aquarius/bpool
 section: aquarius
 sub_section: models
+module: models.bpool
 ---
 ## BPool
 

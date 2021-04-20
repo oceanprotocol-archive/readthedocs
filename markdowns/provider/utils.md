@@ -3,6 +3,7 @@ title: utils
 slug: /read-the-docs/provider/utils
 section: provider
 sub_section: web3_internal
+module: web3_internal.utils
 ---
 
 #### generate_multi_value_hash

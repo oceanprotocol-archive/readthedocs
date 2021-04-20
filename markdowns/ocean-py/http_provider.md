@@ -2,7 +2,8 @@
 title: http_provider
 slug: /read-the-docs/ocean-py/http_provider
 section: ocean.py
-sub_section: ocean_lib.web3_internal.web3_overrides
+sub_section: web3_overrides
+module: ocean_lib.web3_internal.web3_overrides.http_provider
 ---
 ## CustomHTTPProvider
 

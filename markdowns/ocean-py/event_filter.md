@@ -2,7 +2,8 @@
 title: event_filter
 slug: /read-the-docs/ocean-py/event_filter
 section: ocean.py
-sub_section: ocean_lib.web3_internal
+sub_section: web3_internal
+module: ocean_lib.web3_internal.event_filter
 ---
 ## EventFilter
 

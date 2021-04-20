@@ -3,6 +3,7 @@ title: compute_input
 slug: /read-the-docs/provider/compute_input
 section: provider
 sub_section: models
+module: models.compute_input
 ---
 ## ComputeInput
 

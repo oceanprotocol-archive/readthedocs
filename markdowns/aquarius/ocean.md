@@ -8,6 +8,7 @@ title: ocean
 slug: /read-the-docs/aquarius/ocean
 section: aquarius
 sub_section: ocean
+module: ocean.ocean
 ---
 >>>>>>> gatsby:markdowns/aquarius/ocean.md
 Ocean module.

@@ -2,7 +2,8 @@
 title: util
 slug: /read-the-docs/ocean-py/util
 section: ocean.py
-sub_section: ocean_lib.ocean
+sub_section: ocean
+module: ocean_lib.ocean.util
 ---
 #### get\_web3\_connection\_provider
 

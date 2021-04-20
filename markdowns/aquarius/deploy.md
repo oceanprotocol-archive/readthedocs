@@ -8,6 +8,7 @@ title: deploy
 slug: /read-the-docs/aquarius/deploy
 section: aquarius
 sub_section: ocean
+module: ocean.deploy
 ---
 >>>>>>> gatsby:markdowns/aquarius/deploy.md
 Used for deploying fake OCEAN

@@ -2,7 +2,8 @@
 title: auth_tokens
 slug: /read-the-docs/ocean-py/auth_tokens
 section: ocean.py
-sub_section: ocean_lib.data_store
+sub_section: data_store
+module: ocean_lib.data_store.auth_tokens
 ---
 ## AuthTokensStorage
 

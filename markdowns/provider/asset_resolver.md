@@ -3,6 +3,7 @@ title: asset_resolver
 slug: /read-the-docs/provider/asset_resolver
 section: provider
 sub_section: assets
+module: assets.asset_resolver
 ---
 DID Resolver module.
 

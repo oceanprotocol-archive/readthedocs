@@ -3,6 +3,7 @@ title: config
 slug: /read-the-docs/ocean-py/config
 section: ocean.py
 sub_section: ocean_lib
+module: ocean_lib.config
 ---
 ## Config
 

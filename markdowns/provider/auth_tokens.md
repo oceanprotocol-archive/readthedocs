@@ -3,6 +3,7 @@ title: auth_tokens
 slug: /read-the-docs/provider/auth_tokens
 section: provider
 sub_section: data_store
+module: data_store.auth_tokens
 ---
 ## AuthTokensStorage
 

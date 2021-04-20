@@ -9,6 +9,7 @@ title: asset_downloader
 slug: /read-the-docs/aquarius/asset_downloader
 section: aquarius
 sub_section: assets
+module: assets.asset_downloader
 ---
 >>>>>>> gatsby:markdowns/aquarius/asset_downloader.md
 #### download\_asset\_files

@@ -2,7 +2,8 @@
 title: utils
 slug: /read-the-docs/ocean-py/utils
 section: ocean.py
-sub_section: ocean_lib.web3_internal
+sub_section: web3_internal
+module: ocean_lib.web3_internal.utils
 ---
 #### generate\_multi\_value\_hash
 

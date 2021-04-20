@@ -3,6 +3,7 @@ title: fixed_rate_exchange
 slug: /read-the-docs/provider/fixed_rate_exchange
 section: provider
 sub_section: models
+module: models.fixed_rate_exchange
 ---
 ## FixedRateExchange
 

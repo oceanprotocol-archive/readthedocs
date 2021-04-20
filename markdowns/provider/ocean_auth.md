@@ -3,6 +3,7 @@ title: ocean_auth
 slug: /read-the-docs/provider/ocean_auth
 section: provider
 sub_section: ocean
+module: ocean.ocean_auth
 ---
 Ocean module.
 

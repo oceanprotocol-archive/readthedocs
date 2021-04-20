@@ -3,6 +3,7 @@ title: util
 slug: /read-the-docs/provider/util
 section: provider
 sub_section: ocean
+module: ocean.util
 ---
 #### get\_web3\_connection\_provider
 

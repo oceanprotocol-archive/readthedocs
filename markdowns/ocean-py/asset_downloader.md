@@ -2,7 +2,8 @@
 title: asset_downloader
 slug: /read-the-docs/ocean-py/asset_downloader
 section: ocean.py
-sub_section: ocean_lib.assets
+sub_section: assets
+module: ocean_lib.assets.asset_downloader
 ---
 #### download\_asset\_files
 

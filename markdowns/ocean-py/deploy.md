@@ -2,7 +2,8 @@
 title: deploy
 slug: /read-the-docs/ocean-py/deploy
 section: ocean.py
-sub_section: ocean_lib.ocean
+sub_section: ocean
+module: ocean_lib.ocean.deploy
 ---
 Used for deploying fake OCEAN
 isort:skip_file

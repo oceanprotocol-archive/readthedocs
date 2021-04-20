@@ -2,7 +2,8 @@
 title: contract_handler
 slug: /read-the-docs/ocean-py/contract_handler
 section: ocean.py
-sub_section: ocean_lib.web3_internal
+sub_section: web3_internal
+module: ocean_lib.web3_internal.contract_handler
 ---
 ## ContractHandler
 

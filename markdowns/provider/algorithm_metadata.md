@@ -3,6 +3,7 @@ title: algorithm_metadata
 slug: /read-the-docs/provider/algorithm_metadata
 section: provider
 sub_section: models
+module: models.algorithm_metadata
 ---
 ## AlgorithmMetadata
 

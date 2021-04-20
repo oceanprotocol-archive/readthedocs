@@ -2,7 +2,8 @@
 title: exceptions
 slug: /read-the-docs/ocean-py/exceptions
 section: ocean.py
-sub_section: ocean_lib.web3_internal
+sub_section: web3_internal
+module: ocean_lib.web3_internal.exceptions
 ---
 ## OceanKeeperContractsNotFound
 
