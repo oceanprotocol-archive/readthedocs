@@ -37,8 +37,7 @@ def prepend_gatsby_header(file_path, title, slug, section, sub_section, module):
 
     return
 
-def generate_ocean_py_docs(markdown_repo):
-    additioanl_files = markdown_repo['additional_files']
+def generate_additional_docs(additioanl_files):
     for additioanl_file in additioanl_files:
         file_path = additioanl_file['path']
         output_file = additioanl_file['output_file']
@@ -49,10 +48,13 @@ def generate_ocean_py_docs(markdown_repo):
         prepend_gatsby_header(output_file, title, slug, section, sub_section, '')
 
         with open(output_file, 'a') as outfile:
-            with open(file_path) as infile:
-                for line in infile:
-                    outfile.write(line)
-
+            if (os.path.exists(file_path)):
+                with open(file_path, encoding='utf8') as infile:
+                    for line in infile:
+                        outfile.write(line)
+            else:
+                logging.warning("File %s does not exist.", file_path)
+        # os.system("cat {0} >> {1}".format(file_path, output_file))
 
 def find_modules(path):
     '''
@@ -134,9 +136,16 @@ def generate_markdowns(section_name: str, path: str, output_dir: str, doc_ignore
             with open(file_path, 'a') as fp:
                 subprocess.call(['pydoc-markdown', '-I', path, '-m', module_path, config], stdout=fp)
 
-markdown_repos = {'aquarius': {'docignore_file_path': 'aquarius/.docignore','path':'aquarius/ocean_lib', 'output_dir': 'aquarius', 'section': 'aquarius'},
-            'ocean.py': {'docignore_file_path': 'ocean.py/.docignore','path':'ocean.py', 'output_dir': 'ocean-py', 'section': 'ocean.py'},
-        'provider': {'docignore_file_path': 'provider/.docignore','path':'provider/ocean_lib', 'output_dir': 'provider', 'section': 'provider'}}
+markdown_repos = {'aquarius': {'additioanl_files':[], 'docignore_file_path': 'aquarius/.docignore','path':'aquarius/ocean_lib', 'output_dir': 'aquarius', 'section': 'aquarius'},
+            'ocean.py': {'docignore_file_path': 'ocean.py/.docignore','path':'ocean.py', 'output_dir': 'ocean-py', 'section': 'ocean.py','additioanl_files': [
+            {'path': os.path.join('ocean.py','READMEs','Introduction.md'),
+            'section' :'ocean.py',
+            'slug': '/read-the-docs/coean.py/introduction',
+            'sub_section': 'introduction',
+            'output_file' : os.path.join('markdowns','ocean-py','introduction.md')
+            }
+        ]},
+        'provider': {'additioanl_files':[], 'docignore_file_path': 'provider/.docignore','path':'provider/ocean_lib', 'output_dir': 'provider', 'section': 'provider'}}
 
 
 if __name__ == '__main__':
@@ -148,13 +157,5 @@ if __name__ == '__main__':
         markdown_repo = markdown_repos[repository_info]
         generate_markdowns(markdown_repo['section'], markdown_repo['path'], markdown_repo['output_dir'],
                             markdown_repo['docignore_file_path'], True)
-        
-    additioanl_files = [
-        {'path':'ocean.py/READMEs/Introduction.md',
-        'section_name' :'ocean.py',
-        'slug': '/read-the-docs/coean.py/introduction',
-        'sub_section': 'introduction',
-        'output_file' : 'markdowns/ocean-py/introduction.md'
-        }
-    ]
-    generate_ocean_py_docs(additioanl_files)
+  
+        generate_additional_docs(markdown_repo['additioanl_files'])
