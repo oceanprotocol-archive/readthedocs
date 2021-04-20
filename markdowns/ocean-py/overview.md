@@ -1,6 +1,6 @@
 ---
 title: Overview
-slug: /read-the-docs/ocean.py/overview
+slug: /read-the-docs/ocean-py/overview
 section: ocean.py
 sub_section: Overview
 module: overview

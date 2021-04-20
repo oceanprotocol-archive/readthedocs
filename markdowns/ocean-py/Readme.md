@@ -1,8 +1,8 @@
 ---
-title: Readme
-slug: /read-the-docs/ocean.py/readme
+title: Overview
+slug: /read-the-docs/ocean-py/readme
 section: ocean.py
-sub_section: Readme
+sub_section: Overview
 module: introduction
 ---
 <!--

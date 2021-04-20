@@ -25,7 +25,3 @@ DID did:op:<32 byte value>
 :return string: DDO of the resolved DID
 :return None: if the DID cannot be resolved
 
-**Raises**:
-
-- `OceanDIDNotFound`: if no DID can be found to resolve.
-
