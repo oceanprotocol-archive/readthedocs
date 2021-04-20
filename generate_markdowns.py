@@ -24,6 +24,7 @@ if args.verbose:
 else:
     logging.basicConfig(level=logging.INFO)
 
+
 def prepend_gatsby_header(file_path, title, slug, section, sub_section, module):
     '''
     Adds title, description and slug to the file.
@@ -35,6 +36,23 @@ def prepend_gatsby_header(file_path, title, slug, section, sub_section, module):
         out_file.write(header)
 
     return
+
+def generate_ocean_py_docs(markdown_repo):
+    additioanl_files = markdown_repo['additional_files']
+    for additioanl_file in additioanl_files:
+        file_path = additioanl_file['path']
+        output_file = additioanl_file['output_file']
+        title = 'introduction'
+        slug = additioanl_file['slug']
+        sub_section = additioanl_file['sub_section']
+        section = additioanl_file['section']
+        prepend_gatsby_header(output_file, title, slug, section, sub_section, '')
+
+        with open(output_file, 'a') as outfile:
+            with open(file_path) as infile:
+                for line in infile:
+                    outfile.write(line)
+
 
 def find_modules(path):
     '''
@@ -130,3 +148,13 @@ if __name__ == '__main__':
         markdown_repo = markdown_repos[repository_info]
         generate_markdowns(markdown_repo['section'], markdown_repo['path'], markdown_repo['output_dir'],
                             markdown_repo['docignore_file_path'], True)
+        
+    additioanl_files = [
+        {'path':'ocean.py/READMEs/Introduction.md',
+        'section_name' :'ocean.py',
+        'slug': '/read-the-docs/coean.py/introduction',
+        'sub_section': 'introduction',
+        'output_file' : 'markdowns/ocean-py/introduction.md'
+        }
+    ]
+    generate_ocean_py_docs(additioanl_files)
