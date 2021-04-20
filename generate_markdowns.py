@@ -140,7 +140,7 @@ markdown_repos = {'aquarius': {'additioanl_files':[], 'docignore_file_path': 'aq
             'ocean.py': {'docignore_file_path': 'ocean.py/.docignore','path':'ocean.py', 'output_dir': 'ocean-py', 'section': 'ocean.py','additioanl_files': [
             {'path': os.path.join('ocean.py','READMEs','Introduction.md'),
             'section' :'ocean.py',
-            'slug': '/read-the-docs/coean.py/introduction',
+            'slug': '/read-the-docs/ocean.py/introduction',
             'sub_section': 'introduction',
             'output_file' : os.path.join('markdowns','ocean-py','introduction.md')
             }
