@@ -75,7 +75,7 @@ def find_modules(path):
                     modules.add(pkg + '.' + info.name)
     return modules
 
-def filter_modules(module_list:[str], doc_ignore_path: str):
+def filter_modules(path:str, module_list:[str], doc_ignore_path: str):
     '''
     The function removes the modules that are found in `ignore_files`
     '''
@@ -94,9 +94,19 @@ def filter_modules(module_list:[str], doc_ignore_path: str):
             if fnmatch.fnmatch(file_path, ignore):
                 matches.add(module)
     
-    logging.debug('Modules to be ignored: [%s]', ", ".join(matches))
+    directories = set()
+    for module in module_list:
+        module_path =  os.path.join(path, *module.split('.'))
+        if os.path.isdir(module_path):
+            directories.add(module)
 
-    result = list(set(module_list) - matches)
+    logging.debug('Modules to be ignored: [%s]', ", ".join(matches))
+    logging.debug('Following modules are directories and will be ignored: [%s]', ", ".join(directories))
+    
+    result = list(set(module_list) - matches.union(directories))
+
+    logging.debug('Modules found: [%s]', ", ".join(matches))
+
     return result
 
 def generate_markdowns(section_name: str, path: str, output_dir: str, doc_ignore_path: str, generate_markdown: bool):
@@ -105,15 +115,13 @@ def generate_markdowns(section_name: str, path: str, output_dir: str, doc_ignore
     '''
     logging.info("Generating markdowns for [%s]", path)
     result = list(find_modules(path))
-    # result2 = list(find_modules2(path))
 
-    markdowns_to_generate = filter_modules(result, doc_ignore_path)
+    markdowns_to_generate = filter_modules(path, result, doc_ignore_path)
 
     config = ''
     with open("config.txt", "r") as f:
         config = f.read()
 
-    # markdowns_to_generate = [markdowns_to_generate[0]]
     for i in tqdm(range(len(markdowns_to_generate))):
 
         title = markdowns_to_generate[i].split('.')[-1]
@@ -129,8 +137,6 @@ def generate_markdowns(section_name: str, path: str, output_dir: str, doc_ignore
         prepend_gatsby_header(file_path, title, slug, section_name, sub_section_name, markdowns_to_generate[i])
 
         module_path = markdowns_to_generate[i]
-        command = '''pydoc-markdown -I {0} -m {1} '{2}' >> {3}''' \
-                    .format(path, module_path, config, file_path)
         
         if generate_markdown:
             with open(file_path, 'a') as fp:

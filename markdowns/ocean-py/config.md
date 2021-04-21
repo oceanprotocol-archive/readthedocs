@@ -30,7 +30,7 @@ network = rinkeby
 artifacts.path = artifacts
 
 [resources]
-aquarius.url = http://localhost:5000
+metadata_cache_uri = http://localhost:5000
 provider.url = http://localhost:8030
 ; Path of back-up storage
 storage.path = ocean_lib.db
@@ -80,14 +80,14 @@ URL of the ethereum network. (e.g.): http://mynetwork:8545.
 
 Ethereum gas limit.
 
-#### aquarius\_url
+#### metadata\_cache\_uri
 
 ```python
  | @property
- | def aquarius_url()
+ | def metadata_cache_uri()
 ```
 
-URL of aquarius component. (e.g.): http://myaquarius:5000.
+URL of metadata cache component. (e.g.): http://myaquarius:5000.
 
 #### provider\_address
 
