@@ -1,8 +1,7 @@
 ---
 title: did
 slug: /read-the-docs/ocean-py/did
-section: ocean.py
-sub_section: common
+app: ocean.py
 module: ocean_lib.common.did
 ---
 DID Lib to do DID's and DDO's.

@@ -1,9 +1,8 @@
 ---
-title: Overview
+title: readme
 slug: /read-the-docs/ocean-py/readme
-section: ocean.py
-sub_section: Overview
-module: introduction
+app: ocean.py
+module: introduction.readme
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation

@@ -1,8 +1,7 @@
 ---
 title: data_service_provider
 slug: /read-the-docs/aquarius/data_service_provider
-section: aquarius
-sub_section: data_provider
+app: aquarius
 module: data_provider.data_service_provider
 ---
 Provider module.

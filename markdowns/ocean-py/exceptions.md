@@ -1,8 +1,7 @@
 ---
 title: exceptions
 slug: /read-the-docs/ocean-py/exceptions
-section: ocean.py
-sub_section: ocean_lib
+app: ocean.py
 module: ocean_lib.exceptions
 ---
 ## OceanEncryptAssetUrlsError

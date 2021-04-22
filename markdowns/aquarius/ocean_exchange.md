@@ -1,8 +1,7 @@
 ---
 title: ocean_exchange
 slug: /read-the-docs/aquarius/ocean_exchange
-section: aquarius
-sub_section: ocean
+app: aquarius
 module: ocean.ocean_exchange
 ---
 ## OceanExchange

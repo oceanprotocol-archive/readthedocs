@@ -1,8 +1,7 @@
 ---
 title: ocean_assets
 slug: /read-the-docs/ocean-py/ocean_assets
-section: ocean.py
-sub_section: ocean
+app: ocean.py
 module: ocean_lib.ocean.ocean_assets
 ---
 Ocean module.

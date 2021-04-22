@@ -1,8 +1,7 @@
 ---
 title: aquarius_provider
 slug: /read-the-docs/ocean-py/aquarius_provider
-section: ocean.py
-sub_section: aquarius
+app: ocean.py
 module: ocean_lib.common.aquarius.aquarius_provider
 ---
 Aquarius module.

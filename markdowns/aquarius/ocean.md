@@ -1,8 +1,7 @@
 ---
 title: ocean
 slug: /read-the-docs/aquarius/ocean
-section: aquarius
-sub_section: ocean
+app: aquarius
 module: ocean.ocean
 ---
 Ocean module.

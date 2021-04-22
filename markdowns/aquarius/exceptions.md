@@ -1,8 +1,7 @@
 ---
 title: exceptions
 slug: /read-the-docs/aquarius/exceptions
-section: aquarius
-sub_section: data_provider
+app: aquarius
 module: data_provider.exceptions
 ---
 ## InvalidURLException

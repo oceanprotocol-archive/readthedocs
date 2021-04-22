@@ -1,8 +1,7 @@
 ---
 title: contract
 slug: /read-the-docs/ocean-py/contract
-section: ocean.py
-sub_section: web3_overrides
+app: ocean.py
 module: ocean_lib.web3_internal.web3_overrides.contract
 ---
 ## CustomContractFunction

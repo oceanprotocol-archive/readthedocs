@@ -1,8 +1,7 @@
 ---
 title: ocean_pool
 slug: /read-the-docs/ocean-py/ocean_pool
-section: ocean.py
-sub_section: ocean
+app: ocean.py
 module: ocean_lib.ocean.ocean_pool
 ---
 ## OceanPool

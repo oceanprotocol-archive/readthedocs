@@ -1,8 +1,7 @@
 ---
 title: asset
 slug: /read-the-docs/aquarius/asset
-section: aquarius
-sub_section: assets
+app: aquarius
 module: assets.asset
 ---
 ## Asset

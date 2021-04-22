@@ -1,7 +1,6 @@
 ---
 title: metadata
 slug: /read-the-docs/provider/metadata
-section: provider
-sub_section: models
+app: provider
 module: models.metadata
 ---

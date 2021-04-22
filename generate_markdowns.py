@@ -25,27 +25,26 @@ else:
     logging.basicConfig(level=logging.INFO)
 
 
-def prepend_gatsby_header(file_path, title, slug, section, sub_section, module):
+def prepend_gatsby_header(file_path, title, slug, app, module):
     '''
     Adds title, description and slug to the file.
     '''
 
     with open(file_path, 'w') as out_file:
-        header = '---\ntitle: {0}\nslug: {1}\nsection: {2}\nsub_section: {3}\nmodule: {4}\n---\n' \
-            .format(title, slug, section, sub_section, module)
+        header = '---\ntitle: {0}\nslug: {1}\napp: {2}\nmodule: {3}\n---\n' \
+            .format(title, slug, app, module)
         out_file.write(header)
 
     return
 
-def generate_additional_docs(section, additional_files):
+def generate_additional_docs(app, additional_files):
     for additioanl_file in additional_files:
         file_path = additioanl_file['path']
         output_file = additioanl_file['output_file']
         slug = additioanl_file['slug']
-        sub_section = additioanl_file['sub_section']
-        title = sub_section
         module = additioanl_file['module']
-        prepend_gatsby_header(output_file, title, slug, section, sub_section, module)
+        title = module.split('.')[-1]
+        prepend_gatsby_header(output_file, title, slug, app, module)
 
         with open(output_file, 'a', encoding="utf-8") as outfile:
             if (os.path.exists(file_path)):
@@ -109,7 +108,7 @@ def filter_modules(path:str, module_list:[str], doc_ignore_path: str):
 
     return result
 
-def generate_markdowns(section_name: str, path: str, output_dir: str, doc_ignore_path: str, generate_markdown: bool):
+def generate_markdowns(app: str, path: str, output_dir: str, doc_ignore_path: str, generate_markdown: bool):
     '''
     Iterates over each repository to build the .md files.
     '''
@@ -131,10 +130,7 @@ def generate_markdowns(section_name: str, path: str, output_dir: str, doc_ignore
         file_path = 'markdowns/{0}/{1}'.format(output_dir, file_name)
         slug = '/read-the-docs/' + output_dir + '/' + title
 
-        module_path = markdowns_to_generate[i].split('.')
-        sub_section_name =  module_path[-2] if len(module_path) > 1 else module_path[-1]
-
-        prepend_gatsby_header(file_path, title, slug, section_name, sub_section_name, markdowns_to_generate[i])
+        prepend_gatsby_header(file_path, title, slug, app, markdowns_to_generate[i])
 
         module_path = markdowns_to_generate[i]
         
@@ -142,23 +138,21 @@ def generate_markdowns(section_name: str, path: str, output_dir: str, doc_ignore
             with open(file_path, 'a') as fp:
                 subprocess.call(['pydoc-markdown', '-I', path, '-m', module_path, config], stdout=fp)
 
-markdown_repos = {'aquarius': {'additional_files':[], 'docignore_file_path': 'aquarius/.docignore','path':'aquarius/ocean_lib', 'output_dir': 'aquarius', 'section': 'aquarius'},
-            'ocean.py': {'docignore_file_path': 'ocean.py/.docignore','path':'ocean.py', 'output_dir': 'ocean-py', 'section': 'ocean.py',
+markdown_repos = {'aquarius': {'additional_files':[], 'docignore_file_path': 'aquarius/.docignore','path':'aquarius/ocean_lib', 'output_dir': 'aquarius', 'app': 'aquarius'},
+            'ocean.py': {'docignore_file_path': 'ocean.py/.docignore','path':'ocean.py', 'output_dir': 'ocean-py', 'app': 'ocean.py',
             'additional_files': [
                 {'path': os.path.join('ocean.py','README.md'),
                 'slug': '/read-the-docs/ocean-py/readme',
-                'sub_section': 'Overview',
-                'module': 'introduction',
+                'module': 'introduction.readme',
                 'output_file' : os.path.join('markdowns','ocean-py','Readme.md')
                 },
                 {'path': os.path.join('ocean.py','READMEs','overview.md'),
                 'slug': '/read-the-docs/ocean-py/overview',
-                'sub_section': 'Overview',
-                'module': 'overview',
+                'module': 'introduction.overview',
                 'output_file' : os.path.join('markdowns','ocean-py','overview.md')
                 }
         ]},
-        'provider': {'additional_files':[], 'docignore_file_path': 'provider/.docignore','path':'provider/ocean_lib', 'output_dir': 'provider', 'section': 'provider'}}
+        'provider': {'additional_files':[], 'docignore_file_path': 'provider/.docignore','path':'provider/ocean_lib', 'output_dir': 'provider', 'app': 'provider'}}
 
 
 if __name__ == '__main__':
@@ -168,7 +162,7 @@ if __name__ == '__main__':
 
     for repository_info in markdowns_to_be_generated:
         markdown_repo = markdown_repos[repository_info]
-        generate_markdowns(markdown_repo['section'], markdown_repo['path'], markdown_repo['output_dir'],
+        generate_markdowns(markdown_repo['app'], markdown_repo['path'], markdown_repo['output_dir'],
                             markdown_repo['docignore_file_path'], True)
   
-        generate_additional_docs(markdown_repo['section'],markdown_repo['additional_files'])
+        generate_additional_docs(markdown_repo['app'],markdown_repo['additional_files'])

@@ -1,8 +1,7 @@
 ---
 title: ocean
 slug: /read-the-docs/ocean-py/ocean
-section: ocean.py
-sub_section: ocean
+app: ocean.py
 module: ocean_lib.ocean.ocean
 ---
 Ocean module.

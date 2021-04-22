@@ -1,8 +1,7 @@
 ---
 title: aquarius
 slug: /read-the-docs/ocean-py/aquarius
-section: ocean.py
-sub_section: aquarius
+app: ocean.py
 module: ocean_lib.common.aquarius.aquarius
 ---
 Aquarius module.

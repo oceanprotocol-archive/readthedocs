@@ -1,8 +1,7 @@
 ---
 title: requests_session
 slug: /read-the-docs/ocean-py/requests_session
-section: ocean.py
-sub_section: http_requests
+app: ocean.py
 module: ocean_lib.common.http_requests.requests_session
 ---
 #### get\_requests\_session

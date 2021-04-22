@@ -1,8 +1,7 @@
 ---
 title: ocean_auth
 slug: /read-the-docs/aquarius/ocean_auth
-section: aquarius
-sub_section: ocean
+app: aquarius
 module: ocean.ocean_auth
 ---
 Ocean module.

@@ -1,8 +1,7 @@
 ---
 title: bpool
 slug: /read-the-docs/provider/bpool
-section: provider
-sub_section: models
+app: provider
 module: models.bpool
 ---
 ## BPool

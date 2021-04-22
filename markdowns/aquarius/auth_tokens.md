@@ -1,8 +1,7 @@
 ---
 title: auth_tokens
 slug: /read-the-docs/aquarius/auth_tokens
-section: aquarius
-sub_section: data_store
+app: aquarius
 module: data_store.auth_tokens
 ---
 ## AuthTokensStorage

@@ -1,8 +1,7 @@
 ---
 title: ocean_pool
 slug: /read-the-docs/aquarius/ocean_pool
-section: aquarius
-sub_section: ocean
+app: aquarius
 module: ocean.ocean_pool
 ---
 ## OceanPool

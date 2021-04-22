@@ -1,8 +1,7 @@
 ---
 title: data_service_provider
 slug: /read-the-docs/provider/data_service_provider
-section: provider
-sub_section: data_provider
+app: provider
 module: data_provider.data_service_provider
 ---
 Provider module.

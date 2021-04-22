@@ -1,8 +1,7 @@
 ---
 title: public_key_rsa
 slug: /read-the-docs/ocean-py/public_key_rsa
-section: ocean.py
-sub_section: ddo
+app: ocean.py
 module: ocean_lib.common.ddo.public_key_rsa
 ---
 Public key RSA

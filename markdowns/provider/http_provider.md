@@ -1,8 +1,7 @@
 ---
 title: http_provider
 slug: /read-the-docs/provider/http_provider
-section: provider
-sub_section: web3_overrides
+app: provider
 module: web3_internal.web3_overrides.http_provider
 ---
 ## CustomHTTPProvider

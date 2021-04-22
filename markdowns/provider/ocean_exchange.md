@@ -1,8 +1,7 @@
 ---
 title: ocean_exchange
 slug: /read-the-docs/provider/ocean_exchange
-section: provider
-sub_section: ocean
+app: provider
 module: ocean.ocean_exchange
 ---
 ## OceanExchange

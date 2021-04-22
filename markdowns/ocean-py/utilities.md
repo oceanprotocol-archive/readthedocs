@@ -1,8 +1,7 @@
 ---
 title: utilities
 slug: /read-the-docs/ocean-py/utilities
-section: ocean.py
-sub_section: utils
+app: ocean.py
 module: ocean_lib.common.utils.utilities
 ---
 Utilities class

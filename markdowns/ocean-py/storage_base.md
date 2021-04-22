@@ -1,8 +1,7 @@
 ---
 title: storage_base
 slug: /read-the-docs/ocean-py/storage_base
-section: ocean.py
-sub_section: data_store
+app: ocean.py
 module: ocean_lib.common.data_store.storage_base
 ---
 ## StorageBase

@@ -1,8 +1,7 @@
 ---
 title: service_agreement
 slug: /read-the-docs/ocean-py/service_agreement
-section: ocean.py
-sub_section: agreements
+app: ocean.py
 module: ocean_lib.common.agreements.service_agreement
 ---
 ## ServiceAgreement

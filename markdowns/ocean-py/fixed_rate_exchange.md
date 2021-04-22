@@ -1,8 +1,7 @@
 ---
 title: fixed_rate_exchange
 slug: /read-the-docs/ocean-py/fixed_rate_exchange
-section: ocean.py
-sub_section: models
+app: ocean.py
 module: ocean_lib.models.fixed_rate_exchange
 ---
 ## FixedRateExchange

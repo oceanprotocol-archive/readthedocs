@@ -1,8 +1,7 @@
 ---
 title: web3helper
 slug: /read-the-docs/provider/web3helper
-section: provider
-sub_section: web3_internal
+app: provider
 module: web3_internal.web3helper
 ---
 Web3Helper module to provide convenient functions.

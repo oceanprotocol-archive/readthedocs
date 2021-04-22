@@ -1,8 +1,7 @@
 ---
 title: service_factory
 slug: /read-the-docs/ocean-py/service_factory
-section: ocean.py
-sub_section: agreements
+app: ocean.py
 module: ocean_lib.common.agreements.service_factory
 ---
 ## ServiceDescriptor

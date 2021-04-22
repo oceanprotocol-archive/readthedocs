@@ -1,8 +1,7 @@
 ---
 title: ocean_compute
 slug: /read-the-docs/ocean-py/ocean_compute
-section: ocean.py
-sub_section: ocean
+app: ocean.py
 module: ocean_lib.ocean.ocean_compute
 ---
 ## OceanCompute

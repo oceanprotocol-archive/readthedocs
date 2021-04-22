@@ -1,8 +1,7 @@
 ---
 title: asset_downloader
 slug: /read-the-docs/aquarius/asset_downloader
-section: aquarius
-sub_section: assets
+app: aquarius
 module: assets.asset_downloader
 ---
 #### download\_asset\_files

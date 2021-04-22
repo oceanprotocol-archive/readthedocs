@@ -1,8 +1,7 @@
 ---
 title: algorithm_metadata
 slug: /read-the-docs/ocean-py/algorithm_metadata
-section: ocean.py
-sub_section: models
+app: ocean.py
 module: ocean_lib.models.algorithm_metadata
 ---
 ## AlgorithmMetadata

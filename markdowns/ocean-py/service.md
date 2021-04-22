@@ -1,8 +1,7 @@
 ---
 title: service
 slug: /read-the-docs/ocean-py/service
-section: ocean.py
-sub_section: ddo
+app: ocean.py
 module: ocean_lib.common.ddo.service
 ---
 Service Class

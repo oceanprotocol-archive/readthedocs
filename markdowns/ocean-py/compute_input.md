@@ -1,8 +1,7 @@
 ---
 title: compute_input
 slug: /read-the-docs/ocean-py/compute_input
-section: ocean.py
-sub_section: models
+app: ocean.py
 module: ocean_lib.models.compute_input
 ---
 ## ComputeInput

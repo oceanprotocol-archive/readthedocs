@@ -1,8 +1,7 @@
 ---
 title: service_types
 slug: /read-the-docs/ocean-py/service_types
-section: ocean.py
-sub_section: agreements
+app: ocean.py
 module: ocean_lib.common.agreements.service_types
 ---
 Agreements module.
