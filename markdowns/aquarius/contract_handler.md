@@ -1,10 +1,3 @@
-<<<<<<< HEAD:markdowns/ocean-py/web3_internal-contract_handler.md
-<a name="web3_internal.contract_handler"></a>
-# web3\_internal.contract\_handler
-
-<a name="web3_internal.contract_handler.ContractHandler"></a>
-## ContractHandler Objects
-=======
 ---
 title: contract_handler
 slug: /read-the-docs/aquarius/contract_handler
@@ -12,7 +5,6 @@ app: aquarius
 module: web3_internal.contract_handler
 ---
 ## ContractHandler
->>>>>>> gatsby:markdowns/aquarius/contract_handler.md
 
 ```python
 class ContractHandler(object)

@@ -1,16 +1,9 @@
-<<<<<<< HEAD:markdowns/ocean-py/assets-asset_downloader.md
-<a name="assets.asset_downloader"></a>
-# assets.asset\_downloader
-
-<a name="assets.asset_downloader.download_asset_files"></a>
-=======
 ---
 title: asset_downloader
 slug: /read-the-docs/aquarius/asset_downloader
 app: aquarius
 module: assets.asset_downloader
 ---
->>>>>>> gatsby:markdowns/aquarius/asset_downloader.md
 #### download\_asset\_files
 
 ```python

@@ -1,15 +1,9 @@
-<<<<<<< HEAD:markdowns/ocean-py/ocean-ocean.md
-<a name="ocean.ocean"></a>
-# ocean.ocean
-
-=======
 ---
 title: ocean
 slug: /read-the-docs/aquarius/ocean
 app: aquarius
 module: ocean.ocean
 ---
->>>>>>> gatsby:markdowns/aquarius/ocean.md
 Ocean module.
 
 ## Ocean

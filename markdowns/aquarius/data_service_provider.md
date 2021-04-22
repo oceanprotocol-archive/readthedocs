@@ -1,15 +1,9 @@
-<<<<<<< HEAD:markdowns/ocean-py/data_provider-data_service_provider.md
-<a name="data_provider.data_service_provider"></a>
-# data\_provider.data\_service\_provider
-
-=======
 ---
 title: data_service_provider
 slug: /read-the-docs/aquarius/data_service_provider
 app: aquarius
 module: data_provider.data_service_provider
 ---
->>>>>>> gatsby:markdowns/aquarius/data_service_provider.md
 Provider module.
 
 ## DataServiceProvider

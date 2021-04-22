@@ -4,7 +4,6 @@ slug: /read-the-docs/aquarius/account
 app: aquarius
 module: web3_internal.account
 ---
-
 Accounts module.
 
 ## Account
@@ -27,7 +26,8 @@ Hold account address, password and either keyfile path, encrypted key or private
 
 - `address`: The address of this account
 - `password`: account's password. This is necessary for decrypting the private key
-  to be able to sign transactions locally
+to be able to sign transactions locally
 - `key_file`: str path to the encrypted private key file
-- `encrypted_key`:
-- `private_key`:
+- `encrypted_key`: 
+- `private_key`: 
+

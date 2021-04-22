@@ -1,15 +1,9 @@
-<<<<<<< HEAD:markdowns/ocean-py/ocean-ocean_assets.md
-<a name="ocean.ocean_assets"></a>
-# ocean.ocean\_assets
-
-=======
 ---
 title: ocean_assets
 slug: /read-the-docs/aquarius/ocean_assets
 app: aquarius
 module: ocean.ocean_assets
 ---
->>>>>>> gatsby:markdowns/aquarius/ocean_assets.md
 Ocean module.
 
 ## OceanAssets
@@ -81,7 +75,7 @@ Asset instance
 #### search
 
 ```python
- | def search(text: str, sort=None, offset=100, page=1, aquarius_url=None) -> list
+ | def search(text: str, sort=None, offset=100, page=1, metadata_cache_uri=None) -> list
 ```
 
 Search an asset in oceanDB using aquarius.
@@ -92,7 +86,7 @@ Search an asset in oceanDB using aquarius.
 - `sort`: Dictionary to choose order main in some value
 - `offset`: Number of elements shows by page
 - `page`: Page number
-- `aquarius_url`: Url of the aquarius where you want to search. If there is not
+- `metadata_cache_uri`: Url of the aquarius where you want to search. If there is not
 provided take the default
 
 **Returns**:
@@ -102,7 +96,7 @@ List of assets that match with the query
 #### query
 
 ```python
- | def query(query: dict, sort=None, offset=100, page=1, aquarius_url=None) -> []
+ | def query(query: dict, sort=None, offset=100, page=1, metadata_cache_uri=None) -> []
 ```
 
 Search an asset in oceanDB using search query.
@@ -114,7 +108,7 @@ Search an asset in oceanDB using search query.
 - `sort`: Dictionary to choose order main in some value
 - `offset`: Number of elements shows by page
 - `page`: Page number
-- `aquarius_url`: Url of the aquarius where you want to search. If there is not
+- `metadata_cache_uri`: Url of the aquarius where you want to search. If there is not
 provided take the default
 
 **Returns**:

@@ -1,15 +1,9 @@
-<<<<<<< HEAD:markdowns/ocean-py/web3_internal-contract_base.md
-<a name="web3_internal.contract_base"></a>
-# web3\_internal.contract\_base
-
-=======
 ---
 title: contract_base
 slug: /read-the-docs/aquarius/contract_base
 app: aquarius
 module: web3_internal.contract_base
 ---
->>>>>>> gatsby:markdowns/aquarius/contract_base.md
 All contracts inherit from this base class.
 
 ## ContractBase

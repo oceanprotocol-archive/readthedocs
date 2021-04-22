@@ -1,16 +1,9 @@
-<<<<<<< HEAD:markdowns/ocean-py/ocean-util.md
-<a name="ocean.util"></a>
-# ocean.util
-
-<a name="ocean.util.get_web3_connection_provider"></a>
-=======
 ---
 title: util
 slug: /read-the-docs/aquarius/util
 app: aquarius
 module: ocean.util
 ---
->>>>>>> gatsby:markdowns/aquarius/util.md
 #### get\_web3\_connection\_provider
 
 ```python

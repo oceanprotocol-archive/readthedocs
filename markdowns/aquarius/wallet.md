@@ -1,10 +1,3 @@
-<<<<<<< HEAD:markdowns/ocean-py/web3_internal-wallet.md
-<a name="web3_internal.wallet"></a>
-# web3\_internal.wallet
-
-<a name="web3_internal.wallet.Wallet"></a>
-## Wallet Objects
-=======
 ---
 title: wallet
 slug: /read-the-docs/aquarius/wallet
@@ -12,7 +5,6 @@ app: aquarius
 module: web3_internal.wallet
 ---
 ## Wallet
->>>>>>> gatsby:markdowns/aquarius/wallet.md
 
 ```python
 @enforce_types_shim

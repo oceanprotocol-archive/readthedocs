@@ -1,10 +1,3 @@
-<<<<<<< HEAD:markdowns/ocean-py/ocean-ocean_compute.md
-<a name="ocean.ocean_compute"></a>
-# ocean.ocean\_compute
-
-<a name="ocean.ocean_compute.OceanCompute"></a>
-## OceanCompute Objects
-=======
 ---
 title: ocean_compute
 slug: /read-the-docs/aquarius/ocean_compute
@@ -12,7 +5,6 @@ app: aquarius
 module: ocean.ocean_compute
 ---
 ## OceanCompute
->>>>>>> gatsby:markdowns/aquarius/ocean_compute.md
 
 ```python
 @enforce_types_shim

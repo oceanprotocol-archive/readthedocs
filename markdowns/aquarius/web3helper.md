@@ -1,15 +1,9 @@
-<<<<<<< HEAD:markdowns/ocean-py/web3_internal-web3helper.md
-<a name="web3_internal.web3helper"></a>
-# web3\_internal.web3helper
-
-=======
 ---
 title: web3helper
 slug: /read-the-docs/aquarius/web3helper
 app: aquarius
 module: web3_internal.web3helper
 ---
->>>>>>> gatsby:markdowns/aquarius/web3helper.md
 Web3Helper module to provide convenient functions.
 
 ## Web3Helper

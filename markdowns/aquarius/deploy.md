@@ -1,15 +1,9 @@
-<<<<<<< HEAD:markdowns/ocean-py/ocean-deploy.md
-<a name="ocean.deploy"></a>
-# ocean.deploy
-
-=======
 ---
 title: deploy
 slug: /read-the-docs/aquarius/deploy
 app: aquarius
 module: ocean.deploy
 ---
->>>>>>> gatsby:markdowns/aquarius/deploy.md
 Used for deploying fake OCEAN
 isort:skip_file
 

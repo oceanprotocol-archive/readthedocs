@@ -1,10 +1,3 @@
-<<<<<<< HEAD:markdowns/ocean-py/ocean-ocean_pool.md
-<a name="ocean.ocean_pool"></a>
-# ocean.ocean\_pool
-
-<a name="ocean.ocean_pool.OceanPool"></a>
-## OceanPool Objects
-=======
 ---
 title: ocean_pool
 slug: /read-the-docs/aquarius/ocean_pool
@@ -12,7 +5,6 @@ app: aquarius
 module: ocean.ocean_pool
 ---
 ## OceanPool
->>>>>>> gatsby:markdowns/aquarius/ocean_pool.md
 
 ```python
 @enforce_types_shim

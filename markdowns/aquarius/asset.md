@@ -1,10 +1,3 @@
-<<<<<<< HEAD:markdowns/ocean-py/assets-asset.md
-<a name="assets.asset"></a>
-# assets.asset
-
-<a name="assets.asset.Asset"></a>
-## Asset Objects
-=======
 ---
 title: asset
 slug: /read-the-docs/aquarius/asset
@@ -12,7 +5,6 @@ app: aquarius
 module: assets.asset
 ---
 ## Asset
->>>>>>> gatsby:markdowns/aquarius/asset.md
 
 ```python
 class Asset(DDO)

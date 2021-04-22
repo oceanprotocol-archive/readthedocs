@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<a name="ocean"></a>
-# ocean
-=======
 ---
 title: ocean
 slug: /read-the-docs/ocean-py/ocean
@@ -50,5 +46,4 @@ An instance of Ocean is parameterized by a `Config` instance.
 
 - `config`: `Config` instance
 - `data_provider`: `DataServiceProvider` instance
->>>>>>> gatsby
 

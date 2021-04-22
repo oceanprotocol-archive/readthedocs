@@ -1,15 +1,9 @@
-<<<<<<< HEAD:markdowns/ocean-py/ocean-ocean_auth.md
-<a name="ocean.ocean_auth"></a>
-# ocean.ocean\_auth
-
-=======
 ---
 title: ocean_auth
 slug: /read-the-docs/aquarius/ocean_auth
 app: aquarius
 module: ocean.ocean_auth
 ---
->>>>>>> gatsby:markdowns/aquarius/ocean_auth.md
 Ocean module.
 
 ## OceanAuth
