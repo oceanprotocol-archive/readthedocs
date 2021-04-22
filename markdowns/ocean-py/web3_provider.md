@@ -1,8 +1,7 @@
 ---
 title: web3_provider
 slug: /read-the-docs/ocean-py/web3_provider
-section: ocean.py
-sub_section: web3_internal
+app: ocean.py
 module: ocean_lib.web3_internal.web3_provider
 ---
 ## Web3Provider

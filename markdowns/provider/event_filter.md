@@ -1,8 +1,7 @@
 ---
 title: event_filter
 slug: /read-the-docs/provider/event_filter
-section: provider
-sub_section: web3_internal
+app: provider
 module: web3_internal.event_filter
 ---
 ## EventFilter

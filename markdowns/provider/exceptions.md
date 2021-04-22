@@ -1,8 +1,7 @@
 ---
 title: exceptions
 slug: /read-the-docs/provider/exceptions
-section: provider
-sub_section: data_provider
+app: provider
 module: data_provider.exceptions
 ---
 ## InvalidURLException

@@ -1,8 +1,7 @@
 ---
 title: event_filter
 slug: /read-the-docs/aquarius/event_filter
-section: aquarius
-sub_section: web3_internal
+app: aquarius
 module: web3_internal.event_filter
 ---
 ## EventFilter

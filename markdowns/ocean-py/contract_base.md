@@ -1,8 +1,7 @@
 ---
 title: contract_base
 slug: /read-the-docs/ocean-py/contract_base
-section: ocean.py
-sub_section: web3_internal
+app: ocean.py
 module: ocean_lib.web3_internal.contract_base
 ---
 All contracts inherit from this base class.

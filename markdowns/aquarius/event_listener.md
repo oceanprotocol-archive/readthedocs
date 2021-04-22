@@ -1,8 +1,7 @@
 ---
 title: event_listener
 slug: /read-the-docs/aquarius/event_listener
-section: aquarius
-sub_section: web3_internal
+app: aquarius
 module: web3_internal.event_listener
 ---
 ## EventListener

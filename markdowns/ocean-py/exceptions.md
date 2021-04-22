@@ -1,31 +1,46 @@
 ---
 title: exceptions
 slug: /read-the-docs/ocean-py/exceptions
-section: ocean.py
-sub_section: web3_internal
-module: ocean_lib.web3_internal.exceptions
+app: ocean.py
+module: ocean_lib.exceptions
 ---
-## OceanKeeperContractsNotFound
+## OceanEncryptAssetUrlsError
 
 ```python
-class OceanKeeperContractsNotFound(Exception)
+class OceanEncryptAssetUrlsError(Exception)
 ```
 
-Raised when is not possible to find the keeper contracts abi.
+Error invoking the encrypt endpoint.
 
-## OceanDIDNotFound
+## InsufficientBalance
 
 ```python
-class OceanDIDNotFound(Exception)
+class InsufficientBalance(Exception)
 ```
 
-Raised when a requested DID or a DID in the chain cannot be found.
+The token balance is insufficient.
 
-## OceanInvalidTransaction
+## ContractNotFound
 
 ```python
-class OceanInvalidTransaction(Exception)
+class ContractNotFound(Exception)
 ```
 
-Raised when an on-chain transaction fail.
+Contract address is not found in the factory events.
+
+## AquariusError
+
+```python
+class AquariusError(Exception)
+```
+
+Error invoking an Aquarius metadata service endpoint.
+
+## VerifyTxFailed
+
+```python
+class VerifyTxFailed(Exception)
+```
+
+Transaction verification failed.
 

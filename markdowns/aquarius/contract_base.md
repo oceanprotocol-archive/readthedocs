@@ -6,8 +6,7 @@
 ---
 title: contract_base
 slug: /read-the-docs/aquarius/contract_base
-section: aquarius
-sub_section: web3_internal
+app: aquarius
 module: web3_internal.contract_base
 ---
 >>>>>>> gatsby:markdowns/aquarius/contract_base.md

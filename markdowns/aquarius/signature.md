@@ -1,8 +1,7 @@
 ---
 title: signature
 slug: /read-the-docs/aquarius/signature
-section: aquarius
-sub_section: web3_overrides
+app: aquarius
 module: web3_internal.web3_overrides.signature
 ---
 ## SignatureFix

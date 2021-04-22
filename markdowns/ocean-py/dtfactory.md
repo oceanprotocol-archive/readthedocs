@@ -1,8 +1,7 @@
 ---
 title: dtfactory
 slug: /read-the-docs/ocean-py/dtfactory
-section: ocean.py
-sub_section: models
+app: ocean.py
 module: ocean_lib.models.dtfactory
 ---
 ## DTFactory

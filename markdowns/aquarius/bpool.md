@@ -1,8 +1,7 @@
 ---
 title: bpool
 slug: /read-the-docs/aquarius/bpool
-section: aquarius
-sub_section: models
+app: aquarius
 module: models.bpool
 ---
 ## BPool

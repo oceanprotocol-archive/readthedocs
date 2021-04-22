@@ -6,8 +6,7 @@
 ---
 title: ocean_assets
 slug: /read-the-docs/aquarius/ocean_assets
-section: aquarius
-sub_section: ocean
+app: aquarius
 module: ocean.ocean_assets
 ---
 >>>>>>> gatsby:markdowns/aquarius/ocean_assets.md

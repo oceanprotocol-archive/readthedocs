@@ -1,8 +1,7 @@
 ---
 title: algorithm_metadata
 slug: /read-the-docs/aquarius/algorithm_metadata
-section: aquarius
-sub_section: models
+app: aquarius
 module: models.algorithm_metadata
 ---
 ## AlgorithmMetadata

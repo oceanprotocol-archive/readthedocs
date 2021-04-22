@@ -1,8 +1,7 @@
 ---
 title: dtfactory
 slug: /read-the-docs/aquarius/dtfactory
-section: aquarius
-sub_section: models
+app: aquarius
 module: models.dtfactory
 ---
 ## DTFactory

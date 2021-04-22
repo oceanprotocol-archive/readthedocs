@@ -1,7 +1,6 @@
 ---
 title: bfactory
 slug: /read-the-docs/ocean-py/bfactory
-section: ocean.py
-sub_section: models
+app: ocean.py
 module: ocean_lib.models.bfactory
 ---

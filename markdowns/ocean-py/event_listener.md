@@ -1,8 +1,7 @@
 ---
 title: event_listener
 slug: /read-the-docs/ocean-py/event_listener
-section: ocean.py
-sub_section: web3_internal
+app: ocean.py
 module: ocean_lib.web3_internal.event_listener
 ---
 ## EventListener

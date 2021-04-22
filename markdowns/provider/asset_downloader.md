@@ -1,8 +1,7 @@
 ---
 title: asset_downloader
 slug: /read-the-docs/provider/asset_downloader
-section: provider
-sub_section: assets
+app: provider
 module: assets.asset_downloader
 ---
 #### download\_asset\_files

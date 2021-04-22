@@ -1,8 +1,7 @@
 ---
 title: wallet
 slug: /read-the-docs/ocean-py/wallet
-section: ocean.py
-sub_section: web3_internal
+app: ocean.py
 module: ocean_lib.web3_internal.wallet
 ---
 ## Wallet

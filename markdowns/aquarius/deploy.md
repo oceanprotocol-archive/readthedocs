@@ -6,8 +6,7 @@
 ---
 title: deploy
 slug: /read-the-docs/aquarius/deploy
-section: aquarius
-sub_section: ocean
+app: aquarius
 module: ocean.deploy
 ---
 >>>>>>> gatsby:markdowns/aquarius/deploy.md

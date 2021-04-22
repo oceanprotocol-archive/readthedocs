@@ -1,8 +1,7 @@
 ---
 title: dtfactory
 slug: /read-the-docs/provider/dtfactory
-section: provider
-sub_section: models
+app: provider
 module: models.dtfactory
 ---
 ## DTFactory

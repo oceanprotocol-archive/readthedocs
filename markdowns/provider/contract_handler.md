@@ -1,8 +1,7 @@
 ---
 title: contract_handler
 slug: /read-the-docs/provider/contract_handler
-section: provider
-sub_section: web3_internal
+app: provider
 module: web3_internal.contract_handler
 ---
 ## ContractHandler

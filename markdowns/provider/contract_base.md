@@ -1,8 +1,7 @@
 ---
 title: contract_base
 slug: /read-the-docs/provider/contract_base
-section: provider
-sub_section: web3_internal
+app: provider
 module: web3_internal.contract_base
 ---
 All contracts inherit from this base class.

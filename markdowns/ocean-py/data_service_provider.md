@@ -1,8 +1,7 @@
 ---
 title: data_service_provider
 slug: /read-the-docs/ocean-py/data_service_provider
-section: ocean.py
-sub_section: data_provider
+app: ocean.py
 module: ocean_lib.data_provider.data_service_provider
 ---
 Provider module.

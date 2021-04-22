@@ -7,8 +7,7 @@
 ---
 title: util
 slug: /read-the-docs/aquarius/util
-section: aquarius
-sub_section: ocean
+app: aquarius
 module: ocean.util
 ---
 >>>>>>> gatsby:markdowns/aquarius/util.md

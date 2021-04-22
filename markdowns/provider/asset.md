@@ -1,8 +1,7 @@
 ---
 title: asset
 slug: /read-the-docs/provider/asset
-section: provider
-sub_section: assets
+app: provider
 module: assets.asset
 ---
 ## Asset

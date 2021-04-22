@@ -1,8 +1,7 @@
 ---
 title: account
 slug: /read-the-docs/provider/account
-section: provider
-sub_section: web3_internal
+app: provider
 module: web3_internal.account
 ---
 Accounts module.

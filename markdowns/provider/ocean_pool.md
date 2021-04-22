@@ -1,8 +1,7 @@
 ---
 title: ocean_pool
 slug: /read-the-docs/provider/ocean_pool
-section: provider
-sub_section: ocean
+app: provider
 module: ocean.ocean_pool
 ---
 ## OceanPool

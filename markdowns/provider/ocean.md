@@ -1,8 +1,7 @@
 ---
 title: ocean
 slug: /read-the-docs/provider/ocean
-section: provider
-sub_section: ocean
+app: provider
 module: ocean.ocean
 ---
 Ocean module.

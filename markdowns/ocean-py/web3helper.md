@@ -1,8 +1,7 @@
 ---
 title: web3helper
 slug: /read-the-docs/ocean-py/web3helper
-section: ocean.py
-sub_section: web3_internal
+app: ocean.py
 module: ocean_lib.web3_internal.web3helper
 ---
 Web3Helper module to provide convenient functions.

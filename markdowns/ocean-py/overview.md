@@ -1,9 +1,8 @@
 ---
-title: Overview
-slug: /read-the-docs/ocean.py/overview
-section: ocean.py
-sub_section: Overview
-module: overview
+title: overview
+slug: /read-the-docs/ocean-py/overview
+app: ocean.py
+module: introduction.overview
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
