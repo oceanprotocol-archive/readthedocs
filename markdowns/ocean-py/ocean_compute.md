@@ -16,7 +16,7 @@ Ocean assets class.
 #### \_\_init\_\_
 
 ```python
- | def __init__(ocean_auth, config, data_provider)
+ | def __init__(config, data_provider)
 ```
 
 Initialises OceanCompute class.

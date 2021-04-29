@@ -4,8 +4,6 @@ slug: /read-the-docs/ocean-py/ddo
 app: ocean.py
 module: ocean_lib.common.ddo.ddo
 ---
-DID Lib to do DID's and DDO's.
-
 ## DDO
 
 ```python

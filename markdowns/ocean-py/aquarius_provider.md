@@ -4,8 +4,6 @@ slug: /read-the-docs/ocean-py/aquarius_provider
 app: ocean.py
 module: ocean_lib.common.aquarius.aquarius_provider
 ---
-Aquarius module.
-
 ## AquariusProvider
 
 ```python

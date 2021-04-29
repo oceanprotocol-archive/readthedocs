@@ -31,8 +31,6 @@ artifacts.path = artifacts
 [resources]
 metadata_cache_uri = http://localhost:5000
 provider.url = http://localhost:8030
-; Path of back-up storage
-storage.path = ocean_lib.db
 
 [util]
 typecheck = true
@@ -51,15 +49,6 @@ typecheck = true
 ```
 
 Path where the contracts artifacts are allocated.
-
-#### storage\_path
-
-```python
- | @property
- | def storage_path()
-```
-
-Path to local storage (database file).
 
 #### network\_url
 

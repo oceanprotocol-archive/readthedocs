@@ -5,6 +5,7 @@ import argparse
 import fnmatch
 import logging
 import os
+import shutil
 import sys
 import subprocess
 from pkgutil import iter_modules
@@ -121,11 +122,17 @@ def generate_markdowns(app: str, path: str, output_dir: str, doc_ignore_path: st
     with open("config.txt", "r") as f:
         config = f.read()
 
+    output_dir_path = os.path.join('markdowns', output_dir)
+    if os.path.isdir(output_dir_path):
+        shutil.rmtree(output_dir_path)
+
+    Path("markdowns/{0}/".format(output_dir)).mkdir(parents=True, exist_ok=True)
+
     for i in tqdm(range(len(markdowns_to_generate))):
 
         title = markdowns_to_generate[i].split('.')[-1]
         file_name = title + '.md'
-        Path("markdowns/{0}/".format(output_dir)).mkdir(parents=True, exist_ok=True)
+
 
         file_path = 'markdowns/{0}/{1}'.format(output_dir, file_name)
         slug = '/read-the-docs/' + output_dir + '/' + title
