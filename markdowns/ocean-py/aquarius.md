@@ -104,39 +104,6 @@ List all the ddos registered in the aquarius instance.
 
 List of DDO instance
 
-#### publish\_asset\_ddo
-
-```python
- | def publish_asset_ddo(ddo)
-```
-
-Register asset ddo in aquarius.
-
-**Arguments**:
-
-- `ddo`: DDO instance
-
-**Returns**:
-
-API response (depends on implementation)
-
-#### update\_asset\_ddo
-
-```python
- | def update_asset_ddo(did, ddo)
-```
-
-Update the ddo of a did already registered.
-
-**Arguments**:
-
-- `did`: Asset DID string
-- `ddo`: DDO instance
-
-**Returns**:
-
-API response (depends on implementation)
-
 #### text\_search
 
 ```python
@@ -194,34 +161,6 @@ Example: query_search({"price":[0,10]})
 **Returns**:
 
 List of DDO instance
-
-#### retire\_asset\_ddo
-
-```python
- | def retire_asset_ddo(did)
-```
-
-Retire asset ddo of Aquarius.
-
-**Arguments**:
-
-- `did`: Asset DID string
-
-**Returns**:
-
-API response (depends on implementation)
-
-#### retire\_all\_assets
-
-```python
- | def retire_all_assets()
-```
-
-Retire all the ddo assets.
-
-**Returns**:
-
-str
 
 #### validate\_metadata
 

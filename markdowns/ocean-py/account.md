@@ -31,3 +31,30 @@ to be able to sign transactions locally
 - `encrypted_key`: 
 - `private_key`: 
 
+#### key\_file
+
+```python
+ | @property
+ | def key_file()
+```
+
+Holds the key file path
+
+#### private\_key
+
+```python
+ | @property
+ | def private_key()
+```
+
+Holds the private key
+
+#### key
+
+```python
+ | @property
+ | def key()
+```
+
+Returns the private key (if defined) or the encrypted key.
+

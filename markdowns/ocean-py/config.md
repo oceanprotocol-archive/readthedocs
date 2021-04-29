@@ -22,6 +22,7 @@ Initialize Config class.
 
 Options available:
 
+```
 [eth-network]
 ; ethereum network url
 network = rinkeby
@@ -34,6 +35,7 @@ provider.url = http://localhost:8030
 
 [util]
 typecheck = true
+```
 
 **Arguments**:
 
