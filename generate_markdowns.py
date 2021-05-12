@@ -92,7 +92,7 @@ def find_modules(path):
     return modules
 
 
-def filter_modules(path: str, module_list: [str], doc_ignore_path: str):
+def filter_modules(path: str, module_list: list[str], doc_ignore_path: str):
     """
     The function removes the modules that are found in `ignore_files`
     """
