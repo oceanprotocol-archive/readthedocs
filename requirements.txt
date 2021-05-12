@@ -1,4 +1,6 @@
+appdirs==1.4.4
 astroid==2.5.1
+black @ git+git://github.com/psf/black@b2ee211b5ad84b62738ac0997b73bf6ee9a74d06
 certifi==2020.12.5
 chardet==4.0.0
 click==7.1.2
@@ -9,6 +11,7 @@ idna==2.10
 isort==5.8.0
 lazy-object-proxy==1.6.0
 mccabe==0.6.1
+mypy-extensions==0.4.3
 nr.collections==0.0.1
 nr.databind.core==0.0.22
 nr.databind.json==0.0.14
@@ -20,9 +23,11 @@ nr.pylang.utils==0.0.4
 nr.stream==0.0.5
 nr.sumtype==0.0.4
 nr.utils.re==0.1.1
+pathspec==0.8.1
 pydoc-markdown==3.10.0
 pylint==2.7.2
 PyYAML==5.4.1
+regex==2021.4.4
 requests==2.25.1
 six==1.15.0
 toml==0.10.2
