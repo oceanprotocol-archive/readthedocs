@@ -1,9 +1,12 @@
 [submodule "ocean.py"]
-	path = ocean.py
+	path = submodules/ocean.py
 	url = git@github.com:oceanprotocol/ocean.py.git
+	branch = main
 [submodule "provider"]
-	path = provider
+	path = submodules/provider
 	url = git@github.com:oceanprotocol/provider.git
+	branch = main
 [submodule "aquarius"]
-	path = aquarius
+	path = submodules/aquarius
 	url = git@github.com:oceanprotocol/aquarius.git
+	branch = main
