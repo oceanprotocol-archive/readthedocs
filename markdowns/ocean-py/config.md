@@ -21,7 +21,6 @@ Class to manage the ocean-lib configuration.
 Initialize Config class.
 
 Options available:
-
 ```
 [eth-network]
 ; ethereum network url

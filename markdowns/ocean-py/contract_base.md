@@ -191,7 +191,7 @@ Uses either `personal_sendTransaction` (if passphrase is available) or `ether_se
 
 **Returns**:
 
-
+hex str transaction hash
 
 #### get\_event\_argument\_names
 
@@ -199,9 +199,15 @@ Uses either `personal_sendTransaction` (if passphrase is available) or `ether_se
  | def get_event_argument_names(event_name: str)
 ```
 
+Finds the event arguments by `event_name`.
+
+**Arguments**:
+
+- `event_name`: str Name of the event to search in the `contract`.
+
 **Returns**:
 
-Argument names
+`event.argument_names` if event is found or None
 
 #### deploy
 
@@ -228,9 +234,35 @@ smartcontract address of this contract
  | def get_event_logs(event_name, from_block, to_block, filters, web3=None, chunk_size=1000)
 ```
 
+Fetches the list of event logs between the given block numbers.
+
+**Arguments**:
+
+- `event_name`: str
+- `from_block`: int
+- `to_block`: int
+- `filters`: 
+- `web3`: Wallet instance
+- `chunk_size`: int
+
 **Returns**:
 
-Event logs
+List of event logs. List will have the structure as below.
+```Python
+[AttributeDict({
+'args': AttributeDict({}),
+'event': 'LogNoArguments',
+'logIndex': 0,
+'transactionIndex': 0,
+'transactionHash': HexBytes('...'),
+'address': '0xF2E246BB76DF876Cef8b38ae84130F4F55De395b',
+'blockHash': HexBytes('...'),
+'blockNumber': 3
+}),
+AttributeDict(...),
+...
+]
+```
 
 #### getLogs
 

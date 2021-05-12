@@ -22,6 +22,9 @@ key and password safe and they are never sent outside. Another advantage of this
 we can interact directly with remote network nodes without having to run a local parity
 node since we only send the raw transaction hash so the user info is safe.
 
+Usage:
+    1. `wallet = Wallet(ocean.web3, private_key=private_key)`
+
 #### \_\_init\_\_
 
 ```python
@@ -29,4 +32,12 @@ node since we only send the raw transaction hash so the user info is safe.
 ```
 
 Initialises Wallet object.
+
+#### sign
+
+```python
+ | def sign(msg_hash)
+```
+
+Sign a transaction.
 
