@@ -2,7 +2,7 @@
 title: http_provider
 slug: /read-the-docs/aquarius/http_provider
 app: aquarius
-module: web3_internal.web3_overrides.http_provider
+module: events.http_provider
 ---
 ## CustomHTTPProvider
 

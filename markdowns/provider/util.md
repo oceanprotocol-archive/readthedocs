@@ -2,54 +2,37 @@
 title: util
 slug: /read-the-docs/provider/util
 app: provider
-module: ocean.util
+module: utils.util
 ---
-#### get\_web3\_connection\_provider
+#### get\_asset\_urls
 
 ```python
-def get_web3_connection_provider(network_url)
+def get_asset_urls(asset, wallet)
 ```
 
-Return the suitable web3 provider based on the network_url.
+Returns list of urls of the files included in this `asset` in order.
 
-When connecting to a public ethereum network (mainnet or a test net) without
-running a local node requires going through some gateway such as `infura`.
-
-Using infura has some issues if your code is relying on evm events.
-To use events with an infura connection you have to use the websocket interface.
-
-Make sure the `infura` url for websocket connection has the following format
-wss://rinkeby.infura.io/ws/v3/357f2fe737db4304bd2f7285c5602d0d
-Note the `/ws/` in the middle and the `wss` protocol in the beginning.
-
-A note about using the `rinkeby` testnet:
-Web3 py has an issue when making some requests to `rinkeby`
-- the issue is described here: https://github.com/ethereum/web3.py/issues/549
-- and the fix is here: https://web3py.readthedocs.io/en/latest/middleware.html#geth-style-proof-of-authority
-
-**Arguments**:
-
-- `network_url`: str
-
-**Returns**:
-
-provider : HTTPProvider
-
-#### to\_base
+#### filter\_dictionary
 
 ```python
-@enforce_types_shim
-def to_base(amt: float, dec: int) -> int
+def filter_dictionary(dictionary, keys)
 ```
 
-Returns value in e.g. wei (taking e.g. ETH as input).
+Filters a dictionary from a list of keys.
 
-#### from\_base
+#### filter\_dictionary\_starts\_with
 
 ```python
-@enforce_types_shim
-def from_base(num_base: int, dec: int) -> float
+def filter_dictionary_starts_with(dictionary, prefix)
 ```
 
-Returns value in e.g. ETH (taking e.g. wei as input).
+Filters a dictionary from a key prefix.
+
+#### decode\_from\_data
+
+```python
+def decode_from_data(data, key, dec_type="list")
+```
+
+Retrieves a dictionary key as a decoded dictionary or list.
 

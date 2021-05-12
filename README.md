@@ -28,6 +28,7 @@ python generate_markdowns.py -l ocean.py aquarius provider
 
 - `-l` : List of apps
 - `-v` : Verbose logging
+- `-m` : List of modules (optional). If not provided, scirpt will generate docs for all the modules.
 
 ### Usage:
 
