@@ -101,14 +101,6 @@ Update value in the array of values.
 
 None
 
-#### as\_text
-
-```python
- | def as_text(is_pretty=False)
-```
-
-Return the service as a JSON string.
-
 #### as\_dictionary
 
 ```python

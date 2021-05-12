@@ -4,7 +4,7 @@ slug: /read-the-docs/ocean-py/contract_base
 app: ocean.py
 module: ocean_lib.web3_internal.contract_base
 ---
-All contracts inherit from this base class.
+All contracts inherit from `ContractBase` class.
 
 ## ContractBase
 
@@ -23,7 +23,7 @@ Base class for all contract objects.
 
 Initialises Contract Base object.
 
-The contract name attribute and abi_path are required.
+The contract name attribute and `abi_path` are required.
 
 #### \_\_str\_\_
 
@@ -31,7 +31,25 @@ The contract name attribute and abi_path are required.
  | def __str__()
 ```
 
-Returns contract name @ address.
+Returns contract `name @ address.`
+
+#### configured\_address
+
+```python
+ | @classmethod
+ | def configured_address(cls, network, address_file)
+```
+
+Returns the contract addresses
+
+#### contract\_name
+
+```python
+ | @property
+ | def contract_name() -> str
+```
+
+Returns the contract name
 
 #### address
 
@@ -51,9 +69,14 @@ Return the ethereum address of the solidity contract deployed in current network
 
 Expose the underlying contract's events.
 
-**Returns**:
+#### function\_names
 
+```python
+ | @property
+ | def function_names() -> List[str]
+```
 
+Returns the list of functions in the contract
 
 #### to\_checksum\_address
 
@@ -89,6 +112,22 @@ Get the receipt of a tx.
 **Returns**:
 
 Tx receipt
+
+#### is\_tx\_successful
+
+```python
+ | def is_tx_successful(tx_hash: str) -> bool
+```
+
+Check if the transaction is successful.
+
+**Arguments**:
+
+- `tx_hash`: hash of the transaction
+
+**Returns**:
+
+bool
 
 #### get\_event\_signature
 
@@ -152,7 +191,23 @@ Uses either `personal_sendTransaction` (if passphrase is available) or `ether_se
 
 **Returns**:
 
+hex str transaction hash
 
+#### get\_event\_argument\_names
+
+```python
+ | def get_event_argument_names(event_name: str)
+```
+
+Finds the event arguments by `event_name`.
+
+**Arguments**:
+
+- `event_name`: str Name of the event to search in the `contract`.
+
+**Returns**:
+
+`event.argument_names` if event is found or None
 
 #### deploy
 
@@ -173,6 +228,42 @@ Deploy the DataTokenTemplate and DTFactory contracts to the current network.
 
 smartcontract address of this contract
 
+#### get\_event\_logs
+
+```python
+ | def get_event_logs(event_name, from_block, to_block, filters, web3=None, chunk_size=1000)
+```
+
+Fetches the list of event logs between the given block numbers.
+
+**Arguments**:
+
+- `event_name`: str
+- `from_block`: int
+- `to_block`: int
+- `filters`: 
+- `web3`: Wallet instance
+- `chunk_size`: int
+
+**Returns**:
+
+List of event logs. List will have the structure as below.
+```Python
+[AttributeDict({
+'args': AttributeDict({}),
+'event': 'LogNoArguments',
+'logIndex': 0,
+'transactionIndex': 0,
+'transactionHash': HexBytes('...'),
+'address': '0xF2E246BB76DF876Cef8b38ae84130F4F55De395b',
+'blockHash': HexBytes('...'),
+'blockNumber': 3
+}),
+AttributeDict(...),
+...
+]
+```
+
 #### getLogs
 
 ```python
@@ -190,7 +281,8 @@ the Ethereum node might be overloaded and timeout
 on the underlying JSON-RPC call.
 Example - how to get all ERC-20 token transactions
 for the latest 10 blocks:
-.. code-block:: python
+
+```python
 from = max(mycontract.web3.eth.blockNumber - 10, 1)
 to = mycontract.web3.eth.blockNumber
 events = mycontract.events.Transfer.getLogs(fromBlock=from, toBlock=to)
@@ -198,8 +290,10 @@ for e in events:
 print(e["args"]["from"],
 e["args"]["to"],
 e["args"]["value"])
+```
 The returned processed log values will look like:
-.. code-block:: python
+
+```python
 (
 AttributeDict({
 'args': AttributeDict({}),
@@ -214,6 +308,8 @@ AttributeDict({
 AttributeDict(...),
 ...
 )
+```
+
 See also: :func:`web3.middleware.filter.local_filter_middleware`.
 
 **Arguments**:

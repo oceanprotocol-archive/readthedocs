@@ -18,18 +18,6 @@ Generate a new id without prefix.
 
 Id, str
 
-#### generate\_prefixed\_id
-
-```python
-def generate_prefixed_id()
-```
-
-Generate a new id prefixed with 0x that is used as identifier for the service agreements ids.
-
-**Returns**:
-
-Id, str
-
 #### to\_32byte\_hex
 
 ```python

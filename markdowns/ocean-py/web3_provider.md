@@ -41,3 +41,12 @@ If `provider` is given, `network_url` will be ignored.
 
 Return the web3 instance to interact with the ethereum client.
 
+#### set\_web3
+
+```python
+ | @staticmethod
+ | def set_web3(web3)
+```
+
+Set web3 instance.
+

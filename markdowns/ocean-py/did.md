@@ -50,22 +50,6 @@ Parse a DID into it's parts.
 
 Python dictionary with the method and the id.
 
-#### is\_did\_valid
-
-```python
-def is_did_valid(did)
-```
-
-Did validator.
-
-Return True if the did is a valid DID with the method name 'op' and the id
-in the Ocean format
-
-**Arguments**:
-
-- `did`: Asset did, str
-:return bool
-
 #### id\_to\_did
 
 ```python

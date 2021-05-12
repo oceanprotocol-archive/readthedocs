@@ -67,16 +67,5 @@ Return the price from the conditions parameters.
 
 **Returns**:
 
-Int
-
-#### create\_new\_agreement\_id
-
-```python
- | @staticmethod
- | def create_new_agreement_id()
-```
-
-**Returns**:
-
-
+Float
 
