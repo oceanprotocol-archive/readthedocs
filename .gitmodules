@@ -3,7 +3,7 @@
 	url = git@github.com:oceanprotocol/ocean.py.git
 [submodule "provider"]
 	path = provider
-	url = git@github.com:oceanprotocol/ocean.py.git
+	url = git@github.com:oceanprotocol/provider.git
 [submodule "aquarius"]
 	path = aquarius
-	url = git@github.com:oceanprotocol/ocean.py.git
+	url = git@github.com:oceanprotocol/aquarius.git
