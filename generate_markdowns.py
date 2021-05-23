@@ -73,8 +73,10 @@ def concat_files(source_file: str, target_file: str):
 
 
 def generate_additional_docs_from_directory(
-    app, additional_directories, output_directory, source
+    app, additional_directories, output_directory, doc_ignore_file_path, source
 ):
+    ignore_files = get_doc_ignore_file_list(doc_ignore_file_path)
+
     for additional_directory in additional_directories:
         directory_path = additional_directory["path"]
 
@@ -82,15 +84,30 @@ def generate_additional_docs_from_directory(
             os.makedirs(output_directory, exist_ok=True)
 
         for markdown_file_path in Path(directory_path).rglob("*.md"):
-            logging.debug("Adding markdown: %s", str(markdown_file_path))
+
             module_name = markdown_file_path.stem
             relative_path = os.path.relpath(
                 str(markdown_file_path.parent), directory_path
             )
-            module_path = "" if relative_path == "." else relative_path + "."
-            module = ".".join((module_path + module_name).split(os.sep))
+
+            module_path = "" if relative_path == "." else relative_path
+            module = ".".join(os.path.join(module_path, module_name).split(os.sep))
 
             out_dir = os.path.join(output_directory, relative_path)
+
+            can_be_ignored = False
+            for ignore in ignore_files:
+                if fnmatch.fnmatch(
+                    os.path.join(module_path, markdown_file_path.name), ignore
+                ):
+                    can_be_ignored = True
+                    break
+
+            if can_be_ignored:
+                logging.info("Ignoring markdown: %s", str(markdown_file_path))
+                continue
+
+            logging.info("Adding markdown: %s", str(markdown_file_path))
 
             if not os.path.isdir(out_dir):
                 os.makedirs(out_dir)
@@ -126,19 +143,23 @@ def find_modules(path):
     return modules
 
 
-def filter_modules(path: str, module_list: list[str], doc_ignore_path: str):
-    """
-    The function removes the modules that are found in `ignore_files`
-    """
+def get_doc_ignore_file_list(doc_ignore_path: str):
     ignore_files = []
     if os.path.isfile(doc_ignore_path):
         with open(doc_ignore_path) as doc_ignore_file:
             ignore_files = [line.rstrip("\n") for line in doc_ignore_file]
     else:
         logging.warning("File [%s] not found", doc_ignore_path)
+    return ignore_files
+
+
+def filter_modules(path: str, module_list: list[str], doc_ignore_path: str):
+    """
+    The function removes the modules that are found in `ignore_files`
+    """
 
     matches = set()
-
+    ignore_files = get_doc_ignore_file_list(doc_ignore_path)
     for module in module_list:
         for ignore in ignore_files:
             file_path = os.path.join(*module.split("."))
@@ -184,7 +205,6 @@ def generate_markdowns(
     if os.path.isdir(output_dir):
         shutil.rmtree(output_dir)
 
-    Path("markdowns/{0}/".format(output_dir)).mkdir(parents=True, exist_ok=True)
     branch = get_branch(path)
 
     for i in tqdm(range(len(markdowns_to_generate))):
@@ -192,12 +212,10 @@ def generate_markdowns(
         title = markdowns_to_generate[i].split(".")[-1]
         file_name = title + ".md"
 
-        out_d = os.path.join(
-            "markdowns", output_dir, *markdowns_to_generate[i].split(".")[:-1]
-        )
+        out_d = os.path.join(output_dir, *markdowns_to_generate[i].split(".")[:-1])
 
         if not os.path.isdir(out_d):
-            os.makedirs(out_d)
+            os.makedirs(out_d, exist_ok=True)
 
         file_path = os.path.join(out_d, file_name)
         # slug = "/read-the-docs/" + output_dir + "/" + title
@@ -277,5 +295,6 @@ if __name__ == "__main__":
             markdown_repo["app"],
             markdown_repo["markdown_path"],
             markdown_repo["output_dir"],
+            markdown_repo["docignore_file_path"],
             markdown_repo["source"],
         )
