@@ -1,8 +1,8 @@
 ---
-title: readme
-slug: /read-the-docs/ocean-py/readme
+title: README.md
+slug: None
 app: ocean.py
-module: introduction.readme
+module: README
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation

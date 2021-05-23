@@ -1,8 +1,8 @@
 ---
-title: datatokens-flow
-slug: /read-the-docs/ocean-py/READMEs/datatokens-flow.md
+title: datatokens-flow.md
+slug: None
 app: ocean.py
-module: introduction.datatokens-flow
+module: READMEs.datatokens-flow
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
