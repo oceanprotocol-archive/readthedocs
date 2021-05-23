@@ -82,7 +82,7 @@ def generate_additional_docs_from_directory(app, additional_directories):
             os.makedirs(output_directory, exist_ok=True)
 
         for markdown_file_path in Path(directory_path).rglob("*.md"):
-
+            logging.debug("Adding markdown: %s", str(markdown_file_path))
             module_name = markdown_file_path.stem
             relative_path = os.path.relpath(
                 str(markdown_file_path.parent), directory_path
@@ -190,15 +190,22 @@ def generate_markdowns(
         title = markdowns_to_generate[i].split(".")[-1]
         file_name = title + ".md"
 
-        file_path = "markdowns/{0}/{1}".format(output_dir, file_name)
-        slug = "/read-the-docs/" + output_dir + "/" + title
+        out_d = os.path.join(
+            "markdowns", output_dir, *markdowns_to_generate[i].split(".")[:-1]
+        )
 
-        prepend_gatsby_header(file_path, title, slug, app, markdowns_to_generate[i])
+        if not os.path.isdir(out_d):
+            os.makedirs(out_d)
+
+        file_path = os.path.join(out_d, file_name)
+        # slug = "/read-the-docs/" + output_dir + "/" + title
+
+        prepend_gatsby_header(file_path, title, None, app, markdowns_to_generate[i])
 
         module_path = markdowns_to_generate[i]
 
         with open(file_path, "a") as fp:
-            subprocess.Popen(
+            subprocess.call(
                 ["pydoc-markdown", "-I", path, "-m", module_path, config], stdout=fp
             )
 
@@ -222,7 +229,7 @@ markdown_repos = {
             {
                 "path": os.path.join("submodules", "ocean.py"),
                 "module": "introduction.readmes",
-                "output_directory": os.path.join("markdowns", "ocean-py", "readmes"),
+                "output_directory": os.path.join("markdowns", "ocean-py"),
             }
         ],
     },
