@@ -3,6 +3,7 @@ title: dao
 slug: None
 app: aquarius
 module: app.dao
+source: https://github.com/oceanprotocol/aquarius/blob/main/app/dao.py
 ---
 ## Dao
 

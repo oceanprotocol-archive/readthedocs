@@ -3,6 +3,7 @@ title: compute
 slug: None
 app: provider
 module: routes.compute
+source: https://github.com/oceanprotocol/provider/blob/main/routes/compute.py
 ---
 #### computeDelete
 

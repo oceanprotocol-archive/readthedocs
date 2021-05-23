@@ -3,6 +3,7 @@ title: ddo
 slug: None
 app: ocean.py
 module: ocean_lib.common.ddo.ddo
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/ddo/ddo.py
 ---
 ## DDO
 
@@ -28,6 +29,24 @@ Clear the DDO data values.
 ```
 
 Get the DID.
+
+#### is\_disabled
+
+```python
+ | @property
+ | def is_disabled()
+```
+
+Returns whether the asset is disabled.
+
+#### is\_enabled
+
+```python
+ | @property
+ | def is_enabled()
+```
+
+Returns the opposite of is_disabled, for convenience.
 
 #### asset\_id
 
@@ -55,6 +74,15 @@ Get the list of services.
 ```
 
 Get the static proof, or None.
+
+#### credentials
+
+```python
+ | @property
+ | def credentials()
+```
+
+Get the credentials.
 
 #### metadata
 
@@ -227,4 +255,87 @@ Create a public key object based on the values from the JSON record.
 ```
 
 Create authentication object from a JSON dict.
+
+#### enable
+
+```python
+ | def enable()
+```
+
+Enables asset for ordering.
+
+#### disable
+
+```python
+ | def disable()
+```
+
+Disables asset from ordering.
+
+#### requires\_address\_credential
+
+```python
+ | @property
+ | def requires_address_credential()
+```
+
+Checks if an address credential is required on this asset.
+
+#### allowed\_addresses
+
+```python
+ | @property
+ | def allowed_addresses()
+```
+
+Lists addresses that are explicitly allowed in credentials.
+
+#### denied\_addresses
+
+```python
+ | @property
+ | def denied_addresses()
+```
+
+Lists addresesses that are explicitly denied in credentials.
+
+#### add\_address\_to\_allow\_list
+
+```python
+ | def add_address_to_allow_list(address)
+```
+
+Adds an address to allowed addresses list.
+
+#### add\_address\_to\_deny\_list
+
+```python
+ | def add_address_to_deny_list(address)
+```
+
+Adds an address to the denied addresses list.
+
+#### remove\_address\_from\_allow\_list
+
+```python
+ | def remove_address_from_allow_list(address)
+```
+
+Removes address from allow list (if it exists).
+
+#### remove\_address\_from\_deny\_list
+
+```python
+ | def remove_address_from_deny_list(address)
+```
+
+Removes address from deny list (if it exists).
+
+#### is\_consumable
+
+```python
+ | def is_consumable(credential=None, with_connectivity_check=True, provider_uri=None)
+```
+
+Checks whether an asset is consumable and returns a ConsumableCode.
 

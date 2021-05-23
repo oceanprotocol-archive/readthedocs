@@ -3,6 +3,7 @@ title: url
 slug: None
 app: provider
 module: utils.url
+source: https://github.com/oceanprotocol/provider/blob/main/utils/url.py
 ---
 #### validate\_dns\_records
 

@@ -3,6 +3,7 @@ title: ocean_services
 slug: None
 app: ocean.py
 module: ocean_lib.ocean.ocean_services
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_services.py
 ---
 Ocean module.
 

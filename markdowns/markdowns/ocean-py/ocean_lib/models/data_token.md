@@ -3,6 +3,7 @@ title: data_token
 slug: None
 app: ocean.py
 module: ocean_lib.models.data_token
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/data_token.py
 ---
 ## DataToken
 

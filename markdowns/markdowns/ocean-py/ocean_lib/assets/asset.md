@@ -3,6 +3,7 @@ title: asset
 slug: None
 app: ocean.py
 module: ocean_lib.assets.asset
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/assets/asset.py
 ---
 ## Asset
 

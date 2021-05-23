@@ -3,6 +3,7 @@ title: consume
 slug: None
 app: provider
 module: routes.consume
+source: https://github.com/oceanprotocol/provider/blob/main/routes/consume.py
 ---
 #### encrypt
 

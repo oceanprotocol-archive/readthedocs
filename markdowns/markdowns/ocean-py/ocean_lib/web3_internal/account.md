@@ -3,6 +3,7 @@ title: account
 slug: None
 app: ocean.py
 module: ocean_lib.web3_internal.account
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/account.py
 ---
 Accounts module.
 

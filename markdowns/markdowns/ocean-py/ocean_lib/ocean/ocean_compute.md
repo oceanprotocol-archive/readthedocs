@@ -3,6 +3,7 @@ title: ocean_compute
 slug: None
 app: ocean.py
 module: ocean_lib.ocean.ocean_compute
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_compute.py
 ---
 ## OceanCompute
 

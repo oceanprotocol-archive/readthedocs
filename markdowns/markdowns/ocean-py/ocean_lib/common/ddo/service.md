@@ -3,6 +3,7 @@ title: service
 slug: None
 app: ocean.py
 module: ocean_lib.common.ddo.service
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/ddo/service.py
 ---
 Service Class
 To handle service items in a DDO record

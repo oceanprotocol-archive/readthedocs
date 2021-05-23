@@ -3,6 +3,7 @@ title: auth_util
 slug: None
 app: aquarius
 module: app.auth_util
+source: https://github.com/oceanprotocol/aquarius/blob/main/app/auth_util.py
 ---
 #### get\_signer\_address
 

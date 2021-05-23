@@ -3,6 +3,7 @@ title: data_service_provider
 slug: None
 app: ocean.py
 module: ocean_lib.data_provider.data_service_provider
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/data_provider/data_service_provider.py
 ---
 Provider module.
 
@@ -130,34 +131,6 @@ job_info dict with jobId, status, and other values
 **Returns**:
 
 bool whether the job was stopped successfully
-
-#### restart\_compute\_job
-
-```python
- | @staticmethod
- | def restart_compute_job(did, job_id, service_endpoint, consumer_address, signature, service_id, order_tx_id, algorithm_did=None, algorithm_meta=None, output=None, input_datasets=None)
-```
-
-**Arguments**:
-
-- `did`: id of asset starting with `did:op:` and a hex str without 0x prefix
-- `job_id`: str id of compute job that was started and stopped (optional, use it
-here to start a job after it was stopped)
-- `service_endpoint`: 
-- `consumer_address`: hex str the ethereum address of the consumer executing the compute job
-- `signature`: hex str signed message to allow the provider to authorize the consumer
-- `service_id`: 
-- `token_address`: 
-- `order_tx_id`: hex str id of the token transfer transaction
-- `algorithm_did`: str -- the asset did (of `algorithm` type) which consist of `did:op:` and
-the assetId hex str (without `0x` prefix)
-- `algorithm_meta`: see `OceanCompute.execute`
-- `output`: see `OceanCompute.execute`
-- `input_datasets`: list of ComputeInput
-
-**Returns**:
-
-bool whether the job was restarted successfully
 
 #### delete\_compute\_job
 

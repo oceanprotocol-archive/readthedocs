@@ -3,6 +3,7 @@ title: utilities
 slug: None
 app: ocean.py
 module: ocean_lib.common.utils.utilities
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/utils/utilities.py
 ---
 Utilities class
 

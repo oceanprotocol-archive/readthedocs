@@ -3,6 +3,7 @@ title: pools
 slug: None
 app: aquarius
 module: app.pools
+source: https://github.com/oceanprotocol/aquarius/blob/main/app/pools.py
 ---
 #### get\_liquidity\_history
 

@@ -3,6 +3,7 @@ title: assets
 slug: None
 app: aquarius
 module: app.assets
+source: https://github.com/oceanprotocol/aquarius/blob/main/app/assets.py
 ---
 #### get\_assets\_ids
 

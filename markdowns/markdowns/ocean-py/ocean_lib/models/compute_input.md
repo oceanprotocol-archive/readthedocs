@@ -3,6 +3,7 @@ title: compute_input
 slug: None
 app: ocean.py
 module: ocean_lib.models.compute_input
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/compute_input.py
 ---
 ## ComputeInput
 

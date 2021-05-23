@@ -3,6 +3,7 @@ title: contract_handler
 slug: None
 app: ocean.py
 module: ocean_lib.web3_internal.contract_handler
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/contract_handler.py
 ---
 ## ContractHandler
 

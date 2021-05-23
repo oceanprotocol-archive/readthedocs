@@ -3,6 +3,7 @@ title: util
 slug: None
 app: provider
 module: utils.util
+source: https://github.com/oceanprotocol/provider/blob/main/utils/util.py
 ---
 #### get\_asset\_urls
 
