@@ -37,36 +37,70 @@ else:
     logging.basicConfig(level=logging.INFO)
 
 
-def prepend_gatsby_header(file_path, title, slug, app, module):
+def get_branch(path: str):
+    return (
+        subprocess.check_output(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=path)
+        .decode("utf-8")
+        .rstrip()
+    )
+
+
+def generate_source_url(source, branch, module):
+
+    url = source + "/blob/" + branch + "/" + "/".join(module.split(".")) + ".py"
+    return url
+
+
+def prepend_gatsby_header(file_path, title, slug, app, module, source):
     """
     Adds title, description and slug to the file.
     """
-
     with open(file_path, "w") as out_file:
-        header = "---\ntitle: {0}\nslug: {1}\napp: {2}\nmodule: {3}\n---\n".format(
-            title, slug, app, module
-        )
+        header = f"---\ntitle: {title}\nslug: {slug}\napp: {app}\nmodule: {module}\nsource: {source}\n---\n"
         out_file.write(header)
 
     return
 
 
-def generate_additional_docs(app, additional_files):
-    for additioanl_file in additional_files:
-        file_path = additioanl_file["path"]
-        output_file = additioanl_file["output_file"]
-        slug = additioanl_file["slug"]
-        module = additioanl_file["module"]
-        title = module.split(".")[-1]
-        prepend_gatsby_header(output_file, title, slug, app, module)
+def concat_files(source_file: str, target_file: str):
+    with open(target_file, "a", encoding="utf-8") as outfile:
+        if os.path.exists(source_file):
+            with open(source_file, encoding="utf8") as infile:
+                for line in infile:
+                    outfile.write(line)
+        else:
+            logging.warning("File %s does not exist.", source_file)
 
-        with open(output_file, "a", encoding="utf-8") as outfile:
-            if os.path.exists(file_path):
-                with open(file_path, encoding="utf8") as infile:
-                    for line in infile:
-                        outfile.write(line)
-            else:
-                logging.warning("File %s does not exist.", file_path)
+
+def generate_additional_docs_from_directory(
+    app, additional_directories, output_directory, source
+):
+    for additional_directory in additional_directories:
+        directory_path = additional_directory["path"]
+
+        if not os.path.isdir(output_directory):
+            os.makedirs(output_directory, exist_ok=True)
+
+        for markdown_file_path in Path(directory_path).rglob("*.md"):
+            logging.debug("Adding markdown: %s", str(markdown_file_path))
+            module_name = markdown_file_path.stem
+            relative_path = os.path.relpath(
+                str(markdown_file_path.parent), directory_path
+            )
+            module_path = "" if relative_path == "." else relative_path + "."
+            module = ".".join((module_path + module_name).split(os.sep))
+
+            out_dir = os.path.join(output_directory, relative_path)
+
+            if not os.path.isdir(out_dir):
+                os.makedirs(out_dir)
+
+            out_file = os.path.join(out_dir, markdown_file_path.name)
+
+            prepend_gatsby_header(
+                out_file, markdown_file_path.name, None, app, module, source
+            )
+            concat_files(str(markdown_file_path), out_file)
         # os.system("cat {0} >> {1}".format(file_path, output_file))
 
 
@@ -131,7 +165,7 @@ def filter_modules(path: str, module_list: list[str], doc_ignore_path: str):
 
 
 def generate_markdowns(
-    app: str, path: str, output_dir: str, doc_ignore_path: str, modules
+    app: str, path: str, output_dir: str, doc_ignore_path: str, modules, source: str
 ):
     """
     Iterates over each repository to build the .md files.
@@ -147,66 +181,72 @@ def generate_markdowns(
     with open("config.txt", "r") as f:
         config = f.read()
 
-    output_dir_path = os.path.join("markdowns", output_dir)
-    if os.path.isdir(output_dir_path):
-        shutil.rmtree(output_dir_path)
+    if os.path.isdir(output_dir):
+        shutil.rmtree(output_dir)
 
     Path("markdowns/{0}/".format(output_dir)).mkdir(parents=True, exist_ok=True)
+    branch = get_branch(path)
 
     for i in tqdm(range(len(markdowns_to_generate))):
 
         title = markdowns_to_generate[i].split(".")[-1]
         file_name = title + ".md"
 
-        file_path = "markdowns/{0}/{1}".format(output_dir, file_name)
-        slug = "/read-the-docs/" + output_dir + "/" + title
+        out_d = os.path.join(
+            "markdowns", output_dir, *markdowns_to_generate[i].split(".")[:-1]
+        )
 
-        prepend_gatsby_header(file_path, title, slug, app, markdowns_to_generate[i])
+        if not os.path.isdir(out_d):
+            os.makedirs(out_d)
+
+        file_path = os.path.join(out_d, file_name)
+        # slug = "/read-the-docs/" + output_dir + "/" + title
+
+        url = generate_source_url(source, branch, markdowns_to_generate[i])
+
+        prepend_gatsby_header(
+            file_path, title, None, app, markdowns_to_generate[i], url
+        )
 
         module_path = markdowns_to_generate[i]
 
         with open(file_path, "a") as fp:
-            subprocess.Popen(
+            subprocess.call(
                 ["pydoc-markdown", "-I", path, "-m", module_path, config], stdout=fp
             )
 
 
 markdown_repos = {
     "aquarius": {
-        "additional_files": [],
+        "additional_directories": [],
         "docignore_file_path": "submodules/aquarius/.docignore",
         "path": "submodules/aquarius/aquarius",
-        "output_dir": "aquarius",
+        "output_dir": os.path.join("markdowns", "aquarius"),
         "app": "aquarius",
+        "markdown_path": [],
+        "source": "https://github.com/oceanprotocol/aquarius",
     },
     "ocean.py": {
         "docignore_file_path": "submodules/ocean.py/.docignore",
         "path": "submodules/ocean.py",
-        "output_dir": "ocean-py",
+        "output_dir": os.path.join("markdowns", "ocean-py"),
         "app": "ocean.py",
-        "additional_files": [
+        "additional_files": [],
+        "markdown_path": [
             {
-                "path": os.path.join("submodules", "ocean.py", "README.md"),
-                "slug": "/read-the-docs/ocean-py/readme",
-                "module": "introduction.readme",
-                "output_file": os.path.join("markdowns", "ocean-py", "Readme.md"),
-            },
-            {
-                "path": os.path.join(
-                    "submodules", "ocean.py", "READMEs", "overview.md"
-                ),
-                "slug": "/read-the-docs/ocean-py/overview",
-                "module": "introduction.overview",
-                "output_file": os.path.join("markdowns", "ocean-py", "overview.md"),
-            },
+                "path": os.path.join("submodules", "ocean.py"),
+            }
         ],
+        "source": "https://github.com/oceanprotocol/ocean.py",
     },
     "provider": {
-        "additional_files": [],
+        "additional_directories": [],
         "docignore_file_path": "submodules/provider/.docignore",
         "path": "submodules/provider/ocean_provider",
-        "output_dir": "provider",
+        "output_dir": os.path.join("markdowns", "provider"),
         "app": "provider",
+        "markdown_path": [],
+        "source": "https://github.com/oceanprotocol/provider",
     },
 }
 
@@ -230,8 +270,12 @@ if __name__ == "__main__":
             markdown_repo["output_dir"],
             markdown_repo["docignore_file_path"],
             modules,
+            markdown_repo["source"],
         )
 
-        generate_additional_docs(
-            markdown_repo["app"], markdown_repo["additional_files"]
+        generate_additional_docs_from_directory(
+            markdown_repo["app"],
+            markdown_repo["markdown_path"],
+            markdown_repo["output_dir"],
+            markdown_repo["source"],
         )
