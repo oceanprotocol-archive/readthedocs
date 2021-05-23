@@ -37,15 +37,26 @@ else:
     logging.basicConfig(level=logging.INFO)
 
 
-def prepend_gatsby_header(file_path, title, slug, app, module):
+def get_branch(path: str):
+    return (
+        subprocess.check_output(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=path)
+        .decode("utf-8")
+        .rstrip()
+    )
+
+
+def generate_source_url(source, branch, module):
+
+    url = source + "/blob/" + branch + "/" + "/".join(module.split(".")) + ".py"
+    return url
+
+
+def prepend_gatsby_header(file_path, title, slug, app, module, source):
     """
     Adds title, description and slug to the file.
     """
-
     with open(file_path, "w") as out_file:
-        header = "---\ntitle: {0}\nslug: {1}\napp: {2}\nmodule: {3}\n---\n".format(
-            title, slug, app, module
-        )
+        header = f"---\ntitle: {title}\nslug: {slug}\napp: {app}\nmodule: {module}\nsource: {source}\n---\n"
         out_file.write(header)
 
     return
@@ -62,7 +73,7 @@ def concat_files(source_file: str, target_file: str):
 
 
 def generate_additional_docs_from_directory(
-    app, additional_directories, output_directory
+    app, additional_directories, output_directory, source
 ):
     for additional_directory in additional_directories:
         directory_path = additional_directory["path"]
@@ -86,7 +97,9 @@ def generate_additional_docs_from_directory(
 
             out_file = os.path.join(out_dir, markdown_file_path.name)
 
-            prepend_gatsby_header(out_file, markdown_file_path.name, None, app, module)
+            prepend_gatsby_header(
+                out_file, markdown_file_path.name, None, app, module, source
+            )
             concat_files(str(markdown_file_path), out_file)
         # os.system("cat {0} >> {1}".format(file_path, output_file))
 
@@ -152,7 +165,7 @@ def filter_modules(path: str, module_list: list[str], doc_ignore_path: str):
 
 
 def generate_markdowns(
-    app: str, path: str, output_dir: str, doc_ignore_path: str, modules
+    app: str, path: str, output_dir: str, doc_ignore_path: str, modules, source: str
 ):
     """
     Iterates over each repository to build the .md files.
@@ -172,6 +185,7 @@ def generate_markdowns(
         shutil.rmtree(output_dir)
 
     Path("markdowns/{0}/".format(output_dir)).mkdir(parents=True, exist_ok=True)
+    branch = get_branch(path)
 
     for i in tqdm(range(len(markdowns_to_generate))):
 
@@ -188,7 +202,11 @@ def generate_markdowns(
         file_path = os.path.join(out_d, file_name)
         # slug = "/read-the-docs/" + output_dir + "/" + title
 
-        prepend_gatsby_header(file_path, title, None, app, markdowns_to_generate[i])
+        url = generate_source_url(source, branch, markdowns_to_generate[i])
+
+        prepend_gatsby_header(
+            file_path, title, None, app, markdowns_to_generate[i], url
+        )
 
         module_path = markdowns_to_generate[i]
 
@@ -206,6 +224,7 @@ markdown_repos = {
         "output_dir": os.path.join("markdowns", "aquarius"),
         "app": "aquarius",
         "markdown_path": [],
+        "source": "https://github.com/oceanprotocol/aquarius",
     },
     "ocean.py": {
         "docignore_file_path": "submodules/ocean.py/.docignore",
@@ -218,6 +237,7 @@ markdown_repos = {
                 "path": os.path.join("submodules", "ocean.py"),
             }
         ],
+        "source": "https://github.com/oceanprotocol/ocean.py",
     },
     "provider": {
         "additional_directories": [],
@@ -226,6 +246,7 @@ markdown_repos = {
         "output_dir": os.path.join("markdowns", "provider"),
         "app": "provider",
         "markdown_path": [],
+        "source": "https://github.com/oceanprotocol/provider",
     },
 }
 
@@ -249,10 +270,12 @@ if __name__ == "__main__":
             markdown_repo["output_dir"],
             markdown_repo["docignore_file_path"],
             modules,
+            markdown_repo["source"],
         )
 
         generate_additional_docs_from_directory(
             markdown_repo["app"],
             markdown_repo["markdown_path"],
             markdown_repo["output_dir"],
+            markdown_repo["source"],
         )
