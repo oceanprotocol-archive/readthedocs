@@ -1,6 +1,6 @@
 ---
 title: auth_util
-slug: /read-the-docs/aquarius/auth_util
+slug: None
 app: aquarius
 module: app.auth_util
 ---

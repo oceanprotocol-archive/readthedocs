@@ -1,6 +1,6 @@
 ---
 title: consume
-slug: /read-the-docs/provider/consume
+slug: None
 app: provider
 module: routes.consume
 ---

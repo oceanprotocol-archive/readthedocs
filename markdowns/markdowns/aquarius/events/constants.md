@@ -1,6 +1,6 @@
 ---
 title: constants
-slug: /read-the-docs/aquarius/constants
+slug: None
 app: aquarius
 module: events.constants
 ---

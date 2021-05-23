@@ -1,6 +1,6 @@
 ---
 title: pools
-slug: /read-the-docs/aquarius/pools
+slug: None
 app: aquarius
 module: app.pools
 ---

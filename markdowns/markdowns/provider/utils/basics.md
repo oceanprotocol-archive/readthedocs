@@ -1,6 +1,6 @@
 ---
 title: basics
-slug: /read-the-docs/provider/basics
+slug: None
 app: provider
 module: utils.basics
 ---

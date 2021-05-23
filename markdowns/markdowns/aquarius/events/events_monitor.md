@@ -1,6 +1,6 @@
 ---
 title: events_monitor
-slug: /read-the-docs/aquarius/events_monitor
+slug: None
 app: aquarius
 module: events.events_monitor
 ---

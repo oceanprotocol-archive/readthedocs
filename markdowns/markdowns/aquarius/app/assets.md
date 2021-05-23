@@ -1,6 +1,6 @@
 ---
 title: assets
-slug: /read-the-docs/aquarius/assets
+slug: None
 app: aquarius
 module: app.assets
 ---

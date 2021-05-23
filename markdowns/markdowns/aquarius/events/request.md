@@ -1,6 +1,6 @@
 ---
 title: request
-slug: /read-the-docs/aquarius/request
+slug: None
 app: aquarius
 module: events.request
 ---

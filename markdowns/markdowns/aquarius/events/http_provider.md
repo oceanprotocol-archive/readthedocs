@@ -1,6 +1,6 @@
 ---
 title: http_provider
-slug: /read-the-docs/aquarius/http_provider
+slug: None
 app: aquarius
 module: events.http_provider
 ---

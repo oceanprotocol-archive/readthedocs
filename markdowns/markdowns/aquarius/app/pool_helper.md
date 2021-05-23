@@ -1,6 +1,6 @@
 ---
 title: pool_helper
-slug: /read-the-docs/aquarius/pool_helper
+slug: None
 app: aquarius
 module: app.pool_helper
 ---

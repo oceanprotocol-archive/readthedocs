@@ -1,6 +1,6 @@
 ---
 title: util
-slug: /read-the-docs/provider/util
+slug: None
 app: provider
 module: utils.util
 ---

@@ -1,6 +1,6 @@
 ---
 title: dao
-slug: /read-the-docs/aquarius/dao
+slug: None
 app: aquarius
 module: app.dao
 ---

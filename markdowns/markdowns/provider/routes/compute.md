@@ -1,6 +1,6 @@
 ---
 title: compute
-slug: /read-the-docs/provider/compute
+slug: None
 app: provider
 module: routes.compute
 ---

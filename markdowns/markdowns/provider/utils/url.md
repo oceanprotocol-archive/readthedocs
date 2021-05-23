@@ -1,6 +1,6 @@
 ---
 title: url
-slug: /read-the-docs/provider/url
+slug: None
 app: provider
 module: utils.url
 ---

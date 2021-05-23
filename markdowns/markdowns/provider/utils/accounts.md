@@ -1,6 +1,6 @@
 ---
 title: accounts
-slug: /read-the-docs/provider/accounts
+slug: None
 app: provider
 module: utils.accounts
 ---

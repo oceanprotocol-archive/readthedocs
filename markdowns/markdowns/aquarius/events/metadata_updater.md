@@ -1,6 +1,6 @@
 ---
 title: metadata_updater
-slug: /read-the-docs/aquarius/metadata_updater
+slug: None
 app: aquarius
 module: events.metadata_updater
 ---

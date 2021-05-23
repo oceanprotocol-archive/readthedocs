@@ -1,6 +1,6 @@
 ---
 title: util
-slug: /read-the-docs/aquarius/util
+slug: None
 app: aquarius
 module: app.util
 ---

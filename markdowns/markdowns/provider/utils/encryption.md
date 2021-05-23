@@ -1,6 +1,6 @@
 ---
 title: encryption
-slug: /read-the-docs/provider/encryption
+slug: None
 app: provider
 module: utils.encryption
 ---
