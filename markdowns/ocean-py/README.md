@@ -1,6 +1,6 @@
 ---
 title: README.md
-slug: README
+slug: README.md
 app: ocean.py
 module: README
 source: https://github.com/oceanprotocol/ocean.py/blob/main/README.md

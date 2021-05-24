@@ -124,7 +124,7 @@ def generate_additional_docs_from_directory(
             out_file = os.path.join(out_dir, markdown_file_path.name)
 
             url = generate_source_url(source, branch, module, "md")
-            slug = "/".join(module.split("."))
+            slug = "/".join(module.split(".")) + ".md"
             prepend_gatsby_header(
                 out_file, markdown_file_path.name, slug, app, module, url
             )

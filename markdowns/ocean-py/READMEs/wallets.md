@@ -1,6 +1,6 @@
 ---
 title: wallets.md
-slug: READMEs/wallets
+slug: READMEs/wallets.md
 app: ocean.py
 module: READMEs.wallets
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/wallets.md

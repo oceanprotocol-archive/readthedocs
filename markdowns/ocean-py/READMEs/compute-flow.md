@@ -1,6 +1,6 @@
 ---
 title: compute-flow.md
-slug: READMEs/compute-flow
+slug: READMEs/compute-flow.md
 app: ocean.py
 module: READMEs.compute-flow
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/compute-flow.md

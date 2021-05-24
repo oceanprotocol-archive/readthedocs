@@ -1,6 +1,6 @@
 ---
 title: services.md
-slug: READMEs/services
+slug: READMEs/services.md
 app: ocean.py
 module: READMEs.services
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/services.md
