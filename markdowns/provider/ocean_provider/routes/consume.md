@@ -1,9 +1,9 @@
 ---
 title: consume
-slug: None
+slug: ocean_provider/routes/consume
 app: provider
-module: routes.consume
-source: https://github.com/oceanprotocol/provider/blob/main/routes/consume.py
+module: ocean_provider.routes.consume
+source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/routes/consume.py
 ---
 #### encrypt
 

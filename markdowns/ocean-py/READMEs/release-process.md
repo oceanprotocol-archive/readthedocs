@@ -1,6 +1,6 @@
 ---
 title: release-process.md
-slug: None
+slug: READMEs/release-process
 app: ocean.py
 module: READMEs.release-process
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/release-process.md

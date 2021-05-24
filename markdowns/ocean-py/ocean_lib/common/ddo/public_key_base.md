@@ -1,6 +1,6 @@
 ---
 title: public_key_base
-slug: None
+slug: ocean_lib/common/ddo/public_key_base
 app: ocean.py
 module: ocean_lib.common.ddo.public_key_base
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/ddo/public_key_base.py

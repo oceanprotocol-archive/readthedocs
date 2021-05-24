@@ -1,9 +1,9 @@
 ---
 title: dao
-slug: None
+slug: aquarius/app/dao
 app: aquarius
-module: app.dao
-source: https://github.com/oceanprotocol/aquarius/blob/main/app/dao.py
+module: aquarius.app.dao
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/dao.py
 ---
 ## Dao
 

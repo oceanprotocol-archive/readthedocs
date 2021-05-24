@@ -1,9 +1,9 @@
 ---
 title: auth_util
-slug: None
+slug: aquarius/app/auth_util
 app: aquarius
-module: app.auth_util
-source: https://github.com/oceanprotocol/aquarius/blob/main/app/auth_util.py
+module: aquarius.app.auth_util
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/auth_util.py
 ---
 #### get\_signer\_address
 

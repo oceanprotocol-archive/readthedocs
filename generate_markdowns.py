@@ -124,8 +124,9 @@ def generate_additional_docs_from_directory(
             out_file = os.path.join(out_dir, markdown_file_path.name)
 
             url = generate_source_url(source, branch, module, "md")
+            slug = "/".join(module.split("."))
             prepend_gatsby_header(
-                out_file, markdown_file_path.name, None, app, module, url
+                out_file, markdown_file_path.name, slug, app, module, url
             )
             concat_files(str(markdown_file_path), out_file)
         # os.system("cat {0} >> {1}".format(file_path, output_file))
@@ -228,12 +229,12 @@ def generate_markdowns(
             os.makedirs(out_d, exist_ok=True)
 
         file_path = os.path.join(out_d, file_name)
-        # slug = "/read-the-docs/" + output_dir + "/" + title
+        slug = "/".join(markdowns_to_generate[i].split("."))
 
-        url = generate_source_url(source, branch, markdowns_to_generate[i], "py")
+        url = generate_source_url(source, branch, slug, "py")
 
         prepend_gatsby_header(
-            file_path, title, None, app, markdowns_to_generate[i], url
+            file_path, title, slug, app, markdowns_to_generate[i], url
         )
 
         module_path = markdowns_to_generate[i]
@@ -248,7 +249,7 @@ markdown_repos = {
     "aquarius": {
         "additional_directories": [],
         "docignore_file_path": "submodules/aquarius/.docignore",
-        "path": "submodules/aquarius/aquarius",
+        "path": "submodules/aquarius",
         "output_dir": os.path.join("markdowns", "aquarius"),
         "app": "aquarius",
         "markdown_path": [],
@@ -270,7 +271,7 @@ markdown_repos = {
     "provider": {
         "additional_directories": [],
         "docignore_file_path": "submodules/provider/.docignore",
-        "path": "submodules/provider/ocean_provider",
+        "path": "submodules/provider",
         "output_dir": os.path.join("markdowns", "provider"),
         "app": "provider",
         "markdown_path": [],

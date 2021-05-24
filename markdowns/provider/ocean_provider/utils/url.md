@@ -1,9 +1,9 @@
 ---
 title: url
-slug: None
+slug: ocean_provider/utils/url
 app: provider
-module: utils.url
-source: https://github.com/oceanprotocol/provider/blob/main/utils/url.py
+module: ocean_provider.utils.url
+source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/utils/url.py
 ---
 #### validate\_dns\_records
 

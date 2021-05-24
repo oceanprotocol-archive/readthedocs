@@ -1,6 +1,6 @@
 ---
 title: mint_fake_ocean
-slug: None
+slug: ocean_lib/ocean/mint_fake_ocean
 app: ocean.py
 module: ocean_lib.ocean.mint_fake_ocean
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/mint_fake_ocean.py

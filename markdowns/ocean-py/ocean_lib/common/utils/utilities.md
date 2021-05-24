@@ -1,6 +1,6 @@
 ---
 title: utilities
-slug: None
+slug: ocean_lib/common/utils/utilities
 app: ocean.py
 module: ocean_lib.common.utils.utilities
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/utils/utilities.py

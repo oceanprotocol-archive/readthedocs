@@ -1,9 +1,9 @@
 ---
 title: util
-slug: None
+slug: ocean_provider/utils/util
 app: provider
-module: utils.util
-source: https://github.com/oceanprotocol/provider/blob/main/utils/util.py
+module: ocean_provider.utils.util
+source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/utils/util.py
 ---
 #### get\_asset\_urls
 
