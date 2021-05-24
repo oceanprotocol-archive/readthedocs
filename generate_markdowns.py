@@ -124,9 +124,9 @@ def generate_additional_docs_from_directory(
             out_file = os.path.join(out_dir, markdown_file_path.name)
 
             url = generate_source_url(source, branch, module, "md")
-
+            slug = "/".join(module.split("."))
             prepend_gatsby_header(
-                out_file, markdown_file_path.name, None, app, module, url
+                out_file, markdown_file_path.name, slug, app, module, url
             )
             concat_files(str(markdown_file_path), out_file)
         # os.system("cat {0} >> {1}".format(file_path, output_file))
@@ -293,14 +293,14 @@ if __name__ == "__main__":
 
     for repository_info in markdowns_to_be_generated:
         markdown_repo = markdown_repos[repository_info]
-        generate_markdowns(
-            markdown_repo["app"],
-            markdown_repo["path"],
-            markdown_repo["output_dir"],
-            markdown_repo["docignore_file_path"],
-            modules,
-            markdown_repo["source"],
-        )
+        # generate_markdowns(
+        #     markdown_repo["app"],
+        #     markdown_repo["path"],
+        #     markdown_repo["output_dir"],
+        #     markdown_repo["docignore_file_path"],
+        #     modules,
+        #     markdown_repo["source"],
+        # )
 
         generate_additional_docs_from_directory(
             markdown_repo["app"],

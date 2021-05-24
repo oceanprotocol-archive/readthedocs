@@ -1,6 +1,6 @@
 ---
 title: marketplace-flow.md
-slug: None
+slug: READMEs/marketplace-flow
 app: ocean.py
 module: READMEs.marketplace-flow
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/marketplace-flow.md

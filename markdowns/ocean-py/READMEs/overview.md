@@ -1,6 +1,6 @@
 ---
 title: overview.md
-slug: None
+slug: READMEs/overview
 app: ocean.py
 module: READMEs.overview
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/overview.md

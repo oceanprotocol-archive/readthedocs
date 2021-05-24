@@ -1,6 +1,6 @@
 ---
 title: developers.md
-slug: None
+slug: READMEs/developers
 app: ocean.py
 module: READMEs.developers
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/developers.md

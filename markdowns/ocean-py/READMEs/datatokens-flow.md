@@ -1,6 +1,6 @@
 ---
 title: datatokens-flow.md
-slug: None
+slug: READMEs/datatokens-flow
 app: ocean.py
 module: READMEs.datatokens-flow
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/datatokens-flow.md

@@ -1,6 +1,6 @@
 ---
 title: parameters.md
-slug: None
+slug: READMEs/parameters
 app: ocean.py
 module: READMEs.parameters
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/parameters.md
