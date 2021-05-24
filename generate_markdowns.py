@@ -45,9 +45,17 @@ def get_branch(path: str):
     )
 
 
-def generate_source_url(source, branch, module):
+def generate_source_url(source: str, branch: str, module: list[str], extenstion: str):
 
-    url = source + "/blob/" + branch + "/" + "/".join(module.split(".")) + ".py"
+    url = (
+        source
+        + "/blob/"
+        + branch
+        + "/"
+        + "/".join(module.split("."))
+        + "."
+        + extenstion
+    )
     return url
 
 
@@ -73,9 +81,10 @@ def concat_files(source_file: str, target_file: str):
 
 
 def generate_additional_docs_from_directory(
-    app, additional_directories, output_directory, doc_ignore_file_path, source
+    app, path, additional_directories, output_directory, doc_ignore_file_path, source
 ):
     ignore_files = get_doc_ignore_file_list(doc_ignore_file_path)
+    branch = get_branch(path)
 
     for additional_directory in additional_directories:
         directory_path = additional_directory["path"]
@@ -114,8 +123,9 @@ def generate_additional_docs_from_directory(
 
             out_file = os.path.join(out_dir, markdown_file_path.name)
 
+            url = generate_source_url(source, branch, module, "md")
             prepend_gatsby_header(
-                out_file, markdown_file_path.name, None, app, module, source
+                out_file, markdown_file_path.name, None, app, module, url
             )
             concat_files(str(markdown_file_path), out_file)
         # os.system("cat {0} >> {1}".format(file_path, output_file))
@@ -220,7 +230,7 @@ def generate_markdowns(
         file_path = os.path.join(out_d, file_name)
         # slug = "/read-the-docs/" + output_dir + "/" + title
 
-        url = generate_source_url(source, branch, markdowns_to_generate[i])
+        url = generate_source_url(source, branch, markdowns_to_generate[i], "py")
 
         prepend_gatsby_header(
             file_path, title, None, app, markdowns_to_generate[i], url
@@ -293,6 +303,7 @@ if __name__ == "__main__":
 
         generate_additional_docs_from_directory(
             markdown_repo["app"],
+            markdown_repo["path"],
             markdown_repo["markdown_path"],
             markdown_repo["output_dir"],
             markdown_repo["docignore_file_path"],

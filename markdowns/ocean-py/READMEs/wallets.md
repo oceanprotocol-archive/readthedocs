@@ -3,7 +3,7 @@ title: wallets.md
 slug: None
 app: ocean.py
 module: READMEs.wallets
-source: https://github.com/oceanprotocol/ocean.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/wallets.md
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
