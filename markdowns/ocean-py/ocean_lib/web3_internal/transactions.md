@@ -1,6 +1,6 @@
 ---
 title: transactions
-slug: None
+slug: ocean_lib/web3_internal/transactions
 app: ocean.py
 module: ocean_lib.web3_internal.transactions
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/transactions.py

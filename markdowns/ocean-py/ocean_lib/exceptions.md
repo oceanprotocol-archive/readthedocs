@@ -1,6 +1,6 @@
 ---
 title: exceptions
-slug: None
+slug: ocean_lib/exceptions
 app: ocean.py
 module: ocean_lib.exceptions
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/exceptions.py

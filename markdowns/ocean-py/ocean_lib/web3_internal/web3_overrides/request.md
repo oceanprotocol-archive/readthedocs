@@ -1,6 +1,6 @@
 ---
 title: request
-slug: None
+slug: ocean_lib/web3_internal/web3_overrides/request
 app: ocean.py
 module: ocean_lib.web3_internal.web3_overrides.request
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/web3_overrides/request.py

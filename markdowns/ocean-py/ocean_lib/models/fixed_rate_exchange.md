@@ -1,6 +1,6 @@
 ---
 title: fixed_rate_exchange
-slug: None
+slug: ocean_lib/models/fixed_rate_exchange
 app: ocean.py
 module: ocean_lib.models.fixed_rate_exchange
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/fixed_rate_exchange.py

@@ -1,6 +1,6 @@
 ---
 title: util
-slug: None
+slug: ocean_lib/ocean/util
 app: ocean.py
 module: ocean_lib.ocean.util
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/util.py

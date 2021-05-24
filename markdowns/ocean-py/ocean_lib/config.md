@@ -1,6 +1,6 @@
 ---
 title: config
-slug: None
+slug: ocean_lib/config
 app: ocean.py
 module: ocean_lib.config
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/config.py

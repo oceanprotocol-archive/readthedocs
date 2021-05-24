@@ -1,6 +1,6 @@
 ---
 title: ocean
-slug: None
+slug: ocean_lib/ocean/ocean
 app: ocean.py
 module: ocean_lib.ocean.ocean
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean.py

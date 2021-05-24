@@ -1,6 +1,6 @@
 ---
 title: web3_provider
-slug: None
+slug: ocean_lib/web3_internal/web3_provider
 app: ocean.py
 module: ocean_lib.web3_internal.web3_provider
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/web3_provider.py
