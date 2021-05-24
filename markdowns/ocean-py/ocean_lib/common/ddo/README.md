@@ -1,6 +1,6 @@
 ---
 title: README.md
-slug: ocean_lib/common/ddo/README
+slug: ocean_lib/common/ddo/README.md
 app: ocean.py
 module: ocean_lib.common.ddo.README
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/ddo/README.md
