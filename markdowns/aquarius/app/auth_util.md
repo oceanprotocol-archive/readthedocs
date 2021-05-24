@@ -1,6 +1,6 @@
 ---
 title: auth_util
-slug: None
+slug: app/auth_util
 app: aquarius
 module: app.auth_util
 source: https://github.com/oceanprotocol/aquarius/blob/main/app/auth_util.py

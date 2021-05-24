@@ -1,6 +1,6 @@
 ---
 title: http_provider
-slug: None
+slug: events/http_provider
 app: aquarius
 module: events.http_provider
 source: https://github.com/oceanprotocol/aquarius/blob/main/events/http_provider.py

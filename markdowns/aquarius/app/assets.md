@@ -1,6 +1,6 @@
 ---
 title: assets
-slug: None
+slug: app/assets
 app: aquarius
 module: app.assets
 source: https://github.com/oceanprotocol/aquarius/blob/main/app/assets.py

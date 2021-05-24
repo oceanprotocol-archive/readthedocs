@@ -1,6 +1,6 @@
 ---
 title: pools
-slug: None
+slug: app/pools
 app: aquarius
 module: app.pools
 source: https://github.com/oceanprotocol/aquarius/blob/main/app/pools.py

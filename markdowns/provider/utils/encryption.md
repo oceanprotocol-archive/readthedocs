@@ -1,6 +1,6 @@
 ---
 title: encryption
-slug: None
+slug: utils/encryption
 app: provider
 module: utils.encryption
 source: https://github.com/oceanprotocol/provider/blob/main/utils/encryption.py

@@ -293,14 +293,14 @@ if __name__ == "__main__":
 
     for repository_info in markdowns_to_be_generated:
         markdown_repo = markdown_repos[repository_info]
-        # generate_markdowns(
-        #     markdown_repo["app"],
-        #     markdown_repo["path"],
-        #     markdown_repo["output_dir"],
-        #     markdown_repo["docignore_file_path"],
-        #     modules,
-        #     markdown_repo["source"],
-        # )
+        generate_markdowns(
+            markdown_repo["app"],
+            markdown_repo["path"],
+            markdown_repo["output_dir"],
+            markdown_repo["docignore_file_path"],
+            modules,
+            markdown_repo["source"],
+        )
 
         generate_additional_docs_from_directory(
             markdown_repo["app"],

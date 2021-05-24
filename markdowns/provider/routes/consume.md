@@ -1,6 +1,6 @@
 ---
 title: consume
-slug: None
+slug: routes/consume
 app: provider
 module: routes.consume
 source: https://github.com/oceanprotocol/provider/blob/main/routes/consume.py

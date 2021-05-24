@@ -1,6 +1,6 @@
 ---
 title: util
-slug: None
+slug: utils/util
 app: provider
 module: utils.util
 source: https://github.com/oceanprotocol/provider/blob/main/utils/util.py

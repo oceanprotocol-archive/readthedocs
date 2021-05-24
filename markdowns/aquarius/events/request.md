@@ -1,6 +1,6 @@
 ---
 title: request
-slug: None
+slug: events/request
 app: aquarius
 module: events.request
 source: https://github.com/oceanprotocol/aquarius/blob/main/events/request.py

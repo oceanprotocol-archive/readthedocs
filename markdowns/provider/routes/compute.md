@@ -1,6 +1,6 @@
 ---
 title: compute
-slug: None
+slug: routes/compute
 app: provider
 module: routes.compute
 source: https://github.com/oceanprotocol/provider/blob/main/routes/compute.py
