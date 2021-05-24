@@ -1,9 +1,9 @@
 ---
 title: compute
-slug: routes/compute
+slug: ocean_provider/routes/compute
 app: provider
-module: routes.compute
-source: https://github.com/oceanprotocol/provider/blob/main/routes/compute.py
+module: ocean_provider.routes.compute
+source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/routes/compute.py
 ---
 #### computeDelete
 

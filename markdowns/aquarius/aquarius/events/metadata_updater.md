@@ -1,9 +1,9 @@
 ---
 title: metadata_updater
-slug: events/metadata_updater
+slug: aquarius/events/metadata_updater
 app: aquarius
-module: events.metadata_updater
-source: https://github.com/oceanprotocol/aquarius/blob/main/events/metadata_updater.py
+module: aquarius.events.metadata_updater
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/metadata_updater.py
 ---
 ## MetadataUpdater
 

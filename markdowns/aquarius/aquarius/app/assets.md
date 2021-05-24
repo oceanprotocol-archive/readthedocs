@@ -1,9 +1,9 @@
 ---
 title: assets
-slug: app/assets
+slug: aquarius/app/assets
 app: aquarius
-module: app.assets
-source: https://github.com/oceanprotocol/aquarius/blob/main/app/assets.py
+module: aquarius.app.assets
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/assets.py
 ---
 #### get\_assets\_ids
 

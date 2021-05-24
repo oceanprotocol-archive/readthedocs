@@ -1,9 +1,9 @@
 ---
 title: events_monitor
-slug: events/events_monitor
+slug: aquarius/events/events_monitor
 app: aquarius
-module: events.events_monitor
-source: https://github.com/oceanprotocol/aquarius/blob/main/events/events_monitor.py
+module: aquarius.events.events_monitor
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/events_monitor.py
 ---
 ## EventsMonitor
 

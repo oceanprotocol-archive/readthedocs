@@ -1,9 +1,9 @@
 ---
 title: pools
-slug: app/pools
+slug: aquarius/app/pools
 app: aquarius
-module: app.pools
-source: https://github.com/oceanprotocol/aquarius/blob/main/app/pools.py
+module: aquarius.app.pools
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/pools.py
 ---
 #### get\_liquidity\_history
 
