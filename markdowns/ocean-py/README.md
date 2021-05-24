@@ -3,7 +3,7 @@ title: README.md
 slug: None
 app: ocean.py
 module: README
-source: https://github.com/oceanprotocol/ocean.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/README.md
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation

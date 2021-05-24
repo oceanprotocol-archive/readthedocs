@@ -3,7 +3,7 @@ title: overview.md
 slug: None
 app: ocean.py
 module: READMEs.overview
-source: https://github.com/oceanprotocol/ocean.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/overview.md
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
