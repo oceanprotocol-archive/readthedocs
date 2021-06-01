@@ -10,3 +10,6 @@
 	path = submodules/aquarius
 	url = git@github.com:oceanprotocol/aquarius.git
 	branch = main
+[submodule "submodules/ocean-subgraph"]
+	path = submodules/ocean-subgraph
+	url = https://github.com/oceanprotocol/ocean-subgraph.git
