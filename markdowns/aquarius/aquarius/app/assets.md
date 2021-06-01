@@ -4,6 +4,7 @@ slug: aquarius/app/assets
 app: aquarius
 module: aquarius.app.assets
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/assets.py
+version: 2.2.11
 ---
 #### get\_assets\_ids
 

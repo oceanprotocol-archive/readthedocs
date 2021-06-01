@@ -4,6 +4,7 @@ slug: ocean_lib/common/aquarius/aquarius
 app: ocean.py
 module: ocean_lib.common.aquarius.aquarius
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/aquarius/aquarius.py
+version: 0.5.22
 ---
 Aquarius module.
 Help to communicate with the metadata store.

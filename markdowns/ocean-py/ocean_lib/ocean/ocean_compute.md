@@ -4,6 +4,7 @@ slug: ocean_lib/ocean/ocean_compute
 app: ocean.py
 module: ocean_lib.ocean.ocean_compute
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_compute.py
+version: 0.5.22
 ---
 ## OceanCompute
 

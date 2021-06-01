@@ -4,6 +4,7 @@ slug: ocean_lib/web3_internal/web3_overrides/contract
 app: ocean.py
 module: ocean_lib.web3_internal.web3_overrides.contract
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/web3_overrides/contract.py
+version: 0.5.22
 ---
 ## CustomContractFunction
 

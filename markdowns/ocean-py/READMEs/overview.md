@@ -4,6 +4,7 @@ slug: READMEs/overview.md
 app: ocean.py
 module: READMEs.overview
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/overview.md
+version: 0.5.22
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation

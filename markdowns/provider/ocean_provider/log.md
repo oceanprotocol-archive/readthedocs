@@ -4,6 +4,7 @@ slug: ocean_provider/log
 app: provider
 module: ocean_provider.log
 source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/log.py
+version: 0.4.9
 ---
 #### setup\_logging
 

@@ -3,7 +3,8 @@ title: README.md
 slug: docker/README.md
 app: ocean-subgraph
 module: docker.README
-source: https://github.com/oceanprotocol/ocean-subgraph/blob/main/docker/README.md
+source: https://github.com/oceanprotocol/ocean-subgraph/blob/feature/read-the-docs/docker/README.md
+version: 1.1.1
 ---
 # Graph Node Docker Image
 

@@ -4,6 +4,7 @@ slug: ocean_lib/ocean/ocean
 app: ocean.py
 module: ocean_lib.ocean.ocean
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean.py
+version: 0.5.22
 ---
 Ocean module.
 

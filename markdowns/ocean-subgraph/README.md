@@ -3,7 +3,8 @@ title: README.md
 slug: README.md
 app: ocean-subgraph
 module: README
-source: https://github.com/oceanprotocol/ocean-subgraph/blob/main/README.md
+source: https://github.com/oceanprotocol/ocean-subgraph/blob/feature/read-the-docs/README.md
+version: 1.1.1
 ---
 [![banner](https://raw.githubusercontent.com/oceanprotocol/art/master/github/repo-banner%402x.png)](https://oceanprotocol.com)
 
