@@ -4,6 +4,7 @@ slug: aquarius/app/dao
 app: aquarius
 module: aquarius.app.dao
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/dao.py
+version: 2.2.11
 ---
 ## Dao
 

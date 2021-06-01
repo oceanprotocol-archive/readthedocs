@@ -4,6 +4,7 @@ slug: aquarius/app/auth_util
 app: aquarius
 module: aquarius.app.auth_util
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/auth_util.py
+version: 2.2.11
 ---
 #### get\_signer\_address
 

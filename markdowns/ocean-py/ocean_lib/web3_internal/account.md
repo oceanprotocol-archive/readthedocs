@@ -4,6 +4,7 @@ slug: ocean_lib/web3_internal/account
 app: ocean.py
 module: ocean_lib.web3_internal.account
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/account.py
+version: 0.5.22
 ---
 Accounts module.
 

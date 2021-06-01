@@ -4,6 +4,7 @@ slug: READMEs/parameters.md
 app: ocean.py
 module: READMEs.parameters
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/parameters.md
+version: 0.5.22
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation

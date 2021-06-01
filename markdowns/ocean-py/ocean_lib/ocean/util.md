@@ -4,6 +4,7 @@ slug: ocean_lib/ocean/util
 app: ocean.py
 module: ocean_lib.ocean.util
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/util.py
+version: 0.5.22
 ---
 #### get\_web3\_connection\_provider
 

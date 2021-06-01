@@ -59,12 +59,20 @@ def generate_source_url(source: str, branch: str, module: list[str], extenstion:
     return url
 
 
-def prepend_gatsby_header(file_path, title, slug, app, module, source):
+def prepend_gatsby_header(
+    file_path: str,
+    title: str,
+    slug: str,
+    app: str,
+    module: str,
+    source: str,
+    version: str,
+):
     """
     Adds title, description and slug to the file.
     """
     with open(file_path, "w") as out_file:
-        header = f"---\ntitle: {title}\nslug: {slug}\napp: {app}\nmodule: {module}\nsource: {source}\n---\n"
+        header = f"---\ntitle: {title}\nslug: {slug}\napp: {app}\nmodule: {module}\nsource: {source}\nversion: {version}\n---\n"
         out_file.write(header)
 
     return
@@ -81,7 +89,13 @@ def concat_files(source_file: str, target_file: str):
 
 
 def generate_additional_docs_from_directory(
-    app, path, additional_directories, output_directory, doc_ignore_file_path, source
+    app,
+    path,
+    additional_directories,
+    output_directory,
+    doc_ignore_file_path,
+    source,
+    version,
 ):
     ignore_files = get_doc_ignore_file_list(doc_ignore_file_path)
     branch = get_branch(path)
@@ -126,7 +140,7 @@ def generate_additional_docs_from_directory(
             url = generate_source_url(source, branch, module, "md")
             slug = "/".join(module.split(".")) + ".md"
             prepend_gatsby_header(
-                out_file, markdown_file_path.name, slug, app, module, url
+                out_file, markdown_file_path.name, slug, app, module, url, version
             )
             concat_files(str(markdown_file_path), out_file)
         # os.system("cat {0} >> {1}".format(file_path, output_file))
@@ -197,7 +211,13 @@ def filter_modules(path: str, module_list: list[str], doc_ignore_path: str):
 
 
 def generate_markdowns(
-    app: str, path: str, output_dir: str, doc_ignore_path: str, modules, source: str
+    app: str,
+    path: str,
+    output_dir: str,
+    doc_ignore_path: str,
+    modules,
+    source: str,
+    version: str,
 ):
     """
     Iterates over each repository to build the .md files.
@@ -234,7 +254,7 @@ def generate_markdowns(
         url = generate_source_url(source, branch, slug, "py")
 
         prepend_gatsby_header(
-            file_path, title, slug, app, markdowns_to_generate[i], url
+            file_path, title, slug, app, markdowns_to_generate[i], url, version
         )
 
         module_path = markdowns_to_generate[i]
@@ -254,6 +274,7 @@ markdown_repos = {
         "app": "aquarius",
         "markdown_path": [],
         "source": "https://github.com/oceanprotocol/aquarius",
+        "version": "2.2.11",
     },
     "ocean.py": {
         "docignore_file_path": "submodules/ocean.py/.docignore",
@@ -267,6 +288,7 @@ markdown_repos = {
             }
         ],
         "source": "https://github.com/oceanprotocol/ocean.py",
+        "version": "0.5.22",
     },
     "provider": {
         "additional_directories": [],
@@ -276,6 +298,7 @@ markdown_repos = {
         "app": "provider",
         "markdown_path": [],
         "source": "https://github.com/oceanprotocol/provider",
+        "version": "0.4.9",
     },
     "ocean-subgraph": {
         "additional_directories": [],
@@ -289,6 +312,7 @@ markdown_repos = {
             }
         ],
         "source": "https://github.com/oceanprotocol/ocean-subgraph",
+        "version": "1.1.1",
     },
 }
 
@@ -313,6 +337,7 @@ if __name__ == "__main__":
             markdown_repo["docignore_file_path"],
             modules,
             markdown_repo["source"],
+            markdown_repo["version"],
         )
 
         generate_additional_docs_from_directory(
@@ -322,4 +347,5 @@ if __name__ == "__main__":
             markdown_repo["output_dir"],
             markdown_repo["docignore_file_path"],
             markdown_repo["source"],
+            markdown_repo["version"],
         )

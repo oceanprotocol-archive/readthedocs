@@ -4,6 +4,7 @@ slug: ocean_lib/ocean/ocean_exchange
 app: ocean.py
 module: ocean_lib.ocean.ocean_exchange
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_exchange.py
+version: 0.5.22
 ---
 ## OceanExchange
 

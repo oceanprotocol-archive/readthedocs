@@ -4,6 +4,7 @@ slug: ocean_lib/models/bpool
 app: ocean.py
 module: ocean_lib.models.bpool
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/bpool.py
+version: 0.5.22
 ---
 ## BPool
 
