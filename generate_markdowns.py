@@ -277,6 +277,19 @@ markdown_repos = {
         "markdown_path": [],
         "source": "https://github.com/oceanprotocol/provider",
     },
+    "ocean-subgraph": {
+        "additional_directories": [],
+        "docignore_file_path": "submodules/ocean-subgraph/.docignore",
+        "path": "submodules/ocean-subgraph",
+        "output_dir": os.path.join("markdowns", "ocean-subgraph"),
+        "app": "ocean-subgraph",
+        "markdown_path": [
+            {
+                "path": os.path.join("submodules", "ocean-subgraph"),
+            }
+        ],
+        "source": "https://github.com/oceanprotocol/ocean-subgraph",
+    },
 }
 
 
