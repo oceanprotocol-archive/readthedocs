@@ -4,5 +4,5 @@ slug: aquarius/events/util
 app: aquarius
 module: aquarius.events.util
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/util.py
-version: 2.2.11
+version: 2.2.12
 ---
