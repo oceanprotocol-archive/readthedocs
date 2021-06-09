@@ -4,12 +4,12 @@ slug: ocean_lib/models/fixed_rate_exchange
 app: ocean.py
 module: ocean_lib.models.fixed_rate_exchange
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/fixed_rate_exchange.py
-version: 0.5.22
+version: 0.5.24
 ---
 ## FixedRateExchange
 
 ```python
-@enforce_types_shim
+@enforce_types
 class FixedRateExchange(ContractBase)
 ```
 

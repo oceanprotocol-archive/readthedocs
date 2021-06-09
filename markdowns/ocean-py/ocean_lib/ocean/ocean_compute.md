@@ -4,12 +4,12 @@ slug: ocean_lib/ocean/ocean_compute
 app: ocean.py
 module: ocean_lib.ocean.ocean_compute
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_compute.py
-version: 0.5.22
+version: 0.5.24
 ---
 ## OceanCompute
 
 ```python
-@enforce_types_shim
+@enforce_types
 class OceanCompute()
 ```
 
@@ -108,12 +108,13 @@ Return a dict with attributes describing the details of compute resources in thi
 
 ```python
  | @staticmethod
- | def build_service_privacy_attributes(trusted_algorithms: list = None, allow_raw_algorithm: bool = False, allow_all_published_algorithms: bool = False, allow_network_access: bool = False)
+ | def build_service_privacy_attributes(trusted_algorithms: list = None, metadata_cache_uri: str = None, allow_raw_algorithm: bool = False, allow_all_published_algorithms: bool = False, allow_network_access: bool = False)
 ```
 
 **Arguments**:
 
 - `trusted_algorithms`: list of algorithm did to be trusted by the compute service provider
+- `metadata_cache_uir`: URI used to get DDOs for trusted algorithm DIDs if trusted_algorithms set
 - `allow_raw_algorithm`: bool -- when True, unpublished raw algorithm code can be run on this dataset
 - `allow_all_published_algorithms`: bool -- when True, any published algorithm can be run on this dataset
 The list of `trusted_algorithms` will be ignored in this case.
@@ -148,7 +149,7 @@ dict with `main` key and value contain the minimum required attributes of a comp
 
 ```python
  | @staticmethod
- | def check_output_dict(output_def, consumer_address, data_provider, config=None)
+ | def check_output_dict(output_def, consumer_address, data_provider, config: Config)
 ```
 
 Validate the `output_def` dict and fills in defaults for missing values.

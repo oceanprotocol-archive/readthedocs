@@ -4,7 +4,7 @@ slug: READMEs/marketplace-flow.md
 app: ocean.py
 module: READMEs.marketplace-flow
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/marketplace-flow.md
-version: 0.5.22
+version: 0.5.24
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -99,9 +99,6 @@ provider.url = http://localhost:8030
 provider.address = 0x00bd138abd70e2f00903268f3db08f2d25677c9e
 
 downloads.path = consume-downloads
-
-[util]
-typecheck = true
 ```
 
 In the work console:
@@ -134,7 +131,7 @@ alice_wallet = Wallet(ocean.web3, private_key=os.getenv('TEST_PRIVATE_KEY1'))
 
 #Mint OCEAN
 from ocean_lib.ocean.mint_fake_ocean import mint_fake_OCEAN
-mint_fake_OCEAN()
+mint_fake_OCEAN(config)
 
 #Publish a datatoken
 data_token = ocean.create_data_token('DataToken1', 'DT1', alice_wallet, blob=ocean.config.metadata_cache_uri)
@@ -236,7 +233,7 @@ bob_wallet = Wallet(ocean.web3, private_key=os.getenv('TEST_PRIVATE_KEY2'))
 print(f"bob_wallet.address = '{bob_wallet.address}'")
 
 #Verify that Bob has ganache ETH
-assert ocean.web3.eth.getBalance(bob_wallet.address) > 0, "need ganache ETH"
+assert ocean.web3.eth.get_balance(bob_wallet.address) > 0, "need ganache ETH"
 
 #Verify that Bob has ganache OCEAN
 assert OCEAN_token.balanceOf(bob_wallet.address) > 0, "need ganache OCEAN"

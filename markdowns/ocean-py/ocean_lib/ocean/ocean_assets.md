@@ -4,14 +4,14 @@ slug: ocean_lib/ocean/ocean_assets
 app: ocean.py
 module: ocean_lib.ocean.ocean_assets
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_assets.py
-version: 0.5.22
+version: 0.5.24
 ---
 Ocean module.
 
 ## OceanAssets
 
 ```python
-@enforce_types_shim
+@enforce_types
 class OceanAssets()
 ```
 
@@ -28,7 +28,7 @@ Initialises OceanAssets object.
 #### create
 
 ```python
- | def create(metadata: dict, publisher_wallet: Wallet, service_descriptors: list = None, owner_address: str = None, data_token_address: str = None, provider_uri=None, dt_name: str = None, dt_symbol: str = None, dt_blob: str = None, dt_cap: float = None) -> (Asset, None)
+ | def create(metadata: dict, publisher_wallet: Wallet, service_descriptors: list = None, owner_address: str = None, data_token_address: str = None, provider_uri: str = None, dt_name: str = None, dt_symbol: str = None, dt_blob: str = None, dt_cap: float = None) -> (Asset, None)
 ```
 
 Register an asset on-chain.
@@ -191,7 +191,7 @@ str path to saved files
 #### validate
 
 ```python
- | def validate(metadata: dict) -> bool
+ | def validate(metadata: dict) -> (bool, list)
 ```
 
 Validate that the metadata is ok to be stored in aquarius.
@@ -202,7 +202,7 @@ Validate that the metadata is ok to be stored in aquarius.
 
 **Returns**:
 
-bool
+(bool, list) list of errors, empty if valid
 
 #### owner
 

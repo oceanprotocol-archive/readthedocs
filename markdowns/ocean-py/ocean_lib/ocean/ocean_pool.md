@@ -4,12 +4,12 @@ slug: ocean_lib/ocean/ocean_pool
 app: ocean.py
 module: ocean_lib.ocean.ocean_pool
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_pool.py
-version: 0.5.22
+version: 0.5.24
 ---
 ## OceanPool
 
 ```python
-@enforce_types_shim
+@enforce_types
 class OceanPool()
 ```
 

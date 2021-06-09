@@ -4,12 +4,12 @@ slug: ocean_lib/ocean/mint_fake_ocean
 app: ocean.py
 module: ocean_lib.ocean.mint_fake_ocean
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/mint_fake_ocean.py
-version: 0.5.22
+version: 0.5.24
 ---
 #### mint\_fake\_OCEAN
 
 ```python
-def mint_fake_OCEAN()
+def mint_fake_OCEAN(config)
 ```
 
 Does the following:

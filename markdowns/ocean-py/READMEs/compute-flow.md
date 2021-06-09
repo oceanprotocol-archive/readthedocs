@@ -4,7 +4,7 @@ slug: READMEs/compute-flow.md
 app: ocean.py
 module: READMEs.compute-flow
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/compute-flow.md
-version: 0.5.22
+version: 0.5.24
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation

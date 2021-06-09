@@ -4,7 +4,7 @@ slug: ocean_lib/config
 app: ocean.py
 module: ocean_lib.config
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/config.py
-version: 0.5.22
+version: 0.5.24
 ---
 ## Config
 
@@ -33,9 +33,6 @@ artifacts.path = artifacts
 [resources]
 metadata_cache_uri = http://localhost:5000
 provider.url = http://localhost:8030
-
-[util]
-typecheck = true
 ```
 
 **Arguments**:

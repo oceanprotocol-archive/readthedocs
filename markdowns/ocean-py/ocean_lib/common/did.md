@@ -4,7 +4,7 @@ slug: ocean_lib/common/did
 app: ocean.py
 module: ocean_lib.common.did
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/did.py
-version: 0.5.22
+version: 0.5.24
 ---
 DID Lib to do DID's and DDO's.
 

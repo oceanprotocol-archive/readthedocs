@@ -4,12 +4,12 @@ slug: ocean_lib/web3_internal/transactions
 app: ocean.py
 module: ocean_lib.web3_internal.transactions
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/transactions.py
-version: 0.5.22
+version: 0.5.24
 ---
 #### sign\_hash
 
 ```python
-@enforce_types_shim
+@enforce_types
 def sign_hash(msg_hash, wallet: Wallet) -> str
 ```
 

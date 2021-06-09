@@ -4,7 +4,7 @@ slug: ocean_lib/common/ddo/public_key_rsa
 app: ocean.py
 module: ocean_lib.common.ddo.public_key_rsa
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/ddo/public_key_rsa.py
-version: 0.5.22
+version: 0.5.24
 ---
 Public key RSA
 
