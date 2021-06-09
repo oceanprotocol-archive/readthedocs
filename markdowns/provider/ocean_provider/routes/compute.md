@@ -4,7 +4,7 @@ slug: ocean_provider/routes/compute
 app: provider
 module: ocean_provider.routes.compute
 source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/routes/compute.py
-version: 0.4.9
+version: 0.4.11
 ---
 #### computeDelete
 

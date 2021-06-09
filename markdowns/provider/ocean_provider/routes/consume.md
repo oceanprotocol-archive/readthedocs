@@ -4,7 +4,7 @@ slug: ocean_provider/routes/consume
 app: provider
 module: ocean_provider.routes.consume
 source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/routes/consume.py
-version: 0.4.9
+version: 0.4.11
 ---
 #### encrypt
 
