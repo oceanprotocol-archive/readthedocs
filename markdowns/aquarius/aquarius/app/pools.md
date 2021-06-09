@@ -4,7 +4,7 @@ slug: aquarius/app/pools
 app: aquarius
 module: aquarius.app.pools
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/pools.py
-version: 2.2.11
+version: 2.2.12
 ---
 #### get\_liquidity\_history
 

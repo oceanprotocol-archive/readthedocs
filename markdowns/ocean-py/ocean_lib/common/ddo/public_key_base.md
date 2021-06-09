@@ -4,7 +4,7 @@ slug: ocean_lib/common/ddo/public_key_base
 app: ocean.py
 module: ocean_lib.common.ddo.public_key_base
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/ddo/public_key_base.py
-version: 0.5.22
+version: 0.5.24
 ---
 Public key base
 

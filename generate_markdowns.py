@@ -3,8 +3,10 @@ Usage: python generate_markdowns.py
 """
 import argparse
 import fnmatch
+import json
 import logging
 import os
+import re
 import shutil
 import sys
 import subprocess
@@ -35,6 +37,33 @@ if args.verbose:
     logging.basicConfig(level=logging.DEBUG)
 else:
     logging.basicConfig(level=logging.INFO)
+
+
+def get_version_for_js(path: str):
+    package_file = os.path.join(path, "package.json")
+    if not os.path.isfile(package_file):
+        logging.warning("File not found %s", package_file)
+        return ""
+
+    with open(package_file, encoding="utf8") as f:
+        version = json.load(f)["version"]
+        logging.info("Found version [%s] for [%s]", version, package_file)
+        return version
+
+
+def get_version_for_python(path: str):
+    package_file = os.path.join(path, "setup.py")
+    if not os.path.isfile(package_file):
+        logging.warning("File not found %s", package_file)
+        return ""
+
+    pattern = re.compile("version='(.*)',")
+    version = ""
+    for i, line in enumerate(open(package_file, encoding="utf8")):
+        for match in re.finditer(pattern, line):
+            version = match.group(1)
+            logging.info("Found version [%s] for [%s]", match.group(1), package_file)
+            return version
 
 
 def get_branch(path: str):
@@ -274,7 +303,7 @@ markdown_repos = {
         "app": "aquarius",
         "markdown_path": [],
         "source": "https://github.com/oceanprotocol/aquarius",
-        "version": "2.2.11",
+        "version": get_version_for_python(os.path.join("submodules", "aquarius")),
     },
     "ocean.py": {
         "docignore_file_path": "submodules/ocean.py/.docignore",
@@ -288,7 +317,7 @@ markdown_repos = {
             }
         ],
         "source": "https://github.com/oceanprotocol/ocean.py",
-        "version": "0.5.22",
+        "version": get_version_for_python(os.path.join("submodules", "ocean.py")),
     },
     "provider": {
         "additional_directories": [],
@@ -298,7 +327,7 @@ markdown_repos = {
         "app": "provider",
         "markdown_path": [],
         "source": "https://github.com/oceanprotocol/provider",
-        "version": "0.4.9",
+        "version": get_version_for_python(os.path.join("submodules", "provider")),
     },
     "ocean-subgraph": {
         "additional_directories": [],
@@ -312,7 +341,7 @@ markdown_repos = {
             }
         ],
         "source": "https://github.com/oceanprotocol/ocean-subgraph",
-        "version": "1.1.1",
+        "version": get_version_for_js(os.path.join("submodules", "ocean-subgraph")),
     },
 }
 

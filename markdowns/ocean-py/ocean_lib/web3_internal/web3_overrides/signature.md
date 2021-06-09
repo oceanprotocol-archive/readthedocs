@@ -4,12 +4,12 @@ slug: ocean_lib/web3_internal/web3_overrides/signature
 app: ocean.py
 module: ocean_lib.web3_internal.web3_overrides.signature
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/web3_overrides/signature.py
-version: 0.5.22
+version: 0.5.24
 ---
 ## SignatureFix
 
 ```python
-@enforce_types_shim
+@enforce_types
 class SignatureFix(Signature)
 ```
 

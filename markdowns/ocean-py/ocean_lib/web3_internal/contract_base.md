@@ -4,14 +4,14 @@ slug: ocean_lib/web3_internal/contract_base
 app: ocean.py
 module: ocean_lib.web3_internal.contract_base
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/contract_base.py
-version: 0.5.22
+version: 0.5.24
 ---
 All contracts inherit from `ContractBase` class.
 
 ## ContractBase
 
 ```python
-@enforce_types_shim
+@enforce_types
 class ContractBase(object)
 ```
 
@@ -285,8 +285,8 @@ Example - how to get all ERC-20 token transactions
 for the latest 10 blocks:
 
 ```python
-from = max(mycontract.web3.eth.blockNumber - 10, 1)
-to = mycontract.web3.eth.blockNumber
+from = max(mycontract.web3.eth.block_number - 10, 1)
+to = mycontract.web3.eth.block_number
 events = mycontract.events.Transfer.getLogs(fromBlock=from, toBlock=to)
 for e in events:
 print(e["args"]["from"],

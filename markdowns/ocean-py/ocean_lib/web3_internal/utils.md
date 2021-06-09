@@ -4,7 +4,7 @@ slug: ocean_lib/web3_internal/utils
 app: ocean.py
 module: ocean_lib.web3_internal.utils
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/utils.py
-version: 0.5.22
+version: 0.5.24
 ---
 #### generate\_multi\_value\_hash
 
@@ -88,7 +88,7 @@ def split_signature(web3, signature)
 #### get\_network\_name
 
 ```python
-@enforce_types_shim
+@enforce_types
 def get_network_name(network_id: int = None) -> str
 ```
 
@@ -107,7 +107,7 @@ Network name, str
 #### get\_network\_id
 
 ```python
-@enforce_types_shim
+@enforce_types
 def get_network_id() -> int
 ```
 
@@ -120,7 +120,7 @@ Network id, int
 #### ec\_recover
 
 ```python
-@enforce_types_shim
+@enforce_types
 def ec_recover(message, signed_message)
 ```
 
@@ -140,7 +140,7 @@ produced for an ethereum-prefixed message.
 #### get\_ether\_balance
 
 ```python
-@enforce_types_shim
+@enforce_types
 def get_ether_balance(address: str) -> int
 ```
 

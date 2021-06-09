@@ -4,12 +4,12 @@ slug: ocean_lib/models/bpool
 app: ocean.py
 module: ocean_lib.models.bpool
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/bpool.py
-version: 0.5.22
+version: 0.5.24
 ---
 ## BPool
 
 ```python
-@enforce_types_shim
+@enforce_types
 class BPool(BToken)
 ```
 

@@ -4,12 +4,12 @@ slug: ocean_lib/models/dtfactory
 app: ocean.py
 module: ocean_lib.models.dtfactory
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/dtfactory.py
-version: 0.5.22
+version: 0.5.24
 ---
 ## DTFactory
 
 ```python
-@enforce_types_shim
+@enforce_types
 class DTFactory(ContractBase)
 ```
 

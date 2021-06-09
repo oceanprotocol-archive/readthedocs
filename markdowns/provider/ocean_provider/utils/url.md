@@ -4,7 +4,7 @@ slug: ocean_provider/utils/url
 app: provider
 module: ocean_provider.utils.url
 source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/utils/url.py
-version: 0.4.9
+version: 0.4.11
 ---
 #### validate\_dns\_records
 

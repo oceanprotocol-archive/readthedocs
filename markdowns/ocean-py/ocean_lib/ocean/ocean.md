@@ -4,14 +4,14 @@ slug: ocean_lib/ocean/ocean
 app: ocean.py
 module: ocean_lib.ocean.ocean
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean.py
-version: 0.5.22
+version: 0.5.24
 ---
 Ocean module.
 
 ## Ocean
 
 ```python
-@enforce_types_shim
+@enforce_types
 class Ocean()
 ```
 
@@ -20,7 +20,7 @@ The Ocean class is the entry point into Ocean Protocol.
 #### \_\_init\_\_
 
 ```python
- | def __init__(config=None, data_provider=None)
+ | def __init__(config, data_provider=None)
 ```
 
 Initialize Ocean class.

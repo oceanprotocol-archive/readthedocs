@@ -4,7 +4,7 @@ slug: ocean_lib/ocean/util
 app: ocean.py
 module: ocean_lib.ocean.util
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/util.py
-version: 0.5.22
+version: 0.5.24
 ---
 #### get\_web3\_connection\_provider
 
@@ -40,7 +40,7 @@ provider : HTTPProvider
 #### to\_base
 
 ```python
-@enforce_types_shim
+@enforce_types
 def to_base(amt: float, dec: int) -> int
 ```
 
@@ -49,7 +49,7 @@ Returns value in e.g. wei (taking e.g. ETH as input).
 #### from\_base
 
 ```python
-@enforce_types_shim
+@enforce_types
 def from_base(num_base: int, dec: int) -> float
 ```
 

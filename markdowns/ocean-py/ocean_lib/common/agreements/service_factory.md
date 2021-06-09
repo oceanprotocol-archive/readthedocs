@@ -4,7 +4,7 @@ slug: ocean_lib/common/agreements/service_factory
 app: ocean.py
 module: ocean_lib.common.agreements.service_factory
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/agreements/service_factory.py
-version: 0.5.22
+version: 0.5.24
 ---
 ## ServiceDescriptor
 

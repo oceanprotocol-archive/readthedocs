@@ -4,14 +4,14 @@ slug: ocean_lib/data_provider/data_service_provider
 app: ocean.py
 module: ocean_lib.data_provider.data_service_provider
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/data_provider/data_service_provider.py
-version: 0.5.22
+version: 0.5.24
 ---
 Provider module.
 
 ## DataServiceProvider
 
 ```python
-@enforce_types_shim
+@enforce_types
 class DataServiceProvider()
 ```
 
@@ -213,7 +213,7 @@ Url, str
 
 ```python
  | @staticmethod
- | def get_service_endpoints(provider_uri=None)
+ | def get_service_endpoints(provider_uri)
 ```
 
 Return the service endpoints from the provider URL.
@@ -222,7 +222,7 @@ Return the service endpoints from the provider URL.
 
 ```python
  | @staticmethod
- | def get_provider_address(provider_uri=None)
+ | def get_provider_address(provider_uri)
 ```
 
 Return the provider address

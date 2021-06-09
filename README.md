@@ -21,7 +21,7 @@ git submodule update --recursive --remote
 ### Generate markdowns
 
 ```
-python generate_markdowns.py -l ocean.py aquarius provider
+python generate_markdowns.py -l ocean.py aquarius provider ocean-subgraph
 ```
 
 ### Script options

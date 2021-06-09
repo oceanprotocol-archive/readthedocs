@@ -4,7 +4,7 @@ slug: aquarius/events/metadata_updater
 app: aquarius
 module: aquarius.events.metadata_updater
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/metadata_updater.py
-version: 2.2.11
+version: 2.2.12
 ---
 ## MetadataUpdater
 
