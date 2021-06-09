@@ -25,12 +25,12 @@ version: 1.1.1
 </center>
 
 - [🏄 Get Started](#-get-started)
-- [🧶 Example Queries](#-example-queries)
-- [🦑 Development](#-development)
-- [🦑 Development on barge](#-development-on-barge)
-- [🧪 Testing](#-testing)
+- [⛵ Example Queries](#-example-queries)
+- [🏊 Development](#-development)
+- [🏊 Development on barge](#-development-on-barge)
+- [🔍 Testing](#-testing)
 - [✨ Code Style](#-code-style)
-- [🛳 Releases](#️-releases)
+- [🏷️ Releases](#️-releases)
 - [⬆️ Deployment](#️-deployment)
 - [🏛 License](#-license)
 
@@ -42,7 +42,7 @@ This subgraph is deployed under `/subgraphs/name/oceanprotocol/ocean-subgraph/` 
 - [subgraph.ropsten.oceanprotocol.com](https://subgraph.ropsten.oceanprotocol.com/subgraphs/name/oceanprotocol/ocean-subgraph/graphql)
 - [subgraph.rinkeby.oceanprotocol.com](https://subgraph.rinkeby.oceanprotocol.com/subgraphs/name/oceanprotocol/ocean-subgraph/graphql)
 
-## 🧶 Example Queries
+## ⛵ Example Queries
 
 **All pools**
 
@@ -91,7 +91,7 @@ This subgraph is deployed under `/subgraphs/name/oceanprotocol/ocean-subgraph/` 
 
 > Note: all ETH addresses like `$userAddress` in above example need to be passed in lowercase.
 
-## 🦑 Development
+## 🏊 Development
 
 First, clone the repo and install dependencies:
 
@@ -122,7 +122,7 @@ The default network for development is set to Rinkeby. If you want to switch to 
 You now have a local graph-node running and can start deploying your changes to it. To do so, follow the [Deployment instructions](#️-deployment).
 
 
-## 🦑 Development on Barge
+## 🏊 Development on Barge
 
 
 1. Clone [barge](https://github.com/oceanprotocol/barge) and run it in another terminal:
@@ -167,7 +167,7 @@ You now have a local graph-node running on http://localhost:9000
 
 
 
-## 🧪 Testing
+## 🔍 Testing
 
 - Please note: the `npm run test` command is currently not working due to [this issue](https://github.com/graphprotocol/graph-ts/issues/113).
 
@@ -190,7 +190,7 @@ npm run lint
 npm run format
 ```
 
-## 🛳 Releases
+## 🏷️ Releases
 
 Releases are managed semi-automatically. They are always manually triggered from a developer's 
 machine with release scripts. From a clean `main` branch you can run the release task bumping 
