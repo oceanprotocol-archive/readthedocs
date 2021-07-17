@@ -3,166 +3,159 @@ title: assets
 slug: aquarius/app/assets
 app: aquarius
 module: aquarius.app.assets
-source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/assets.py
+source: https://github.com/oceanprotocol/aquarius/blob/issue-517-add-docstrings/aquarius/app/assets.py
 version: 2.2.12
 ---
-
-#### get_assets_ids
+#### get\_assets\_ids
 
 ```python
 @assets.route("", methods=["GET"])
 def get_assets_ids()
 ```
 
-## Get all asset IDs.
-
+Get all asset IDs.
+---
 tags:
-
-- ddo
-  responses:
+  - ddo
+responses:
   200:
-  description: successful action
+    description: successful action
 
-#### get_ddo
+#### get\_ddo
 
 ```python
 @assets.route("/ddo/<did>", methods=["GET"])
 def get_ddo(did)
 ```
 
-## Get DDO of a particular asset.
-
+Get DDO of a particular asset.
+---
 tags:
-
-- ddo
-  parameters:
-- name: did
-  in: path
-  description: DID of the asset.
-  required: true
-  type: string
-  responses:
+  - ddo
+parameters:
+  - name: did
+    in: path
+    description: DID of the asset.
+    required: true
+    type: string
+responses:
   200:
-  description: successful operation
+    description: successful operation
   404:
-  description: This asset DID is not in OceanDB
+    description: This asset DID is not in OceanDB
 
-#### get_asset_ddos
+#### get\_asset\_ddos
 
 ```python
 @assets.route("/ddo", methods=["GET"])
 def get_asset_ddos()
 ```
 
-## Get DDO of all assets.
-
+Get DDO of all assets.
+---
 tags:
-
-- ddo
-  responses:
+  - ddo
+responses:
   200:
-  description: successful action
+    description: successful action
 
-#### get_metadata
+#### get\_metadata
 
 ```python
 @assets.route("/metadata/<did>", methods=["GET"])
 def get_metadata(did)
 ```
 
-## Get metadata of a particular asset
-
+Get metadata of a particular asset
+---
 tags:
-
-- metadata
-  parameters:
-- name: did
-  in: path
-  description: DID of the asset.
-  required: true
-  type: string
-  responses:
+  - metadata
+parameters:
+  - name: did
+    in: path
+    description: DID of the asset.
+    required: true
+    type: string
+responses:
   200:
-  description: successful operation.
+    description: successful operation.
   404:
-  description: This asset DID is not in OceanDB.
+    description: This asset DID is not in OceanDB.
 
-#### get_assets_names
+#### get\_assets\_names
 
 ```python
 @assets.route("/names", methods=["POST"])
 def get_assets_names()
 ```
 
-## Get names of assets as specified in the payload
-
+Get names of assets as specified in the payload
+---
 tags:
-
-- name
-  consumes:
-- application/json
-  parameters:
-- in: body
-  name: body
-  required: true
-  description: list of asset DIDs
-  schema:
-  type: object
-  properties:
-  didList:
-  type: list
-  description: list of dids
-  example: ["did:op:123455644356", "did:op:533443322223344"]
-  responses:
+  - name
+consumes:
+  - application/json
+parameters:
+  - in: body
+    name: body
+    required: true
+    description: list of asset DIDs
+    schema:
+      type: object
+      properties:
+        didList:
+          type: list
+          description: list of dids
+          example: ["did:op:123455644356", "did:op:533443322223344"]
+responses:
   200:
-  description: successful operation.
+    description: successful operation.
   404:
-  description: assets not found
+    description: assets not found
 
-#### query_ddo
+#### query\_ddo
 
 ```python
 @assets.route("/ddo/query", methods=["POST"])
 def query_ddo()
 ```
 
-## Get a list of DDOs that match with the executed query.
-
+Get a list of DDOs that match with the executed query.
+---
 tags:
-
-- ddo
-  consumes:
-- application/json
-  parameters:
-- in: body
-  name: body
-  required: true
-  description: Asset metadata.
-  schema:
-  type: object
-  properties:
-  query:
-  type: string
-  description: Query to realize
-  example: {"value":1}
-  sort:
-  type: object
-  description: Key or list of keys to sort the result
-  example: {"value":1}
-  offset:
-  type: int
-  description: Number of records per page
-  example: 100
-  page:
-  type: int
-  description: Page showed
-  example: 1
-  responses:
+  - ddo
+consumes:
+  - application/json
+parameters:
+  - in: body
+    name: body
+    required: true
+    description: Asset metadata.
+    schema:
+      type: object
+      properties:
+        query:
+          type: string
+          description: Query to realize
+          example: {"value":1}
+        sort:
+          type: object
+          description: Key or list of keys to sort the result
+          example: {"value":1}
+        offset:
+          type: int
+          description: Number of records per page
+          example: 100
+        page:
+          type: int
+          description: Page showed
+          example: 1
+responses:
   200:
-  description: successful action
+    description: successful action
 
 example:
-{"query": {"query_string": {"query": "(covid) -isInPurgatory:true"}}, "offset":1, "page": 1}
+    {"query": {"query_string": {"query": "(covid) -isInPurgatory:true"}}, "offset":1, "page": 1}
 
 #### validate
 
@@ -171,109 +164,106 @@ example:
 def validate()
 ```
 
-## Validate metadata content.
-
+Validate metadata content.
+---
 tags:
-
-- ddo
-  consumes:
-- application/json
-  parameters:
-- in: body
-  name: body
-  required: true
-  description: Asset metadata.
-  schema:
-  type: object
-  responses:
+  - ddo
+consumes:
+  - application/json
+parameters:
+  - in: body
+    name: body
+    required: true
+    description: Asset metadata.
+    schema:
+      type: object
+responses:
   200:
-  description: successfully request.
+    description: successfully request.
   500:
-  description: Error
+    description: Error
 
-#### validate_remote
+#### validate\_remote
 
 ```python
 @assets.route("/ddo/validate-remote", methods=["POST"])
 def validate_remote()
 ```
 
-## Validate DDO content.
-
+Validate DDO content.
+---
 tags:
-
-- ddo
-  consumes:
-- application/json
-  parameters:
-- in: body
-  name: body
-  required: true
-  description: Asset DDO.
-  schema:
-  type: object
-  responses:
+  - ddo
+consumes:
+  - application/json
+parameters:
+  - in: body
+    name: body
+    required: true
+    description: Asset DDO.
+    schema:
+      type: object
+responses:
   200:
-  description: successfully request.
+    description: successfully request.
   400:
-  description: Invalid DDO format
+    description: Invalid DDO format
   500:
-  description: Error
+    description: Error
 
-#### encrypt_ddo
+#### encrypt\_ddo
 
 ```python
 @assets.route("/ddo/encrypt", methods=["POST"])
 def encrypt_ddo()
 ```
 
-## Encrypt a DDO.
-
+Encrypt a DDO.
+---
 tags:
-
-- ddo
-  consumes:
-- application/octet-stream
-  parameters:
-- in: body
-  name: body
-  required: true
-  description: data
-  schema:
-  type: object
-  responses:
+  - ddo
+consumes:
+  - application/octet-stream
+parameters:
+  - in: body
+    name: body
+    required: true
+    description: data
+    schema:
+      type: object
+responses:
   200:
-  description: successfully request. data is converted to hex
+    description: successfully request. data is converted to hex
   400:
-  description: Invalid format
+    description: Invalid format
   500:
-  description: Error
+    description: Error
 
-#### encrypt_ddo_as_hex
+#### encrypt\_ddo\_as\_hex
 
 ```python
 @assets.route("/ddo/encryptashex", methods=["POST"])
 def encrypt_ddo_as_hex()
 ```
 
-## Encrypt a DDO.
-
+Encrypt a DDO.
+---
 tags:
-
-- ddo
-  consumes:
-- application/octet-stream
-  parameters:
-- in: body
-  name: body
-  required: true
-  description: data
-  schema:
-  type: object
-  responses:
+  - ddo
+consumes:
+  - application/octet-stream
+parameters:
+  - in: body
+    name: body
+    required: true
+    description: data
+    schema:
+      type: object
+responses:
   200:
-  description: successfully request. data is converted to hex
+    description: successfully request. data is converted to hex
   400:
-  description: Invalid format
+    description: Invalid format
   500:
-  description: Error
+    description: Error
+

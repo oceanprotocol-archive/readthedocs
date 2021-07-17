@@ -3,10 +3,9 @@ title: events_monitor
 slug: aquarius/events/events_monitor
 app: aquarius
 module: aquarius.events.events_monitor
-source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/events_monitor.py
+source: https://github.com/oceanprotocol/aquarius/blob/issue-517-add-docstrings/aquarius/events/events_monitor.py
 version: 2.2.12
 ---
-
 ## EventsMonitor
 
 ```python
@@ -31,7 +30,7 @@ The events monitor pauses for 25 seconds between updates.
 The cached Metadata can be restricted to only those published by specific ethereum accounts.
 To do this set the `ALLOWED_PUBLISHERS` envvar to the list of ethereum addresses of known publishers.
 
-#### process_current_blocks
+#### process\_current\_blocks
 
 ```python
  | def process_current_blocks()
@@ -39,10 +38,11 @@ To do this set the `ALLOWED_PUBLISHERS` envvar to the list of ethereum addresses
 
 Process all blocks from the last processed block to the current block.
 
-#### process_block_range
+#### process\_block\_range
 
 ```python
  | def process_block_range(from_block, to_block)
 ```
 
 Process a range of blocks.
+

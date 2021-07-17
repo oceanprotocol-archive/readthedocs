@@ -30,7 +30,7 @@ version: 1.1.1
 - [🏊 Development on barge](#-development-on-barge)
 - [🔍 Testing](#-testing)
 - [✨ Code Style](#-code-style)
-- [🏷️ Releases](#️-releases)
+- [🛳 Releases](#️-releases)
 - [⬆️ Deployment](#️-deployment)
 - [🏛 License](#-license)
 
@@ -190,7 +190,7 @@ npm run lint
 npm run format
 ```
 
-## 🏷️ Releases
+## 🛳 Releases
 
 Releases are managed semi-automatically. They are always manually triggered from a developer's 
 machine with release scripts. From a clean `main` branch you can run the release task bumping 
