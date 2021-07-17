@@ -2,7 +2,7 @@
 title: dao
 slug: /read-the-docs/aquarius/dao
 app: aquarius
-module: app.dao
+module: aquarius.app.dao
 ---
 ## Dao
 

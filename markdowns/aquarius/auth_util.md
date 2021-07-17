@@ -2,7 +2,7 @@
 title: auth_util
 slug: /read-the-docs/aquarius/auth_util
 app: aquarius
-module: app.auth_util
+module: aquarius.app.auth_util
 ---
 #### get\_signer\_address
 

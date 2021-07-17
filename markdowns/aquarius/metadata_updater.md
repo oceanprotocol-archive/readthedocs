@@ -2,7 +2,7 @@
 title: metadata_updater
 slug: /read-the-docs/aquarius/metadata_updater
 app: aquarius
-module: events.metadata_updater
+module: aquarius.events.metadata_updater
 ---
 ## MetadataUpdater
 
@@ -30,6 +30,7 @@ See `get_dt_addresses_from_pool_logs`
   events. This should be set to the blockNumber in which the BFactory was created/deployed
   - The continuous updater runs every N seconds (initially set to 20s)
   - The price/liquidity info is added to the Asset's json object under the `price` key, e.g.:
+  ```
   asset['price'] = {
 - `'datatoken'` - 90,
 - `'ocean'` - 10,
@@ -38,4 +39,5 @@ See `get_dt_addresses_from_pool_logs`
 - `'address'` - '0x12112112112...',
 - `'pools'` - ['0x12112112112...', ]
   }
+  ```
 

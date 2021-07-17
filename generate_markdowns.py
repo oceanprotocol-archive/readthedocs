@@ -175,7 +175,7 @@ markdown_repos = {
     "aquarius": {
         "additional_files": [],
         "docignore_file_path": "submodules/aquarius/.docignore",
-        "path": "submodules/aquarius/aquarius",
+        "path": "submodules/aquarius",
         "output_dir": "aquarius",
         "app": "aquarius",
     },

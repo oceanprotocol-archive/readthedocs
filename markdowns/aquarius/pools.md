@@ -2,7 +2,7 @@
 title: pools
 slug: /read-the-docs/aquarius/pools
 app: aquarius
-module: app.pools
+module: aquarius.app.pools
 ---
 #### get\_liquidity\_history
 

@@ -2,7 +2,7 @@
 title: events_monitor
 slug: /read-the-docs/aquarius/events_monitor
 app: aquarius
-module: events.events_monitor
+module: aquarius.events.events_monitor
 ---
 ## EventsMonitor
 

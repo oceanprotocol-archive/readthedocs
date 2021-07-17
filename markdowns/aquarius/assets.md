@@ -2,7 +2,7 @@
 title: assets
 slug: /read-the-docs/aquarius/assets
 app: aquarius
-module: app.assets
+module: aquarius.app.assets
 ---
 #### get\_assets\_ids
 
@@ -214,6 +214,34 @@ responses:
 ```python
 @assets.route("/ddo/encrypt", methods=["POST"])
 def encrypt_ddo()
+```
+
+Encrypt a DDO.
+---
+tags:
+  - ddo
+consumes:
+  - application/octet-stream
+parameters:
+  - in: body
+    name: body
+    required: true
+    description: data
+    schema:
+      type: object
+responses:
+  200:
+    description: successfully request. data is converted to hex
+  400:
+    description: Invalid format
+  500:
+    description: Error
+
+#### encrypt\_ddo\_as\_hex
+
+```python
+@assets.route("/ddo/encryptashex", methods=["POST"])
+def encrypt_ddo_as_hex()
 ```
 
 Encrypt a DDO.
