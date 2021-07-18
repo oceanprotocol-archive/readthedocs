@@ -6,6 +6,16 @@ module: ocean_provider.routes.consume
 source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/routes/consume.py
 version: 0.4.12
 ---
+#### nonce
+
+```python
+@services.route("/nonce", methods=["GET"])
+@validate(NonceRequest)
+def nonce()
+```
+
+Returns a `nonce` for the given account address.
+
 #### encrypt
 
 ```python
