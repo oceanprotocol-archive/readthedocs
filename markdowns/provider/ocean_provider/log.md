@@ -3,7 +3,7 @@ title: log
 slug: ocean_provider/log
 app: provider
 module: ocean_provider.log
-source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/log.py
+source: https://github.com/oceanprotocol/provider/blob/issue-182-improve-docs/ocean_provider/log.py
 version: 0.4.12
 ---
 #### setup\_logging

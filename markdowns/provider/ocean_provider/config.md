@@ -3,7 +3,7 @@ title: config
 slug: ocean_provider/config
 app: provider
 module: ocean_provider.config
-source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/config.py
+source: https://github.com/oceanprotocol/provider/blob/issue-182-improve-docs/ocean_provider/config.py
 version: 0.4.12
 ---
 Config data.

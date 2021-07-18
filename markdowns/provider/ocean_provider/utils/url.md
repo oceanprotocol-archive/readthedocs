@@ -3,7 +3,7 @@ title: url
 slug: ocean_provider/utils/url
 app: provider
 module: ocean_provider.utils.url
-source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/utils/url.py
+source: https://github.com/oceanprotocol/provider/blob/issue-182-improve-docs/ocean_provider/utils/url.py
 version: 0.4.12
 ---
 #### validate\_dns\_records

@@ -3,7 +3,7 @@ title: exceptions
 slug: ocean_provider/exceptions
 app: provider
 module: ocean_provider.exceptions
-source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/exceptions.py
+source: https://github.com/oceanprotocol/provider/blob/issue-182-improve-docs/ocean_provider/exceptions.py
 version: 0.4.12
 ---
 ## InvalidSignatureError
