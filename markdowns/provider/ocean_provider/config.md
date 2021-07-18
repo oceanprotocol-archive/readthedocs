@@ -4,7 +4,7 @@ slug: ocean_provider/config
 app: provider
 module: ocean_provider.config
 source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/config.py
-version: 0.4.11
+version: 0.4.12
 ---
 Config data.
 
@@ -28,7 +28,6 @@ Options available:
 
 [eth-network]
 network = http://localhost:8545                            # ocean-contracts url.
-artifacts.path = artifacts                                       # Path of json abis.
 
 [resources]
 aquarius.url = http://localhost:5000
@@ -39,15 +38,6 @@ aquarius.url = http://localhost:5000
 - `options_dict`: Python dict with the config, dict.
 - `kwargs`: Additional args. If you pass text, you have to pass the plain text
 configuration.
-
-#### artifacts\_path
-
-```python
- | @property
- | def artifacts_path()
-```
-
-Path where the eth-network artifacts are allocated.
 
 #### network\_url
 

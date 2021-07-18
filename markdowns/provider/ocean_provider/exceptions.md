@@ -4,7 +4,7 @@ slug: ocean_provider/exceptions
 app: provider
 module: ocean_provider.exceptions
 source: https://github.com/oceanprotocol/provider/blob/main/ocean_provider/exceptions.py
-version: 0.4.11
+version: 0.4.12
 ---
 ## InvalidSignatureError
 
@@ -13,4 +13,12 @@ class InvalidSignatureError(Exception)
 ```
 
 User signature is not valid.
+
+## RequestNotFound
+
+```python
+class RequestNotFound(Exception)
+```
+
+Request undeclared/undefined.
 
