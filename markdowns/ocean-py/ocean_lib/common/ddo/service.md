@@ -3,7 +3,7 @@ title: service
 slug: ocean_lib/common/ddo/service
 app: ocean.py
 module: ocean_lib.common.ddo.service
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/ddo/service.py
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/common/ddo/service.py
 version: 0.5.26
 ---
 Service Class

@@ -3,7 +3,7 @@ title: config
 slug: ocean_lib/config
 app: ocean.py
 module: ocean_lib.config
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/config.py
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/config.py
 version: 0.5.26
 ---
 ## Config

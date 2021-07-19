@@ -3,7 +3,7 @@ title: developers.md
 slug: READMEs/developers.md
 app: ocean.py
 module: READMEs.developers
-source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/developers.md
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/READMEs/developers.md
 version: 0.5.26
 ---
 <!--

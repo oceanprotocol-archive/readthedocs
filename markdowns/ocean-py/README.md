@@ -3,7 +3,7 @@ title: README.md
 slug: README.md
 app: ocean.py
 module: README
-source: https://github.com/oceanprotocol/ocean.py/blob/main/README.md
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/README.md
 version: 0.5.26
 ---
 <!--

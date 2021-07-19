@@ -3,7 +3,7 @@ title: wallets.md
 slug: READMEs/wallets.md
 app: ocean.py
 module: READMEs.wallets
-source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/wallets.md
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/READMEs/wallets.md
 version: 0.5.26
 ---
 <!--

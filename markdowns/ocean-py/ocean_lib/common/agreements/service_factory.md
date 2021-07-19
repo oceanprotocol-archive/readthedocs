@@ -3,7 +3,7 @@ title: service_factory
 slug: ocean_lib/common/agreements/service_factory
 app: ocean.py
 module: ocean_lib.common.agreements.service_factory
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/agreements/service_factory.py
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/common/agreements/service_factory.py
 version: 0.5.26
 ---
 ## ServiceDescriptor
