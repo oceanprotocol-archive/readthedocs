@@ -12,7 +12,9 @@ version: 0.5.26
 def create_checksum(text)
 ```
 
-:return str:
+**Returns**:
+
+str
 
 #### generate\_trusted\_algo\_dict
 

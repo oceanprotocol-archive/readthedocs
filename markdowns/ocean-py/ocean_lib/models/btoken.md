@@ -19,7 +19,9 @@ class BToken(ContractBase)
  | def symbol() -> str
 ```
 
-:return str:
+**Returns**:
+
+str
 
 #### decimals
 
@@ -27,7 +29,9 @@ class BToken(ContractBase)
  | def decimals() -> int
 ```
 
-:return int:
+**Returns**:
+
+int
 
 #### balanceOf
 
@@ -35,7 +39,9 @@ class BToken(ContractBase)
  | def balanceOf(address: str) -> int
 ```
 
-:return int:
+**Returns**:
+
+int
 
 #### approve
 
@@ -43,7 +49,9 @@ class BToken(ContractBase)
  | def approve(spender_address: str, amt_base: int, from_wallet: Wallet)
 ```
 
-:return str: hex str transaction hash
+**Returns**:
+
+hex str transaction hash
 
 #### transfer
 
@@ -51,7 +59,9 @@ class BToken(ContractBase)
  | def transfer(dst_address: str, amt_base: int, from_wallet: Wallet)
 ```
 
-:return str: hex str transaction hash
+**Returns**:
+
+hex str transaction hash
 
 #### allowance
 
@@ -59,5 +69,7 @@ class BToken(ContractBase)
  | def allowance(src_address: str, dst_address: str) -> int
 ```
 
-:return int:
+**Returns**:
+
+int
 

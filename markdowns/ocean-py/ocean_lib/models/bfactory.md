@@ -19,5 +19,7 @@ class BFactory(ContractBase)
  | def newBPool(from_wallet: Wallet) -> str
 ```
 
-:return str: new pool address
+**Returns**:
+
+`str` new pool address
 
