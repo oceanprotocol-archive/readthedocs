@@ -4,7 +4,7 @@ slug: ocean_lib/ocean/ocean_services
 app: ocean.py
 module: ocean_lib.ocean.ocean_services
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_services.py
-version: 0.5.24
+version: 0.5.26
 ---
 Ocean module.
 

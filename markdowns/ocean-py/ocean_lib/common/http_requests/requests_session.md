@@ -4,7 +4,7 @@ slug: ocean_lib/common/http_requests/requests_session
 app: ocean.py
 module: ocean_lib.common.http_requests.requests_session
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/http_requests/requests_session.py
-version: 0.5.24
+version: 0.5.26
 ---
 #### get\_requests\_session
 

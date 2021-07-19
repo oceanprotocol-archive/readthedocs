@@ -4,7 +4,7 @@ slug: ocean_lib/models/algorithm_metadata
 app: ocean.py
 module: ocean_lib.models.algorithm_metadata
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/algorithm_metadata.py
-version: 0.5.24
+version: 0.5.26
 ---
 ## AlgorithmMetadata
 

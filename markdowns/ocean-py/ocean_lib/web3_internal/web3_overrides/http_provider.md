@@ -4,7 +4,7 @@ slug: ocean_lib/web3_internal/web3_overrides/http_provider
 app: ocean.py
 module: ocean_lib.web3_internal.web3_overrides.http_provider
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/web3_overrides/http_provider.py
-version: 0.5.24
+version: 0.5.26
 ---
 ## CustomHTTPProvider
 

@@ -4,7 +4,7 @@ slug: ocean_lib/assets/asset
 app: ocean.py
 module: ocean_lib.assets.asset
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/assets/asset.py
-version: 0.5.24
+version: 0.5.26
 ---
 ## Asset
 

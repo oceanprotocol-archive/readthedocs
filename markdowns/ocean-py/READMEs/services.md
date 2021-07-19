@@ -4,7 +4,7 @@ slug: READMEs/services.md
 app: ocean.py
 module: READMEs.services
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/services.md
-version: 0.5.24
+version: 0.5.26
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -54,14 +54,9 @@ In Python, import and configure the components / services:
 ```python
 import os
 from ocean_lib.config import Config
-from ocean_lib.ocean.util import get_web3_connection_provider
-from ocean_lib.web3_internal.web3_provider import Web3Provider
-from ocean_lib.web3_internal.contract_handler import ContractHandler
 
 #configure the components
 config = Config(os.getenv('CONFIG_FILE'))
-Web3Provider.init_web3(provider=get_web3_connection_provider(config.network_url))
-ContractHandler.set_artifacts_path(config.artifacts_path)
 ```
 
 Now you're ready to use the services! 🐳 The marketplace tutorial will use them in more detail.

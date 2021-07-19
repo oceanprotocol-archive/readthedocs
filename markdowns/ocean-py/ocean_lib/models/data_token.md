@@ -4,7 +4,7 @@ slug: ocean_lib/models/data_token
 app: ocean.py
 module: ocean_lib.models.data_token
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/data_token.py
-version: 0.5.24
+version: 0.5.26
 ---
 ## DataToken
 

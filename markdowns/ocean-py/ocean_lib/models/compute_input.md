@@ -4,7 +4,7 @@ slug: ocean_lib/models/compute_input
 app: ocean.py
 module: ocean_lib.models.compute_input
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/compute_input.py
-version: 0.5.24
+version: 0.5.26
 ---
 ## ComputeInput
 

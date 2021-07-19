@@ -4,7 +4,7 @@ slug: ocean_lib/web3_internal/utils
 app: ocean.py
 module: ocean_lib.web3_internal.utils
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/utils.py
-version: 0.5.24
+version: 0.5.26
 ---
 #### generate\_multi\_value\_hash
 
@@ -39,31 +39,14 @@ def prepare_prefixed_hash(msg_hash)
 
 
 
-#### add\_ethereum\_prefix\_and\_hash\_msg
-
-```python
-def add_ethereum_prefix_and_hash_msg(text)
-```
-
-This method of adding the ethereum prefix seems to be used in web3.personal.sign/ecRecover.
-
-**Arguments**:
-
-- `text`: str any str to be signed / used in recovering address from a signature
-
-**Returns**:
-
-hash of prefixed text according to the recommended ethereum prefix
-
 #### to\_32byte\_hex
 
 ```python
-def to_32byte_hex(web3, val)
+def to_32byte_hex(val)
 ```
 
 **Arguments**:
 
-- `web3`: 
 - `val`: 
 
 **Returns**:
@@ -73,7 +56,7 @@ def to_32byte_hex(web3, val)
 #### split\_signature
 
 ```python
-def split_signature(web3, signature)
+def split_signature(signature)
 ```
 
 **Arguments**:
@@ -89,33 +72,34 @@ def split_signature(web3, signature)
 
 ```python
 @enforce_types
-def get_network_name(network_id: int = None) -> str
+def get_network_name(chain_id: Optional[int] = None, web3: Optional[Web3] = None) -> str
 ```
 
-Return the network name based on the current ethereum network id.
+Return the network name based on the current ethereum chain id.
 
-Return `ganache` for every network id that is not mapped.
+Return `ganache` for every chain id that is not mapped.
 
 **Arguments**:
 
-- `network_id`: Network id, int
+- `chain_id`: Chain id, int
+- `web3`: Web3 instance
 
-**Returns**:
-
-Network name, str
-
-#### get\_network\_id
+#### get\_chain\_id
 
 ```python
 @enforce_types
-def get_network_id() -> int
+def get_chain_id(web3: Web3) -> int
 ```
 
-Return the ethereum network id calling the `web3.version.network` method.
+Return the ethereum chain id calling the `web3.eth.chain_id` method.
+
+**Arguments**:
+
+- `web3`: Web3 instance
 
 **Returns**:
 
-Network id, int
+Chain id, int
 
 #### ec\_recover
 
@@ -141,7 +125,7 @@ produced for an ethereum-prefixed message.
 
 ```python
 @enforce_types
-def get_ether_balance(address: str) -> int
+def get_ether_balance(web3: Web3, address: str) -> int
 ```
 
 Get balance of an ethereum address.

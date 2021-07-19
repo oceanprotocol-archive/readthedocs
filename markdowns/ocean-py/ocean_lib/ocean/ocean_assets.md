@@ -4,7 +4,7 @@ slug: ocean_lib/ocean/ocean_assets
 app: ocean.py
 module: ocean_lib.ocean.ocean_assets
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_assets.py
-version: 0.5.24
+version: 0.5.26
 ---
 Ocean module.
 
@@ -20,7 +20,7 @@ Ocean assets class.
 #### \_\_init\_\_
 
 ```python
- | def __init__(config, data_provider, ddo_registry_address)
+ | def __init__(config, web3, data_provider, ddo_registry_address)
 ```
 
 Initialises OceanAssets object.
@@ -28,7 +28,7 @@ Initialises OceanAssets object.
 #### create
 
 ```python
- | def create(metadata: dict, publisher_wallet: Wallet, service_descriptors: list = None, owner_address: str = None, data_token_address: str = None, provider_uri: str = None, dt_name: str = None, dt_symbol: str = None, dt_blob: str = None, dt_cap: float = None) -> (Asset, None)
+ | def create(metadata: dict, publisher_wallet: Wallet, service_descriptors: list = None, owner_address: str = None, data_token_address: str = None, provider_uri: str = None, dt_name: str = None, dt_symbol: str = None, dt_blob: str = None, dt_cap: float = None) -> Optional[Asset]
 ```
 
 Register an asset on-chain.
@@ -98,7 +98,7 @@ List of assets that match with the query
 #### query
 
 ```python
- | def query(query: dict, sort=None, offset=100, page=1, metadata_cache_uri=None) -> []
+ | def query(query: dict, sort=None, offset=100, page=1, metadata_cache_uri=None) -> list
 ```
 
 Search an asset in oceanDB using search query.
@@ -141,7 +141,7 @@ OrderRequirements instance -- named tuple (amount, data_token_address, receiver_
 
 ```python
  | @staticmethod
- | def pay_for_service(amount: float, token_address: str, did: str, service_id: int, fee_receiver: str, from_wallet: Wallet, consumer: str = None) -> str
+ | def pay_for_service(web3: Web3, amount: float, token_address: str, did: str, service_id: int, fee_receiver: str, from_wallet: Wallet, consumer: str = None) -> str
 ```
 
 Submits the payment for chosen service in DataTokens.
@@ -191,7 +191,7 @@ str path to saved files
 #### validate
 
 ```python
- | def validate(metadata: dict) -> (bool, list)
+ | def validate(metadata: dict) -> Tuple[bool, list]
 ```
 
 Validate that the metadata is ok to be stored in aquarius.

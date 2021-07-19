@@ -4,7 +4,7 @@ slug: READMEs/developers.md
 app: ocean.py
 module: READMEs.developers
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/developers.md
-version: 0.5.24
+version: 0.5.26
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation

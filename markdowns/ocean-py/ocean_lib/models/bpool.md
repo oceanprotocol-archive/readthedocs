@@ -4,7 +4,7 @@ slug: ocean_lib/models/bpool
 app: ocean.py
 module: ocean_lib.models.bpool
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/bpool.py
-version: 0.5.24
+version: 0.5.26
 ---
 ## BPool
 
@@ -12,14 +12,6 @@ version: 0.5.24
 @enforce_types
 class BPool(BToken)
 ```
-
-#### \_\_init\_\_
-
-```python
- | def __init__(*args, **kwargs)
-```
-
-Initialises BPool object.
 
 #### \_\_str\_\_
 
@@ -320,7 +312,7 @@ Returns poolAmountIn_base.
 #### get\_liquidity\_logs
 
 ```python
- | def get_liquidity_logs(event_name, web3, from_block, to_block=None, user_address=None, this_pool_only=True)
+ | def get_liquidity_logs(event_name, from_block, to_block=None, user_address=None, this_pool_only=True)
 ```
 
 **Arguments**:
