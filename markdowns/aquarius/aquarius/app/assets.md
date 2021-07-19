@@ -157,6 +157,23 @@ responses:
 example:
     {"query": {"query_string": {"query": "(covid) -isInPurgatory:true"}}, "offset":1, "page": 1}
 
+#### es\_query
+
+```python
+@assets.route("/ddo/es-query", methods=["POST"])
+def es_query()
+```
+
+Runs a native ES query.
+---
+tags:
+  - ddo
+consumes:
+  - application/json
+responses:
+  200:
+    description: successful action
+
 #### validate
 
 ```python

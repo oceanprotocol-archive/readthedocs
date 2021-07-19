@@ -14,21 +14,6 @@ def get_network_name()
 
 :return str: network name
 
-#### prepare\_contracts
-
-```python
-def prepare_contracts(web3, config)
-```
-
-**Arguments**:
-
-- `web3`: Web3 object instance
-- `config`: Config instance
-
-**Returns**:
-
-dict
-
 #### deploy\_contract
 
 ```python
@@ -80,59 +65,14 @@ def deploy_datatoken(web3, private_key, name, symbol, minter_address)
 
 Address of the deployed contract
 
-#### get\_artifacts\_path
-
-```python
-def get_artifacts_path()
-```
-
-**Returns**:
-
-string
-
 #### get\_address\_file
 
 ```python
-def get_address_file(artifacts_path)
+def get_address_file()
 ```
 
-**Arguments**:
-
-- `artifacts_path`: Path to the artifacts directory
-
-**Returns**:
-
-string
-
-#### get\_contract\_address\_and\_abi\_file
-
-```python
-def get_contract_address_and_abi_file(name)
-```
-
-**Arguments**:
-
-- `name`: Artifacts file name
-
-**Returns**:
-
-tuple (contract_address, contract_abi_file)
-
-#### read\_ddo\_contract\_address
-
-```python
-def read_ddo_contract_address(file_path, name, network="ganache")
-```
-
-**Arguments**:
-
-- `file_path`: Json artifact file path
-- `name`: str
-- `network`: Name of the network
-
-**Returns**:
-
-tuple (contract_address, contract_abi_file)
+Returns Path to the address.json file
+Checks envvar first, fallback to address.json included with ocean-contracts.
 
 #### get\_metadata\_contract
 
@@ -140,32 +80,20 @@ tuple (contract_address, contract_abi_file)
 def get_metadata_contract(web3)
 ```
 
-**Arguments**:
+Returns a Contract built from the Metadata contract address (or ENV) and ABI
 
-- `web3`: Web3 instance
-
-**Returns**:
-
-Contract instance
-
-#### get\_exchange\_contract
+#### get\_metadata\_start\_block
 
 ```python
-def get_exchange_contract(web3)
+def get_metadata_start_block()
 ```
 
-**Arguments**:
-
-- `web3`: Web3 instance
-
-**Returns**:
-
-Contract instance
+Returns the block number to use as start
 
 #### get\_datatoken\_info
 
 ```python
-def get_datatoken_info(token_address)
+def get_datatoken_info(web3, token_address)
 ```
 
 **Arguments**:
