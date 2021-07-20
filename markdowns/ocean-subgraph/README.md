@@ -3,8 +3,8 @@ title: README.md
 slug: README.md
 app: ocean-subgraph
 module: README
-source: https://github.com/oceanprotocol/ocean-subgraph/blob/feature/read-the-docs/README.md
-version: 1.1.1
+source: https://github.com/oceanprotocol/ocean-subgraph/blob/main/README.md
+version: 1.1.2
 ---
 [![banner](https://raw.githubusercontent.com/oceanprotocol/art/master/github/repo-banner%402x.png)](https://oceanprotocol.com)
 
@@ -30,7 +30,7 @@ version: 1.1.1
 - [🏊 Development on barge](#-development-on-barge)
 - [🔍 Testing](#-testing)
 - [✨ Code Style](#-code-style)
-- [🏷️ Releases](#️-releases)
+- [🛳 Releases](#️-releases)
 - [⬆️ Deployment](#️-deployment)
 - [🏛 License](#-license)
 
@@ -41,6 +41,8 @@ This subgraph is deployed under `/subgraphs/name/oceanprotocol/ocean-subgraph/` 
 - [subgraph.mainnet.oceanprotocol.com](https://subgraph.mainnet.oceanprotocol.com/subgraphs/name/oceanprotocol/ocean-subgraph/graphql)
 - [subgraph.ropsten.oceanprotocol.com](https://subgraph.ropsten.oceanprotocol.com/subgraphs/name/oceanprotocol/ocean-subgraph/graphql)
 - [subgraph.rinkeby.oceanprotocol.com](https://subgraph.rinkeby.oceanprotocol.com/subgraphs/name/oceanprotocol/ocean-subgraph/graphql)
+- [subgraph.polygon.oceanprotocol.com](https://subgraph.polygon.oceanprotocol.com/subgraphs/name/oceanprotocol/ocean-subgraph/graphql)
+- [subgraph.bsc.oceanprotocol.com](https://subgraph.bsc.oceanprotocol.com/subgraphs/name/oceanprotocol/ocean-subgraph/graphql)
 
 ## ⛵ Example Queries
 
@@ -190,7 +192,7 @@ npm run lint
 npm run format
 ```
 
-## 🏷️ Releases
+## 🛳 Releases
 
 Releases are managed semi-automatically. They are always manually triggered from a developer's 
 machine with release scripts. From a clean `main` branch you can run the release task bumping 
