@@ -3,8 +3,8 @@ title: processors
 slug: aquarius/events/processors
 app: aquarius
 module: aquarius.events.processors
-source: https://github.com/oceanprotocol/aquarius/blob/issue-517-add-docstrings/aquarius/events/processors.py
-version: 2.2.12
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/processors.py
+version: 3.0.0
 ---
 ## EventProcessor
 

@@ -3,8 +3,8 @@ title: assets
 slug: aquarius/app/assets
 app: aquarius
 module: aquarius.app.assets
-source: https://github.com/oceanprotocol/aquarius/blob/issue-517-add-docstrings/aquarius/app/assets.py
-version: 2.2.12
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/assets.py
+version: 3.0.0
 ---
 #### get\_assets\_ids
 

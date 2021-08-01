@@ -3,8 +3,8 @@ title: constants
 slug: aquarius/constants
 app: aquarius
 module: aquarius.constants
-source: https://github.com/oceanprotocol/aquarius/blob/issue-517-add-docstrings/aquarius/constants.py
-version: 2.2.12
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/constants.py
+version: 3.0.0
 ---
 ## ConfigSections
 

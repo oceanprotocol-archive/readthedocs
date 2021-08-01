@@ -3,8 +3,8 @@ title: log
 slug: aquarius/log
 app: aquarius
 module: aquarius.log
-source: https://github.com/oceanprotocol/aquarius/blob/issue-517-add-docstrings/aquarius/log.py
-version: 2.2.12
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/log.py
+version: 3.0.0
 ---
 #### setup\_logging
 

@@ -3,8 +3,8 @@ title: dao
 slug: aquarius/app/dao
 app: aquarius
 module: aquarius.app.dao
-source: https://github.com/oceanprotocol/aquarius/blob/issue-517-add-docstrings/aquarius/app/dao.py
-version: 2.2.12
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/dao.py
+version: 3.0.0
 ---
 ## Dao
 

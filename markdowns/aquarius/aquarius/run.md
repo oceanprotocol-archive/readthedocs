@@ -3,8 +3,8 @@ title: run
 slug: aquarius/run
 app: aquarius
 module: aquarius.run
-source: https://github.com/oceanprotocol/aquarius/blob/issue-517-add-docstrings/aquarius/run.py
-version: 2.2.12
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/run.py
+version: 3.0.0
 ---
 This module is the entrypoint for statring the Aquarius component.
 

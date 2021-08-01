@@ -3,8 +3,8 @@ title: auth_util
 slug: aquarius/app/auth_util
 app: aquarius
 module: aquarius.app.auth_util
-source: https://github.com/oceanprotocol/aquarius/blob/issue-517-add-docstrings/aquarius/app/auth_util.py
-version: 2.2.12
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/auth_util.py
+version: 3.0.0
 ---
 #### compare\_eth\_addresses
 

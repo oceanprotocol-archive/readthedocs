@@ -3,8 +3,8 @@ title: util
 slug: aquarius/events/util
 app: aquarius
 module: aquarius.events.util
-source: https://github.com/oceanprotocol/aquarius/blob/issue-517-add-docstrings/aquarius/events/util.py
-version: 2.2.12
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/util.py
+version: 3.0.0
 ---
 #### get\_network\_name
 

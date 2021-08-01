@@ -3,8 +3,8 @@ title: util
 slug: aquarius/app/util
 app: aquarius
 module: aquarius.app.util
-source: https://github.com/oceanprotocol/aquarius/blob/issue-517-add-docstrings/aquarius/app/util.py
-version: 2.2.12
+source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/util.py
+version: 3.0.0
 ---
 #### get\_timestamp
 
