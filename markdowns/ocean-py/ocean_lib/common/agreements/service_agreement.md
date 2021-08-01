@@ -3,8 +3,8 @@ title: service_agreement
 slug: ocean_lib/common/agreements/service_agreement
 app: ocean.py
 module: ocean_lib.common.agreements.service_agreement
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/agreements/service_agreement.py
-version: 0.5.24
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/common/agreements/service_agreement.py
+version: 0.5.26
 ---
 ## ServiceAgreement
 

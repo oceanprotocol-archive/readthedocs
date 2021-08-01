@@ -4,7 +4,7 @@ slug: aquarius/app/assets
 app: aquarius
 module: aquarius.app.assets
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/assets.py
-version: 2.2.12
+version: 3.0.0
 ---
 #### get\_assets\_ids
 
@@ -156,6 +156,23 @@ responses:
 
 example:
     {"query": {"query_string": {"query": "(covid) -isInPurgatory:true"}}, "offset":1, "page": 1}
+
+#### es\_query
+
+```python
+@assets.route("/ddo/es-query", methods=["POST"])
+def es_query()
+```
+
+Runs a native ES query.
+---
+tags:
+  - ddo
+consumes:
+  - application/json
+responses:
+  200:
+    description: successful action
 
 #### validate
 

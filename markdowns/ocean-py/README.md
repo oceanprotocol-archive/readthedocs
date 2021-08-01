@@ -3,8 +3,8 @@ title: README.md
 slug: README.md
 app: ocean.py
 module: README
-source: https://github.com/oceanprotocol/ocean.py/blob/main/README.md
-version: 0.5.24
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/README.md
+version: 0.5.26
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -55,7 +55,11 @@ This is in beta state and you can expect running into problems. If you run into 
 
 ## 🏗 Installation
 
-`pip install ocean-lib`
+```console
+#Install the ocean.py library. Install wheel first to avoid errors.
+pip install wheel
+pip install ocean-lib
+```
 
 ## 🏄 Quickstart
 

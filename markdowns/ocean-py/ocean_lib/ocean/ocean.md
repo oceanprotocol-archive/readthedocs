@@ -3,8 +3,8 @@ title: ocean
 slug: ocean_lib/ocean/ocean
 app: ocean.py
 module: ocean_lib.ocean.ocean
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean.py
-version: 0.5.24
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/ocean/ocean.py
+version: 0.5.26
 ---
 Ocean module.
 
@@ -99,6 +99,20 @@ datatoken = ocean.create_data_token("Dataset name", "dtsymbol", from_wallet=wall
 **Returns**:
 
 `Datatoken` instance
+
+#### get\_dtfactory
+
+```python
+ | def get_dtfactory(dtfactory_address: str = "") -> DTFactory
+```
+
+**Arguments**:
+
+- `dtfactory_address`: contract address, str
+
+**Returns**:
+
+`DTFactory` instance
 
 #### get\_user\_orders
 

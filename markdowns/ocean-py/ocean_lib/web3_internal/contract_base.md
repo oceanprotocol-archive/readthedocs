@@ -3,8 +3,8 @@ title: contract_base
 slug: ocean_lib/web3_internal/contract_base
 app: ocean.py
 module: ocean_lib.web3_internal.contract_base
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/contract_base.py
-version: 0.5.24
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/web3_internal/contract_base.py
+version: 0.5.26
 ---
 All contracts inherit from `ContractBase` class.
 
@@ -20,12 +20,10 @@ Base class for all contract objects.
 #### \_\_init\_\_
 
 ```python
- | def __init__(address: Optional[str], abi_path=None)
+ | def __init__(web3: Web3, address: Optional[str])
 ```
 
 Initialises Contract Base object.
-
-The contract name attribute and `abi_path` are required.
 
 #### \_\_str\_\_
 
@@ -101,7 +99,7 @@ address, hex str
 
 ```python
  | @staticmethod
- | def get_tx_receipt(tx_hash: str, timeout=20)
+ | def get_tx_receipt(web3: Web3, tx_hash: str, timeout=20)
 ```
 
 Get the receipt of a tx.
@@ -215,7 +213,7 @@ Finds the event arguments by `event_name`.
 
 ```python
  | @classmethod
- | def deploy(cls, web3, deployer_wallet: Wallet, abi_path: str = "", *args)
+ | def deploy(cls, web3: Web3, deployer_wallet: Wallet, *args)
 ```
 
 Deploy the DataTokenTemplate and DTFactory contracts to the current network.
@@ -223,17 +221,33 @@ Deploy the DataTokenTemplate and DTFactory contracts to the current network.
 **Arguments**:
 
 - `web3`: 
-- `abi_path`: 
 - `deployer_wallet`: Wallet instance
 
 **Returns**:
 
 smartcontract address of this contract
 
+#### get\_event\_log
+
+```python
+ | def get_event_log(event_name, from_block, to_block, filters, chunk_size=1000)
+```
+
+Retrieves the first event log which matches the filters parameter criteria.
+It processes the blocks order backwards.
+
+**Arguments**:
+
+- `event_name`: str
+- `from_block`: int
+- `to_block`: int
+- `filters`: 
+- `chunk_size`: int
+
 #### get\_event\_logs
 
 ```python
- | def get_event_logs(event_name, from_block, to_block, filters, web3=None, chunk_size=1000)
+ | def get_event_logs(event_name, from_block, to_block, filters, chunk_size=1000)
 ```
 
 Fetches the list of event logs between the given block numbers.
@@ -244,7 +258,6 @@ Fetches the list of event logs between the given block numbers.
 - `from_block`: int
 - `to_block`: int
 - `filters`: 
-- `web3`: Wallet instance
 - `chunk_size`: int
 
 **Returns**:
@@ -269,7 +282,8 @@ AttributeDict(...),
 #### getLogs
 
 ```python
- | def getLogs(event, web3, argument_filters: Optional[Dict[str, Any]] = None, fromBlock: Optional[BlockIdentifier] = None, toBlock: Optional[BlockIdentifier] = None, blockHash: Optional[HexBytes] = None)
+ | @staticmethod
+ | def getLogs(event: ContractEvent, argument_filters: Optional[Dict[str, Any]] = None, fromBlock: Optional[BlockIdentifier] = None, toBlock: Optional[BlockIdentifier] = None, blockHash: Optional[HexBytes] = None, from_all_addresses: Optional[bool] = False)
 ```
 
 Get events for this contract instance using eth_getLogs API.
@@ -316,10 +330,13 @@ See also: :func:`web3.middleware.filter.local_filter_middleware`.
 
 **Arguments**:
 
+- `event`: the ContractEvent instance with a web3 instance
 - `argument_filters`: 
 - `fromBlock`: block number or "latest", defaults to "latest"
 - `toBlock`: block number or "latest". Defaults to "latest"
 - `blockHash`: block hash. blockHash cannot be set at the
 same time as fromBlock or toBlock
+- `from_all_addresses`: True = return logs from all addresses
+False = return logs originating from event.address
 :yield: Tuple of :class:`AttributeDict` instances
 

@@ -3,6 +3,47 @@ title: metadata
 slug: ocean_lib/models/metadata
 app: ocean.py
 module: ocean_lib.models.metadata
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/metadata.py
-version: 0.5.24
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/models/metadata.py
+version: 0.5.26
 ---
+## MetadataContract
+
+```python
+@enforce_types
+class MetadataContract(ContractBase)
+```
+
+#### get\_event\_log
+
+```python
+ | def get_event_log(event_name, block, did, timeout=45)
+```
+
+**Returns**:
+
+Log if event is found else None
+
+#### verify\_tx
+
+```python
+ | def verify_tx(tx_hash: str) -> bool
+```
+
+:return bool:
+
+#### create
+
+```python
+ | def create(did: str, flags: bytes, data: bytes, from_wallet: Wallet) -> str
+```
+
+:return str: hex str transaction hash
+
+#### update
+
+```python
+ | def update(did: str, flags: bytes, data: bytes, from_wallet: Wallet) -> str
+```
+
+:return str: hex str transaction hash
+

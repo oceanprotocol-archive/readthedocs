@@ -3,8 +3,8 @@ title: account
 slug: ocean_lib/web3_internal/account
 app: ocean.py
 module: ocean_lib.web3_internal.account
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/account.py
-version: 0.5.24
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/web3_internal/account.py
+version: 0.5.26
 ---
 Accounts module.
 

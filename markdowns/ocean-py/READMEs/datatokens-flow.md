@@ -3,8 +3,8 @@ title: datatokens-flow.md
 slug: READMEs/datatokens-flow.md
 app: ocean.py
 module: READMEs.datatokens-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/datatokens-flow.md
-version: 0.5.24
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/READMEs/datatokens-flow.md
+version: 0.5.26
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -44,7 +44,6 @@ Create a file called `config.ini` and fill it as follows.
 ```text
 [eth-network]
 network = ganache
-artifacts.path = ~/.ocean/ocean-contracts/artifacts
 address.file = ~/.ocean/ocean-contracts/artifacts/address.json
 ```
 
@@ -57,7 +56,8 @@ In a new console:
 python -m venv venv
 source venv/bin/activate
 
-#Install the ocean.py library
+#Install the ocean.py library. Install wheel first to avoid errors.
+pip install wheel
 pip install ocean-lib
 
 #set envvars
@@ -86,7 +86,7 @@ wallet = Wallet(ocean.web3, private_key=private_key)
 print(f"create wallet: done. Its address is {wallet.address}")
 
 print("create datatoken: begin.")
-datatoken = ocean.create_data_token("Dataset name", "dtsymbol", from_wallet=wallet) 
+datatoken = ocean.create_data_token("Dataset name", "dtsymbol", from_wallet=wallet)
 print(f"created datatoken: done. Its address is {datatoken.address}")
 ```
 

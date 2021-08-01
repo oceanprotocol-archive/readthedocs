@@ -3,8 +3,8 @@ title: ddo
 slug: ocean_lib/common/ddo/ddo
 app: ocean.py
 module: ocean_lib.common.ddo.ddo
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/ddo/ddo.py
-version: 0.5.24
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/common/ddo/ddo.py
+version: 0.5.26
 ---
 ## DDO
 
@@ -48,6 +48,24 @@ Returns whether the asset is disabled.
 ```
 
 Returns the opposite of is_disabled, for convenience.
+
+#### is\_retired
+
+```python
+ | @property
+ | def is_retired()
+```
+
+Returns whether the asset is retired.
+
+#### is\_listed
+
+```python
+ | @property
+ | def is_listed()
+```
+
+Returns whether the asset is listed.
 
 #### asset\_id
 
@@ -102,31 +120,6 @@ Get the metadata service.
 ```
 
 Return encryptedFiles field in the base metadata.
-
-#### add\_public\_key
-
-```python
- | def add_public_key(did, public_key)
-```
-
-Add a public key object to the list of public keys.
-
-**Arguments**:
-
-- `public_key`: Public key, PublicKeyHex
-
-#### add\_authentication
-
-```python
- | def add_authentication(public_key, authentication_type)
-```
-
-Add a authentication public key id and type to the list of authentications.
-
-**Arguments**:
-
-- `public_key`: Key id, Authentication
-- `authentication_type`: Authentication type, str
 
 #### add\_service
 
@@ -189,14 +182,6 @@ add a static proof to the DDO, based on one of the public keys.
 - `checksums`: dict with the checksum of the main attributes of each service, dict
 - `publisher_account`: account of the publisher, account
 
-#### get\_public\_key
-
-```python
- | def get_public_key(key_id)
-```
-
-Key_id can be a string, or int. If int then the index in the list of keys.
-
 #### get\_service
 
 ```python
@@ -221,42 +206,6 @@ Get service for a given index.
 
 Service
 
-#### public\_keys
-
-```python
- | @property
- | def public_keys()
-```
-
-Get the list of public keys.
-
-#### authentications
-
-```python
- | @property
- | def authentications()
-```
-
-Get the list authentication records.
-
-#### create\_public\_key\_from\_json
-
-```python
- | @staticmethod
- | def create_public_key_from_json(values)
-```
-
-Create a public key object based on the values from the JSON record.
-
-#### create\_authentication\_from\_json
-
-```python
- | @staticmethod
- | def create_authentication_from_json(values)
-```
-
-Create authentication object from a JSON dict.
-
 #### enable
 
 ```python
@@ -272,6 +221,38 @@ Enables asset for ordering.
 ```
 
 Disables asset from ordering.
+
+#### retire
+
+```python
+ | def retire()
+```
+
+Retires an asset.
+
+#### unretire
+
+```python
+ | def unretire()
+```
+
+Unretires an asset.
+
+#### list
+
+```python
+ | def list()
+```
+
+Lists a previously unlisted asset.
+
+#### unlist
+
+```python
+ | def unlist()
+```
+
+Unlists an asset.
 
 #### requires\_address\_credential
 

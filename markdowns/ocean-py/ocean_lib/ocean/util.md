@@ -3,8 +3,8 @@ title: util
 slug: ocean_lib/ocean/util
 app: ocean.py
 module: ocean_lib.ocean.util
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/util.py
-version: 0.5.24
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/ocean/util.py
+version: 0.5.26
 ---
 #### get\_web3\_connection\_provider
 
@@ -54,4 +54,31 @@ def from_base(num_base: int, dec: int) -> float
 ```
 
 Returns value in e.g. ETH (taking e.g. wei as input).
+
+#### get\_dtfactory\_address
+
+```python
+def get_dtfactory_address(address_file, network=None, web3=None)
+```
+
+Returns the DTFactory address for given network or web3 instance
+Requires either network name or web3 instance.
+
+#### get\_bfactory\_address
+
+```python
+def get_bfactory_address(address_file, network=None, web3=None)
+```
+
+Returns the BFactory address for given network or web3 instance
+Requires either network name or web3 instance.
+
+#### get\_ocean\_token\_address
+
+```python
+def get_ocean_token_address(address_file, network=None, web3=None)
+```
+
+Returns the Ocean token address for given network or web3 instance
+Requires either network name or web3 instance.
 

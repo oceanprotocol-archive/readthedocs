@@ -3,8 +3,8 @@ title: utilities
 slug: ocean_lib/common/utils/utilities
 app: ocean.py
 module: ocean_lib.common.utils.utilities
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/utils/utilities.py
-version: 0.5.24
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/common/utils/utilities.py
+version: 0.5.26
 ---
 Utilities class
 
@@ -23,12 +23,11 @@ Id, str
 #### to\_32byte\_hex
 
 ```python
-def to_32byte_hex(web3, val)
+def to_32byte_hex(val)
 ```
 
 **Arguments**:
 
-- `web3`: 
 - `val`: 
 
 **Returns**:
@@ -38,12 +37,11 @@ def to_32byte_hex(web3, val)
 #### convert\_to\_bytes
 
 ```python
-def convert_to_bytes(web3, data)
+def convert_to_bytes(data)
 ```
 
 **Arguments**:
 
-- `web3`: 
 - `data`: 
 
 **Returns**:
@@ -53,12 +51,11 @@ def convert_to_bytes(web3, data)
 #### convert\_to\_string
 
 ```python
-def convert_to_string(web3, data)
+def convert_to_string(data)
 ```
 
 **Arguments**:
 
-- `web3`: 
 - `data`: 
 
 **Returns**:
@@ -68,12 +65,11 @@ def convert_to_string(web3, data)
 #### convert\_to\_text
 
 ```python
-def convert_to_text(web3, data)
+def convert_to_text(data)
 ```
 
 **Arguments**:
 
-- `web3`: 
 - `data`: 
 
 **Returns**:

@@ -3,8 +3,8 @@ title: config
 slug: ocean_lib/config
 app: ocean.py
 module: ocean_lib.config
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/config.py
-version: 0.5.24
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/config.py
+version: 0.5.26
 ---
 ## Config
 
@@ -27,8 +27,6 @@ Options available:
 [eth-network]
 ; ethereum network url
 network = rinkeby
-; Path of json abis, this defaults to the artifacts installed with `pip install ocean-contracts`
-artifacts.path = artifacts
 
 [resources]
 metadata_cache_uri = http://localhost:5000
@@ -40,15 +38,6 @@ provider.url = http://localhost:8030
 - `filename`: Path of the config file, str.
 - `options_dict`: Python dict with the config, dict.
 - `kwargs`: Additional args. If you pass text, you have to pass the plain text configuration.
-
-#### artifacts\_path
-
-```python
- | @property
- | def artifacts_path()
-```
-
-Path where the contracts artifacts are allocated.
 
 #### network\_url
 

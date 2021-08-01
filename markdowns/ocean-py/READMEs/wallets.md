@@ -3,8 +3,8 @@ title: wallets.md
 slug: READMEs/wallets.md
 app: ocean.py
 module: READMEs.wallets
-source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/wallets.md
-version: 0.5.24
+source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/READMEs/wallets.md
+version: 0.5.26
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -38,8 +38,8 @@ ocean-lib includes the [web3.py library](https://web3py.readthedocs.io/en/stable
 Here's how. In Python:
 
 ```python
-import web3
-private_key = web3.Web3().eth.account.create().key
+from eth_account.account import Account
+private_key = Account.create().key
 ```
 
 ## 2. Where to store private keys

@@ -4,26 +4,8 @@ slug: aquarius/app/auth_util
 app: aquarius
 module: aquarius.app.auth_util
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/auth_util.py
-version: 2.2.12
+version: 3.0.0
 ---
-#### get\_signer\_address
-
-```python
-def get_signer_address(message, signature, logger)
-```
-
-Get signer address of a previous signed message
-:param str message: Message
-:param str signature: Signature obtain with web3.eth.personal.sign
-
-**Arguments**:
-
-- `logger`: logging object
-
-**Returns**:
-
-Address or None in case of error
-
 #### compare\_eth\_addresses
 
 ```python
