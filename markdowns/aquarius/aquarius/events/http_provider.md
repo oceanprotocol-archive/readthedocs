@@ -4,7 +4,7 @@ slug: aquarius/events/http_provider
 app: aquarius
 module: aquarius.events.http_provider
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/http_provider.py
-version: 3.0.0
+version: 3.0.1
 ---
 ## CustomHTTPProvider
 

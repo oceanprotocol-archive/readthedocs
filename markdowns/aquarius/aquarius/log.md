@@ -4,7 +4,7 @@ slug: aquarius/log
 app: aquarius
 module: aquarius.log
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/log.py
-version: 3.0.0
+version: 3.0.1
 ---
 #### setup\_logging
 

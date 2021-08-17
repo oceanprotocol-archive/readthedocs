@@ -4,7 +4,7 @@ slug: aquarius/events/purgatory
 app: aquarius
 module: aquarius.events.purgatory
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/purgatory.py
-version: 3.0.0
+version: 3.0.1
 ---
 ## Purgatory
 

@@ -4,7 +4,7 @@ slug: aquarius/constants
 app: aquarius
 module: aquarius.constants
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/constants.py
-version: 3.0.0
+version: 3.0.1
 ---
 ## ConfigSections
 

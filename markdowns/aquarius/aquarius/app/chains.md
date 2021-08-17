@@ -4,7 +4,7 @@ slug: aquarius/app/chains
 app: aquarius
 module: aquarius.app.chains
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/chains.py
-version: 3.0.0
+version: 3.0.1
 ---
 #### get\_chains\_list
 
