@@ -32,4 +32,11 @@ python generate_markdowns.py -l ocean.py aquarius provider ocean-subgraph
 
 ### Usage:
 
-Generate the markdowns and push the changes to `main` branch. Refresh the [Ocean Procotol docs](https://github.com/oceanprotocol/docs) deployment.
+Generate the markdowns and push the changes to `main` branch or raise a PR and merge changes to `main`.
+
+Refresh the [Ocean Procotol docs](https://github.com/oceanprotocol/docs) deployment by creating a new PR with a dummy commit.
+1. Clone `docs` repository and create a new branch.
+2. `git commit --allow-empty -m "Trigger rebuild"`.
+3. Push the changes.
+4. Create a new PR.
+5. Merge the PR to `main`.
