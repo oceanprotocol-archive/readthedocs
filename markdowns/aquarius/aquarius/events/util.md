@@ -4,7 +4,7 @@ slug: aquarius/events/util
 app: aquarius
 module: aquarius.events.util
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/util.py
-version: 3.0.0
+version: 3.0.1
 ---
 #### get\_network\_name
 

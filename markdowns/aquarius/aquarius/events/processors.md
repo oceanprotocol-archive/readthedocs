@@ -4,7 +4,7 @@ slug: aquarius/events/processors
 app: aquarius
 module: aquarius.events.processors
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/processors.py
-version: 3.0.0
+version: 3.0.1
 ---
 ## EventProcessor
 

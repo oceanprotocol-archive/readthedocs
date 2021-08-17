@@ -4,7 +4,7 @@ slug: aquarius/config
 app: aquarius
 module: aquarius.config
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/config.py
-version: 3.0.0
+version: 3.0.1
 ---
 ## Config
 

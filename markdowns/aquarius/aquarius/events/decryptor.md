@@ -4,7 +4,7 @@ slug: aquarius/events/decryptor
 app: aquarius
 module: aquarius.events.decryptor
 source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/decryptor.py
-version: 3.0.0
+version: 3.0.1
 ---
 ## Decryptor
 
