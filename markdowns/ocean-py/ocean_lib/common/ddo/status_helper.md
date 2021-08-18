@@ -3,7 +3,7 @@ title: status_helper
 slug: ocean_lib/common/ddo/status_helper
 app: ocean.py
 module: ocean_lib.common.ddo.status_helper
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/common/ddo/status_helper.py
+source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/common/ddo/status_helper.py
 version: 0.5.26
 ---
 #### enable\_flag

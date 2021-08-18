@@ -3,7 +3,7 @@ title: ocean_exchange
 slug: ocean_lib/ocean/ocean_exchange
 app: ocean.py
 module: ocean_lib.ocean.ocean_exchange
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/ocean/ocean_exchange.py
+source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/ocean/ocean_exchange.py
 version: 0.5.26
 ---
 ## OceanExchange

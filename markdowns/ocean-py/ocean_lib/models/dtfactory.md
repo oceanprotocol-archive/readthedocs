@@ -3,7 +3,7 @@ title: dtfactory
 slug: ocean_lib/models/dtfactory
 app: ocean.py
 module: ocean_lib.models.dtfactory
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/models/dtfactory.py
+source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/models/dtfactory.py
 version: 0.5.26
 ---
 ## DTFactory

@@ -3,7 +3,7 @@ title: compute-flow.md
 slug: READMEs/compute-flow.md
 app: ocean.py
 module: READMEs.compute-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/READMEs/compute-flow.md
+source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/READMEs/compute-flow.md
 version: 0.5.26
 ---
 <!--
