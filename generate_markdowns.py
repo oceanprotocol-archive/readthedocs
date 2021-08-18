@@ -14,6 +14,7 @@ from pkgutil import iter_modules
 from pathlib import Path
 from setuptools import find_packages
 from tqdm import tqdm
+from typing import List
 
 parser = argparse.ArgumentParser(description="Process some integers.")
 parser.add_argument(
@@ -74,7 +75,7 @@ def get_branch(path: str):
     )
 
 
-def generate_source_url(source: str, branch: str, module: list[str], extenstion: str):
+def generate_source_url(source: str, branch: str, module: List[str], extenstion: str):
 
     url = (
         source
@@ -207,7 +208,7 @@ def get_doc_ignore_file_list(doc_ignore_path: str):
     return ignore_files
 
 
-def filter_modules(path: str, module_list: list[str], doc_ignore_path: str):
+def filter_modules(path: str, module_list: List[str], doc_ignore_path: str):
     """
     The function removes the modules that are found in `ignore_files`
     """
