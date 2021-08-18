@@ -6,13 +6,16 @@ A repository to generate documentation from doc strings
 
 ### Prerequisites
 
-1. Python 3.9.2
+1. Python 3.8+
 
 ### Initial setup
 
 ```
 python -m venv venv
-source venv/Scripts/activate
+
+source venv/bin/activate
+# or, if Python 3.9: source venv/Scripts/activate
+
 pip install -r requirements.txt
 git submodule update --init --recursive
 git submodule update --recursive --remote
