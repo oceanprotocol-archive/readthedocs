@@ -29,7 +29,7 @@ git pull "$@" &&
 
 ### Usage:
 
-1. Check if intended submodule points to correct branch and has all the required commits. Submodules will be cloned in `submodules` directory. If not, pull the changes from remote.
+1. Check if intended submodule points to correct branch and has all the required commits. Submodules will be cloned in `submodules` directory. If not, pull the changes from remote submodule.
 
 - Check branch
 
@@ -38,6 +38,7 @@ git pull "$@" &&
 - Check commits
 
   `git log`
+  `cd ../..`
 
 2. Checkout new feature branch.
    `git checkout -b feature/<name>`
