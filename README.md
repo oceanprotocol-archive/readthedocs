@@ -38,6 +38,7 @@ git pull "$@" &&
 - Check commits
 
   `git log`
+
   `cd ../..`
 
 2. Checkout new feature branch.
