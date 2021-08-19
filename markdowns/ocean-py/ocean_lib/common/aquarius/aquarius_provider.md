@@ -3,12 +3,13 @@ title: aquarius_provider
 slug: ocean_lib/common/aquarius/aquarius_provider
 app: ocean.py
 module: ocean_lib.common.aquarius.aquarius_provider
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/common/aquarius/aquarius_provider.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/aquarius/aquarius_provider.py
+version: 0.5.30
 ---
 ## AquariusProvider
 
 ```python
+@enforce_types
 class AquariusProvider()
 ```
 
@@ -18,7 +19,7 @@ Provides the Aquarius instance.
 
 ```python
  | @staticmethod
- | def get_aquarius(url)
+ | def get_aquarius(url: str) -> Any
 ```
 
 Get an Aquarius instance.
@@ -27,7 +28,7 @@ Get an Aquarius instance.
 
 ```python
  | @staticmethod
- | def set_aquarius_class(aquarius_class)
+ | def set_aquarius_class(aquarius_class: Any) -> None
 ```
 
 Set an Aquarius class

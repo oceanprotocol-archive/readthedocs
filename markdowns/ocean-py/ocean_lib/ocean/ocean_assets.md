@@ -3,8 +3,8 @@ title: ocean_assets
 slug: ocean_lib/ocean/ocean_assets
 app: ocean.py
 module: ocean_lib.ocean.ocean_assets
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/ocean/ocean_assets.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_assets.py
+version: 0.5.30
 ---
 Ocean module.
 
@@ -20,7 +20,7 @@ Ocean assets class.
 #### \_\_init\_\_
 
 ```python
- | def __init__(config, web3, data_provider, ddo_registry_address)
+ | def __init__(config: Config, web3: Web3, data_provider: Type[DataServiceProvider], ddo_registry_address: str) -> None
 ```
 
 Initialises OceanAssets object.
@@ -77,7 +77,7 @@ Asset instance
 #### search
 
 ```python
- | def search(text: str, sort=None, offset=100, page=1, metadata_cache_uri=None) -> list
+ | def search(text: str, sort: Optional[dict] = None, offset: int = 100, page: int = 1, metadata_cache_uri: Optional[str] = None) -> list
 ```
 
 Search an asset in oceanDB using aquarius.
@@ -98,7 +98,7 @@ List of assets that match with the query
 #### query
 
 ```python
- | def query(query: dict, sort=None, offset=100, page=1, metadata_cache_uri=None) -> list
+ | def query(query: dict, sort: Optional[dict] = None, offset: int = 100, page: int = 1, metadata_cache_uri: Optional[str] = None) -> list
 ```
 
 Search an asset in oceanDB using search query.
@@ -120,7 +120,7 @@ List of assets that match with the query.
 #### order
 
 ```python
- | def order(did: str, consumer_address: str, service_index: Optional[int] = None, service_type: str = None) -> OrderRequirements
+ | def order(did: str, consumer_address: str, service_index: Optional[int] = None, service_type: Optional[str] = None, userdata: Optional[dict] = None) -> OrderRequirements
 ```
 
 Request a specific service from an asset, returns the service requirements that
@@ -163,7 +163,7 @@ hex str id of transfer transaction
 #### download
 
 ```python
- | def download(did: str, service_index: int, consumer_wallet: Wallet, order_tx_id: str, destination: str, index: Optional[int] = None) -> str
+ | def download(did: str, service_index: int, consumer_wallet: Wallet, order_tx_id: str, destination: str, index: Optional[int] = None, userdata: Optional[dict] = None) -> str
 ```
 
 Consume the asset data.

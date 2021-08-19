@@ -3,8 +3,8 @@ title: ocean_compute
 slug: ocean_lib/ocean/ocean_compute
 app: ocean.py
 module: ocean_lib.ocean.ocean_compute
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/ocean/ocean_compute.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_compute.py
+version: 0.5.30
 ---
 ## OceanCompute
 
@@ -18,7 +18,7 @@ Ocean assets class.
 #### \_\_init\_\_
 
 ```python
- | def __init__(config, data_provider)
+ | def __init__(config: Union[Config, Dict], data_provider: Type[DataServiceProvider]) -> None
 ```
 
 Initialises OceanCompute class.
@@ -27,7 +27,7 @@ Initialises OceanCompute class.
 
 ```python
  | @staticmethod
- | def build_cluster_attributes(cluster_type, url)
+ | def build_cluster_attributes(cluster_type: str, url: str) -> Dict[str, str]
 ```
 
 Builds cluster attributes.
@@ -45,7 +45,7 @@ Builds cluster attributes.
 
 ```python
  | @staticmethod
- | def build_container_attributes(image, tag, entrypoint)
+ | def build_container_attributes(image: str, tag: str, entrypoint: str) -> Dict[str, str]
 ```
 
 Builds container attributes.
@@ -64,7 +64,7 @@ Builds container attributes.
 
 ```python
  | @staticmethod
- | def build_server_attributes(server_id, server_type, cpu, gpu, memory, disk, max_run_time)
+ | def build_server_attributes(server_id: str, server_type: str, cpu: int, gpu: int, memory: str, disk: str, max_run_time: int) -> Dict[str, Union[int, str]]
 ```
 
 Builds server attributes.
@@ -87,7 +87,7 @@ Builds server attributes.
 
 ```python
  | @staticmethod
- | def build_service_provider_attributes(provider_type, description, cluster, containers, servers)
+ | def build_service_provider_attributes(provider_type: str, description: str, cluster: Dict[str, str], containers: Union[Dict[str, str], List[Dict[str, str]]], servers: Union[Dict, List]) -> Dict[str, Any]
 ```
 
 Return a dict with attributes describing the details of compute resources in this service
@@ -108,12 +108,13 @@ Return a dict with attributes describing the details of compute resources in thi
 
 ```python
  | @staticmethod
- | def build_service_privacy_attributes(trusted_algorithms: list = None, metadata_cache_uri: str = None, allow_raw_algorithm: bool = False, allow_all_published_algorithms: bool = False, allow_network_access: bool = False)
+ | def build_service_privacy_attributes(trusted_algorithms: list = None, trusted_algorithm_publishers: list = None, metadata_cache_uri: str = None, allow_raw_algorithm: bool = False, allow_all_published_algorithms: bool = False, allow_network_access: bool = False) -> Dict[str, Any]
 ```
 
 **Arguments**:
 
 - `trusted_algorithms`: list of algorithm did to be trusted by the compute service provider
+- `trusted_algorithm_publishers`: list of algorithm publisher (addresses) that can be trusted by the compute service provider
 - `metadata_cache_uir`: URI used to get DDOs for trusted algorithm DIDs if trusted_algorithms set
 - `allow_raw_algorithm`: bool -- when True, unpublished raw algorithm code can be run on this dataset
 - `allow_all_published_algorithms`: bool -- when True, any published algorithm can be run on this dataset
@@ -128,7 +129,7 @@ dict
 
 ```python
  | @staticmethod
- | def create_compute_service_attributes(timeout: int, creator: str, date_published: str, provider_attributes: dict = None, privacy_attributes: dict = None)
+ | def create_compute_service_attributes(timeout: int, creator: str, date_published: str, provider_attributes: dict = None, privacy_attributes: dict = None) -> Dict[str, Any]
 ```
 
 Creates compute service attributes.
@@ -149,7 +150,7 @@ dict with `main` key and value contain the minimum required attributes of a comp
 
 ```python
  | @staticmethod
- | def check_output_dict(output_def, consumer_address, data_provider, config: Config)
+ | def check_output_dict(output_def: Dict[str, Any], consumer_address: str, data_provider: DataServiceProvider, config: Config) -> Dict[str, Any]
 ```
 
 Validate the `output_def` dict and fills in defaults for missing values.
@@ -168,7 +169,7 @@ dict a valid `output_def` object
 #### create\_compute\_service\_descriptor
 
 ```python
- | def create_compute_service_descriptor(attributes)
+ | def create_compute_service_descriptor(attributes: dict) -> ServiceDescriptor
 ```
 
 Return a service descriptor (tuple) for service of type ServiceTypes.CLOUD_COMPUTE
@@ -181,7 +182,7 @@ and having the required attributes and service endpoint.
 #### start
 
 ```python
- | def start(input_datasets: list, consumer_wallet: Wallet, nonce: Optional[int] = None, algorithm_did: Optional[str] = None, algorithm_meta: Optional[AlgorithmMetadata] = None, algorithm_tx_id: str = None, algorithm_data_token: str = None, output: dict = None, job_id: str = None)
+ | def start(input_datasets: list, consumer_wallet: Wallet, nonce: Optional[int] = None, algorithm_did: Optional[str] = None, algorithm_meta: Optional[AlgorithmMetadata] = None, algorithm_tx_id: str = None, algorithm_data_token: str = None, output: dict = None, job_id: str = None, algouserdata: Optional[dict] = None) -> str
 ```
 
 Start a remote compute job on the asset files.
@@ -212,7 +213,7 @@ str -- id of compute job being executed
 #### status
 
 ```python
- | def status(did, job_id, wallet)
+ | def status(did: str, job_id: str, wallet: Wallet) -> Dict[str, Any]
 ```
 
 Gets job status.
@@ -230,7 +231,7 @@ dict the status for an existing compute job, keys are (ok, status, statusText)
 #### result
 
 ```python
- | def result(did, job_id, wallet)
+ | def result(did: str, job_id: str, wallet: Wallet) -> Dict[str, Any]
 ```
 
 Gets job result.
@@ -248,7 +249,7 @@ dict the results/logs urls for an existing compute job, keys are (did, urls, log
 #### stop
 
 ```python
- | def stop(did, job_id, wallet)
+ | def stop(did: str, job_id: str, wallet: Wallet) -> Dict[str, Any]
 ```
 
 Attempt to stop the running compute job.

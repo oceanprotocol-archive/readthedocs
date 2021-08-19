@@ -3,19 +3,19 @@ title: util
 slug: ocean_lib/ocean/util
 app: ocean.py
 module: ocean_lib.ocean.util
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/ocean/util.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/util.py
+version: 0.5.30
 ---
 #### get\_web3\_connection\_provider
 
 ```python
-def get_web3_connection_provider(network_url)
+@enforce_types
+def get_web3_connection_provider(network_url: str) -> Union[CustomHTTPProvider, WebsocketProvider]
 ```
 
 Return the suitable web3 provider based on the network_url.
 
-When connecting to a public ethereum network (mainnet or a test net) without
-running a local node requires going through some gateway such as `infura`.
+Requires going through some gateway such as `infura`.
 
 Using infura has some issues if your code is relying on evm events.
 To use events with an infura connection you have to use the websocket interface.
@@ -58,7 +58,8 @@ Returns value in e.g. ETH (taking e.g. wei as input).
 #### get\_dtfactory\_address
 
 ```python
-def get_dtfactory_address(address_file, network=None, web3=None)
+@enforce_types
+def get_dtfactory_address(address_file: str, network: Optional[str] = None, web3: Optional[Web3] = None) -> str
 ```
 
 Returns the DTFactory address for given network or web3 instance
@@ -67,7 +68,8 @@ Requires either network name or web3 instance.
 #### get\_bfactory\_address
 
 ```python
-def get_bfactory_address(address_file, network=None, web3=None)
+@enforce_types
+def get_bfactory_address(address_file: str, network: Optional[str] = None, web3: Optional[Web3] = None) -> str
 ```
 
 Returns the BFactory address for given network or web3 instance
@@ -76,7 +78,8 @@ Requires either network name or web3 instance.
 #### get\_ocean\_token\_address
 
 ```python
-def get_ocean_token_address(address_file, network=None, web3=None)
+@enforce_types
+def get_ocean_token_address(address_file: str, network: Optional[str] = None, web3: Optional[Web3] = None) -> str
 ```
 
 Returns the Ocean token address for given network or web3 instance

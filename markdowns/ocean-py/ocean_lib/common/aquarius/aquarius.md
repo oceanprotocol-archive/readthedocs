@@ -3,8 +3,8 @@ title: aquarius
 slug: ocean_lib/common/aquarius/aquarius
 app: ocean.py
 module: ocean_lib.common.aquarius.aquarius
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/common/aquarius/aquarius.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/aquarius/aquarius.py
+version: 0.5.30
 ---
 Aquarius module.
 Help to communicate with the metadata store.
@@ -12,6 +12,7 @@ Help to communicate with the metadata store.
 ## Aquarius
 
 ```python
+@enforce_types
 class Aquarius()
 ```
 
@@ -20,7 +21,7 @@ Aquarius wrapper to call different endpoint of aquarius component.
 #### \_\_init\_\_
 
 ```python
- | def __init__(aquarius_url)
+ | def __init__(aquarius_url: str) -> None
 ```
 
 The Metadata class is a wrapper on the Metadata Store, which has exposed a REST API.
@@ -29,19 +30,10 @@ The Metadata class is a wrapper on the Metadata Store, which has exposed a REST 
 
 - `aquarius_url`: Url of the aquarius instance.
 
-#### url
-
-```python
- | @property
- | def url()
-```
-
-Base URL of the aquarius instance.
-
 #### get\_service\_endpoint
 
 ```python
- | def get_service_endpoint()
+ | def get_service_endpoint() -> str
 ```
 
 Retrieve the endpoint with the ddo for a given did.
@@ -50,22 +42,10 @@ Retrieve the endpoint with the ddo for a given did.
 
 Return the url of the the ddo location
 
-#### list\_assets
-
-```python
- | def list_assets()
-```
-
-List all the assets registered in the aquarius instance.
-
-**Returns**:
-
-List of DID string
-
 #### get\_asset\_ddo
 
 ```python
- | def get_asset_ddo(did)
+ | def get_asset_ddo(did: str) -> Union[DDO, dict]
 ```
 
 Retrieve asset ddo for a given did.
@@ -78,10 +58,26 @@ Retrieve asset ddo for a given did.
 
 DDO instance
 
+#### ddo\_exists
+
+```python
+ | def ddo_exists(did: str) -> bool
+```
+
+Return whether the DDO with this did exists in Aqua
+
+**Arguments**:
+
+- `did`: Asset DID string
+
+**Returns**:
+
+bool
+
 #### get\_asset\_metadata
 
 ```python
- | def get_asset_metadata(did)
+ | def get_asset_metadata(did: str) -> list
 ```
 
 Retrieve asset metadata for a given did.
@@ -94,22 +90,10 @@ Retrieve asset metadata for a given did.
 
 metadata key of the DDO instance
 
-#### list\_assets\_ddo
-
-```python
- | def list_assets_ddo()
-```
-
-List all the ddos registered in the aquarius instance.
-
-**Returns**:
-
-List of DDO instance
-
 #### text\_search
 
 ```python
- | def text_search(text, sort=None, offset=100, page=1)
+ | def text_search(text: str, sort: Optional[int] = None, offset: int = 100, page: int = 1) -> list
 ```
 
 Search in aquarius using text query.
@@ -140,7 +124,7 @@ List of DDO instance
 #### query\_search
 
 ```python
- | def query_search(search_query, sort=None, offset=100, page=1)
+ | def query_search(search_query: dict, sort: Optional[dict] = None, offset: int = 100, page: int = 1) -> list
 ```
 
 Search using a query.
@@ -167,7 +151,7 @@ List of DDO instance
 #### validate\_metadata
 
 ```python
- | def validate_metadata(metadata)
+ | def validate_metadata(metadata: dict) -> Tuple[bool, Union[list, dict]]
 ```
 
 Validate that the metadata of your ddo is valid.

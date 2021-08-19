@@ -3,15 +3,15 @@ title: utilities
 slug: ocean_lib/common/utils/utilities
 app: ocean.py
 module: ocean_lib.common.utils.utilities
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/common/utils/utilities.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/utils/utilities.py
+version: 0.5.30
 ---
 Utilities class
 
 #### generate\_new\_id
 
 ```python
-def generate_new_id()
+def generate_new_id() -> str
 ```
 
 Generate a new id without prefix.
@@ -23,7 +23,7 @@ Id, str
 #### to\_32byte\_hex
 
 ```python
-def to_32byte_hex(val)
+def to_32byte_hex(val: Any) -> str
 ```
 
 **Arguments**:
@@ -37,7 +37,7 @@ def to_32byte_hex(val)
 #### convert\_to\_bytes
 
 ```python
-def convert_to_bytes(data)
+def convert_to_bytes(data: str) -> bytes
 ```
 
 **Arguments**:
@@ -51,7 +51,7 @@ def convert_to_bytes(data)
 #### convert\_to\_string
 
 ```python
-def convert_to_string(data)
+def convert_to_string(data: bytes) -> HexStr
 ```
 
 **Arguments**:
@@ -65,7 +65,7 @@ def convert_to_string(data)
 #### convert\_to\_text
 
 ```python
-def convert_to_text(data)
+def convert_to_text(data: bytes) -> str
 ```
 
 **Arguments**:
@@ -79,7 +79,7 @@ def convert_to_text(data)
 #### checksum
 
 ```python
-def checksum(seed)
+def checksum(seed: Dict[str, Any]) -> str
 ```
 
 Calculate the hash3_256.
@@ -87,7 +87,7 @@ Calculate the hash3_256.
 #### get\_timestamp
 
 ```python
-def get_timestamp()
+def get_timestamp() -> str
 ```
 
 Return the current system timestamp.

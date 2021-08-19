@@ -3,8 +3,8 @@ title: ocean_pool
 slug: ocean_lib/ocean/ocean_pool
 app: ocean.py
 module: ocean_lib.ocean.ocean_pool
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/ocean/ocean_pool.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_pool.py
+version: 0.5.30
 ---
 ## OceanPool
 
@@ -28,7 +28,7 @@ reads the OCEAN token address from the `address_file` config option (see Config.
 #### \_\_init\_\_
 
 ```python
- | def __init__(web3: Web3, ocean_token_address: str, bfactory_address: str)
+ | def __init__(web3: Web3, ocean_token_address: str, bfactory_address: str) -> None
 ```
 
 Initialises Ocean Pool.
@@ -61,7 +61,7 @@ BPool instance
 #### get\_token\_address
 
 ```python
- | def get_token_address(pool_address: str, pool: BPool = None, validate=True) -> str
+ | def get_token_address(pool_address: str, pool: BPool = None, validate: bool = True) -> str
 ```
 
 Returns the address of this pool's datatoken.

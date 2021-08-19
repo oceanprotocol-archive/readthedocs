@@ -3,8 +3,8 @@ title: data_service_provider
 slug: ocean_lib/data_provider/data_service_provider
 app: ocean.py
 module: ocean_lib.data_provider.data_service_provider
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/data_provider/data_service_provider.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/data_provider/data_service_provider.py
+version: 0.5.30
 ---
 Provider module.
 
@@ -25,7 +25,7 @@ The main functions available are:
 
 ```python
  | @staticmethod
- | def get_http_client()
+ | def get_http_client() -> Session
 ```
 
 Get the http client.
@@ -34,7 +34,7 @@ Get the http client.
 
 ```python
  | @staticmethod
- | def set_http_client(http_client)
+ | def set_http_client(http_client: Session) -> None
 ```
 
 Set the http client to something other than the default `requests`.
@@ -43,7 +43,7 @@ Set the http client to something other than the default `requests`.
 
 ```python
  | @staticmethod
- | def get_order_requirements(did, service_endpoint, consumer_address, service_id, service_type, token_address)
+ | def get_order_requirements(did: str, service_endpoint: str, consumer_address: str, service_id: Union[str, int], service_type: str, token_address: str, userdata: Optional[Dict] = None) -> Optional[OrderRequirements]
 ```
 
 **Arguments**:
@@ -63,7 +63,7 @@ OrderRequirements instance -- named tuple (amount, data_token_address, receiver_
 
 ```python
  | @staticmethod
- | def download_service(did, service_endpoint, wallet, files, destination_folder, service_id, token_address, order_tx_id, index=None)
+ | def download_service(did: str, service_endpoint: str, wallet: Wallet, files: List[Dict[str, Any]], destination_folder: str, service_id: int, token_address: str, order_tx_id: str, index: Optional[int] = None, userdata: Optional[Dict] = None) -> None
 ```
 
 Call the provider endpoint to get access to the different files that form the asset.
@@ -89,7 +89,7 @@ True if was downloaded, bool
 
 ```python
  | @staticmethod
- | def start_compute_job(did: str, service_endpoint: str, consumer_address: str, signature: str, service_id: int, order_tx_id: str, algorithm_did: str = None, algorithm_meta: AlgorithmMetadata = None, algorithm_tx_id: str = None, algorithm_data_token: str = None, output: dict = None, input_datasets: list = None, job_id: str = None)
+ | def start_compute_job(did: str, service_endpoint: str, consumer_address: str, signature: str, service_id: int, order_tx_id: str, algorithm_did: str = None, algorithm_meta: Optional[AlgorithmMetadata] = None, algorithm_tx_id: str = None, algorithm_data_token: str = None, output: dict = None, input_datasets: list = None, job_id: str = None, userdata: Optional[dict] = None, algouserdata: Optional[dict] = None) -> Dict[str, Any]
 ```
 
 **Arguments**:
@@ -118,7 +118,7 @@ job_info dict with jobId, status, and other values
 
 ```python
  | @staticmethod
- | def stop_compute_job(did, job_id, service_endpoint, consumer_address, signature)
+ | def stop_compute_job(did: str, job_id: str, service_endpoint: str, consumer_address: str, signature: str) -> Dict[str, Any]
 ```
 
 **Arguments**:
@@ -137,7 +137,7 @@ bool whether the job was stopped successfully
 
 ```python
  | @staticmethod
- | def delete_compute_job(did, job_id, service_endpoint, consumer_address, signature)
+ | def delete_compute_job(did: str, job_id: str, service_endpoint: str, consumer_address: str, signature: str) -> Dict[str, str]
 ```
 
 **Arguments**:
@@ -156,7 +156,7 @@ bool whether the job was deleted successfully
 
 ```python
  | @staticmethod
- | def compute_job_status(did, job_id, service_endpoint, consumer_address, signature)
+ | def compute_job_status(did: str, job_id: str, service_endpoint: str, consumer_address: str, signature: str) -> Dict[str, Any]
 ```
 
 **Arguments**:
@@ -176,7 +176,7 @@ status for each job_id that exist for the did
 
 ```python
  | @staticmethod
- | def compute_job_result(did, job_id, service_endpoint, consumer_address, signature)
+ | def compute_job_result(did: str, job_id: str, service_endpoint: str, consumer_address: str, signature: str) -> Dict[str, Any]
 ```
 
 **Arguments**:
@@ -196,7 +196,7 @@ result for each job_id that exist for the did
 
 ```python
  | @staticmethod
- | def get_url(config)
+ | def get_url(config: Config) -> str
 ```
 
 Return the DataProvider component url.
@@ -213,7 +213,7 @@ Url, str
 
 ```python
  | @staticmethod
- | def get_service_endpoints(provider_uri)
+ | def get_service_endpoints(provider_uri: str) -> Dict[str, List[str]]
 ```
 
 Return the service endpoints from the provider URL.
@@ -222,7 +222,7 @@ Return the service endpoints from the provider URL.
 
 ```python
  | @staticmethod
- | def get_provider_address(provider_uri)
+ | def get_provider_address(provider_uri: str) -> Optional[str]
 ```
 
 Return the provider address
@@ -231,7 +231,7 @@ Return the provider address
 
 ```python
  | @staticmethod
- | def write_file(response, destination_folder, file_name)
+ | def write_file(response: Response, destination_folder: Union[str, bytes, os.PathLike], file_name: str) -> None
 ```
 
 Write the response content in a file in the destination folder.
@@ -244,5 +244,5 @@ Write the response content in a file in the destination folder.
 
 **Returns**:
 
-bool
+None
 

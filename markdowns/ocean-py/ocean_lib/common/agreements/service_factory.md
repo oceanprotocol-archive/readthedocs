@@ -3,12 +3,13 @@ title: service_factory
 slug: ocean_lib/common/agreements/service_factory
 app: ocean.py
 module: ocean_lib.common.agreements.service_factory
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/common/agreements/service_factory.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/agreements/service_factory.py
+version: 0.5.30
 ---
 ## ServiceDescriptor
 
 ```python
+@enforce_types
 class ServiceDescriptor(object)
 ```
 
@@ -19,7 +20,7 @@ item is a dict of parameters and values required by the service
 
 ```python
  | @staticmethod
- | def metadata_service_descriptor(attributes, service_endpoint)
+ | def metadata_service_descriptor(attributes: dict, service_endpoint: str) -> tuple
 ```
 
 Metadata service descriptor.
@@ -37,7 +38,7 @@ Service descriptor.
 
 ```python
  | @staticmethod
- | def authorization_service_descriptor(service_endpoint)
+ | def authorization_service_descriptor(service_endpoint: str) -> tuple
 ```
 
 Authorization service descriptor.
@@ -54,7 +55,7 @@ Service descriptor.
 
 ```python
  | @staticmethod
- | def access_service_descriptor(attributes, service_endpoint)
+ | def access_service_descriptor(attributes: dict, service_endpoint: str) -> tuple
 ```
 
 Access service descriptor.
@@ -73,7 +74,7 @@ Service descriptor.
 
 ```python
  | @staticmethod
- | def compute_service_descriptor(attributes, service_endpoint)
+ | def compute_service_descriptor(attributes: dict, service_endpoint: str) -> tuple
 ```
 
 Compute service descriptor.
@@ -91,6 +92,7 @@ Service descriptor.
 ## ServiceFactory
 
 ```python
+@enforce_types
 class ServiceFactory(object)
 ```
 
@@ -100,7 +102,7 @@ Factory class to create Services.
 
 ```python
  | @staticmethod
- | def build_services(service_descriptors)
+ | def build_services(service_descriptors: list) -> list
 ```
 
 Build a list of services.
@@ -119,7 +121,7 @@ List of Services
 
 ```python
  | @staticmethod
- | def build_service(service_descriptor)
+ | def build_service(service_descriptor: list) -> Service
 ```
 
 Build a service.
@@ -137,7 +139,7 @@ Service
 
 ```python
  | @staticmethod
- | def build_metadata_service(metadata, service_endpoint)
+ | def build_metadata_service(metadata: dict, service_endpoint: str) -> Service
 ```
 
 Build a metadata service.
@@ -155,7 +157,7 @@ Service
 
 ```python
  | @staticmethod
- | def build_authorization_service(attributes, service_endpoint)
+ | def build_authorization_service(attributes: dict, service_endpoint: str) -> Service
 ```
 
 Build an authorization service.
@@ -173,7 +175,7 @@ Service
 
 ```python
  | @staticmethod
- | def build_access_service(attributes, service_endpoint)
+ | def build_access_service(attributes: dict, service_endpoint: str) -> ServiceAgreement
 ```
 
 Build an authorization service.
@@ -191,7 +193,7 @@ ServiceAgreement instance
 
 ```python
  | @staticmethod
- | def build_compute_service(attributes, service_endpoint)
+ | def build_compute_service(attributes: dict, service_endpoint: str) -> ServiceAgreement
 ```
 
 Build an authorization service.

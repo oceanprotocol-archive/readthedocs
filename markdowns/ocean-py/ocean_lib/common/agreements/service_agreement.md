@@ -3,12 +3,13 @@ title: service_agreement
 slug: ocean_lib/common/agreements/service_agreement
 app: ocean.py
 module: ocean_lib.common.agreements.service_agreement
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/common/agreements/service_agreement.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/agreements/service_agreement.py
+version: 0.5.30
 ---
 ## ServiceAgreement
 
 ```python
+@enforce_types
 class ServiceAgreement(Service)
 ```
 
@@ -17,7 +18,7 @@ Class representing a Service Agreement.
 #### \_\_init\_\_
 
 ```python
- | def __init__(attributes, service_endpoint=None, service_type=None, service_index=None, other_values=None)
+ | def __init__(attributes: Optional[dict], service_endpoint: Optional[str], service_type: str = None, service_index: Optional[int] = None, other_values: Optional[dict] = None)
 ```
 
 **Arguments**:
@@ -32,7 +33,7 @@ include `main` and optionally the `additionalInformation` section
 
 ```python
  | @classmethod
- | def from_json(cls, service_dict)
+ | def from_json(cls, service_dict: dict) -> "ServiceAgreement"
 ```
 
 **Arguments**:
@@ -47,7 +48,7 @@ include `main` and optionally the `additionalInformation` section
 
 ```python
  | @classmethod
- | def from_ddo(cls, service_type, ddo)
+ | def from_ddo(cls, service_type: str, ddo: object) -> "ServiceAgreement"
 ```
 
 **Arguments**:
@@ -62,7 +63,7 @@ include `main` and optionally the `additionalInformation` section
 #### get\_cost
 
 ```python
- | def get_cost()
+ | def get_cost() -> float
 ```
 
 Return the price from the conditions parameters.

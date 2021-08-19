@@ -3,8 +3,8 @@ title: wallet
 slug: ocean_lib/web3_internal/wallet
 app: ocean.py
 module: ocean_lib.web3_internal.wallet
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/web3_internal/wallet.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/wallet.py
+version: 0.5.30
 ---
 ## Wallet
 
@@ -15,9 +15,6 @@ class Wallet()
 
 The wallet is responsible for signing transactions and messages by using an account's
 private key.
-
-The private key is always read from the encrypted keyfile and is never saved in memory beyond
-the life span of the signing function.
 
 The use of this wallet allows Ocean tools to send rawTransactions which keeps the user
 key and password safe and they are never sent outside. Another advantage of this is that
@@ -30,7 +27,7 @@ Usage:
 #### \_\_init\_\_
 
 ```python
- | def __init__(web3, private_key: Optional[str] = None, encrypted_key: dict = None, password: Optional[str] = None, address: Optional[str] = None)
+ | def __init__(web3: Web3, private_key: str) -> None
 ```
 
 Initialises Wallet object.
@@ -38,7 +35,7 @@ Initialises Wallet object.
 #### sign
 
 ```python
- | def sign(msg_hash)
+ | def sign(msg_hash: SignableMessage) -> SignedMessage
 ```
 
 Sign a transaction.

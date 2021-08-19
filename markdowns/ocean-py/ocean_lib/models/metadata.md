@@ -3,8 +3,8 @@ title: metadata
 slug: ocean_lib/models/metadata
 app: ocean.py
 module: ocean_lib.models.metadata
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/models/metadata.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/metadata.py
+version: 0.5.30
 ---
 ## MetadataContract
 
@@ -16,7 +16,7 @@ class MetadataContract(ContractBase)
 #### get\_event\_log
 
 ```python
- | def get_event_log(event_name, block, did, timeout=45)
+ | def get_event_log(event_name: str, block: int, did: str, timeout: int = 45) -> Optional[AttributeDict]
 ```
 
 **Returns**:

@@ -3,8 +3,8 @@ title: exceptions
 slug: ocean_lib/exceptions
 app: ocean.py
 module: ocean_lib.exceptions
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/exceptions.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/exceptions.py
+version: 0.5.30
 ---
 ## OceanEncryptAssetUrlsError
 
@@ -45,4 +45,12 @@ class VerifyTxFailed(Exception)
 ```
 
 Transaction verification failed.
+
+## TransactionFailed
+
+```python
+class TransactionFailed(Exception)
+```
+
+Transaction has failed.
 

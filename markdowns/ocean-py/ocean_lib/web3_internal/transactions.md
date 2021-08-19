@@ -3,14 +3,14 @@ title: transactions
 slug: ocean_lib/web3_internal/transactions
 app: ocean.py
 module: ocean_lib.web3_internal.transactions
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/web3_internal/transactions.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/transactions.py
+version: 0.5.30
 ---
 #### sign\_hash
 
 ```python
 @enforce_types
-def sign_hash(msg_hash, wallet: Wallet) -> str
+def sign_hash(msg_hash: SignableMessage, wallet: Wallet) -> str
 ```
 
 This method use `personal_sign`for signing a message. This will always prepend the

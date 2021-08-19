@@ -3,14 +3,15 @@ title: did
 slug: ocean_lib/common/did
 app: ocean.py
 module: ocean_lib.common.did
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/common/did.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/did.py
+version: 0.5.30
 ---
 DID Lib to do DID's and DDO's.
 
 ## DID
 
 ```python
+@enforce_types
 class DID()
 ```
 
@@ -20,7 +21,7 @@ Class representing an asset DID.
 
 ```python
  | @staticmethod
- | def did(seed)
+ | def did(seed: Dict[str, str]) -> str
 ```
 
 Create a did.
@@ -39,7 +40,8 @@ Asset did, str.
 #### did\_parse
 
 ```python
-def did_parse(did)
+@enforce_types
+def did_parse(did: str) -> Dict[str, str]
 ```
 
 Parse a DID into it's parts.
@@ -55,7 +57,8 @@ Python dictionary with the method and the id.
 #### id\_to\_did
 
 ```python
-def id_to_did(did_id, method="op")
+@enforce_types
+def id_to_did(did_id: Union[bytes, str], method: str = "op") -> str
 ```
 
 Return an Ocean DID from given a hex id.
@@ -63,7 +66,8 @@ Return an Ocean DID from given a hex id.
 #### did\_to\_id
 
 ```python
-def did_to_id(did)
+@enforce_types
+def did_to_id(did: str) -> str
 ```
 
 Return an id extracted from a DID string.
@@ -71,7 +75,8 @@ Return an id extracted from a DID string.
 #### did\_to\_id\_bytes
 
 ```python
-def did_to_id_bytes(did)
+@enforce_types
+def did_to_id_bytes(did: Union[bytes, str]) -> bytes
 ```
 
 Return an Ocean DID to it's correspondng hex id in bytes.

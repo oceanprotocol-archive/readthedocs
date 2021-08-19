@@ -3,8 +3,8 @@ title: developers.md
 slug: READMEs/developers.md
 app: ocean.py
 module: READMEs.developers
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/READMEs/developers.md
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/developers.md
+version: 0.5.30
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -75,7 +75,7 @@ In work console:
 
 ```console
 #specify config file as an envvar
-export CONFIG_FILE=config.ini
+export OCEAN_CONFIG_FILE=config.ini
 
 #set private keys of two accounts
 export TEST_PRIVATE_KEY1=0xbbfbee4961061d506ffbb11dfea64eba16355cbf1d9c29613126ba7fec0aed5d
