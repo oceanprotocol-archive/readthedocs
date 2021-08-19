@@ -3,8 +3,8 @@ title: service
 slug: ocean_lib/common/ddo/service
 app: ocean.py
 module: ocean_lib.common.ddo.service
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/common/ddo/service.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/ddo/service.py
+version: 0.5.30
 ---
 Service Class
 To handle service items in a DDO record
@@ -20,66 +20,16 @@ Service class to create validate service in a DDO.
 #### \_\_init\_\_
 
 ```python
- | def __init__(service_endpoint, service_type, attributes, other_values=None, index=None)
+ | def __init__(service_endpoint: Optional[str], service_type: str, attributes: Optional[Dict], other_values: Optional[Dict[str, Any]] = None, index: Optional[int] = None) -> None
 ```
 
 Initialize Service instance.
 
-#### type
-
-```python
- | @property
- | def type()
-```
-
-Type of the service.
-
-**Returns**:
-
-str
-
-#### index
-
-```python
- | @property
- | def index()
-```
-
-Identifier of the service inside the asset DDO
-
-**Returns**:
-
-str
-
-#### service\_endpoint
-
-```python
- | @property
- | def service_endpoint()
-```
-
-Service endpoint.
-
-**Returns**:
-
-String
-
-#### set\_service\_endpoint
-
-```python
- | def set_service_endpoint(service_endpoint)
-```
-
-Update service endpoint. Needed to update after create did.
-
-**Arguments**:
-
-- `service_endpoint`: Service endpoint, str
-
 #### values
 
 ```python
- | def values()
+ | @enforce_types
+ | def values() -> Dict[str, Any]
 ```
 
 **Returns**:
@@ -89,7 +39,8 @@ array of values
 #### update\_value
 
 ```python
- | def update_value(name, value)
+ | @enforce_types
+ | def update_value(name: str, value: Any) -> None
 ```
 
 Update value in the array of values.
@@ -106,7 +57,8 @@ None
 #### as\_dictionary
 
 ```python
- | def as_dictionary()
+ | @enforce_types
+ | def as_dictionary() -> Dict[str, Any]
 ```
 
 Return the service as a python dictionary.
@@ -115,7 +67,8 @@ Return the service as a python dictionary.
 
 ```python
  | @classmethod
- | def from_json(cls, service_dict)
+ | @enforce_types
+ | def from_json(cls, service_dict: Dict[str, Any]) -> "Service"
 ```
 
 Create a service object from a JSON string.

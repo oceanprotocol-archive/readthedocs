@@ -3,8 +3,8 @@ title: datatokens-flow.md
 slug: READMEs/datatokens-flow.md
 app: ocean.py
 module: READMEs.datatokens-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/READMEs/datatokens-flow.md
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/datatokens-flow.md
+version: 0.5.30
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -16,7 +16,7 @@ SPDX-License-Identifier: Apache-2.0
 ## Prerequisites
 
 -   Linux/MacOS
--   Docker, [allowing non-root users](https://www.thegeekdiary.com/run-docker-as-a-non-root-user/)
+-   [Docker](https://docs.docker.com/engine/install/), [Docker Compose](https://docs.docker.com/compose/install/), [allowing non-root users](https://www.thegeekdiary.com/run-docker-as-a-non-root-user/)
 -   Python 3.8.5+
 
 ## Run barge services
@@ -43,7 +43,7 @@ Create a file called `config.ini` and fill it as follows.
 
 ```text
 [eth-network]
-network = ganache
+network = http://127.0.0.1:8545
 address.file = ~/.ocean/ocean-contracts/artifacts/address.json
 ```
 

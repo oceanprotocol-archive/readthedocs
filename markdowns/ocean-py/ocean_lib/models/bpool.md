@@ -3,8 +3,8 @@ title: bpool
 slug: ocean_lib/models/bpool
 app: ocean.py
 module: ocean_lib.models.bpool
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/models/bpool.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/bpool.py
+version: 0.5.30
 ---
 ## BPool
 
@@ -16,7 +16,7 @@ class BPool(BToken)
 #### \_\_str\_\_
 
 ```python
- | def __str__()
+ | def __str__() -> str
 ```
 
 Formats with attributes as key, value pairs.
@@ -94,7 +94,7 @@ Get the "controller" address, which can call `CONTROL` functions like
 #### setSwapFee
 
 ```python
- | def setSwapFee(swapFee_base: int, from_wallet: Wallet)
+ | def setSwapFee(swapFee_base: int, from_wallet: Wallet) -> str
 ```
 
 Caller must be controller. Pool must NOT be finalized.
@@ -102,7 +102,7 @@ Caller must be controller. Pool must NOT be finalized.
 #### setPublicSwap
 
 ```python
- | def setPublicSwap(public: bool, from_wallet: Wallet)
+ | def setPublicSwap(public: bool, from_wallet: Wallet) -> str
 ```
 
 Makes `isPublicSwap` return `_publicSwap`. Requires caller to be
@@ -112,7 +112,7 @@ public swap.
 #### finalize
 
 ```python
- | def finalize(from_wallet: Wallet)
+ | def finalize(from_wallet: Wallet) -> str
 ```
 
 This makes the pool **finalized**. This is a one-way transition. `bind`,
@@ -123,7 +123,7 @@ This makes the pool **finalized**. This is a one-way transition. `bind`,
 #### bind
 
 ```python
- | def bind(token_address: str, balance_base: int, weight_base: int, from_wallet: Wallet)
+ | def bind(token_address: str, balance_base: int, weight_base: int, from_wallet: Wallet) -> str
 ```
 
 Binds the token with address `token`. Tokens will be pushed/pulled from
@@ -143,7 +143,7 @@ Possible errors:
 #### rebind
 
 ```python
- | def rebind(token_address: str, balance_base: int, weight_base: int, from_wallet: Wallet)
+ | def rebind(token_address: str, balance_base: int, weight_base: int, from_wallet: Wallet) -> str
 ```
 
 Changes the parameters of an already-bound token. Performs the same
@@ -152,7 +152,7 @@ validation on the parameters.
 #### unbind
 
 ```python
- | def unbind(token_address: str, from_wallet: Wallet)
+ | def unbind(token_address: str, from_wallet: Wallet) -> str
 ```
 
 Unbinds a token, clearing all of its parameters. Exit fee is charged
@@ -161,7 +161,7 @@ and the remaining balance is sent to caller.
 #### gulp
 
 ```python
- | def gulp(token_address: str, from_wallet: Wallet)
+ | def gulp(token_address: str, from_wallet: Wallet) -> str
 ```
 
 This syncs the internal `balance` of `token` within a pool with the
@@ -179,7 +179,7 @@ forever.
 #### joinPool
 
 ```python
- | def joinPool(poolAmountOut_base: int, maxAmountsIn_base: typing.List[int], from_wallet: Wallet)
+ | def joinPool(poolAmountOut_base: int, maxAmountsIn_base: typing.List[int], from_wallet: Wallet) -> str
 ```
 
 Join the pool, getting `poolAmountOut` pool tokens. This will pull some
@@ -190,7 +190,7 @@ limited by the array of `maxAmountsIn` in the order of the pool tokens.
 #### exitPool
 
 ```python
- | def exitPool(poolAmountIn_base: int, minAmountsOut_base: typing.List[int], from_wallet: Wallet)
+ | def exitPool(poolAmountIn_base: int, minAmountsOut_base: typing.List[int], from_wallet: Wallet) -> str
 ```
 
 Exit the pool, paying `poolAmountIn` pool tokens and getting some of
@@ -200,7 +200,7 @@ limited by the array of `minAmountsOut` in the order of the pool tokens.
 #### swapExactAmountIn
 
 ```python
- | def swapExactAmountIn(tokenIn_address: str, tokenAmountIn_base: int, tokenOut_address: str, minAmountOut_base: int, maxPrice_base: int, from_wallet: Wallet)
+ | def swapExactAmountIn(tokenIn_address: str, tokenAmountIn_base: int, tokenOut_address: str, minAmountOut_base: int, maxPrice_base: int, from_wallet: Wallet) -> str
 ```
 
 Trades an exact `tokenAmountIn` of `tokenIn` taken from the caller by
@@ -218,7 +218,7 @@ guaranteed `tokenAmountOut >= minAmountOut` and
 #### joinswapExternAmountIn
 
 ```python
- | def joinswapExternAmountIn(tokenIn_address: str, tokenAmountIn_base: int, minPoolAmountOut_base: int, from_wallet: Wallet)
+ | def joinswapExternAmountIn(tokenIn_address: str, tokenAmountIn_base: int, minPoolAmountOut_base: int, from_wallet: Wallet) -> str
 ```
 
 Pay `tokenAmountIn` of token `tokenIn` to join the pool, getting
@@ -227,7 +227,7 @@ Pay `tokenAmountIn` of token `tokenIn` to join the pool, getting
 #### joinswapPoolAmountOut
 
 ```python
- | def joinswapPoolAmountOut(tokenIn_address: str, poolAmountOut_base: int, maxAmountIn_base: int, from_wallet: Wallet)
+ | def joinswapPoolAmountOut(tokenIn_address: str, poolAmountOut_base: int, maxAmountIn_base: int, from_wallet: Wallet) -> str
 ```
 
 Specify `poolAmountOut` pool shares that you want to get, and a token
@@ -237,7 +237,7 @@ into the pool).
 #### exitswapPoolAmountIn
 
 ```python
- | def exitswapPoolAmountIn(tokenOut_address: str, poolAmountIn_base: int, minAmountOut_base: int, from_wallet: Wallet)
+ | def exitswapPoolAmountIn(tokenOut_address: str, poolAmountIn_base: int, minAmountOut_base: int, from_wallet: Wallet) -> str
 ```
 
 Pay `poolAmountIn` pool shares into the pool, getting `tokenAmountOut`
@@ -246,7 +246,7 @@ of the given token `tokenOut` out of the pool.
 #### exitswapExternAmountOut
 
 ```python
- | def exitswapExternAmountOut(tokenOut_address: str, tokenAmountOut_base: int, maxPoolAmountIn_base: int, from_wallet: Wallet)
+ | def exitswapExternAmountOut(tokenOut_address: str, tokenAmountOut_base: int, maxPoolAmountIn_base: int, from_wallet: Wallet) -> str
 ```
 
 Specify `tokenAmountOut` of token `tokenOut` that you want to get out
@@ -312,7 +312,7 @@ Returns poolAmountIn_base.
 #### get\_liquidity\_logs
 
 ```python
- | def get_liquidity_logs(event_name, from_block, to_block=None, user_address=None, this_pool_only=True)
+ | def get_liquidity_logs(event_name: str, from_block: BlockIdentifier, to_block: Optional[BlockIdentifier] = None, user_address: Optional[str] = None, this_pool_only: bool = True) -> Tuple
 ```
 
 **Arguments**:

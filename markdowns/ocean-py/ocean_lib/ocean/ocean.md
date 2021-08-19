@@ -3,8 +3,8 @@ title: ocean
 slug: ocean_lib/ocean/ocean
 app: ocean.py
 module: ocean_lib.ocean.ocean
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/ocean/ocean.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean.py
+version: 0.5.30
 ---
 Ocean module.
 
@@ -20,7 +20,7 @@ The Ocean class is the entry point into Ocean Protocol.
 #### \_\_init\_\_
 
 ```python
- | def __init__(config, data_provider=None)
+ | def __init__(config: Union[Dict, Config], data_provider: Optional[Type] = None) -> None
 ```
 
 Initialize Ocean class.
@@ -49,15 +49,6 @@ An instance of Ocean is parameterized by a `Config` instance.
 
 - `config`: `Config` instance
 - `data_provider`: `DataServiceProvider` instance
-
-#### config
-
-```python
- | @property
- | def config()
-```
-
-`Config` stores artifact path, urls.
 
 #### create\_data\_token
 
@@ -117,7 +108,7 @@ datatoken = ocean.create_data_token("Dataset name", "dtsymbol", from_wallet=wall
 #### get\_user\_orders
 
 ```python
- | def get_user_orders(address, datatoken=None, service_id=None)
+ | def get_user_orders(address: str, datatoken: Optional[str] = None, service_id: int = None) -> List[Order]
 ```
 
 **Returns**:

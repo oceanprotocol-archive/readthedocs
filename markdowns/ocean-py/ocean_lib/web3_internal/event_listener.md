@@ -3,12 +3,13 @@ title: event_listener
 slug: ocean_lib/web3_internal/event_listener
 app: ocean.py
 module: ocean_lib.web3_internal.event_listener
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/web3_internal/event_listener.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/event_listener.py
+version: 0.5.30
 ---
 ## EventListener
 
 ```python
+@enforce_types
 class EventListener(object)
 ```
 
@@ -17,7 +18,7 @@ Class representing an event listener.
 #### \_\_init\_\_
 
 ```python
- | def __init__(web3, contract_name, address, event_name, args=None, from_block=None, to_block=None, filters=None)
+ | def __init__(web3: Web3, contract_name: str, address: str, event_name: str, args: Optional[list] = None, from_block: Optional[Union[int, str]] = None, to_block: Optional[Union[int, str]] = None, filters: Optional[dict] = None) -> None
 ```
 
 Initialises EventListener object.
@@ -25,7 +26,7 @@ Initialises EventListener object.
 #### make\_event\_filter
 
 ```python
- | def make_event_filter()
+ | def make_event_filter() -> EventFilter
 ```
 
 Create a new event filter.
@@ -33,7 +34,7 @@ Create a new event filter.
 #### listen\_once
 
 ```python
- | def listen_once(callback, timeout=None, timeout_callback=None, start_time=None, blocking=False)
+ | def listen_once(callback: Optional[Callable] = None, timeout: Optional[int] = None, timeout_callback: Optional[Callable] = None, start_time: Optional[float] = None, blocking: bool = False) -> None
 ```
 
 Listens once for event.
@@ -55,7 +56,7 @@ event if blocking is True and an event is received, otherwise returns None
 
 ```python
  | @staticmethod
- | def watch_one_event(event_filter, callback, timeout_callback, timeout, args, start_time=None)
+ | def watch_one_event(event_filter: EventFilter, callback: Callable, timeout_callback: Optional[Callable], timeout: int, args: list, start_time: Optional[int] = None) -> None
 ```
 
 Start to watch one event.

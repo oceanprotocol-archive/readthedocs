@@ -3,8 +3,8 @@ title: wallets.md
 slug: READMEs/wallets.md
 app: ocean.py
 module: READMEs.wallets
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/READMEs/wallets.md
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/wallets.md
+version: 0.5.30
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -44,7 +44,7 @@ private_key = Account.create().key
 
 ## 2. Where to store private keys
 
-The _whole point_ of crypto wallets is store private keys. Wallets have various tradeoffs of cost, convienence, and security. For example, hardware wallets tend to be more secure but less convenient and not free.
+The _whole point_ of crypto wallets is to store private keys. Wallets have various tradeoffs of cost, convienence, and security. For example, hardware wallets tend to be more secure but less convenient and not free.
 
 It can also be useful to store private keys locally on your machine, for testing, though only with a small amount of value at stake (keep the risk down 🐙).
 
@@ -52,13 +52,9 @@ Do _not_ store your private keys on anything public, unless you want your tokens
 
 ## 3. How your software might access Ethereum accounts
 
-There are two main ways: (a) directly load private key, and (b) as a keyfile JSON object. Let's review each.
+ocean.py suppports direct loading of the private key. Use an envvar that you copy in for a new session.
 
-### 3a. Directly load private key
-
-You could grab this from a locally-stored file, or from an envvar that you copy in for a new session. Here we focus on the latter.
-
-First, make your key available as an envvar. Here's an example key. From your console:
+Here's an example key. From your console:
 
 ```console
 export MY_TEST_KEY=0xaefd8bc8725c4b3d15fbe058d0f58f4d852e8caea2bf68e0f73acb1aeec19baa
@@ -73,47 +69,4 @@ import os
 import web3
 from ocean_lib.web3_internal.wallet import Wallet
 wallet = Wallet(web3, private_key=os.getenv('MY_TEST_KEY'))
-```
-
-### 3b. Keyfile JSON object, aka EncryptedKey
-
-Here's an example JSON object. This example has the same private key as above, and password `OceanProtocol` to encrypt/decrypt the private key. The private key is stored as parameter `ciphertext` (in encrypted form, of course).
-
-```json
-    {
-      "address": "281269c18376010b196a928c335e495bd05ec32f",
-      "crypto": {
-        "cipher": "aes-128-ctr",
-        "cipherparams": {
-          "iv": "ac0b74c5100bd319030d983029256250"
-        },
-        "ciphertext": "6e003d25869a8f84c3d055d4bda3fd0e83b89769b6513b58b2b76d0738f2ab1c",
-        "kdf": "pbkdf2",
-        "kdfparams": {
-          "c": 1000000,
-          "dklen": 32,
-          "prf": "hmac-sha256",
-          "salt": "423c1be88c1fadd926c1b668a5d93f74"
-        },
-        "mac": "6b90720ddc10d457c2e3e7e1b61550d7a7fa75e6051cb1ed4f1516fba4f0a45f"
-      },
-      "id": "7954ec59-6819-4e3c-b065-e6f3a9c1fe6c",
-      "version": 3
-    }
-```
-
-Here's how you use the JSON object. In your console, export the EncryptedKey and password:
-
-```console
-export MY_TEST_ENCRYPTED_KEY='{"address": "281269c18376010b196a928c335e495bd05ec32f", "crypto": {"cipher": "aes-128-ctr", "cipherparams": {"iv": "ac0b74c5100bd319030d983029256250"}, "ciphertext": "6e003d25869a8f84c3d055d4bda3fd0e83b89769b6513b58b2b76d0738f2ab1c", "kdf": "pbkdf2", "kdfparams": {"c": 1000000, "dklen": 32, "prf": "hmac-sha256", "salt": "423c1be88c1fadd926c1b668a5d93f74"}, "mac": "6b90720ddc10d457c2e3e7e1b61550d7a7fa75e6051cb1ed4f1516fba4f0a45f"}, "id": "7954ec59-6819-4e3c-b065-e6f3a9c1fe6c", "version": 3}'
-export MY_TEST_PASSWORD=OceanProtocol
-```
-
-In Python, you'd create a wallet from this info with a line like:
-
-```python
-import os
-import web3
-from ocean_lib.web3_internal.wallet import Wallet
-wallet = Wallet(web3, encrypted_key=os.getenv('MY_TEST_ENCRYPTED_KEY'), password=os.getenv('MY_TEST_PASSWORD'))
 ```

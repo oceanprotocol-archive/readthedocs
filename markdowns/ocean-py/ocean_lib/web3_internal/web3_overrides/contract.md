@@ -3,12 +3,13 @@ title: contract
 slug: ocean_lib/web3_internal/web3_overrides/contract
 app: ocean.py
 module: ocean_lib.web3_internal.web3_overrides.contract
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/web3_internal/web3_overrides/contract.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/web3_overrides/contract.py
+version: 0.5.30
 ---
 ## CustomContractFunction
 
 ```python
+@enforce_types
 class CustomContractFunction()
 ```
 
@@ -23,22 +24,19 @@ Initializes CustomContractFunction.
 #### transact
 
 ```python
- | def transact(transaction)
+ | def transact(transaction: Dict[str, Any]) -> HexBytes
 ```
 
 Customize calling smart contract transaction functions.
+This function is copied from web3 ContractFunction with a few changes:
 
-Use `personal_sendTransaction` instead of `eth_sendTransaction` and to estimate gas limit.
-
-This function is largely copied from web3 ContractFunction with an important addition.
-
-Note: will fallback to `eth_sendTransaction` if `passphrase` is not provided in the
-`transaction` dict.
+1. Don't set `from` using the web3.eth.default account
+2. Add chainId if `chainId` is not in the `transaction` dict
+3. Estimate gas limit if `gas` is not in the `transaction` dict
 
 **Arguments**:
 
-- `transaction`: dict which has the required transaction arguments per
-`personal_sendTransaction` requirements.
+- `transaction`: dict which has the required transaction arguments
 
 **Returns**:
 
@@ -47,10 +45,16 @@ hex str transaction hash
 #### transact\_with\_contract\_function
 
 ```python
-def transact_with_contract_function(address, web3, function_name=None, transaction=None, contract_abi=None, fn_abi=None, *args, **kwargs, *, ,)
+@enforce_types
+def transact_with_contract_function(address: str, web3: Web3, function_name: Optional[str] = None, transaction: Optional[dict] = None, contract_abi: Optional[list] = None, fn_abi: Optional[dict] = None, *args, **kwargs, *, ,) -> HexBytes
 ```
 
 Helper function for interacting with a contract function by sending a
 transaction. This is copied from web3 `transact_with_contract_function`
-so we can use `personal_sendTransaction` when possible.
+with a few additions:
+    1. If `account_key` in transaction dict, sign and send transaction via
+       `web3.eth.send_raw_transaction`
+    2. Otherwise, send via `web3.eth.send_transaction`
+    3. Retry failed transactions (when txn_receipt.status indicates failure)
+    4. Network-dependent timeout
 

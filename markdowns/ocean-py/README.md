@@ -3,8 +3,8 @@ title: README.md
 slug: README.md
 app: ocean.py
 module: README
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/README.md
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/README.md
+version: 0.5.30
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -48,8 +48,8 @@ This is in beta state and you can expect running into problems. If you run into 
 - [🏗 Installation](#-installation)
 - [🏄 Quickstart](#-quickstart)
   - [Simple Flow](#simple-flow)
-  - [Learn more](#learn-more)
   - [Marketplace Flow](#marketplace-flow)
+  - [Learn more](#learn-more)
 - [🦑 Development](#-development)
 - [🏛 License](#-license)
 

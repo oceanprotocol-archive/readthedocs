@@ -3,12 +3,13 @@ title: ddo
 slug: ocean_lib/common/ddo/ddo
 app: ocean.py
 module: ocean_lib.common.ddo.ddo
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/common/ddo/ddo.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/ddo/ddo.py
+version: 0.5.30
 ---
 ## DDO
 
 ```python
+@enforce_types
 class DDO()
 ```
 
@@ -17,25 +18,16 @@ DDO class to create, import, export, validate DDO objects.
 #### \_\_init\_\_
 
 ```python
- | def __init__(did=None, json_text=None, json_filename=None, created=None, dictionary=None)
+ | def __init__(did: Optional[str] = None, json_text: Optional[str] = None, json_filename: Optional[Path] = None, created: Optional[Any] = None, dictionary: Optional[dict] = None) -> None
 ```
 
 Clear the DDO data values.
-
-#### did
-
-```python
- | @property
- | def did()
-```
-
-Get the DID.
 
 #### is\_disabled
 
 ```python
  | @property
- | def is_disabled()
+ | def is_disabled() -> bool
 ```
 
 Returns whether the asset is disabled.
@@ -44,7 +36,7 @@ Returns whether the asset is disabled.
 
 ```python
  | @property
- | def is_enabled()
+ | def is_enabled() -> bool
 ```
 
 Returns the opposite of is_disabled, for convenience.
@@ -53,7 +45,7 @@ Returns the opposite of is_disabled, for convenience.
 
 ```python
  | @property
- | def is_retired()
+ | def is_retired() -> bool
 ```
 
 Returns whether the asset is retired.
@@ -62,7 +54,7 @@ Returns whether the asset is retired.
 
 ```python
  | @property
- | def is_listed()
+ | def is_listed() -> bool
 ```
 
 Returns whether the asset is listed.
@@ -71,43 +63,16 @@ Returns whether the asset is listed.
 
 ```python
  | @property
- | def asset_id()
+ | def asset_id() -> Optional[str]
 ```
 
 The asset id part of the DID
-
-#### services
-
-```python
- | @property
- | def services()
-```
-
-Get the list of services.
-
-#### proof
-
-```python
- | @property
- | def proof()
-```
-
-Get the static proof, or None.
-
-#### credentials
-
-```python
- | @property
- | def credentials()
-```
-
-Get the credentials.
 
 #### metadata
 
 ```python
  | @property
- | def metadata()
+ | def metadata() -> Optional[dict]
 ```
 
 Get the metadata service.
@@ -116,7 +81,7 @@ Get the metadata service.
 
 ```python
  | @property
- | def encrypted_files()
+ | def encrypted_files() -> Optional[dict]
 ```
 
 Return encryptedFiles field in the base metadata.
@@ -124,7 +89,7 @@ Return encryptedFiles field in the base metadata.
 #### add\_service
 
 ```python
- | def add_service(service_type, service_endpoint=None, values=None, index=None)
+ | def add_service(service_type: str, service_endpoint: Optional[str] = None, values: Optional[dict] = None, index: Optional[int] = None) -> None
 ```
 
 Add a service to the list of services on the DDO.
@@ -139,7 +104,7 @@ list of conditions and purchase endpoint.
 #### as\_text
 
 ```python
- | def as_text(is_proof=True, is_pretty=False)
+ | def as_text(is_proof: bool = True, is_pretty: bool = False) -> str
 ```
 
 Return the DDO as a JSON text.
@@ -157,7 +122,7 @@ str
 #### as\_dictionary
 
 ```python
- | def as_dictionary(is_proof=True)
+ | def as_dictionary(is_proof: bool = True) -> dict
 ```
 
 Return the DDO as a JSON dict.
@@ -171,7 +136,7 @@ dict
 #### add\_proof
 
 ```python
- | def add_proof(checksums, publisher_account)
+ | def add_proof(checksums: dict, publisher_account: Account) -> None
 ```
 
 Add a proof to the DDO, based on the public_key id/index and signed with the private key
@@ -185,7 +150,7 @@ add a static proof to the DDO, based on one of the public keys.
 #### get\_service
 
 ```python
- | def get_service(service_type=None)
+ | def get_service(service_type: str) -> Optional[Service]
 ```
 
 Return a service using.
@@ -193,7 +158,7 @@ Return a service using.
 #### get\_service\_by\_index
 
 ```python
- | def get_service_by_index(index)
+ | def get_service_by_index(index: int) -> Optional[Service]
 ```
 
 Get service for a given index.
@@ -209,7 +174,7 @@ Service
 #### enable
 
 ```python
- | def enable()
+ | def enable() -> None
 ```
 
 Enables asset for ordering.
@@ -217,7 +182,7 @@ Enables asset for ordering.
 #### disable
 
 ```python
- | def disable()
+ | def disable() -> None
 ```
 
 Disables asset from ordering.
@@ -225,7 +190,7 @@ Disables asset from ordering.
 #### retire
 
 ```python
- | def retire()
+ | def retire() -> None
 ```
 
 Retires an asset.
@@ -233,7 +198,7 @@ Retires an asset.
 #### unretire
 
 ```python
- | def unretire()
+ | def unretire() -> None
 ```
 
 Unretires an asset.
@@ -241,7 +206,7 @@ Unretires an asset.
 #### list
 
 ```python
- | def list()
+ | def list() -> None
 ```
 
 Lists a previously unlisted asset.
@@ -249,7 +214,7 @@ Lists a previously unlisted asset.
 #### unlist
 
 ```python
- | def unlist()
+ | def unlist() -> None
 ```
 
 Unlists an asset.
@@ -258,7 +223,7 @@ Unlists an asset.
 
 ```python
  | @property
- | def requires_address_credential()
+ | def requires_address_credential() -> bool
 ```
 
 Checks if an address credential is required on this asset.
@@ -267,7 +232,7 @@ Checks if an address credential is required on this asset.
 
 ```python
  | @property
- | def allowed_addresses()
+ | def allowed_addresses() -> list
 ```
 
 Lists addresses that are explicitly allowed in credentials.
@@ -276,7 +241,7 @@ Lists addresses that are explicitly allowed in credentials.
 
 ```python
  | @property
- | def denied_addresses()
+ | def denied_addresses() -> list
 ```
 
 Lists addresesses that are explicitly denied in credentials.
@@ -284,7 +249,7 @@ Lists addresesses that are explicitly denied in credentials.
 #### add\_address\_to\_allow\_list
 
 ```python
- | def add_address_to_allow_list(address)
+ | def add_address_to_allow_list(address: str) -> None
 ```
 
 Adds an address to allowed addresses list.
@@ -292,7 +257,7 @@ Adds an address to allowed addresses list.
 #### add\_address\_to\_deny\_list
 
 ```python
- | def add_address_to_deny_list(address)
+ | def add_address_to_deny_list(address: str) -> None
 ```
 
 Adds an address to the denied addresses list.
@@ -300,7 +265,7 @@ Adds an address to the denied addresses list.
 #### remove\_address\_from\_allow\_list
 
 ```python
- | def remove_address_from_allow_list(address)
+ | def remove_address_from_allow_list(address: str) -> None
 ```
 
 Removes address from allow list (if it exists).
@@ -308,7 +273,7 @@ Removes address from allow list (if it exists).
 #### remove\_address\_from\_deny\_list
 
 ```python
- | def remove_address_from_deny_list(address)
+ | def remove_address_from_deny_list(address: str) -> None
 ```
 
 Removes address from deny list (if it exists).
@@ -316,8 +281,38 @@ Removes address from deny list (if it exists).
 #### is\_consumable
 
 ```python
- | def is_consumable(credential=None, with_connectivity_check=True, provider_uri=None)
+ | def is_consumable(credential: Optional[dict] = None, with_connectivity_check: bool = True, provider_uri: Optional[str] = None) -> bool
 ```
 
 Checks whether an asset is consumable and returns a ConsumableCode.
+
+#### enable\_flag
+
+```python
+ | def enable_flag(flag_name: str) -> None
+```
+
+**Returns**:
+
+None
+
+#### disable\_flag
+
+```python
+ | def disable_flag(flag_name: str) -> None
+```
+
+**Returns**:
+
+None
+
+#### is\_flag\_enabled
+
+```python
+ | def is_flag_enabled(flag_name: str) -> bool
+```
+
+**Returns**:
+
+`isListed` or `bool` in metadata_service.attributes["status"]
 

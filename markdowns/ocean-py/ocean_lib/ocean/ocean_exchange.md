@@ -3,8 +3,8 @@ title: ocean_exchange
 slug: ocean_lib/ocean/ocean_exchange
 app: ocean.py
 module: ocean_lib.ocean.ocean_exchange
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/ocean/ocean_exchange.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_exchange.py
+version: 0.5.30
 ---
 ## OceanExchange
 
@@ -16,7 +16,7 @@ class OceanExchange()
 #### \_\_init\_\_
 
 ```python
- | def __init__(web3: Web3, ocean_token_address: str, exchange_address: str, config: Config)
+ | def __init__(web3: Web3, ocean_token_address: str, exchange_address: str, config: Config) -> None
 ```
 
 Initialises OceanExchange object.

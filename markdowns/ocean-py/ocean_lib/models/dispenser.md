@@ -3,8 +3,8 @@ title: dispenser
 slug: ocean_lib/models/dispenser
 app: ocean.py
 module: ocean_lib.models.dispenser
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/models/dispenser.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/dispenser.py
+version: 0.5.30
 ---
 ## DispenserContract
 
@@ -86,7 +86,7 @@ int
 #### activate
 
 ```python
- | def activate(dt_address: str, max_tokens: int, max_balance: int, from_wallet: Wallet)
+ | def activate(dt_address: str, max_tokens: int, max_balance: int, from_wallet: Wallet) -> str
 ```
 
 **Returns**:
@@ -96,7 +96,7 @@ hex str transaction hash
 #### deactivate
 
 ```python
- | def deactivate(dt_address: str, from_wallet: Wallet)
+ | def deactivate(dt_address: str, from_wallet: Wallet) -> str
 ```
 
 **Returns**:
@@ -106,7 +106,7 @@ hex str transaction hash
 #### make\_minter
 
 ```python
- | def make_minter(dt_address: str, from_wallet: Wallet)
+ | def make_minter(dt_address: str, from_wallet: Wallet) -> str
 ```
 
 **Returns**:
@@ -116,7 +116,7 @@ hex str transaction hash
 #### cancel\_minter
 
 ```python
- | def cancel_minter(dt_address: str, from_wallet: Wallet)
+ | def cancel_minter(dt_address: str, from_wallet: Wallet) -> str
 ```
 
 **Returns**:
@@ -126,7 +126,7 @@ hex str transaction hash
 #### dispense
 
 ```python
- | def dispense(dt_address: str, amount: int, from_wallet: Wallet)
+ | def dispense(dt_address: str, amount: int, from_wallet: Wallet) -> str
 ```
 
 **Returns**:
@@ -136,7 +136,7 @@ hex str transaction hash
 #### owner\_withdraw
 
 ```python
- | def owner_withdraw(dt_address: str, from_wallet: Wallet)
+ | def owner_withdraw(dt_address: str, from_wallet: Wallet) -> str
 ```
 
 **Returns**:
@@ -146,7 +146,7 @@ hex str transaction hash
 #### is\_dispensable
 
 ```python
- | def is_dispensable(dt_address: str, amount: int, to_wallet: Wallet)
+ | def is_dispensable(dt_address: str, amount: int, to_wallet: Wallet) -> bool
 ```
 
 **Returns**:

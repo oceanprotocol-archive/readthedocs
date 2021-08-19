@@ -3,8 +3,8 @@ title: contract_base
 slug: ocean_lib/web3_internal/contract_base
 app: ocean.py
 module: ocean_lib.web3_internal.contract_base
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/web3_internal/contract_base.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/contract_base.py
+version: 0.5.30
 ---
 All contracts inherit from `ContractBase` class.
 
@@ -20,7 +20,7 @@ Base class for all contract objects.
 #### \_\_init\_\_
 
 ```python
- | def __init__(web3: Web3, address: Optional[str])
+ | def __init__(web3: Web3, address: Optional[str]) -> None
 ```
 
 Initialises Contract Base object.
@@ -28,7 +28,7 @@ Initialises Contract Base object.
 #### \_\_str\_\_
 
 ```python
- | def __str__()
+ | def __str__() -> str
 ```
 
 Returns contract `name @ address.`
@@ -37,7 +37,7 @@ Returns contract `name @ address.`
 
 ```python
  | @classmethod
- | def configured_address(cls, network, address_file)
+ | def configured_address(cls, network: str, address_file: str) -> str
 ```
 
 Returns the contract addresses
@@ -64,7 +64,7 @@ Return the ethereum address of the solidity contract deployed in current network
 
 ```python
  | @property
- | def events()
+ | def events() -> ContractEvents
 ```
 
 Expose the underlying contract's events.
@@ -82,7 +82,7 @@ Returns the list of functions in the contract
 
 ```python
  | @staticmethod
- | def to_checksum_address(address: str)
+ | def to_checksum_address(address: str) -> ChecksumAddress
 ```
 
 Validate the address provided.
@@ -99,7 +99,7 @@ address, hex str
 
 ```python
  | @staticmethod
- | def get_tx_receipt(web3: Web3, tx_hash: str, timeout=20)
+ | def get_tx_receipt(web3: Web3, tx_hash: str, timeout: int = 120) -> Optional[AttributeDict]
 ```
 
 Get the receipt of a tx.
@@ -132,7 +132,7 @@ bool
 #### get\_event\_signature
 
 ```python
- | def get_event_signature(event_name)
+ | def get_event_signature(event_name: str) -> str
 ```
 
 Return signature of event definition to use in the call to eth_getLogs.
@@ -151,7 +151,7 @@ The signature reflects the event name and argument types.
 #### subscribe\_to\_event
 
 ```python
- | def subscribe_to_event(event_name: str, timeout, event_filter, callback=None, timeout_callback=None, args=None, wait=False, from_block="latest", to_block="latest")
+ | def subscribe_to_event(event_name: str, timeout: int, event_filter: Optional[dict] = None, callback: Optional[Callable] = None, timeout_callback: Optional[Callable] = None, args: Optional[list] = None, wait: bool = False, from_block: Optional[Union[str, int]] = "latest", to_block: Optional[Union[str, int]] = "latest") -> None
 ```
 
 Create a listener for the event `event_name` on this contract.
@@ -175,12 +175,10 @@ event if blocking is True and an event is received, otherwise returns None
 #### send\_transaction
 
 ```python
- | def send_transaction(fn_name: str, fn_args, from_wallet: Wallet, transact: dict = None) -> str
+ | def send_transaction(fn_name: str, fn_args: Any, from_wallet: Wallet, transact: Optional[dict] = None) -> str
 ```
 
 Calls a smart contract function.
-
-Uses either `personal_sendTransaction` (if passphrase is available) or `ether_sendTransaction`.
 
 **Arguments**:
 
@@ -196,7 +194,7 @@ hex str transaction hash
 #### get\_event\_argument\_names
 
 ```python
- | def get_event_argument_names(event_name: str)
+ | def get_event_argument_names(event_name: str) -> Tuple
 ```
 
 Finds the event arguments by `event_name`.
@@ -213,7 +211,7 @@ Finds the event arguments by `event_name`.
 
 ```python
  | @classmethod
- | def deploy(cls, web3: Web3, deployer_wallet: Wallet, *args)
+ | def deploy(cls, web3: Web3, deployer_wallet: Wallet, *args) -> str
 ```
 
 Deploy the DataTokenTemplate and DTFactory contracts to the current network.
@@ -230,7 +228,7 @@ smartcontract address of this contract
 #### get\_event\_log
 
 ```python
- | def get_event_log(event_name, from_block, to_block, filters, chunk_size=1000)
+ | def get_event_log(event_name: str, from_block: int, to_block: int, filters: Optional[Dict[str, str]], chunk_size: int = 1000) -> List[Any]
 ```
 
 Retrieves the first event log which matches the filters parameter criteria.
@@ -247,7 +245,7 @@ It processes the blocks order backwards.
 #### get\_event\_logs
 
 ```python
- | def get_event_logs(event_name, from_block, to_block, filters, chunk_size=1000)
+ | def get_event_logs(event_name: str, from_block: int, to_block: int, filters: Optional[Dict[str, str]] = None, chunk_size: int = 1000) -> List[AttributeDict]
 ```
 
 Fetches the list of event logs between the given block numbers.

@@ -3,13 +3,14 @@ title: utils
 slug: ocean_lib/web3_internal/utils
 app: ocean.py
 module: ocean_lib.web3_internal.utils
-source: https://github.com/oceanprotocol/ocean.py/blob/issue-384-improve-docs/ocean_lib/web3_internal/utils.py
-version: 0.5.26
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/utils.py
+version: 0.5.30
 ---
 #### generate\_multi\_value\_hash
 
 ```python
-def generate_multi_value_hash(types, values)
+@enforce_types
+def generate_multi_value_hash(types: List[str], values: List[str]) -> HexBytes
 ```
 
 Return the hash of the given list of values.
@@ -28,7 +29,8 @@ bytes
 #### prepare\_prefixed\_hash
 
 ```python
-def prepare_prefixed_hash(msg_hash)
+@enforce_types
+def prepare_prefixed_hash(msg_hash: str) -> HexBytes
 ```
 
 **Arguments**:
@@ -42,7 +44,8 @@ def prepare_prefixed_hash(msg_hash)
 #### to\_32byte\_hex
 
 ```python
-def to_32byte_hex(val)
+@enforce_types
+def to_32byte_hex(val: int) -> str
 ```
 
 **Arguments**:
@@ -56,7 +59,8 @@ def to_32byte_hex(val)
 #### split\_signature
 
 ```python
-def split_signature(signature)
+@enforce_types
+def split_signature(signature: Any) -> Signature
 ```
 
 **Arguments**:
@@ -84,6 +88,24 @@ Return `ganache` for every chain id that is not mapped.
 - `chain_id`: Chain id, int
 - `web3`: Web3 instance
 
+#### get\_network\_timeout
+
+```python
+@enforce_types
+def get_network_timeout(network_id: Optional[int] = None, web3: Optional[Web3] = None) -> str
+```
+
+Return the network blocking call timeout limit based on the current ethereum network id.
+Callers must pass either network_id or web3.
+
+**Arguments**:
+
+- `network_id`: Network id, int
+
+**Returns**:
+
+number of seconds, int
+
 #### get\_chain\_id
 
 ```python
@@ -105,7 +127,7 @@ Chain id, int
 
 ```python
 @enforce_types
-def ec_recover(message, signed_message)
+def ec_recover(message: str, signed_message: str) -> str
 ```
 
 This method does not prepend the message with the prefix `\x19Ethereum Signed Message:\n32`.
