@@ -16,6 +16,7 @@ python -m venv venv
 source venv/bin/activate
 # or, if Python 3.9: source venv/Scripts/activate
 
+pip install wheel
 pip install -r requirements.txt
 git submodule update --init --recursive
 
