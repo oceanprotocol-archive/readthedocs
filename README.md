@@ -54,7 +54,7 @@ git pull "$@" &&
 
    `git commit -m "message"`
 
-   `git push origin <branchnam>`
+   `git push origin <branchname>`
 
 5. Create a pull request and merge changes to `main` branch.
 
