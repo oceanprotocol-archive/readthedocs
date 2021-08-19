@@ -13,3 +13,4 @@
 [submodule "submodules/ocean-subgraph"]
 	path = submodules/ocean-subgraph
 	url = https://github.com/oceanprotocol/ocean-subgraph.git
+	branch = main
