@@ -3,7 +3,7 @@ title: ocean_services
 slug: ocean_lib/ocean/ocean_services
 app: ocean.py
 module: ocean_lib.ocean.ocean_services
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/ocean/ocean_services.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_services.py
 version: 0.7.0
 ---
 Ocean module.

@@ -3,7 +3,7 @@ title: btoken
 slug: ocean_lib/models/btoken
 app: ocean.py
 module: ocean_lib.models.btoken
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/models/btoken.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/btoken.py
 version: 0.7.0
 ---
 ## BToken

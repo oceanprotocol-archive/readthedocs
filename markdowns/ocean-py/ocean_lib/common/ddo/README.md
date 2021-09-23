@@ -3,7 +3,7 @@ title: README.md
 slug: ocean_lib/common/ddo/README.md
 app: ocean.py
 module: ocean_lib.common.ddo.README
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/common/ddo/README.md
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/ddo/README.md
 version: 0.7.0
 ---
 <!--

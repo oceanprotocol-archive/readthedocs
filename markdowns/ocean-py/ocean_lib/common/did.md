@@ -3,7 +3,7 @@ title: did
 slug: ocean_lib/common/did
 app: ocean.py
 module: ocean_lib.common.did
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/common/did.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/did.py
 version: 0.7.0
 ---
 DID Lib to do DID's and DDO's.

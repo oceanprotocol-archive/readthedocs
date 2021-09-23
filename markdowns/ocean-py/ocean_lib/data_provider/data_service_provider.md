@@ -3,7 +3,7 @@ title: data_service_provider
 slug: ocean_lib/data_provider/data_service_provider
 app: ocean.py
 module: ocean_lib.data_provider.data_service_provider
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/data_provider/data_service_provider.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/data_provider/data_service_provider.py
 version: 0.7.0
 ---
 Provider module.

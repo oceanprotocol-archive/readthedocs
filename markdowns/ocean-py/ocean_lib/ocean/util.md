@@ -3,7 +3,7 @@ title: util
 slug: ocean_lib/ocean/util
 app: ocean.py
 module: ocean_lib.ocean.util
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/ocean/util.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/util.py
 version: 0.7.0
 ---
 #### get\_web3

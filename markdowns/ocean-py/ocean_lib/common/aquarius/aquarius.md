@@ -3,7 +3,7 @@ title: aquarius
 slug: ocean_lib/common/aquarius/aquarius
 app: ocean.py
 module: ocean_lib.common.aquarius.aquarius
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/common/aquarius/aquarius.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/aquarius/aquarius.py
 version: 0.7.0
 ---
 Aquarius module.

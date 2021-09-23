@@ -3,7 +3,7 @@ title: ocean_assets
 slug: ocean_lib/ocean/ocean_assets
 app: ocean.py
 module: ocean_lib.ocean.ocean_assets
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/ocean/ocean_assets.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_assets.py
 version: 0.7.0
 ---
 Ocean module.

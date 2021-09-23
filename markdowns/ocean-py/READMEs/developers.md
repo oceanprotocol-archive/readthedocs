@@ -3,7 +3,7 @@ title: developers.md
 slug: READMEs/developers.md
 app: ocean.py
 module: READMEs.developers
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/READMEs/developers.md
+source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/developers.md
 version: 0.7.0
 ---
 <!--

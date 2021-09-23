@@ -3,7 +3,7 @@ title: aquarius_provider
 slug: ocean_lib/common/aquarius/aquarius_provider
 app: ocean.py
 module: ocean_lib.common.aquarius.aquarius_provider
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/common/aquarius/aquarius_provider.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/aquarius/aquarius_provider.py
 version: 0.7.0
 ---
 ## AquariusProvider

@@ -3,7 +3,7 @@ title: marketplace-flow.md
 slug: READMEs/marketplace-flow.md
 app: ocean.py
 module: READMEs.marketplace-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/READMEs/marketplace-flow.md
+source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/marketplace-flow.md
 version: 0.7.0
 ---
 <!--

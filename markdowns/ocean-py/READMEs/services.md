@@ -3,7 +3,7 @@ title: services.md
 slug: READMEs/services.md
 app: ocean.py
 module: READMEs.services
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/READMEs/services.md
+source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/services.md
 version: 0.7.0
 ---
 <!--

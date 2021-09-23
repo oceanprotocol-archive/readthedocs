@@ -3,7 +3,7 @@ title: transactions
 slug: ocean_lib/web3_internal/transactions
 app: ocean.py
 module: ocean_lib.web3_internal.transactions
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/web3_internal/transactions.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/transactions.py
 version: 0.7.0
 ---
 #### sign\_hash

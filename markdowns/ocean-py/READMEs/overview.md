@@ -3,7 +3,7 @@ title: overview.md
 slug: READMEs/overview.md
 app: ocean.py
 module: READMEs.overview
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/READMEs/overview.md
+source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/overview.md
 version: 0.7.0
 ---
 <!--

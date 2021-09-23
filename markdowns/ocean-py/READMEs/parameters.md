@@ -3,7 +3,7 @@ title: parameters.md
 slug: READMEs/parameters.md
 app: ocean.py
 module: READMEs.parameters
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/READMEs/parameters.md
+source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/parameters.md
 version: 0.7.0
 ---
 <!--

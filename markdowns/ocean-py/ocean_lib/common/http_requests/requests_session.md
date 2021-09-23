@@ -3,7 +3,7 @@ title: requests_session
 slug: ocean_lib/common/http_requests/requests_session
 app: ocean.py
 module: ocean_lib.common.http_requests.requests_session
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/common/http_requests/requests_session.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/http_requests/requests_session.py
 version: 0.7.0
 ---
 #### get\_requests\_session
