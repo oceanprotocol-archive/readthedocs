@@ -3,8 +3,8 @@ title: bpool
 slug: ocean_lib/models/bpool
 app: ocean.py
 module: ocean_lib.models.bpool
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/models/bpool.py
-version: 0.6.1
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/models/bpool.py
+version: 0.7.0
 ---
 ## BPool
 

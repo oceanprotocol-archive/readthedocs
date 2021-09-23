@@ -3,8 +3,8 @@ title: signature
 slug: ocean_lib/web3_internal/web3_overrides/signature
 app: ocean.py
 module: ocean_lib.web3_internal.web3_overrides.signature
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/web3_internal/web3_overrides/signature.py
-version: 0.6.1
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/web3_internal/web3_overrides/signature.py
+version: 0.7.0
 ---
 ## SignatureFix
 

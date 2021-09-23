@@ -3,8 +3,8 @@ title: overview.md
 slug: READMEs/overview.md
 app: ocean.py
 module: READMEs.overview
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/READMEs/overview.md
-version: 0.6.1
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/READMEs/overview.md
+version: 0.7.0
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation

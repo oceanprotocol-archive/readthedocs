@@ -3,8 +3,8 @@ title: service
 slug: ocean_lib/common/ddo/service
 app: ocean.py
 module: ocean_lib.common.ddo.service
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/common/ddo/service.py
-version: 0.6.1
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/common/ddo/service.py
+version: 0.7.0
 ---
 Service Class
 To handle service items in a DDO record

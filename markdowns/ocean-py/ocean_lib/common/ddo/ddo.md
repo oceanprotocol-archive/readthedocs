@@ -3,8 +3,8 @@ title: ddo
 slug: ocean_lib/common/ddo/ddo
 app: ocean.py
 module: ocean_lib.common.ddo.ddo
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/common/ddo/ddo.py
-version: 0.6.1
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/common/ddo/ddo.py
+version: 0.7.0
 ---
 ## DDO
 

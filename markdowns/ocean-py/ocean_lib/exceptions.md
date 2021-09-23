@@ -3,8 +3,8 @@ title: exceptions
 slug: ocean_lib/exceptions
 app: ocean.py
 module: ocean_lib.exceptions
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/exceptions.py
-version: 0.6.1
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/exceptions.py
+version: 0.7.0
 ---
 ## OceanEncryptAssetUrlsError
 

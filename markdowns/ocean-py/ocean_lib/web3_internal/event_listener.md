@@ -3,8 +3,8 @@ title: event_listener
 slug: ocean_lib/web3_internal/event_listener
 app: ocean.py
 module: ocean_lib.web3_internal.event_listener
-source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/web3_internal/event_listener.py
-version: 0.6.1
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-bumpversion-to-v0.7.0/ocean_lib/web3_internal/event_listener.py
+version: 0.7.0
 ---
 ## EventListener
 
