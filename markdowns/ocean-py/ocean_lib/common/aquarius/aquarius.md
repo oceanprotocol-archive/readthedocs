@@ -3,8 +3,8 @@ title: aquarius
 slug: ocean_lib/common/aquarius/aquarius
 app: ocean.py
 module: ocean_lib.common.aquarius.aquarius
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/aquarius/aquarius.py
-version: 0.5.30
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/common/aquarius/aquarius.py
+version: 0.6.1
 ---
 Aquarius module.
 Help to communicate with the metadata store.
@@ -12,7 +12,6 @@ Help to communicate with the metadata store.
 ## Aquarius
 
 ```python
-@enforce_types
 class Aquarius()
 ```
 
@@ -21,6 +20,7 @@ Aquarius wrapper to call different endpoint of aquarius component.
 #### \_\_init\_\_
 
 ```python
+ | @enforce_types
  | def __init__(aquarius_url: str) -> None
 ```
 
@@ -33,6 +33,7 @@ The Metadata class is a wrapper on the Metadata Store, which has exposed a REST 
 #### get\_service\_endpoint
 
 ```python
+ | @enforce_types
  | def get_service_endpoint() -> str
 ```
 
@@ -42,9 +43,23 @@ Retrieve the endpoint with the ddo for a given did.
 
 Return the url of the the ddo location
 
+#### get\_encrypt\_endpoint
+
+```python
+ | @enforce_types
+ | def get_encrypt_endpoint() -> str
+```
+
+Retrieve the endpoint for DDO encrption
+
+**Returns**:
+
+Return the url of the the Aquarius ddo encryption endpoint
+
 #### get\_asset\_ddo
 
 ```python
+ | @enforce_types
  | def get_asset_ddo(did: str) -> Union[DDO, dict]
 ```
 
@@ -61,6 +76,7 @@ DDO instance
 #### ddo\_exists
 
 ```python
+ | @enforce_types
  | def ddo_exists(did: str) -> bool
 ```
 
@@ -77,6 +93,7 @@ bool
 #### get\_asset\_metadata
 
 ```python
+ | @enforce_types
  | def get_asset_metadata(did: str) -> list
 ```
 
@@ -93,7 +110,8 @@ metadata key of the DDO instance
 #### text\_search
 
 ```python
- | def text_search(text: str, sort: Optional[int] = None, offset: int = 100, page: int = 1) -> list
+ | @enforce_types
+ | def text_search(text: str, sort: Optional[dict] = None, offset: Optional[int] = 100, page: Optional[int] = 1) -> list
 ```
 
 Search in aquarius using text query.
@@ -124,7 +142,8 @@ List of DDO instance
 #### query\_search
 
 ```python
- | def query_search(search_query: dict, sort: Optional[dict] = None, offset: int = 100, page: int = 1) -> list
+ | @enforce_types
+ | def query_search(search_query: dict, sort: Optional[dict] = None, offset: Optional[int] = 100, page: Optional[int] = 1) -> list
 ```
 
 Search using a query.
@@ -151,6 +170,7 @@ List of DDO instance
 #### validate\_metadata
 
 ```python
+ | @enforce_types
  | def validate_metadata(metadata: dict) -> Tuple[bool, Union[list, dict]]
 ```
 
@@ -163,4 +183,17 @@ Validate that the metadata of your ddo is valid.
 **Returns**:
 
 bool
+
+#### encrypt
+
+```python
+ | @enforce_types
+ | def encrypt(text: str) -> bytes
+```
+
+Encrypt the contents of an asset.
+
+**Returns**:
+
+Return the encrypted asset string.
 

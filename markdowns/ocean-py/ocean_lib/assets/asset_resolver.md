@@ -3,8 +3,8 @@ title: asset_resolver
 slug: ocean_lib/assets/asset_resolver
 app: ocean.py
 module: ocean_lib.assets.asset_resolver
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/assets/asset_resolver.py
-version: 0.5.30
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/assets/asset_resolver.py
+version: 0.6.1
 ---
 DID Resolver module.
 

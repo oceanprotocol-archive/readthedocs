@@ -3,8 +3,8 @@ title: contract_utils
 slug: ocean_lib/web3_internal/contract_utils
 app: ocean.py
 module: ocean_lib.web3_internal.contract_utils
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/contract_utils.py
-version: 0.5.30
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/web3_internal/contract_utils.py
+version: 0.6.1
 ---
 #### get\_contract\_definition
 

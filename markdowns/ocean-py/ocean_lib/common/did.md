@@ -3,15 +3,14 @@ title: did
 slug: ocean_lib/common/did
 app: ocean.py
 module: ocean_lib.common.did
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/did.py
-version: 0.5.30
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/common/did.py
+version: 0.6.1
 ---
 DID Lib to do DID's and DDO's.
 
 ## DID
 
 ```python
-@enforce_types
 class DID()
 ```
 
@@ -21,6 +20,7 @@ Class representing an asset DID.
 
 ```python
  | @staticmethod
+ | @enforce_types
  | def did(seed: Dict[str, str]) -> str
 ```
 

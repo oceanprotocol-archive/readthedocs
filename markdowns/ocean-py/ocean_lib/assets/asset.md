@@ -3,20 +3,20 @@ title: asset
 slug: ocean_lib/assets/asset
 app: ocean.py
 module: ocean_lib.assets.asset
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/assets/asset.py
-version: 0.5.30
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/assets/asset.py
+version: 0.6.1
 ---
 ## Asset
 
 ```python
-@enforce_types
 class Asset(DDO)
 ```
 
 #### update\_compute\_privacy
 
 ```python
- | def update_compute_privacy(trusted_algorithms: list, trusted_algo_publishers: list, allow_all: bool, allow_raw_algorithm: bool) -> None
+ | @enforce_types
+ | def update_compute_privacy(trusted_algorithms: list, trusted_algo_publishers: Optional[list], allow_all: bool, allow_raw_algorithm: bool) -> None
 ```
 
 Set the `trusted_algorithms` on the compute service.

@@ -3,8 +3,8 @@ title: datatokens-flow.md
 slug: READMEs/datatokens-flow.md
 app: ocean.py
 module: READMEs.datatokens-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/datatokens-flow.md
-version: 0.5.30
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/READMEs/datatokens-flow.md
+version: 0.6.1
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -39,12 +39,14 @@ docker system prune -a --volumes
 
 ## Create config file
 
-Create a file called `config.ini` and fill it as follows.
-
-```text
+In a console:
+```console
+#Create config.ini file and fill it with configuration info
+echo """
 [eth-network]
 network = http://127.0.0.1:8545
 address.file = ~/.ocean/ocean-contracts/artifacts/address.json
+""" > config.ini
 ```
 
 ## Install the library, set envvars
@@ -82,7 +84,7 @@ config = Config('config.ini')
 ocean = Ocean(config)
 
 print("create wallet: begin")
-wallet = Wallet(ocean.web3, private_key=private_key)
+wallet = Wallet(ocean.web3, private_key, config.block_confirmations)
 print(f"create wallet: done. Its address is {wallet.address}")
 
 print("create datatoken: begin.")

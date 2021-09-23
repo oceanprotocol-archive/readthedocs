@@ -3,19 +3,19 @@ title: bpool
 slug: ocean_lib/models/bpool
 app: ocean.py
 module: ocean_lib.models.bpool
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/bpool.py
-version: 0.5.30
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/models/bpool.py
+version: 0.6.1
 ---
 ## BPool
 
 ```python
-@enforce_types
 class BPool(BToken)
 ```
 
 #### \_\_str\_\_
 
 ```python
+ | @enforce_types
  | def __str__() -> str
 ```
 
@@ -24,6 +24,7 @@ Formats with attributes as key, value pairs.
 #### isFinalized
 
 ```python
+ | @enforce_types
  | def isFinalized() -> bool
 ```
 
@@ -37,6 +38,7 @@ fees of this pool are immutable. In the `finalized` state, `SWAP`,
 #### isBound
 
 ```python
+ | @enforce_types
  | def isBound(token_address: str) -> bool
 ```
 
@@ -51,6 +53,7 @@ tokens in the pool, which can always `exitPool`).
 #### getNumTokens
 
 ```python
+ | @enforce_types
  | def getNumTokens() -> int
 ```
 
@@ -59,6 +62,7 @@ How many tokens are bound to this pool.
 #### getCurrentTokens
 
 ```python
+ | @enforce_types
  | def getCurrentTokens() -> typing.List[str]
 ```
 
@@ -67,6 +71,7 @@ How many tokens are bound to this pool.
 #### getFinalTokens
 
 ```python
+ | @enforce_types
  | def getFinalTokens() -> typing.List[str]
 ```
 
@@ -75,6 +80,7 @@ How many tokens are bound to this pool.
 #### getNormalizedWeight
 
 ```python
+ | @enforce_types
  | def getNormalizedWeight(token_address: str) -> int
 ```
 
@@ -85,6 +91,7 @@ minus a few wei due to division precision loss)
 #### getController
 
 ```python
+ | @enforce_types
  | def getController() -> str
 ```
 
@@ -94,7 +101,8 @@ Get the "controller" address, which can call `CONTROL` functions like
 #### setSwapFee
 
 ```python
- | def setSwapFee(swapFee_base: int, from_wallet: Wallet) -> str
+ | @enforce_types
+ | def setSwapFee(swapFee: int, from_wallet: Wallet) -> str
 ```
 
 Caller must be controller. Pool must NOT be finalized.
@@ -102,6 +110,7 @@ Caller must be controller. Pool must NOT be finalized.
 #### setPublicSwap
 
 ```python
+ | @enforce_types
  | def setPublicSwap(public: bool, from_wallet: Wallet) -> str
 ```
 
@@ -112,6 +121,7 @@ public swap.
 #### finalize
 
 ```python
+ | @enforce_types
  | def finalize(from_wallet: Wallet) -> str
 ```
 
@@ -123,7 +133,8 @@ This makes the pool **finalized**. This is a one-way transition. `bind`,
 #### bind
 
 ```python
- | def bind(token_address: str, balance_base: int, weight_base: int, from_wallet: Wallet) -> str
+ | @enforce_types
+ | def bind(token_address: str, balance: int, weight: int, from_wallet: Wallet) -> str
 ```
 
 Binds the token with address `token`. Tokens will be pushed/pulled from
@@ -143,7 +154,8 @@ Possible errors:
 #### rebind
 
 ```python
- | def rebind(token_address: str, balance_base: int, weight_base: int, from_wallet: Wallet) -> str
+ | @enforce_types
+ | def rebind(token_address: str, balance: int, weight: int, from_wallet: Wallet) -> str
 ```
 
 Changes the parameters of an already-bound token. Performs the same
@@ -152,6 +164,7 @@ validation on the parameters.
 #### unbind
 
 ```python
+ | @enforce_types
  | def unbind(token_address: str, from_wallet: Wallet) -> str
 ```
 
@@ -161,6 +174,7 @@ and the remaining balance is sent to caller.
 #### gulp
 
 ```python
+ | @enforce_types
  | def gulp(token_address: str, from_wallet: Wallet) -> str
 ```
 
@@ -179,7 +193,8 @@ forever.
 #### joinPool
 
 ```python
- | def joinPool(poolAmountOut_base: int, maxAmountsIn_base: typing.List[int], from_wallet: Wallet) -> str
+ | @enforce_types
+ | def joinPool(poolAmountOut: int, maxAmountsIn: typing.List[int], from_wallet: Wallet) -> str
 ```
 
 Join the pool, getting `poolAmountOut` pool tokens. This will pull some
@@ -190,7 +205,8 @@ limited by the array of `maxAmountsIn` in the order of the pool tokens.
 #### exitPool
 
 ```python
- | def exitPool(poolAmountIn_base: int, minAmountsOut_base: typing.List[int], from_wallet: Wallet) -> str
+ | @enforce_types
+ | def exitPool(poolAmountIn: int, minAmountsOut: typing.List[int], from_wallet: Wallet) -> str
 ```
 
 Exit the pool, paying `poolAmountIn` pool tokens and getting some of
@@ -200,7 +216,8 @@ limited by the array of `minAmountsOut` in the order of the pool tokens.
 #### swapExactAmountIn
 
 ```python
- | def swapExactAmountIn(tokenIn_address: str, tokenAmountIn_base: int, tokenOut_address: str, minAmountOut_base: int, maxPrice_base: int, from_wallet: Wallet) -> str
+ | @enforce_types
+ | def swapExactAmountIn(tokenIn_address: str, tokenAmountIn: int, tokenOut_address: str, minAmountOut: int, maxPrice: int, from_wallet: Wallet) -> str
 ```
 
 Trades an exact `tokenAmountIn` of `tokenIn` taken from the caller by
@@ -218,7 +235,8 @@ guaranteed `tokenAmountOut >= minAmountOut` and
 #### joinswapExternAmountIn
 
 ```python
- | def joinswapExternAmountIn(tokenIn_address: str, tokenAmountIn_base: int, minPoolAmountOut_base: int, from_wallet: Wallet) -> str
+ | @enforce_types
+ | def joinswapExternAmountIn(tokenIn_address: str, tokenAmountIn: int, minPoolAmountOut: int, from_wallet: Wallet) -> str
 ```
 
 Pay `tokenAmountIn` of token `tokenIn` to join the pool, getting
@@ -227,7 +245,8 @@ Pay `tokenAmountIn` of token `tokenIn` to join the pool, getting
 #### joinswapPoolAmountOut
 
 ```python
- | def joinswapPoolAmountOut(tokenIn_address: str, poolAmountOut_base: int, maxAmountIn_base: int, from_wallet: Wallet) -> str
+ | @enforce_types
+ | def joinswapPoolAmountOut(tokenIn_address: str, poolAmountOut: int, maxAmountIn: int, from_wallet: Wallet) -> str
 ```
 
 Specify `poolAmountOut` pool shares that you want to get, and a token
@@ -237,7 +256,8 @@ into the pool).
 #### exitswapPoolAmountIn
 
 ```python
- | def exitswapPoolAmountIn(tokenOut_address: str, poolAmountIn_base: int, minAmountOut_base: int, from_wallet: Wallet) -> str
+ | @enforce_types
+ | def exitswapPoolAmountIn(tokenOut_address: str, poolAmountIn: int, minAmountOut: int, from_wallet: Wallet) -> str
 ```
 
 Pay `poolAmountIn` pool shares into the pool, getting `tokenAmountOut`
@@ -246,7 +266,8 @@ of the given token `tokenOut` out of the pool.
 #### exitswapExternAmountOut
 
 ```python
- | def exitswapExternAmountOut(tokenOut_address: str, tokenAmountOut_base: int, maxPoolAmountIn_base: int, from_wallet: Wallet) -> str
+ | @enforce_types
+ | def exitswapExternAmountOut(tokenOut_address: str, tokenAmountOut: int, maxPoolAmountIn: int, from_wallet: Wallet) -> str
 ```
 
 Specify `tokenAmountOut` of token `tokenOut` that you want to get out
@@ -256,63 +277,71 @@ the pool).
 #### calcSpotPrice
 
 ```python
- | def calcSpotPrice(tokenBalanceIn_base: int, tokenWeightIn_base: int, tokenBalanceOut_base: int, tokenWeightOut_base: int, swapFee_base: int) -> int
+ | @enforce_types
+ | def calcSpotPrice(tokenBalanceIn: int, tokenWeightIn: int, tokenBalanceOut: int, tokenWeightOut: int, swapFee: int) -> int
 ```
 
-Returns spotPrice_base.
+Returns spotPrice.
 
 #### calcOutGivenIn
 
 ```python
- | def calcOutGivenIn(tokenBalanceIn_base: int, tokenWeightIn_base: int, tokenBalanceOut: int, tokenWeightOut_base: int, tokenAmountIn_base: int, swapFee_base: int) -> int
+ | @enforce_types
+ | def calcOutGivenIn(tokenBalanceIn: int, tokenWeightIn: int, tokenBalanceOut: int, tokenWeightOut: int, tokenAmountIn: int, swapFee: int) -> int
 ```
 
-Returns tokenAmountOut_base.
+Returns tokenAmountOut.
 
 #### calcInGivenOut
 
 ```python
- | def calcInGivenOut(tokenBalanceIn_base: int, tokenWeightIn_base: int, tokenBalanceOut_base: int, tokenWeightOut_base: int, tokenAmountOut_base: int, swapFee_base: int) -> int
+ | @enforce_types
+ | def calcInGivenOut(tokenBalanceIn: int, tokenWeightIn: int, tokenBalanceOut: int, tokenWeightOut: int, tokenAmountOut: int, swapFee: int) -> int
 ```
 
-Returns tokenAmountIn_base.
+Returns tokenAmountIn.
 
 #### calcPoolOutGivenSingleIn
 
 ```python
- | def calcPoolOutGivenSingleIn(tokenBalanceIn_base: int, tokenWeightIn_base: int, poolSupply_base: int, totalWeight_base: int, tokenAmountIn_base: int, swapFee_base: int) -> int
+ | @enforce_types
+ | def calcPoolOutGivenSingleIn(tokenBalanceIn: int, tokenWeightIn: int, poolSupply: int, totalWeight: int, tokenAmountIn: int, swapFee: int) -> int
 ```
 
-Returns poolAmountOut_base.
+Returns poolAmountOut.
 
 #### calcSingleInGivenPoolOut
 
 ```python
- | def calcSingleInGivenPoolOut(tokenBalanceIn_base: int, tokenWeightIn_base: int, poolSupply_base: int, totalWeight_base: int, poolAmountOut_base: int, swapFee_base: int) -> int
+ | @enforce_types
+ | def calcSingleInGivenPoolOut(tokenBalanceIn: int, tokenWeightIn: int, poolSupply: int, totalWeight: int, poolAmountOut: int, swapFee: int) -> int
 ```
 
-Returns tokenAmountIn_base.
+Returns tokenAmountIn.
 
 #### calcSingleOutGivenPoolIn
 
 ```python
- | def calcSingleOutGivenPoolIn(tokenBalanceOut_base: int, tokenWeightOut_base: int, poolSupply_base: int, totalWeight_base: int, poolAmountIn_base: int, swapFee_base: int) -> int
+ | @enforce_types
+ | def calcSingleOutGivenPoolIn(tokenBalanceOut: int, tokenWeightOut: int, poolSupply: int, totalWeight: int, poolAmountIn: int, swapFee: int) -> int
 ```
 
-Returns tokenAmountOut_base.
+Returns tokenAmountOut.
 
 #### calcPoolInGivenSingleOut
 
 ```python
- | def calcPoolInGivenSingleOut(tokenBalanceOut_base: int, tokenWeightOut_base: int, poolSupply_base: int, totalWeight_base: int, tokenAmountOut_base: int, swapFee_base: int) -> int
+ | @enforce_types
+ | def calcPoolInGivenSingleOut(tokenBalanceOut: int, tokenWeightOut: int, poolSupply: int, totalWeight: int, tokenAmountOut: int, swapFee: int) -> int
 ```
 
-Returns poolAmountIn_base.
+Returns poolAmountIn.
 
 #### get\_liquidity\_logs
 
 ```python
- | def get_liquidity_logs(event_name: str, from_block: BlockIdentifier, to_block: Optional[BlockIdentifier] = None, user_address: Optional[str] = None, this_pool_only: bool = True) -> Tuple
+ | @enforce_types
+ | def get_liquidity_logs(event_name: str, from_block: int, to_block: Optional[int] = None, user_address: Optional[str] = None, this_pool_only: bool = True) -> Tuple
 ```
 
 **Arguments**:

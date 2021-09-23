@@ -3,13 +3,12 @@ title: metadata
 slug: ocean_lib/models/metadata
 app: ocean.py
 module: ocean_lib.models.metadata
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/metadata.py
-version: 0.5.30
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/models/metadata.py
+version: 0.6.1
 ---
 ## MetadataContract
 
 ```python
-@enforce_types
 class MetadataContract(ContractBase)
 ```
 
@@ -26,6 +25,7 @@ Log if event is found else None
 #### verify\_tx
 
 ```python
+ | @enforce_types
  | def verify_tx(tx_hash: str) -> bool
 ```
 
@@ -34,6 +34,7 @@ Log if event is found else None
 #### create
 
 ```python
+ | @enforce_types
  | def create(did: str, flags: bytes, data: bytes, from_wallet: Wallet) -> str
 ```
 
@@ -42,6 +43,7 @@ Log if event is found else None
 #### update
 
 ```python
+ | @enforce_types
  | def update(did: str, flags: bytes, data: bytes, from_wallet: Wallet) -> str
 ```
 

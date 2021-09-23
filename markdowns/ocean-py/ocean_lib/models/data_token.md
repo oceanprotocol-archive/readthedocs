@@ -3,20 +3,20 @@ title: data_token
 slug: ocean_lib/models/data_token
 app: ocean.py
 module: ocean_lib.models.data_token
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/data_token.py
-version: 0.5.30
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/models/data_token.py
+version: 0.6.1
 ---
 ## DataToken
 
 ```python
-@enforce_types
 class DataToken(ContractBase)
 ```
 
 #### calculate\_token\_holders
 
 ```python
- | def calculate_token_holders(from_block: Optional[BlockIdentifier], to_block: Optional[BlockIdentifier], min_token_amount: float) -> List[Tuple[str, float]]
+ | @enforce_types
+ | def calculate_token_holders(from_block: Optional[int], to_block: Optional[int], min_token_amount: int) -> List[Tuple[str, int]]
 ```
 
 Returns a list of addresses with token balances above a minimum token

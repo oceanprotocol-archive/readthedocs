@@ -3,8 +3,8 @@ title: wallets.md
 slug: READMEs/wallets.md
 app: ocean.py
 module: READMEs.wallets
-source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/wallets.md
-version: 0.5.30
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/READMEs/wallets.md
+version: 0.6.1
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -68,5 +68,7 @@ In Python, you'd create a wallet from this private key with a line like:
 import os
 import web3
 from ocean_lib.web3_internal.wallet import Wallet
-wallet = Wallet(web3, private_key=os.getenv('MY_TEST_KEY'))
+from ocean_lib.integer import Integer
+private_key = os.getenv('MY_TEST_KEY')
+wallet = Wallet(web3, private_key, 1)
 ```

@@ -3,13 +3,12 @@ title: wallet
 slug: ocean_lib/web3_internal/wallet
 app: ocean.py
 module: ocean_lib.web3_internal.wallet
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/wallet.py
-version: 0.5.30
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/web3_internal/wallet.py
+version: 0.6.1
 ---
 ## Wallet
 
 ```python
-@enforce_types
 class Wallet()
 ```
 
@@ -22,12 +21,13 @@ we can interact directly with remote network nodes without having to run a local
 node since we only send the raw transaction hash so the user info is safe.
 
 Usage:
-    1. `wallet = Wallet(ocean.web3, private_key=private_key)`
+    1. `wallet = Wallet(ocean.web3, private_key=private_key, block_confirmations=ocean.config.block_confirmations)`
 
 #### \_\_init\_\_
 
 ```python
- | def __init__(web3: Web3, private_key: str) -> None
+ | @enforce_types
+ | def __init__(web3: Web3, private_key: str, block_confirmations: Union[Integer, int]) -> None
 ```
 
 Initialises Wallet object.
@@ -35,6 +35,7 @@ Initialises Wallet object.
 #### sign
 
 ```python
+ | @enforce_types
  | def sign(msg_hash: SignableMessage) -> SignedMessage
 ```
 

@@ -3,15 +3,14 @@ title: ocean_assets
 slug: ocean_lib/ocean/ocean_assets
 app: ocean.py
 module: ocean_lib.ocean.ocean_assets
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_assets.py
-version: 0.5.30
+source: https://github.com/oceanprotocol/ocean.py/blob/issue497-update-docs/ocean_lib/ocean/ocean_assets.py
+version: 0.6.1
 ---
 Ocean module.
 
 ## OceanAssets
 
 ```python
-@enforce_types
 class OceanAssets()
 ```
 
@@ -20,6 +19,7 @@ Ocean assets class.
 #### \_\_init\_\_
 
 ```python
+ | @enforce_types
  | def __init__(config: Config, web3: Web3, data_provider: Type[DataServiceProvider], ddo_registry_address: str) -> None
 ```
 
@@ -28,7 +28,8 @@ Initialises OceanAssets object.
 #### create
 
 ```python
- | def create(metadata: dict, publisher_wallet: Wallet, service_descriptors: list = None, owner_address: str = None, data_token_address: str = None, provider_uri: str = None, dt_name: str = None, dt_symbol: str = None, dt_blob: str = None, dt_cap: float = None) -> Optional[Asset]
+ | @enforce_types
+ | def create(metadata: dict, publisher_wallet: Wallet, service_descriptors: list = None, owner_address: Optional[str] = None, data_token_address: Optional[str] = None, provider_uri: Optional[str] = None, dt_name: Optional[str] = None, dt_symbol: Optional[str] = None, dt_blob: Optional[str] = None, dt_cap: Optional[int] = None, encrypt: Optional[bool] = False) -> Optional[Asset]
 ```
 
 Register an asset on-chain.
@@ -52,7 +53,7 @@ construct the serviceEndpoint for the `access` (download) service
 - `dt_symbol`: str symbol of DataToken if creating a new one
 - `dt_blob`: str blob of DataToken if creating a new one. A `blob` is any text
 to be stored with the ERC20 DataToken contract for any purpose.
-- `dt_cap`: float
+- `dt_cap`: int amount of DataTokens to mint, denoted in wei
 
 **Returns**:
 
@@ -61,6 +62,7 @@ DDO instance
 #### resolve
 
 ```python
+ | @enforce_types
  | def resolve(did: str) -> Asset
 ```
 
@@ -77,7 +79,8 @@ Asset instance
 #### search
 
 ```python
- | def search(text: str, sort: Optional[dict] = None, offset: int = 100, page: int = 1, metadata_cache_uri: Optional[str] = None) -> list
+ | @enforce_types
+ | def search(text: str, sort: Optional[dict] = None, offset: Optional[int] = 100, page: Optional[int] = 1, metadata_cache_uri: Optional[str] = None) -> list
 ```
 
 Search an asset in oceanDB using aquarius.
@@ -98,7 +101,8 @@ List of assets that match with the query
 #### query
 
 ```python
- | def query(query: dict, sort: Optional[dict] = None, offset: int = 100, page: int = 1, metadata_cache_uri: Optional[str] = None) -> list
+ | @enforce_types
+ | def query(query: dict, sort: Optional[dict] = None, offset: Optional[int] = 100, page: Optional[int] = 1, metadata_cache_uri: Optional[str] = None) -> list
 ```
 
 Search an asset in oceanDB using search query.
@@ -120,6 +124,7 @@ List of assets that match with the query.
 #### order
 
 ```python
+ | @enforce_types
  | def order(did: str, consumer_address: str, service_index: Optional[int] = None, service_type: Optional[str] = None, userdata: Optional[dict] = None) -> OrderRequirements
 ```
 
@@ -141,7 +146,8 @@ OrderRequirements instance -- named tuple (amount, data_token_address, receiver_
 
 ```python
  | @staticmethod
- | def pay_for_service(web3: Web3, amount: float, token_address: str, did: str, service_id: int, fee_receiver: str, from_wallet: Wallet, consumer: str = None) -> str
+ | @enforce_types
+ | def pay_for_service(web3: Web3, amount: int, token_address: str, did: str, service_id: int, fee_receiver: str, from_wallet: Wallet, consumer: str) -> str
 ```
 
 Submits the payment for chosen service in DataTokens.
@@ -154,7 +160,7 @@ Submits the payment for chosen service in DataTokens.
 - `service_id`: 
 - `fee_receiver`: 
 - `from_wallet`: Wallet instance
-- `consumer`: str the address of consumer of the service, defaults to the payer (the `from_wallet` address)
+- `consumer`: str the address of consumer of the service
 
 **Returns**:
 
@@ -163,7 +169,8 @@ hex str id of transfer transaction
 #### download
 
 ```python
- | def download(did: str, service_index: int, consumer_wallet: Wallet, order_tx_id: str, destination: str, index: Optional[int] = None, userdata: Optional[dict] = None) -> str
+ | @enforce_types
+ | def download(did: str, service_index: int, consumer_wallet: Wallet, order_tx_id: str, destination: Union[str, Path], index: Optional[int] = None, userdata: Optional[dict] = None) -> str
 ```
 
 Consume the asset data.
@@ -191,6 +198,7 @@ str path to saved files
 #### validate
 
 ```python
+ | @enforce_types
  | def validate(metadata: dict) -> Tuple[bool, list]
 ```
 
@@ -207,6 +215,7 @@ Validate that the metadata is ok to be stored in aquarius.
 #### owner
 
 ```python
+ | @enforce_types
  | def owner(did: str) -> str
 ```
 
@@ -223,6 +232,7 @@ the ethereum address of the owner/publisher of given asset did, hex-str
 #### owner\_assets
 
 ```python
+ | @enforce_types
  | def owner_assets(owner_address: str) -> list
 ```
 
