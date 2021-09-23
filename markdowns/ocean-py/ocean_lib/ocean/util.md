@@ -4,8 +4,24 @@ slug: ocean_lib/ocean/util
 app: ocean.py
 module: ocean_lib.ocean.util
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/util.py
-version: 0.5.30
+version: 0.7.0
 ---
+#### get\_web3
+
+```python
+@enforce_types
+def get_web3(network_url: str) -> Web3
+```
+
+Return a web3 instance connected via the given network_url.
+
+Adds POA middleware when connecting to the Rinkeby Testnet.
+
+A note about using the `rinkeby` testnet:
+Web3 py has an issue when making some requests to `rinkeby`
+- the issue is described here: https://github.com/ethereum/web3.py/issues/549
+- and the fix is here: https://web3py.readthedocs.io/en/latest/middleware.html#geth-style-proof-of-authority
+
 #### get\_web3\_connection\_provider
 
 ```python
@@ -24,36 +40,13 @@ Make sure the `infura` url for websocket connection has the following format
 wss://rinkeby.infura.io/ws/v3/357f2fe737db4304bd2f7285c5602d0d
 Note the `/ws/` in the middle and the `wss` protocol in the beginning.
 
-A note about using the `rinkeby` testnet:
-Web3 py has an issue when making some requests to `rinkeby`
-- the issue is described here: https://github.com/ethereum/web3.py/issues/549
-- and the fix is here: https://web3py.readthedocs.io/en/latest/middleware.html#geth-style-proof-of-authority
-
 **Arguments**:
 
 - `network_url`: str
 
 **Returns**:
 
-provider : HTTPProvider
-
-#### to\_base
-
-```python
-@enforce_types
-def to_base(amt: float, dec: int) -> int
-```
-
-Returns value in e.g. wei (taking e.g. ETH as input).
-
-#### from\_base
-
-```python
-@enforce_types
-def from_base(num_base: int, dec: int) -> float
-```
-
-Returns value in e.g. ETH (taking e.g. wei as input).
+provider : Union[CustomHTTPProvider, WebsocketProvider]
 
 #### get\_dtfactory\_address
 

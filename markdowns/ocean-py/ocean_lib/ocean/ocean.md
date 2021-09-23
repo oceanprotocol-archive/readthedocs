@@ -4,14 +4,13 @@ slug: ocean_lib/ocean/ocean
 app: ocean.py
 module: ocean_lib.ocean.ocean
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean.py
-version: 0.5.30
+version: 0.7.0
 ---
 Ocean module.
 
 ## Ocean
 
 ```python
-@enforce_types
 class Ocean()
 ```
 
@@ -20,6 +19,7 @@ The Ocean class is the entry point into Ocean Protocol.
 #### \_\_init\_\_
 
 ```python
+ | @enforce_types
  | def __init__(config: Union[Dict, Config], data_provider: Optional[Type] = None) -> None
 ```
 
@@ -53,7 +53,8 @@ An instance of Ocean is parameterized by a `Config` instance.
 #### create\_data\_token
 
 ```python
- | def create_data_token(name: str, symbol: str, from_wallet: Wallet, cap: float = DataToken.DEFAULT_CAP, blob: str = "") -> DataToken
+ | @enforce_types
+ | def create_data_token(name: str, symbol: str, from_wallet: Wallet, cap: int = DataToken.DEFAULT_CAP, blob: str = "") -> DataToken
 ```
 
 This method deploys a datatoken contract on the blockchain.
@@ -62,7 +63,7 @@ Usage:
 ```python
 config = Config('config.ini')
 ocean = Ocean(config)
-wallet = Wallet(ocean.web3, private_key=private_key)
+wallet = Wallet(ocean.web3, private_key=private_key, block_confirmations=config.block_confirmations)
 datatoken = ocean.create_data_token("Dataset name", "dtsymbol", from_wallet=wallet)
 ```
 
@@ -71,7 +72,7 @@ datatoken = ocean.create_data_token("Dataset name", "dtsymbol", from_wallet=wall
 - `name`: Datatoken name, str
 - `symbol`: Datatoken symbol, str
 - `from_wallet`: wallet instance, wallet
-- `cap`: float
+- `cap`: Amount of data tokens to create, denoted in wei, int
 
 **Returns**:
 
@@ -80,6 +81,7 @@ datatoken = ocean.create_data_token("Dataset name", "dtsymbol", from_wallet=wall
 #### get\_data\_token
 
 ```python
+ | @enforce_types
  | def get_data_token(token_address: str) -> DataToken
 ```
 
@@ -94,6 +96,7 @@ datatoken = ocean.create_data_token("Dataset name", "dtsymbol", from_wallet=wall
 #### get\_dtfactory
 
 ```python
+ | @enforce_types
  | def get_dtfactory(dtfactory_address: str = "") -> DTFactory
 ```
 
@@ -108,7 +111,8 @@ datatoken = ocean.create_data_token("Dataset name", "dtsymbol", from_wallet=wall
 #### get\_user\_orders
 
 ```python
- | def get_user_orders(address: str, datatoken: Optional[str] = None, service_id: int = None) -> List[Order]
+ | @enforce_types
+ | def get_user_orders(address: str, datatoken: Optional[str] = None, service_id: Optional[int] = None) -> List[Order]
 ```
 
 **Returns**:

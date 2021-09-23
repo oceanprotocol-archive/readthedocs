@@ -4,12 +4,11 @@ slug: ocean_lib/ocean/ocean_compute
 app: ocean.py
 module: ocean_lib.ocean.ocean_compute
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_compute.py
-version: 0.5.30
+version: 0.7.0
 ---
 ## OceanCompute
 
 ```python
-@enforce_types
 class OceanCompute()
 ```
 
@@ -18,6 +17,7 @@ Ocean assets class.
 #### \_\_init\_\_
 
 ```python
+ | @enforce_types
  | def __init__(config: Union[Config, Dict], data_provider: Type[DataServiceProvider]) -> None
 ```
 
@@ -27,6 +27,7 @@ Initialises OceanCompute class.
 
 ```python
  | @staticmethod
+ | @enforce_types
  | def build_cluster_attributes(cluster_type: str, url: str) -> Dict[str, str]
 ```
 
@@ -45,6 +46,7 @@ Builds cluster attributes.
 
 ```python
  | @staticmethod
+ | @enforce_types
  | def build_container_attributes(image: str, tag: str, entrypoint: str) -> Dict[str, str]
 ```
 
@@ -64,6 +66,7 @@ Builds container attributes.
 
 ```python
  | @staticmethod
+ | @enforce_types
  | def build_server_attributes(server_id: str, server_type: str, cpu: int, gpu: int, memory: str, disk: str, max_run_time: int) -> Dict[str, Union[int, str]]
 ```
 
@@ -108,7 +111,8 @@ Return a dict with attributes describing the details of compute resources in thi
 
 ```python
  | @staticmethod
- | def build_service_privacy_attributes(trusted_algorithms: list = None, trusted_algorithm_publishers: list = None, metadata_cache_uri: str = None, allow_raw_algorithm: bool = False, allow_all_published_algorithms: bool = False, allow_network_access: bool = False) -> Dict[str, Any]
+ | @enforce_types
+ | def build_service_privacy_attributes(trusted_algorithms: Optional[list] = None, trusted_algorithm_publishers: Optional[list] = None, metadata_cache_uri: Optional[str] = None, allow_raw_algorithm: Optional[bool] = False, allow_all_published_algorithms: Optional[bool] = False, allow_network_access: Optional[bool] = False) -> Dict[str, Any]
 ```
 
 **Arguments**:
@@ -129,7 +133,8 @@ dict
 
 ```python
  | @staticmethod
- | def create_compute_service_attributes(timeout: int, creator: str, date_published: str, provider_attributes: dict = None, privacy_attributes: dict = None) -> Dict[str, Any]
+ | @enforce_types
+ | def create_compute_service_attributes(timeout: int, creator: str, date_published: str, provider_attributes: Optional[dict] = None, privacy_attributes: Optional[dict] = None) -> Dict[str, Any]
 ```
 
 Creates compute service attributes.
@@ -150,7 +155,7 @@ dict with `main` key and value contain the minimum required attributes of a comp
 
 ```python
  | @staticmethod
- | def check_output_dict(output_def: Dict[str, Any], consumer_address: str, data_provider: DataServiceProvider, config: Config) -> Dict[str, Any]
+ | def check_output_dict(output_def: Optional[Dict[str, Any]], consumer_address: str, data_provider: DataServiceProvider, config: Config) -> Dict[str, Any]
 ```
 
 Validate the `output_def` dict and fills in defaults for missing values.
@@ -169,6 +174,7 @@ dict a valid `output_def` object
 #### create\_compute\_service\_descriptor
 
 ```python
+ | @enforce_types
  | def create_compute_service_descriptor(attributes: dict) -> ServiceDescriptor
 ```
 
@@ -182,7 +188,8 @@ and having the required attributes and service endpoint.
 #### start
 
 ```python
- | def start(input_datasets: list, consumer_wallet: Wallet, nonce: Optional[int] = None, algorithm_did: Optional[str] = None, algorithm_meta: Optional[AlgorithmMetadata] = None, algorithm_tx_id: str = None, algorithm_data_token: str = None, output: dict = None, job_id: str = None, algouserdata: Optional[dict] = None) -> str
+ | @enforce_types
+ | def start(input_datasets: list, consumer_wallet: Wallet, nonce: Optional[int] = None, algorithm_did: Optional[str] = None, algorithm_meta: Optional[AlgorithmMetadata] = None, algorithm_tx_id: Optional[str] = None, algorithm_data_token: Optional[str] = None, output: Optional[dict] = None, job_id: Optional[str] = None, algouserdata: Optional[dict] = None) -> str
 ```
 
 Start a remote compute job on the asset files.
@@ -213,6 +220,7 @@ str -- id of compute job being executed
 #### status
 
 ```python
+ | @enforce_types
  | def status(did: str, job_id: str, wallet: Wallet) -> Dict[str, Any]
 ```
 
@@ -231,6 +239,7 @@ dict the status for an existing compute job, keys are (ok, status, statusText)
 #### result
 
 ```python
+ | @enforce_types
  | def result(did: str, job_id: str, wallet: Wallet) -> Dict[str, Any]
 ```
 
@@ -249,6 +258,7 @@ dict the results/logs urls for an existing compute job, keys are (did, urls, log
 #### stop
 
 ```python
+ | @enforce_types
  | def stop(did: str, job_id: str, wallet: Wallet) -> Dict[str, Any]
 ```
 

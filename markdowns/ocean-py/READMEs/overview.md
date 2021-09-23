@@ -4,7 +4,7 @@ slug: READMEs/overview.md
 app: ocean.py
 module: READMEs.overview
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/overview.md
-version: 0.5.30
+version: 0.7.0
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -18,7 +18,7 @@ quick overview of the main functions and submodules:
 from ocean_lib.ocean.ocean import Ocean
 from ocean_lib.config import Config
 
-config = Config('config_local.ini')
+config = Config('config.ini')
 
 # Ocean instance: create/get datatoken, get dtfactory, user orders (history)
 ocean = Ocean(config)

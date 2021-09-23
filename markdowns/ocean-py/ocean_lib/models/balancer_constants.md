@@ -4,7 +4,7 @@ slug: ocean_lib/models/balancer_constants
 app: ocean.py
 module: ocean_lib.models.balancer_constants
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/balancer_constants.py
-version: 0.5.30
+version: 0.7.0
 ---
 Contains `Balancer` related constants for
 - `GASLIMIT_BFACTORY_NEWBPOOL`
@@ -12,12 +12,8 @@ Contains `Balancer` related constants for
 - `BCONST_MIN_WEIGHT`
 - `BCONST_MAX_WEIGHT`
 - `BCONST_MAX_TOTAL_WEIGHT`
-- `BCONST_MAX_TOTAL_WEIGHT`
 - `BCONST_MIN_BALANCE`
 - `INIT_WEIGHT_DT`
 - `INIT_WEIGHT_OCEAN`
-- `INIT_WEIGHT_DT_BASE`
-- `INIT_WEIGHT_OCEAN_BASE`
 - `DEFAULT_SWAP_FEE`
-- `DEFAULT_SWAP_FEE_BASE`
 

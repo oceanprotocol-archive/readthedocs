@@ -4,7 +4,7 @@ slug: ocean_lib/config
 app: ocean.py
 module: ocean_lib.config
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/config.py
-version: 0.5.30
+version: 0.7.0
 ---
 ## Config
 
@@ -39,6 +39,16 @@ provider.url = http://localhost:8030
 - `options_dict`: Python dict with the config, dict.
 - `kwargs`: Additional args. If you pass text, you have to pass the plain text configuration.
 
+#### block\_confirmations
+
+```python
+ | @property
+ | @enforce_types
+ | def block_confirmations() -> Integer
+```
+
+Block confirmations.
+
 #### network\_url
 
 ```python
@@ -48,6 +58,16 @@ provider.url = http://localhost:8030
 ```
 
 URL of the ethereum network. (e.g.): http://mynetwork:8545.
+
+#### network\_name
+
+```python
+ | @property
+ | @enforce_types
+ | def network_name() -> str
+```
+
+Name of the ethereum network. (e.g.): ganache.
 
 #### chain\_id
 

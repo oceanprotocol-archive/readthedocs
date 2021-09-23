@@ -4,12 +4,11 @@ slug: ocean_lib/common/agreements/service_agreement
 app: ocean.py
 module: ocean_lib.common.agreements.service_agreement
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/agreements/service_agreement.py
-version: 0.5.30
+version: 0.7.0
 ---
 ## ServiceAgreement
 
 ```python
-@enforce_types
 class ServiceAgreement(Service)
 ```
 
@@ -18,6 +17,7 @@ Class representing a Service Agreement.
 #### \_\_init\_\_
 
 ```python
+ | @enforce_types
  | def __init__(attributes: Optional[dict], service_endpoint: Optional[str], service_type: str = None, service_index: Optional[int] = None, other_values: Optional[dict] = None)
 ```
 
@@ -33,6 +33,7 @@ include `main` and optionally the `additionalInformation` section
 
 ```python
  | @classmethod
+ | @enforce_types
  | def from_json(cls, service_dict: dict) -> "ServiceAgreement"
 ```
 
@@ -48,6 +49,7 @@ include `main` and optionally the `additionalInformation` section
 
 ```python
  | @classmethod
+ | @enforce_types
  | def from_ddo(cls, service_type: str, ddo: object) -> "ServiceAgreement"
 ```
 
@@ -63,6 +65,7 @@ include `main` and optionally the `additionalInformation` section
 #### get\_cost
 
 ```python
+ | @enforce_types
  | def get_cost() -> float
 ```
 

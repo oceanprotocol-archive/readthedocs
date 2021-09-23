@@ -4,12 +4,11 @@ slug: ocean_lib/common/agreements/service_factory
 app: ocean.py
 module: ocean_lib.common.agreements.service_factory
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/agreements/service_factory.py
-version: 0.5.30
+version: 0.7.0
 ---
 ## ServiceDescriptor
 
 ```python
-@enforce_types
 class ServiceDescriptor(object)
 ```
 
@@ -20,6 +19,7 @@ item is a dict of parameters and values required by the service
 
 ```python
  | @staticmethod
+ | @enforce_types
  | def metadata_service_descriptor(attributes: dict, service_endpoint: str) -> tuple
 ```
 
@@ -38,6 +38,7 @@ Service descriptor.
 
 ```python
  | @staticmethod
+ | @enforce_types
  | def authorization_service_descriptor(service_endpoint: str) -> tuple
 ```
 
@@ -55,6 +56,7 @@ Service descriptor.
 
 ```python
  | @staticmethod
+ | @enforce_types
  | def access_service_descriptor(attributes: dict, service_endpoint: str) -> tuple
 ```
 
@@ -74,6 +76,7 @@ Service descriptor.
 
 ```python
  | @staticmethod
+ | @enforce_types
  | def compute_service_descriptor(attributes: dict, service_endpoint: str) -> tuple
 ```
 
@@ -92,7 +95,6 @@ Service descriptor.
 ## ServiceFactory
 
 ```python
-@enforce_types
 class ServiceFactory(object)
 ```
 
@@ -102,7 +104,8 @@ Factory class to create Services.
 
 ```python
  | @staticmethod
- | def build_services(service_descriptors: list) -> list
+ | @enforce_types
+ | def build_services(service_descriptors: Sequence) -> list
 ```
 
 Build a list of services.
@@ -121,7 +124,8 @@ List of Services
 
 ```python
  | @staticmethod
- | def build_service(service_descriptor: list) -> Service
+ | @enforce_types
+ | def build_service(service_descriptor: Sequence) -> Service
 ```
 
 Build a service.
@@ -139,6 +143,7 @@ Service
 
 ```python
  | @staticmethod
+ | @enforce_types
  | def build_metadata_service(metadata: dict, service_endpoint: str) -> Service
 ```
 
@@ -157,6 +162,7 @@ Service
 
 ```python
  | @staticmethod
+ | @enforce_types
  | def build_authorization_service(attributes: dict, service_endpoint: str) -> Service
 ```
 
@@ -175,6 +181,7 @@ Service
 
 ```python
  | @staticmethod
+ | @enforce_types
  | def build_access_service(attributes: dict, service_endpoint: str) -> ServiceAgreement
 ```
 
@@ -193,6 +200,7 @@ ServiceAgreement instance
 
 ```python
  | @staticmethod
+ | @enforce_types
  | def build_compute_service(attributes: dict, service_endpoint: str) -> ServiceAgreement
 ```
 

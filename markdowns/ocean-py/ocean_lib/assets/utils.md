@@ -4,7 +4,7 @@ slug: ocean_lib/assets/utils
 app: ocean.py
 module: ocean_lib.assets.utils
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/assets/utils.py
-version: 0.5.30
+version: 0.7.0
 ---
 #### create\_checksum
 
@@ -39,7 +39,7 @@ Object as follows:
 
 ```python
 @enforce_types
-def create_publisher_trusted_algorithms(dids: list, metadata_cache_uri: str) -> list
+def create_publisher_trusted_algorithms(ddos_or_dids: list, metadata_cache_uri: str) -> list
 ```
 
 **Returns**:
