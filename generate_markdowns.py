@@ -67,20 +67,20 @@ def get_version_for_python(path: str):
             return version
 
 
-def get_branch(path: str):
+def get_tag(path: str):
     return (
-        subprocess.check_output(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=path)
+        subprocess.check_output(["git", "describe", "--tags", "--always"], cwd=path)
         .decode("utf-8")
         .rstrip()
     )
 
 
-def generate_source_url(source: str, branch: str, module: List[str], extenstion: str):
+def generate_source_url(source: str, tag: str, module: List[str], extenstion: str):
 
     url = (
         source
         + "/blob/"
-        + branch
+        + tag
         + "/"
         + "/".join(module.split("."))
         + "."
@@ -128,7 +128,7 @@ def generate_additional_docs_from_directory(
     version,
 ):
     ignore_files = get_doc_ignore_file_list(doc_ignore_file_path)
-    branch = get_branch(path)
+    tag = get_tag(path)
 
     for additional_directory in additional_directories:
         directory_path = additional_directory["path"]
@@ -167,7 +167,7 @@ def generate_additional_docs_from_directory(
 
             out_file = os.path.join(out_dir, markdown_file_path.name)
 
-            url = generate_source_url(source, branch, module, "md")
+            url = generate_source_url(source, tag, module, "md")
             slug = "/".join(module.split(".")) + ".md"
             prepend_gatsby_header(
                 out_file, markdown_file_path.name, slug, app, module, url, version
@@ -266,7 +266,7 @@ def generate_markdowns(
     if os.path.isdir(output_dir):
         shutil.rmtree(output_dir)
 
-    branch = get_branch(path)
+    tag = get_tag(path)
 
     for i in tqdm(range(len(markdowns_to_generate))):
 
@@ -281,7 +281,7 @@ def generate_markdowns(
         file_path = os.path.join(out_d, file_name)
         slug = "/".join(markdowns_to_generate[i].split("."))
 
-        url = generate_source_url(source, branch, slug, "py")
+        url = generate_source_url(source, tag, slug, "py")
 
         prepend_gatsby_header(
             file_path, title, slug, app, markdowns_to_generate[i], url, version
