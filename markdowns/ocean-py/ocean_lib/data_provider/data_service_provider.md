@@ -4,7 +4,7 @@ slug: ocean_lib/data_provider/data_service_provider
 app: ocean.py
 module: ocean_lib.data_provider.data_service_provider
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/data_provider/data_service_provider.py
-version: 0.7.0
+version: 0.8.1
 ---
 Provider module.
 
@@ -199,6 +199,26 @@ status for each job_id that exist for the did
 
 dict of job_id to result urls. When job_id is not provided, this will return
 result for each job_id that exist for the did
+
+#### compute\_job\_result\_file
+
+```python
+ | @staticmethod
+ | @enforce_types
+ | def compute_job_result_file(job_id: str, index: int, service_endpoint: str, consumer_address: str, signature: str) -> Dict[str, Any]
+```
+
+**Arguments**:
+
+- `job_id`: str id of compute job that was returned from `start_compute_job`
+- `index`: int compute result index
+- `service_endpoint`: str url of the provider service endpoint for compute service
+- `consumer_address`: hex str the ethereum address of the consumer's account
+- `signature`: hex str signed message to allow the provider to authorize the consumer
+
+**Returns**:
+
+dict of job_id to result urls.
 
 #### get\_url
 

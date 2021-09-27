@@ -4,7 +4,7 @@ slug: READMEs/marketplace-flow.md
 app: ocean.py
 module: READMEs.marketplace-flow
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/marketplace-flow.md
-version: 0.7.0
+version: 0.8.1
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -194,10 +194,11 @@ assert token_address == asset.data_token_address
 
 did = asset.did  # did contains the datatoken address
 print(f"did = '{did}'")
+```
 
 In order to encrypt the entire asset, when using a private market or metadata cache, use the encrypt keyword:
 `asset = ocean.assets.create(..., encrypt=True)`
-
+```python
 #Mint the datatokens
 from ocean_lib.web3_internal.currency import to_wei
 data_token.mint(alice_wallet.address, to_wei(100), alice_wallet)
@@ -277,7 +278,8 @@ print(f"Bob has {pretty_ether_and_wei(data_token.balanceOf(bob_wallet.address), 
 assert data_token.balanceOf(bob_wallet.address) >= to_wei(1), "Bob didn't get 1.0 datatokens"
 
 #Bob points to the service object
-fee_receiver = None # could also be market address
+from ocean_lib.web3_internal.constants import ZERO_ADDRESS
+fee_receiver = ZERO_ADDRESS # could also be market address
 from ocean_lib.common.agreements.service_types import ServiceTypes
 asset = ocean.assets.resolve(did)
 service = asset.get_service(ServiceTypes.ASSET_ACCESS)

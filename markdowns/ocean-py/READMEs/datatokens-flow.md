@@ -4,7 +4,7 @@ slug: READMEs/datatokens-flow.md
 app: ocean.py
 module: READMEs.datatokens-flow
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/datatokens-flow.md
-version: 0.7.0
+version: 0.8.1
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation

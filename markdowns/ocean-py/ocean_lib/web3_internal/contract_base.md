@@ -4,7 +4,7 @@ slug: ocean_lib/web3_internal/contract_base
 app: ocean.py
 module: ocean_lib.web3_internal.contract_base
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/contract_base.py
-version: 0.7.0
+version: 0.8.1
 ---
 All contracts inherit from `ContractBase` class.
 

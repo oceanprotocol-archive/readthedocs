@@ -4,7 +4,7 @@ slug: READMEs/release-process.md
 app: ocean.py
 module: READMEs.release-process
 source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/release-process.md
-version: 0.7.0
+version: 0.8.1
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -58,25 +58,16 @@ This doesn't actually affect the pip release of the following steps. And if you'
   - Describe the main changes. (In the future, these will come from the changelog.)
   - Click "Publish release".
 
+### Numbering versions
+Ocean.py is still in v3. We now use a marketing version numbering convention, where non-breaking changes should be patches, and breaking changes warrant minor releases.
+Once we integrate the v4 contracts, Ocean.py will be fully SEMVER compatible.
+
 ## Step 4: Verifiy
 
-- Travis will detect the release (a new tag) and run the deployment section of [.travis.yml](.travis.yml), i.e.
-
-  ```yaml
-  deploy:
-  provider: pypi
-  distributions: sdist bdist_wheel
-  user: ${PYPI_USER}
-  password: ${PYPI_PASSWORD}
-  on:
-    tags: true
-    repo: oceanprotocol/ocean.py
-    python: 3.8
-  ```
-
-- Go to [ocean.py Travis page](https://travis-ci.com/github/oceanprotocol/ocean.py) and check the Travis job. It should deploy a new release to PyPI.
+- GitHub Actions will detect the release (a new tag) and run the deployment and publishing to PyPi.
 
 - Check PyPI for the new release at <https://pypi.org/project/ocean-lib/>
 
 - Go through the [simple quickstart](datatokens-flow.md), ensure it works.
+
 - Go through the [marketplace quickstart](marketplace-flow.md), ensure it works.

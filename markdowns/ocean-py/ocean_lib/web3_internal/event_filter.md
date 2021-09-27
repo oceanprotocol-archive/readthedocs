@@ -4,7 +4,7 @@ slug: ocean_lib/web3_internal/event_filter
 app: ocean.py
 module: ocean_lib.web3_internal.event_filter
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/event_filter.py
-version: 0.7.0
+version: 0.8.1
 ---
 ## EventFilter
 

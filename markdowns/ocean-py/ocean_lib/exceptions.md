@@ -4,7 +4,7 @@ slug: ocean_lib/exceptions
 app: ocean.py
 module: ocean_lib.exceptions
 source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/exceptions.py
-version: 0.7.0
+version: 0.8.1
 ---
 ## OceanEncryptAssetUrlsError
 
