@@ -3,7 +3,7 @@ title: README.md
 slug: README.md
 app: ocean.py
 module: README
-source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/README.md
+source: https://github.com/oceanprotocol/ocean.py/blob/main/README.md
 version: 0.8.1
 ---
 <!--
@@ -49,6 +49,7 @@ This is in beta state and you can expect running into problems. If you run into 
 - [🏄 Quickstart](#-quickstart)
   - [Simple Flow](#simple-flow)
   - [Marketplace Flow](#marketplace-flow)
+  - [Compute-to-Data Flow](#compute-to-data-flow)
   - [Learn more](#learn-more)
 - [🦑 Development](#-development)
 - [🏛 License](#-license)
@@ -60,6 +61,9 @@ This is in beta state and you can expect running into problems. If you run into 
 pip install wheel
 pip install ocean-lib
 ```
+⚠️ For Mac users, if you encounter an issue with "Unsupported Architecture", see [this issue](https://github.com/oceanprotocol/ocean.py/issues/486) for an explanation and run the installation command with ARCHFLAGS set, like so:
+
+`ARCHFLAGS="-arch x86_64" pip install ocean-lib`
 
 ## 🏄 Quickstart
 
@@ -71,9 +75,15 @@ This stripped-down flow shows the essence of Ocean: simply creating a datatoken.
 
 ### Marketplace flow
 
-This batteries-included flow includes metadata and datatoken pool.
+In this flow, a data asset is posted for sale in a marketplace, and purchased. It includes metadata and a datatoken pool.
 
 [Go to marketplace flow](READMEs/marketplace-flow.md)
+
+### Compute-to-Data flow
+
+This flow uses Ocean Compute-to-Data (c2d) to compute results from a dataset that never leaves the premises.
+
+[Go to c2d flow](READMEs/c2d-flow.md)
 
 ### Learn more
 

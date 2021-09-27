@@ -3,7 +3,7 @@ title: ocean_compute
 slug: ocean_lib/ocean/ocean_compute
 app: ocean.py
 module: ocean_lib.ocean.ocean_compute
-source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/ocean/ocean_compute.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_compute.py
 version: 0.8.1
 ---
 ## OceanCompute

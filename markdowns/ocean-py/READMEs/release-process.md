@@ -3,7 +3,7 @@ title: release-process.md
 slug: READMEs/release-process.md
 app: ocean.py
 module: READMEs.release-process
-source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/READMEs/release-process.md
+source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/release-process.md
 version: 0.8.1
 ---
 <!--

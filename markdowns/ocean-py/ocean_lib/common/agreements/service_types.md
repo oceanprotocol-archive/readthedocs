@@ -3,7 +3,7 @@ title: service_types
 slug: ocean_lib/common/agreements/service_types
 app: ocean.py
 module: ocean_lib.common.agreements.service_types
-source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/common/agreements/service_types.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/agreements/service_types.py
 version: 0.8.1
 ---
 Agreements module.

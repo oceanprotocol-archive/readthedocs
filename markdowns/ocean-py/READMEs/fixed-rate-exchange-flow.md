@@ -3,7 +3,7 @@ title: fixed-rate-exchange-flow.md
 slug: READMEs/fixed-rate-exchange-flow.md
 app: ocean.py
 module: READMEs.fixed-rate-exchange-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/READMEs/fixed-rate-exchange-flow.md
+source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/fixed-rate-exchange-flow.md
 version: 0.8.1
 ---
 <!--

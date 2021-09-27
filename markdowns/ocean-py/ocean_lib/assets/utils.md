@@ -3,7 +3,7 @@ title: utils
 slug: ocean_lib/assets/utils
 app: ocean.py
 module: ocean_lib.assets.utils
-source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/assets/utils.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/assets/utils.py
 version: 0.8.1
 ---
 #### create\_checksum

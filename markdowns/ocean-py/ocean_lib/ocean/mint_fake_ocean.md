@@ -3,7 +3,7 @@ title: mint_fake_ocean
 slug: ocean_lib/ocean/mint_fake_ocean
 app: ocean.py
 module: ocean_lib.ocean.mint_fake_ocean
-source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/ocean/mint_fake_ocean.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/mint_fake_ocean.py
 version: 0.8.1
 ---
 #### mint\_fake\_OCEAN

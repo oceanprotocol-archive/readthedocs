@@ -3,7 +3,7 @@ title: dispenser-flow.md
 slug: READMEs/dispenser-flow.md
 app: ocean.py
 module: READMEs.dispenser-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/READMEs/dispenser-flow.md
+source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/dispenser-flow.md
 version: 0.8.1
 ---
 <!--

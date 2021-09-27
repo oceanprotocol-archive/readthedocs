@@ -3,7 +3,7 @@ title: currency
 slug: ocean_lib/web3_internal/currency
 app: ocean.py
 module: ocean_lib.web3_internal.currency
-source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/web3_internal/currency.py
+source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/currency.py
 version: 0.8.1
 ---
 #### ETHEREUM\_DECIMAL\_CONTEXT
