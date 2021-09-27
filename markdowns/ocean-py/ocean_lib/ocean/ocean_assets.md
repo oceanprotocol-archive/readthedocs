@@ -3,8 +3,8 @@ title: ocean_assets
 slug: ocean_lib/ocean/ocean_assets
 app: ocean.py
 module: ocean_lib.ocean.ocean_assets
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_assets.py
-version: 0.7.0
+source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/ocean/ocean_assets.py
+version: 0.8.1
 ---
 Ocean module.
 
@@ -80,7 +80,7 @@ Asset instance
 
 ```python
  | @enforce_types
- | def search(text: str, sort: Optional[dict] = None, offset: Optional[int] = 100, page: Optional[int] = 1, metadata_cache_uri: Optional[str] = None) -> list
+ | def search(text: str, metadata_cache_uri: Optional[str] = None) -> list
 ```
 
 Search an asset in oceanDB using aquarius.
@@ -88,9 +88,6 @@ Search an asset in oceanDB using aquarius.
 **Arguments**:
 
 - `text`: String with the value that you are searching
-- `sort`: Dictionary to choose order main in some value
-- `offset`: Number of elements shows by page
-- `page`: Page number
 - `metadata_cache_uri`: Url of the aquarius where you want to search. If there is not
 provided take the default
 
@@ -102,7 +99,7 @@ List of assets that match with the query
 
 ```python
  | @enforce_types
- | def query(query: dict, sort: Optional[dict] = None, offset: Optional[int] = 100, page: Optional[int] = 1, metadata_cache_uri: Optional[str] = None) -> list
+ | def query(query: dict, metadata_cache_uri: Optional[str] = None) -> list
 ```
 
 Search an asset in oceanDB using search query.
@@ -111,9 +108,6 @@ Search an asset in oceanDB using search query.
 
 - `query`: dict with query parameters
 (e.g.) https://github.com/oceanprotocol/aquarius/blob/develop/docs/for_api_users/API.md
-- `sort`: Dictionary to choose order main in some value
-- `offset`: Number of elements shows by page
-- `page`: Page number
 - `metadata_cache_uri`: Url of the aquarius where you want to search. If there is not
 provided take the default
 

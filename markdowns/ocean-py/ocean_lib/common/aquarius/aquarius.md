@@ -3,8 +3,8 @@ title: aquarius
 slug: ocean_lib/common/aquarius/aquarius
 app: ocean.py
 module: ocean_lib.common.aquarius.aquarius
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/aquarius/aquarius.py
-version: 0.7.0
+source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/common/aquarius/aquarius.py
+version: 0.8.1
 ---
 Aquarius module.
 Help to communicate with the metadata store.
@@ -60,7 +60,7 @@ Return the url of the the Aquarius ddo encryption endpoint
 
 ```python
  | @enforce_types
- | def get_asset_ddo(did: str) -> Union[DDO, dict]
+ | def get_asset_ddo(did: str) -> Optional[DDO]
 ```
 
 Retrieve asset ddo for a given did.
@@ -107,43 +107,11 @@ Retrieve asset metadata for a given did.
 
 metadata key of the DDO instance
 
-#### text\_search
-
-```python
- | @enforce_types
- | def text_search(text: str, sort: Optional[dict] = None, offset: Optional[int] = 100, page: Optional[int] = 1) -> list
-```
-
-Search in aquarius using text query.
-
-Given the string aquarius will do a full-text query to search in all documents.
-
-Currently implemented are the MongoDB and Elastic Search drivers.
-
-For a detailed guide on how to search, see the MongoDB driver documentation:
-mongodb driverCurrently implemented in:
-https://docs.mongodb.com/manual/reference/operator/query/text/
-
-And the Elastic Search documentation:
-https://www.elastic.co/guide/en/elasticsearch/guide/current/full-text-search.html
-Other drivers are possible according to each implementation.
-
-**Arguments**:
-
-- `text`: String to be search.
-- `sort`: 1/-1 to sort ascending or descending.
-- `offset`: Integer with the number of elements displayed per page.
-- `page`: Integer with the number of page.
-
-**Returns**:
-
-List of DDO instance
-
 #### query\_search
 
 ```python
  | @enforce_types
- | def query_search(search_query: dict, sort: Optional[dict] = None, offset: Optional[int] = 100, page: Optional[int] = 1) -> list
+ | def query_search(search_query: dict) -> list
 ```
 
 Search using a query.
@@ -158,10 +126,7 @@ Example: query_search({"price":[0,10]})
 
 **Arguments**:
 
-- `search_query`: Python dictionary, query following mongodb syntax
-- `sort`: 1/-1 to sort ascending or descending.
-- `offset`: Integer with the number of elements displayed per page.
-- `page`: Integer with the number of page.
+- `search_query`: Python dictionary, query following elasticsearch syntax
 
 **Returns**:
 

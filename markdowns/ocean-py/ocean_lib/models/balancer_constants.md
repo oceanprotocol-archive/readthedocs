@@ -3,8 +3,8 @@ title: balancer_constants
 slug: ocean_lib/models/balancer_constants
 app: ocean.py
 module: ocean_lib.models.balancer_constants
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/balancer_constants.py
-version: 0.7.0
+source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/models/balancer_constants.py
+version: 0.8.1
 ---
 Contains `Balancer` related constants for
 - `GASLIMIT_BFACTORY_NEWBPOOL`

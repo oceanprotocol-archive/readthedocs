@@ -3,8 +3,8 @@ title: http_provider
 slug: ocean_lib/web3_internal/web3_overrides/http_provider
 app: ocean.py
 module: ocean_lib.web3_internal.web3_overrides.http_provider
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/web3_overrides/http_provider.py
-version: 0.7.0
+source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/web3_internal/web3_overrides/http_provider.py
+version: 0.8.1
 ---
 ## CustomHTTPProvider
 

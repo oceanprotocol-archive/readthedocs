@@ -3,8 +3,8 @@ title: algorithm_metadata
 slug: ocean_lib/models/algorithm_metadata
 app: ocean.py
 module: ocean_lib.models.algorithm_metadata
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/models/algorithm_metadata.py
-version: 0.7.0
+source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/models/algorithm_metadata.py
+version: 0.8.1
 ---
 ## AlgorithmMetadata
 

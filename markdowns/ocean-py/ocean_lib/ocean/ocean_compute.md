@@ -3,8 +3,8 @@ title: ocean_compute
 slug: ocean_lib/ocean/ocean_compute
 app: ocean.py
 module: ocean_lib.ocean.ocean_compute
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_compute.py
-version: 0.7.0
+source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/ocean/ocean_compute.py
+version: 0.8.1
 ---
 ## OceanCompute
 
@@ -249,6 +249,25 @@ Gets job result.
 
 - `did`: str id of the asset offering the compute service of this job
 - `job_id`: str id of the compute job
+- `wallet`: Wallet instance
+
+**Returns**:
+
+dict the results/logs urls for an existing compute job, keys are (did, urls, logs)
+
+#### result\_file
+
+```python
+ | @enforce_types
+ | def result_file(did: str, job_id: str, index: int, wallet: Wallet) -> Dict[str, Any]
+```
+
+Gets job result.
+
+**Arguments**:
+
+- `job_id`: str id of the compute job
+- `index`: compute result index
 - `wallet`: Wallet instance
 
 **Returns**:

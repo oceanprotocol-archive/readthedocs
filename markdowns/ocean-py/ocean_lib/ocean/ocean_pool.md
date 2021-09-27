@@ -3,8 +3,8 @@ title: ocean_pool
 slug: ocean_lib/ocean/ocean_pool
 app: ocean.py
 module: ocean_lib.ocean.ocean_pool
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_pool.py
-version: 0.7.0
+source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/ocean/ocean_pool.py
+version: 0.8.1
 ---
 ## OceanPool
 

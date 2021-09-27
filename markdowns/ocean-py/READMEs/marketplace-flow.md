@@ -3,8 +3,8 @@ title: marketplace-flow.md
 slug: READMEs/marketplace-flow.md
 app: ocean.py
 module: READMEs.marketplace-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/marketplace-flow.md
-version: 0.7.0
+source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/READMEs/marketplace-flow.md
+version: 0.8.1
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -194,6 +194,7 @@ assert token_address == asset.data_token_address
 
 did = asset.did  # did contains the datatoken address
 print(f"did = '{did}'")
+```
 
 In order to encrypt the entire asset, when using a private market or metadata cache, use the encrypt keyword:
 `asset = ocean.assets.create(..., encrypt=True)`

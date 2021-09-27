@@ -3,8 +3,8 @@ title: services.md
 slug: READMEs/services.md
 app: ocean.py
 module: READMEs.services
-source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/services.md
-version: 0.7.0
+source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/READMEs/services.md
+version: 0.8.1
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation

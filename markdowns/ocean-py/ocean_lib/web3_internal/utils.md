@@ -3,8 +3,8 @@ title: utils
 slug: ocean_lib/web3_internal/utils
 app: ocean.py
 module: ocean_lib.web3_internal.utils
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/utils.py
-version: 0.7.0
+source: https://github.com/oceanprotocol/ocean.py/blob/HEAD/ocean_lib/web3_internal/utils.py
+version: 0.8.1
 ---
 #### generate\_multi\_value\_hash
 
