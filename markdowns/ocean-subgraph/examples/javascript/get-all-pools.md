@@ -1,9 +1,9 @@
 ---
-title: get-pools-from-subgraph.md
-slug: examples/javascript/get-pools-from-subgraph.md
+title: get-all-pools.md
+slug: examples/javascript/get-all-pools.md
 app: ocean-subgraph
-module: examples.javascript.get-pools-from-subgraph
-source: https://github.com/oceanprotocol/ocean-subgraph/blob/v1.2.0-2-gb99e243/examples/javascript/get-pools-from-subgraph.md
+module: examples.javascript.get-all-pools
+source: https://github.com/oceanprotocol/ocean-subgraph/blob/v1.2.0-3-g56a4192/examples/javascript/get-all-pools.md
 version: 1.2.0
 ---
 ## Ocean-subgraph javascript example
