@@ -3,7 +3,7 @@ title: list-datatokens.md
 slug: examples/python/list-datatokens.md
 app: ocean-subgraph
 module: examples.python.list-datatokens
-source: https://github.com/oceanprotocol/ocean-subgraph/blob/v1.2.0/examples/python/list-datatokens.md
+source: https://github.com/oceanprotocol/ocean-subgraph/blob/v1.2.0-2-gb99e243/examples/python/list-datatokens.md
 version: 1.2.0
 ---
 ## Ocean-subgraph python example
