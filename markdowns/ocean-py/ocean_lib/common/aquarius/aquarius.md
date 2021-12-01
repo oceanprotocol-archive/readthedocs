@@ -3,8 +3,8 @@ title: aquarius
 slug: ocean_lib/common/aquarius/aquarius
 app: ocean.py
 module: ocean_lib.common.aquarius.aquarius
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/aquarius/aquarius.py
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/common/aquarius/aquarius.py
+version: 0.8.5
 ---
 Aquarius module.
 Help to communicate with the metadata store.
@@ -60,7 +60,7 @@ Return the url of the the Aquarius ddo encryption endpoint
 
 ```python
  | @enforce_types
- | def get_asset_ddo(did: str) -> Optional[DDO]
+ | def get_asset_ddo(did: str) -> Optional[V3Asset]
 ```
 
 Retrieve asset ddo for a given did.
@@ -71,7 +71,7 @@ Retrieve asset ddo for a given did.
 
 **Returns**:
 
-DDO instance
+V3Asset instance
 
 #### ddo\_exists
 
@@ -80,7 +80,7 @@ DDO instance
  | def ddo_exists(did: str) -> bool
 ```
 
-Return whether the DDO with this did exists in Aqua
+Return whether the Asset with this did exists in Aqua
 
 **Arguments**:
 
@@ -105,7 +105,7 @@ Retrieve asset metadata for a given did.
 
 **Returns**:
 
-metadata key of the DDO instance
+metadata key of the Asset instance
 
 #### query\_search
 
@@ -130,7 +130,7 @@ Example: query_search({"price":[0,10]})
 
 **Returns**:
 
-List of DDO instance
+List of V3Asset instance
 
 #### validate\_metadata
 

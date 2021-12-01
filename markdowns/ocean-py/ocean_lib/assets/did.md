@@ -1,10 +1,10 @@
 ---
 title: did
-slug: ocean_lib/common/did
+slug: ocean_lib/assets/did
 app: ocean.py
-module: ocean_lib.common.did
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/did.py
-version: 0.8.1
+module: ocean_lib.assets.did
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/assets/did.py
+version: 0.8.5
 ---
 DID Lib to do DID's and DDO's.
 

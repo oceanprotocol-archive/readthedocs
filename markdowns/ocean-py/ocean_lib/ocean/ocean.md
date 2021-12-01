@@ -3,8 +3,8 @@ title: ocean
 slug: ocean_lib/ocean/ocean
 app: ocean.py
 module: ocean_lib.ocean.ocean
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean.py
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/ocean/ocean.py
+version: 0.8.5
 ---
 Ocean module.
 
@@ -63,7 +63,12 @@ Usage:
 ```python
 config = Config('config.ini')
 ocean = Ocean(config)
-wallet = Wallet(ocean.web3, private_key=private_key, block_confirmations=config.block_confirmations)
+wallet = Wallet(
+ocean.web3,
+private_key=private_key,
+block_confirmations=config.block_confirmations,
+transaction_timeout=config.transaction_timeout,
+)
 datatoken = ocean.create_data_token("Dataset name", "dtsymbol", from_wallet=wallet)
 ```
 

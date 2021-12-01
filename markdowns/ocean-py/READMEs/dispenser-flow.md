@@ -3,8 +3,8 @@ title: dispenser-flow.md
 slug: READMEs/dispenser-flow.md
 app: ocean.py
 module: READMEs.dispenser-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/dispenser-flow.md
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/READMEs/dispenser-flow.md
+version: 0.8.5
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -79,6 +79,9 @@ export FACTORY_DEPLOYER_PRIVATE_KEY=0xc594c6e5def4bab63ac29eed19a134c130388f74f0
 #set the address file only for ganache
 export ADDRESS_FILE=~/.ocean/ocean-contracts/artifacts/address.json
 
+#set network URL
+export OCEAN_NETWORK_URL=http://127.0.0.1:8545
+
 #start python
 python
 ```
@@ -95,6 +98,7 @@ config = ExampleConfig.get_config()
 ocean = Ocean(config)
 
 print(f"config.network_url = '{config.network_url}'")
+print(f"config.block_confirmations = {config.block_confirmations.value}")
 print(f"config.metadata_cache_uri = '{config.metadata_cache_uri}'")
 print(f"config.provider_url = '{config.provider_url}'")
 print(f"config.network_name = '{config.network_name}'")
@@ -103,7 +107,7 @@ print(f"config.network_name = '{config.network_name}'")
 import os
 from ocean_lib.web3_internal.wallet import Wallet
 alice_private_key = os.getenv('TEST_PRIVATE_KEY1')
-alice_wallet = Wallet(ocean.web3, alice_private_key, config.block_confirmations)
+alice_wallet = Wallet(ocean.web3, alice_private_key, config.block_confirmations, config.transaction_timeout)
 print(f"alice_wallet.address = '{alice_wallet.address}'")
 
 #Mint OCEAN for ganache only
@@ -128,6 +132,7 @@ from ocean_lib.web3_internal.currency import to_wei
 contracts_addresses = get_contracts_addresses(config.network_name, config.address_file)
 assert contracts_addresses, "invalid network."
 print(f"contracts_addresses = {contracts_addresses}")
+
 #Create the dispenser
 dispenser_address = contracts_addresses["Dispenser"]
 dispenser = DispenserContract(alice_wallet.web3, dispenser_address)

@@ -3,8 +3,8 @@ title: services.md
 slug: READMEs/services.md
 app: ocean.py
 module: READMEs.services
-source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/services.md
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/READMEs/services.md
+version: 0.8.5
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -32,7 +32,7 @@ In your working directory, create a file `config.ini` and fill it with the follo
     network = https://rinkeby.infura.io/v3/<your Infura project id>
 
     [resources]
-    metadata_cache_uri = https://aquarius.rinkeby.oceanprotocol.com
+    metadata_cache_uri = https://aquarius.oceanprotocol.com
     provider.url = https://provider.rinkeby.oceanprotocol.com
 
 Ensure that envvars don't override the config file values:

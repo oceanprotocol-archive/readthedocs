@@ -3,8 +3,8 @@ title: ocean_compute
 slug: ocean_lib/ocean/ocean_compute
 app: ocean.py
 module: ocean_lib.ocean.ocean_compute
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_compute.py
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/ocean/ocean_compute.py
+version: 0.8.5
 ---
 ## OceanCompute
 
@@ -170,20 +170,6 @@ Validate the `output_def` dict and fills in defaults for missing values.
 **Returns**:
 
 dict a valid `output_def` object
-
-#### create\_compute\_service\_descriptor
-
-```python
- | @enforce_types
- | def create_compute_service_descriptor(attributes: dict) -> ServiceDescriptor
-```
-
-Return a service descriptor (tuple) for service of type ServiceTypes.CLOUD_COMPUTE
-and having the required attributes and service endpoint.
-
-**Arguments**:
-
-- `attributes`: dict as created in `create_compute_service_attributes`
 
 #### start
 

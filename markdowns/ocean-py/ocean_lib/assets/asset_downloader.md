@@ -3,14 +3,14 @@ title: asset_downloader
 slug: ocean_lib/assets/asset_downloader
 app: ocean.py
 module: ocean_lib.assets.asset_downloader
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/assets/asset_downloader.py
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/assets/asset_downloader.py
+version: 0.8.5
 ---
 #### download\_asset\_files
 
 ```python
 @enforce_types
-def download_asset_files(service_index: int, asset: Asset, consumer_wallet: Wallet, destination: str, token_address: str, order_tx_id: str, data_provider: Type[DataServiceProvider], index: Optional[int] = None, userdata: Optional[dict] = None) -> str
+def download_asset_files(service_index: int, asset: V3Asset, consumer_wallet: Wallet, destination: str, token_address: str, order_tx_id: str, data_provider: Type[DataServiceProvider], index: Optional[int] = None, userdata: Optional[dict] = None) -> str
 ```
 
 Download asset data files or result files from a compute job.
@@ -18,7 +18,7 @@ Download asset data files or result files from a compute job.
 **Arguments**:
 
 - `service_index`: identifier of the service inside the asset DDO, str
-- `asset`: Asset instance
+- `asset`: V3Asset instance
 - `consumer_wallet`: Wallet instance of the consumer
 - `destination`: Path, str
 - `token_address`: hex str the address of the DataToken smart contract
@@ -28,5 +28,5 @@ Download asset data files or result files from a compute job.
 
 **Returns**:
 
-Asset folder path, str
+asset folder path, str
 

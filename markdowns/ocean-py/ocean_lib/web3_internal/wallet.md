@@ -3,8 +3,8 @@ title: wallet
 slug: ocean_lib/web3_internal/wallet
 app: ocean.py
 module: ocean_lib.web3_internal.wallet
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/wallet.py
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/web3_internal/wallet.py
+version: 0.8.5
 ---
 ## Wallet
 
@@ -21,13 +21,20 @@ we can interact directly with remote network nodes without having to run a local
 node since we only send the raw transaction hash so the user info is safe.
 
 Usage:
-    1. `wallet = Wallet(ocean.web3, private_key=private_key, block_confirmations=ocean.config.block_confirmations)`
+```python
+wallet = Wallet(
+    ocean.web3,
+    private_key=private_key,
+    block_confirmations=ocean.config.block_confirmations,
+    transaction_timeout=config.transaction_timeout,
+)
+```
 
 #### \_\_init\_\_
 
 ```python
  | @enforce_types
- | def __init__(web3: Web3, private_key: str, block_confirmations: Union[Integer, int]) -> None
+ | def __init__(web3: Web3, private_key: str, block_confirmations: Union[Integer, int], transaction_timeout: Union[Integer, int]) -> None
 ```
 
 Initialises Wallet object.
