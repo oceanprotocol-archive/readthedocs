@@ -3,8 +3,8 @@ title: fixed-rate-exchange-flow.md
 slug: READMEs/fixed-rate-exchange-flow.md
 app: ocean.py
 module: READMEs.fixed-rate-exchange-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/fixed-rate-exchange-flow.md
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/READMEs/fixed-rate-exchange-flow.md
+version: 0.8.5
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -101,6 +101,7 @@ config = ExampleConfig.get_config()
 ocean = Ocean(config)
 
 print(f"config.network_url = '{config.network_url}'")
+print(f"config.block_confirmations = {config.block_confirmations.value}")
 print(f"config.metadata_cache_uri = '{config.metadata_cache_uri}'")
 print(f"config.provider_url = '{config.provider_url}'")
 
@@ -108,7 +109,7 @@ print(f"config.provider_url = '{config.provider_url}'")
 import os
 from ocean_lib.web3_internal.wallet import Wallet
 alice_private_key = os.getenv('TEST_PRIVATE_KEY1')
-alice_wallet = Wallet(ocean.web3, alice_private_key, config.block_confirmations)
+alice_wallet = Wallet(ocean.web3, alice_private_key, config.block_confirmations, config.transaction_timeout)
 print(f"alice_wallet.address = '{alice_wallet.address}'")
 
 #Mint OCEAN for ganache only
@@ -137,7 +138,7 @@ data_token.approve(ocean.exchange._exchange_address, to_wei(100), alice_wallet)
 In the same python console:
 ```python
 bob_private_key = os.getenv('TEST_PRIVATE_KEY2')
-bob_wallet = Wallet(ocean.web3, bob_private_key, config.block_confirmations)
+bob_wallet = Wallet(ocean.web3, bob_private_key, config.block_confirmations, config.transaction_timeout)
 print(f"bob_wallet.address = '{bob_wallet.address}'")
 
 #Verify that Bob has ganache ETH
@@ -162,7 +163,8 @@ exchanges for a certain data token, it can be searched by
 providing the data token address.
 
 ```python
-#Search for exchange_id for a certain data token address (e.g. token_address).
+#Search for exchange_id from a specific block retrieved at 3rd step
+#for a certain data token address (e.g. token_address).
 logs = ocean.exchange.search_exchange_by_data_token(token_address)
 print(logs)
 #E.g. First exchange is the wanted one.

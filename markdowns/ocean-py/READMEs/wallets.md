@@ -3,8 +3,8 @@ title: wallets.md
 slug: READMEs/wallets.md
 app: ocean.py
 module: READMEs.wallets
-source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/wallets.md
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/READMEs/wallets.md
+version: 0.8.5
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation
@@ -70,5 +70,5 @@ import web3
 from ocean_lib.web3_internal.wallet import Wallet
 from ocean_lib.integer import Integer
 private_key = os.getenv('MY_TEST_KEY')
-wallet = Wallet(web3, private_key, 1)
+wallet = Wallet(web3, private_key, 1, 600)
 ```

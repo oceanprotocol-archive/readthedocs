@@ -3,8 +3,8 @@ title: DATA_ddo.md
 slug: READMEs/DATA_ddo.md
 app: ocean.py
 module: READMEs.DATA_ddo
-source: https://github.com/oceanprotocol/ocean.py/blob/main/READMEs/DATA_ddo.md
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/READMEs/DATA_ddo.md
+version: 0.8.5
 ---
 (HACK to help debugging. Remove later)
 

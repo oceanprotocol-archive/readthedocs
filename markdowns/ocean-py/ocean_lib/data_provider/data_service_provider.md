@@ -3,8 +3,8 @@ title: data_service_provider
 slug: ocean_lib/data_provider/data_service_provider
 app: ocean.py
 module: ocean_lib.data_provider.data_service_provider
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/data_provider/data_service_provider.py
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/data_provider/data_service_provider.py
+version: 0.8.5
 ---
 Provider module.
 
@@ -254,6 +254,16 @@ Return the service endpoints from the provider URL.
  | @staticmethod
  | @enforce_types
  | def get_c2d_address(provider_uri: str) -> Optional[str]
+```
+
+Return the provider address
+
+#### get\_provider\_address
+
+```python
+ | @staticmethod
+ | @enforce_types
+ | def get_provider_address(provider_uri: str) -> Optional[str]
 ```
 
 Return the provider address

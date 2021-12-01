@@ -3,8 +3,8 @@ title: config
 slug: ocean_lib/config
 app: ocean.py
 module: ocean_lib.config
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/config.py
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/config.py
+version: 0.8.5
 ---
 ## Config
 
@@ -48,6 +48,16 @@ provider.url = http://localhost:8030
 ```
 
 Block confirmations.
+
+#### transaction\_timeout
+
+```python
+ | @property
+ | @enforce_types
+ | def transaction_timeout() -> Integer
+```
+
+Transaction timeout.
 
 #### network\_url
 

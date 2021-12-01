@@ -3,8 +3,8 @@ title: ocean_assets
 slug: ocean_lib/ocean/ocean_assets
 app: ocean.py
 module: ocean_lib.ocean.ocean_assets
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/ocean/ocean_assets.py
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/ocean/ocean_assets.py
+version: 0.8.5
 ---
 Ocean module.
 
@@ -29,7 +29,7 @@ Initialises OceanAssets object.
 
 ```python
  | @enforce_types
- | def create(metadata: dict, publisher_wallet: Wallet, service_descriptors: list = None, owner_address: Optional[str] = None, data_token_address: Optional[str] = None, provider_uri: Optional[str] = None, dt_name: Optional[str] = None, dt_symbol: Optional[str] = None, dt_blob: Optional[str] = None, dt_cap: Optional[int] = None, encrypt: Optional[bool] = False) -> Optional[Asset]
+ | def create(metadata: dict, publisher_wallet: Wallet, services: Optional[list] = None, owner_address: Optional[str] = None, data_token_address: Optional[str] = None, provider_uri: Optional[str] = None, dt_name: Optional[str] = None, dt_symbol: Optional[str] = None, dt_blob: Optional[str] = None, dt_cap: Optional[int] = None, encrypt: Optional[bool] = False) -> Optional[V3Asset]
 ```
 
 Register an asset on-chain.
@@ -40,9 +40,7 @@ Creating/deploying a DataToken contract and in the Metadata store (Aquarius).
 
 - `metadata`: dict conforming to the Metadata accepted by Ocean Protocol.
 - `publisher_wallet`: Wallet of the publisher registering this asset
-- `service_descriptors`: list of ServiceDescriptor tuples of length 2.
-The first item must be one of ServiceTypes and the second
-item is a dict of parameters and values required by the service
+- `services`: list of Service objects.
 - `owner_address`: hex str the ethereum address to assign asset ownership to. After
 registering the asset on-chain, the ownership is transferred to this address
 - `data_token_address`: hex str the address of the data token smart contract. The new
@@ -63,7 +61,7 @@ DDO instance
 
 ```python
  | @enforce_types
- | def resolve(did: str) -> Asset
+ | def resolve(did: str) -> V3Asset
 ```
 
 When you pass a did retrieve the ddo associated.

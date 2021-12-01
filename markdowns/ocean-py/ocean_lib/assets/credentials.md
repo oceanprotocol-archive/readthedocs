@@ -1,10 +1,10 @@
 ---
 title: credentials
-slug: ocean_lib/common/ddo/credentials
+slug: ocean_lib/assets/credentials
 app: ocean.py
-module: ocean_lib.common.ddo.credentials
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/ddo/credentials.py
-version: 0.8.1
+module: ocean_lib.assets.credentials
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/assets/credentials.py
+version: 0.8.5
 ---
 ## AddressCredential
 

@@ -3,8 +3,8 @@ title: utils
 slug: ocean_lib/web3_internal/utils
 app: ocean.py
 module: ocean_lib.web3_internal.utils
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/utils.py
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/web3_internal/utils.py
+version: 0.8.5
 ---
 #### generate\_multi\_value\_hash
 
@@ -87,24 +87,6 @@ Return `ganache` for every chain id that is not mapped.
 
 - `chain_id`: Chain id, int
 - `web3`: Web3 instance
-
-#### get\_network\_timeout
-
-```python
-@enforce_types
-def get_network_timeout(network_id: Optional[int] = None, web3: Optional[Web3] = None) -> str
-```
-
-Return the network blocking call timeout limit based on the current ethereum network id.
-Callers must pass either network_id or web3.
-
-**Arguments**:
-
-- `network_id`: Network id, int
-
-**Returns**:
-
-number of seconds, int
 
 #### get\_chain\_id
 

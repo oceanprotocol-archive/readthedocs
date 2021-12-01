@@ -3,8 +3,8 @@ title: contract
 slug: ocean_lib/web3_internal/web3_overrides/contract
 app: ocean.py
 module: ocean_lib.web3_internal.web3_overrides.contract
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/web3_internal/web3_overrides/contract.py
-version: 0.8.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/web3_internal/web3_overrides/contract.py
+version: 0.8.5
 ---
 ## CustomContractFunction
 
@@ -24,7 +24,7 @@ Initializes CustomContractFunction.
 #### transact
 
 ```python
- | def transact(transaction: Dict[str, Any], block_confirmations: int) -> HexBytes
+ | def transact(transaction: Dict[str, Any], block_confirmations: int, transaction_timeout: int) -> HexBytes
 ```
 
 Customize calling smart contract transaction functions.
@@ -46,7 +46,7 @@ hex str transaction hash
 
 ```python
 @enforce_types
-def transact_with_contract_function(address: str, web3: Web3, block_confirmations: int, function_name: Optional[str] = None, transaction: Optional[dict] = None, contract_abi: Optional[list] = None, fn_abi: Optional[dict] = None, *args, **kwargs, *, ,) -> HexBytes
+def transact_with_contract_function(address: str, web3: Web3, block_confirmations: int, transaction_timeout: int, function_name: Optional[str] = None, transaction: Optional[dict] = None, contract_abi: Optional[list] = None, fn_abi: Optional[dict] = None, *args, **kwargs, *, ,) -> HexBytes
 ```
 
 Helper function for interacting with a contract function by sending a

@@ -1,10 +1,10 @@
 ---
 title: utilities
-slug: ocean_lib/common/utils/utilities
+slug: ocean_lib/utils/utilities
 app: ocean.py
-module: ocean_lib.common.utils.utilities
-source: https://github.com/oceanprotocol/ocean.py/blob/main/ocean_lib/common/utils/utilities.py
-version: 0.8.1
+module: ocean_lib.utils.utilities
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/utils/utilities.py
+version: 0.8.5
 ---
 Utilities class
 
@@ -89,6 +89,17 @@ def checksum(seed: Dict[str, Any]) -> str
 ```
 
 Calculate the hash3_256.
+
+#### create\_checksum
+
+```python
+@enforce_types
+def create_checksum(text: str) -> str
+```
+
+**Returns**:
+
+str
 
 #### get\_timestamp
 
