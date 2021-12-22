@@ -3,8 +3,8 @@ title: consume
 slug: ocean_provider/routes/consume
 app: provider
 module: ocean_provider.routes.consume
-source: https://github.com/oceanprotocol/provider/blob/issue-182-improve-docs/ocean_provider/routes/consume.py
-version: 0.4.12
+source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/routes/consume.py
+version: 0.4.19
 ---
 #### nonce
 
@@ -172,6 +172,49 @@ responses:
     description: One of the required attributes is missing.
   401:
     description: Invalid asset data.
+  503:
+    description: Service Unavailable
+
+#### asset\_urls
+
+```python
+@services.route("/assetUrls", methods=["GET"])
+@validate(AssetUrlsRequest)
+def asset_urls()
+```
+
+Lists files from an asset
+
+---
+tags:
+  - services
+consumes:
+  - application/json
+parameters:
+  - name: documentId
+    in: query
+    description: The ID of the asset/document (the DID).
+    required: true
+    type: string
+  - name: signature
+    in: query
+    description: Signature of the documentId to verify that the consumer has rights to download the asset.
+  - name: serviceId
+    in: string
+    description: ServiceId for the asset access service.
+  - name: nonce
+    in: string
+    description: User nonce.
+  - name: publisherAddress
+    in: query
+    description: The publisher address.
+    required: true
+    type: string
+responses:
+  200:
+    description: lists asset files
+  400:
+    description: One of the required attributes is missing.
   503:
     description: Service Unavailable
 

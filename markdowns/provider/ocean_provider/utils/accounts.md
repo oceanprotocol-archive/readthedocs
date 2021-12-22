@@ -3,8 +3,8 @@ title: accounts
 slug: ocean_provider/utils/accounts
 app: provider
 module: ocean_provider.utils.accounts
-source: https://github.com/oceanprotocol/provider/blob/issue-182-improve-docs/ocean_provider/utils/accounts.py
-version: 0.4.12
+source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/utils/accounts.py
+version: 0.4.19
 ---
 #### verify\_signature
 

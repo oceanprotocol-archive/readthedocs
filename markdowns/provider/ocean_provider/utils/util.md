@@ -3,9 +3,17 @@ title: util
 slug: ocean_provider/utils/util
 app: provider
 module: ocean_provider.utils.util
-source: https://github.com/oceanprotocol/provider/blob/issue-182-improve-docs/ocean_provider/utils/util.py
-version: 0.4.12
+source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/utils/util.py
+version: 0.4.19
 ---
+#### checksum
+
+```python
+def checksum(seed) -> str
+```
+
+Calculate the hash3_256.
+
 #### get\_asset\_urls
 
 ```python
