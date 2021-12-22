@@ -3,8 +3,8 @@ title: basics
 slug: ocean_provider/utils/basics
 app: provider
 module: ocean_provider.utils.basics
-source: https://github.com/oceanprotocol/provider/blob/issue-182-improve-docs/ocean_provider/utils/basics.py
-version: 0.4.12
+source: https://github.com/oceanprotocol/provider/blob/v0.4.18-8-g361885d/ocean_provider/utils/basics.py
+version: 0.4.19
 ---
 #### get\_config
 
@@ -19,7 +19,7 @@ Config instance
 #### get\_provider\_wallet
 
 ```python
-def get_provider_wallet(web3: Optional[Web3] = None) -> Wallet
+def get_provider_wallet(web3: Optional[Web3] = None)
 ```
 
 **Returns**:

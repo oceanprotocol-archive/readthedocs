@@ -3,8 +3,8 @@ title: compute
 slug: ocean_provider/routes/compute
 app: provider
 module: ocean_provider.routes.compute
-source: https://github.com/oceanprotocol/provider/blob/issue-182-improve-docs/ocean_provider/routes/compute.py
-version: 0.4.12
+source: https://github.com/oceanprotocol/provider/blob/v0.4.18-8-g361885d/ocean_provider/routes/compute.py
+version: 0.4.19
 ---
 #### computeDelete
 
@@ -199,4 +199,47 @@ responses:
     description: Consumer signature is invalid or failed verification
   503:
     description: Service unavailable
+
+#### computeResult
+
+```python
+@services.route("/computeResult", methods=["GET"])
+@validate(ComputeGetResult)
+def computeResult()
+```
+
+Allows download of asset data file.
+
+---
+tags:
+  - services
+consumes:
+  - application/json
+parameters:
+  - name: consumerAddress
+    in: query
+    description: The consumer address.
+    required: true
+    type: string
+  - name: jobId
+    in: query
+    description: JobId
+    required: true
+    type: string
+  - name: index
+    in: query
+    description: Result index
+    required: true
+  - name: signature
+    in: query
+    description: Signature of (consumerAddress+jobId+index+nonce) to verify that the consumer has rights to download the result
+responses:
+  200:
+    description: Content of the result
+  400:
+    description: One of the required attributes is missing.
+  404:
+    description: Result not found
+  503:
+    description: Service Unavailable
 

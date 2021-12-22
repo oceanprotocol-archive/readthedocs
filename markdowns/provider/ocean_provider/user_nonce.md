@@ -3,8 +3,8 @@ title: user_nonce
 slug: ocean_provider/user_nonce
 app: provider
 module: ocean_provider.user_nonce
-source: https://github.com/oceanprotocol/provider/blob/issue-182-improve-docs/ocean_provider/user_nonce.py
-version: 0.4.12
+source: https://github.com/oceanprotocol/provider/blob/v0.4.18-8-g361885d/ocean_provider/user_nonce.py
+version: 0.4.19
 ---
 #### get\_nonce
 
@@ -14,7 +14,7 @@ def get_nonce(address)
 
 **Returns**:
 
-`nonce`
+`nonce` for the given address stored in the database
 
 #### increment\_nonce
 
@@ -22,6 +22,6 @@ def get_nonce(address)
 def increment_nonce(address)
 ```
 
-Increatements the value of `nonce`
+Increments the value of `nonce` in the database
 :param: address
 

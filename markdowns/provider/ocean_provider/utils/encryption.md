@@ -3,13 +3,13 @@ title: encryption
 slug: ocean_provider/utils/encryption
 app: provider
 module: ocean_provider.utils.encryption
-source: https://github.com/oceanprotocol/provider/blob/issue-182-improve-docs/ocean_provider/utils/encryption.py
-version: 0.4.12
+source: https://github.com/oceanprotocol/provider/blob/v0.4.18-8-g361885d/ocean_provider/utils/encryption.py
+version: 0.4.19
 ---
 #### do\_encrypt
 
 ```python
-def do_encrypt(document, wallet: Wallet = None, public_key=None)
+def do_encrypt(document, wallet=None, public_key=None)
 ```
 
 **Arguments**:
