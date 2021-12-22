@@ -3,7 +3,7 @@ title: http_provider
 slug: ocean_provider/http_provider
 app: provider
 module: ocean_provider.http_provider
-source: https://github.com/oceanprotocol/provider/blob/v0.4.18-8-g361885d/ocean_provider/http_provider.py
+source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/http_provider.py
 version: 0.4.19
 ---
 ## CustomHTTPProvider

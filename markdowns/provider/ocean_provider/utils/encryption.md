@@ -3,7 +3,7 @@ title: encryption
 slug: ocean_provider/utils/encryption
 app: provider
 module: ocean_provider.utils.encryption
-source: https://github.com/oceanprotocol/provider/blob/v0.4.18-8-g361885d/ocean_provider/utils/encryption.py
+source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/utils/encryption.py
 version: 0.4.19
 ---
 #### do\_encrypt

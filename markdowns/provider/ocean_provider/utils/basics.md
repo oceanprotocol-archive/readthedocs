@@ -3,7 +3,7 @@ title: basics
 slug: ocean_provider/utils/basics
 app: provider
 module: ocean_provider.utils.basics
-source: https://github.com/oceanprotocol/provider/blob/v0.4.18-8-g361885d/ocean_provider/utils/basics.py
+source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/utils/basics.py
 version: 0.4.19
 ---
 #### get\_config

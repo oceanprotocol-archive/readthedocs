@@ -3,7 +3,7 @@ title: util
 slug: ocean_provider/utils/util
 app: provider
 module: ocean_provider.utils.util
-source: https://github.com/oceanprotocol/provider/blob/v0.4.18-8-g361885d/ocean_provider/utils/util.py
+source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/utils/util.py
 version: 0.4.19
 ---
 #### checksum

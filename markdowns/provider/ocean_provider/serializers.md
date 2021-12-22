@@ -3,7 +3,7 @@ title: serializers
 slug: ocean_provider/serializers
 app: provider
 module: ocean_provider.serializers
-source: https://github.com/oceanprotocol/provider/blob/v0.4.18-8-g361885d/ocean_provider/serializers.py
+source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/serializers.py
 version: 0.4.19
 ---
 ## StageAlgoSerializer

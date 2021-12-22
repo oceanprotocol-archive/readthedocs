@@ -3,7 +3,7 @@ title: asset
 slug: ocean_provider/utils/asset
 app: provider
 module: ocean_provider.utils.asset
-source: https://github.com/oceanprotocol/provider/blob/v0.4.18-8-g361885d/ocean_provider/utils/asset.py
+source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/utils/asset.py
 version: 0.4.19
 ---
 ## Asset
