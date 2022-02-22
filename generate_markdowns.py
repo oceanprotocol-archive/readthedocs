@@ -328,7 +328,9 @@ markdown_repos = {
         "path": "submodules/provider",
         "output_dir": os.path.join("markdowns", "provider"),
         "app": "provider",
-        "markdown_path": [],
+        "markdown_path": [{
+                "path": os.path.join("submodules", "provider"),
+            }],
         "source": "https://github.com/oceanprotocol/provider",
         "version": get_version_for_python(os.path.join("submodules", "provider")),
     },

@@ -3,13 +3,13 @@ title: accounts
 slug: ocean_provider/utils/accounts
 app: provider
 module: ocean_provider.utils.accounts
-source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/utils/accounts.py
-version: 0.4.19
+source: https://github.com/oceanprotocol/provider/blob/v0.4.17-69-g5a60369/ocean_provider/utils/accounts.py
+version: 0.4.17
 ---
 #### verify\_signature
 
 ```python
-def verify_signature(signer_address, signature, original_msg, nonce: int = None)
+def verify_signature(signer_address, signature, original_msg, nonce)
 ```
 
 **Returns**:
@@ -23,48 +23,6 @@ def get_private_key(wallet)
 ```
 
 Returns private key of the given wallet
-
-#### is\_auth\_token\_valid
-
-```python
-def is_auth_token_valid(token)
-```
-
-**Arguments**:
-
-- `token`: str
-
-**Returns**:
-
-`True` if token is valid else `False`
-
-#### check\_auth\_token
-
-```python
-def check_auth_token(token)
-```
-
-**Arguments**:
-
-- `token`: str
-
-**Returns**:
-
-String
-
-#### generate\_auth\_token
-
-```python
-def generate_auth_token(wallet)
-```
-
-**Arguments**:
-
-- `wallet`: Wallet instance
-
-**Returns**:
-
-`str`
 
 #### sign\_message
 

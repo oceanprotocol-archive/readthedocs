@@ -3,8 +3,8 @@ title: compute
 slug: ocean_provider/routes/compute
 app: provider
 module: ocean_provider.routes.compute
-source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/routes/compute.py
-version: 0.4.19
+source: https://github.com/oceanprotocol/provider/blob/v0.4.17-69-g5a60369/ocean_provider/routes/compute.py
+version: 0.4.17
 ---
 #### computeDelete
 
@@ -114,27 +114,21 @@ tags:
 consumes:
   - application/json
 parameters:
-  - name: signature
+  - name: jobId
     in: query
-    description: Signature of (consumerAddress+jobId+documentId) to verify the consumer of
-        this asset/compute job. The signature uses ethereum based signing method
-        (see https://github.com/ethereum/EIPs/pull/683)
+    description: The ID of the compute job. If not provided, all running compute jobs of
+        the specified consumerAddress/documentId are suspended
     type: string
+    required: true
   - name: documentId
     in: query
     description: The ID of the asset. If not provided, the status of all
         currently running and old compute jobs for the specified consumerAddress will be returned.
-    required: true
     type: string
   - name: consumerAddress
     in: query
     description: The consumer ethereum address.
     required: true
-    type: string
-  - name: jobId
-    in: query
-    description: The ID of the compute job. If not provided, all running compute jobs of
-        the specified consumerAddress/documentId are suspended
     type: string
 
 responses:
@@ -174,11 +168,20 @@ parameters:
     description: The consumer ethereum address.
     required: true
     type: string
-
+  - name: computeEnv
+    in: query
+    description: Compute Environment
+    required: true
+    type: string
   - name: algorithmDid
     in: query
     description: The DID of the algorithm Asset to be executed
     required: false
+    type: string
+  - name: algorithmServiceId
+    in: query
+    description: the id of the service to use to process the algorithm
+    required: true
     type: string
   - name: algorithmMeta
     in: query
@@ -240,6 +243,27 @@ responses:
     description: One of the required attributes is missing.
   404:
     description: Result not found
+  503:
+    description: Service Unavailable
+
+#### computeEnvironments
+
+```python
+@services.route("/computeEnvironments", methods=["GET"])
+def computeEnvironments()
+```
+
+Get compute environments
+
+---
+tags:
+  - services
+consumes:
+  - application/json
+
+responses:
+  200:
+    description: Call to the operator-service was successful.
   503:
     description: Service Unavailable
 

@@ -3,8 +3,8 @@ title: services
 slug: ocean_provider/utils/services
 app: provider
 module: ocean_provider.utils.services
-source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/utils/services.py
-version: 0.4.19
+source: https://github.com/oceanprotocol/provider/blob/v0.4.17-69-g5a60369/ocean_provider/utils/services.py
+version: 0.4.17
 ---
 ## Service
 
@@ -15,25 +15,18 @@ class Service()
 #### \_\_init\_\_
 
 ```python
- | def __init__(service_endpoint, service_type, index, attributes=None) -> None
+ | def __init__(index: int, service_id: str, service_type: ServiceType, datatoken_address: HexAddress, service_endpoint: str, encrypted_files: HexStr, timeout: int, name: Optional[str] = None, description: Optional[str] = None, compute_dict: Optional[dict] = None) -> None
 ```
 
 Initialize Service instance.
-
-#### as\_dictionary
-
-```python
- | def as_dictionary()
-```
-
-Return the service as a python dictionary.
+If service is type "compute", then, compute_dict should be set
 
 #### from\_json
 
 ```python
  | @staticmethod
- | def from_json(service_dict)
+ | def from_json(index: int, service_dict: Dict[str, Any])
 ```
 
-Create a service object from a JSON string.
+Create a Service object from a JSON string.
 

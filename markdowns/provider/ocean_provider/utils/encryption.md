@@ -3,19 +3,19 @@ title: encryption
 slug: ocean_provider/utils/encryption
 app: provider
 module: ocean_provider.utils.encryption
-source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/utils/encryption.py
-version: 0.4.19
+source: https://github.com/oceanprotocol/provider/blob/v0.4.17-69-g5a60369/ocean_provider/utils/encryption.py
+version: 0.4.17
 ---
 #### do\_encrypt
 
 ```python
-def do_encrypt(document, wallet=None, public_key=None)
+def do_encrypt(document: Union[HexStr, str, bytes], wallet: LocalAccount = None, public_key: str = None) -> HexStr
 ```
 
 **Arguments**:
 
-- `document`: Json document/string to be encrypted
-- `wallet`: Wallet instance
+- `document`: document to be encrypted as HexStr or bytes
+- `wallet`: LocalAccount instance
 - `public_key`: Eth public address
 
 **Returns**:
@@ -25,15 +25,15 @@ Encrypted String
 #### do\_decrypt
 
 ```python
-def do_decrypt(encrypted_document, provider_wallet)
+def do_decrypt(encrypted_document: Union[HexStr, bytes], provider_wallet: LocalAccount) -> bytes
 ```
 
 **Arguments**:
 
-- `encrypted_document`: Encrypted data
-- `provider_wallet`: Wallet instance
+- `encrypted_document`: Encrypted document as HexStr or bytes
+- `provider_wallet`: LocalAccount instance
 
 **Returns**:
 
-Decrypted string if successful else `None`
+Decrypted string
 
