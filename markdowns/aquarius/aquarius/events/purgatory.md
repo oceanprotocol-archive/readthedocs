@@ -3,8 +3,8 @@ title: purgatory
 slug: aquarius/events/purgatory
 app: aquarius
 module: aquarius.events.purgatory
-source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/purgatory.py
-version: 3.0.1
+source: https://github.com/oceanprotocol/aquarius/blob/v3.1.2-62-g1ce2da0/aquarius/events/purgatory.py
+version: 3.1.2
 ---
 ## Purgatory
 
@@ -29,10 +29,10 @@ Object as follows: {...('<did>', '<reason>'),...}
 #### update\_asset\_purgatory\_status
 
 ```python
- | def update_asset_purgatory_status(asset, purgatory="true")
+ | def update_asset_purgatory_status(asset, purgatory=True, reason="")
 ```
 
-Updates the field `isInPurgatory` of `asset` object.
+Updates the fields `state` and `reason` of field `purgatory` in `asset` object.
 
 #### get\_assets\_authored\_by
 

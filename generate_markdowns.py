@@ -302,7 +302,9 @@ markdown_repos = {
         "path": "submodules/aquarius",
         "output_dir": os.path.join("markdowns", "aquarius"),
         "app": "aquarius",
-        "markdown_path": [],
+        "markdown_path": [{
+                "path": os.path.join("submodules", "aquarius"),
+            }],
         "source": "https://github.com/oceanprotocol/aquarius",
         "version": get_version_for_python(os.path.join("submodules", "aquarius")),
     },

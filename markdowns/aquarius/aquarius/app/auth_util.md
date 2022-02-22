@@ -3,8 +3,8 @@ title: auth_util
 slug: aquarius/app/auth_util
 app: aquarius
 module: aquarius.app.auth_util
-source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/auth_util.py
-version: 3.0.1
+source: https://github.com/oceanprotocol/aquarius/blob/v3.1.2-62-g1ce2da0/aquarius/app/auth_util.py
+version: 3.1.2
 ---
 #### compare\_eth\_addresses
 

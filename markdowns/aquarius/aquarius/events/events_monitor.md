@@ -3,8 +3,8 @@ title: events_monitor
 slug: aquarius/events/events_monitor
 app: aquarius
 module: aquarius.events.events_monitor
-source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/events_monitor.py
-version: 3.0.1
+source: https://github.com/oceanprotocol/aquarius/blob/v3.1.2-62-g1ce2da0/aquarius/events/events_monitor.py
+version: 3.1.2
 ---
 ## EventsMonitor
 
@@ -20,10 +20,7 @@ event log from the `Metadata` smartcontract. Metadata updates are also detected 
 the `MetadataUpdated` event.
 
 The Metadata json object is expected to be
-in an `lzma` compressed form. If desired the metadata can also be encrypted for specific
-use cases. When using encrypted Metadata, the EventsMonitor requires the private key of
-the ethereum account that is used for encryption. This can be specified in `EVENTS_ECIES_PRIVATE_KEY`
-envvar.
+in an `lzma` compressed form and then encrypted. Decryption is done through Provider.
 
 The events monitor pauses for 25 seconds between updates.
 
@@ -45,4 +42,20 @@ Process all blocks from the last processed block to the current block.
 ```
 
 Process a range of blocks.
+
+#### handle\_regular\_event\_processor
+
+```python
+ | def handle_regular_event_processor(event_name, processor, processor_args, from_block, to_block)
+```
+
+Process emitted events between two given blocks for a given event name.
+
+**Arguments**:
+
+- `event_name` _str_ - event uppercase constant name
+- `processor` _EventProcessor_ - event processor
+- `processor_args` _List[any]_ - list of processors arguments
+- `from_block` _int_ - inital block
+- `to_block` _int_ - final block
 
