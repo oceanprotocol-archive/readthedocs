@@ -3,8 +3,8 @@ title: exceptions
 slug: ocean_lib/exceptions
 app: ocean.py
 module: ocean_lib.exceptions
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/exceptions.py
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/exceptions.py
+version: 1.0.0-alpha.1
 ---
 ## OceanEncryptAssetUrlsError
 
@@ -53,4 +53,12 @@ class TransactionFailed(Exception)
 ```
 
 Transaction has failed.
+
+## DataProviderException
+
+```python
+class DataProviderException(Exception)
+```
+
+Exception from Provider endpoints.
 

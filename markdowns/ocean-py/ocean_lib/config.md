@@ -3,8 +3,8 @@ title: config
 slug: ocean_lib/config
 app: ocean.py
 module: ocean_lib.config
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/config.py
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/config.py
+version: 1.0.0-alpha.1
 ---
 ## Config
 
@@ -29,8 +29,8 @@ Options available:
 network = https://rinkeby.infura.io/v3/<your Infura project id>
 
 [resources]
-metadata_cache_uri = http://localhost:5000
-provider.url = http://localhost:8030
+metadata_cache_uri = http://172.15.0.5:5000
+provider.url = http://172.15.0.4:8030
 ```
 
 **Arguments**:
@@ -87,7 +87,7 @@ Name of the ethereum network. (e.g.): ganache.
  | def chain_id() -> int
 ```
 
-Chain ID of the ethereum network. (e.g.): 1337.
+Chain ID of the EVM-compatible network. (e.g.): 8996.
 
 #### gas\_limit
 

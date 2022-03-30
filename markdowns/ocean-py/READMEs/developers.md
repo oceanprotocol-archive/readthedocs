@@ -3,11 +3,11 @@ title: developers.md
 slug: READMEs/developers.md
 app: ocean.py
 module: READMEs.developers
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/READMEs/developers.md
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/READMEs/developers.md
+version: 1.0.0-alpha.1
 ---
 <!--
-Copyright 2021 Ocean Protocol Foundation
+Copyright 2022 Ocean Protocol Foundation
 SPDX-License-Identifier: Apache-2.0
 -->
 
@@ -63,8 +63,9 @@ cd barge
 #clean up old containers (to be sure)
 docker system prune -a --volumes
 
-#run barge: start ganache, Provider, Aquarius; deploy contracts; update ~/.ocean
-./start_ocean.sh  --with-provider2
+# Run barge: start Ganache, Provider, Aquarius; deploy contracts; update ~/.ocean
+# The `--with-c2d` option tells barge to include the Compute-to-Data backend
+./start_ocean.sh --with-c2d
 ```
 
 (Or, [run services separately](services.md).)
@@ -78,30 +79,29 @@ In work console:
 export OCEAN_CONFIG_FILE=config.ini
 
 #set private keys of two accounts
-export TEST_PRIVATE_KEY1=0x5d75837394b078ce97bc289fa8d75e21000573520bfa7784a9d28ccaae602bf8
-export TEST_PRIVATE_KEY2=0xef4b441145c1d0f3b4bc6d61d29f5c6e502359481152f869247c7a4244d45209
+export TEST_PRIVATE_KEY1=0x8467415bb2ba7c91084d932276214b11a3dd9bdb2930fefa194b666dd8020b99
+export TEST_PRIVATE_KEY2=0x1d751ded5a32226054cd2e71261039b65afb9ee1c746d055dd699b1150a5befc
+
+#needed to mint fake OCEAN for testing with ganache
+export FACTORY_DEPLOYER_PRIVATE_KEY=0xc594c6e5def4bab63ac29eed19a134c130388f74f019bc74b8f4389df2837a58
 ```
 
 ## 4. Test
 
 In work console:
 ```console
-export OPERATOR_SERVICE_URL=https://c2d-dev.operator.oceanprotocol.com/
-
 #run a single test
-pytest ocean_lib/models/test/test_btoken.py::test_ERC20
+pytest ocean_lib/models/test/test_erc721_factory.py::test_start_multiple_order
 
 #run all tests in a file
-pytest ocean_lib/models/test/test_btoken.py
+pytest ocean_lib/models/test/test_erc721_factory.py
 
-#run all tests
-pytest
+#run all regular tests; see details on pytest markers to select specific suites
+pytest -m "not slow"
 
-#run all tests, using CI tooling
-tox
 ```
 
-For envvars that aren't set, `pytest` uses values in `pytest.ini`, and `tox` uses values in `tox.ini`.
+For envvars that aren't set, `pytest` uses values in `pytest.ini`.
 
 Bonus: see the [appendix](developers.md#7-appendix-more-tests) for even more tests.
 

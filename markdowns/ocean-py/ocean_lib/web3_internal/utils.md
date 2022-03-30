@@ -3,8 +3,8 @@ title: utils
 slug: ocean_lib/web3_internal/utils
 app: ocean.py
 module: ocean_lib.web3_internal.utils
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/web3_internal/utils.py
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/web3_internal/utils.py
+version: 1.0.0-alpha.1
 ---
 #### generate\_multi\_value\_hash
 
@@ -104,26 +104,6 @@ Return the ethereum chain id calling the `web3.eth.chain_id` method.
 **Returns**:
 
 Chain id, int
-
-#### ec\_recover
-
-```python
-@enforce_types
-def ec_recover(message: str, signed_message: str) -> str
-```
-
-This method does not prepend the message with the prefix `\x19Ethereum Signed Message:\n32`.
-The caller should add the prefix to the msg/hash before calling this if the signature was
-produced for an ethereum-prefixed message.
-
-**Arguments**:
-
-- `message`: 
-- `signed_message`: 
-
-**Returns**:
-
-
 
 #### get\_ether\_balance
 

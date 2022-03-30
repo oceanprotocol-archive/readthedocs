@@ -1,10 +1,10 @@
 ---
 title: aquarius
-slug: ocean_lib/common/aquarius/aquarius
+slug: ocean_lib/aquarius/aquarius
 app: ocean.py
-module: ocean_lib.common.aquarius.aquarius
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/common/aquarius/aquarius.py
-version: 0.8.5
+module: ocean_lib.aquarius.aquarius
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/aquarius/aquarius.py
+version: 1.0.0-alpha.1
 ---
 Aquarius module.
 Help to communicate with the metadata store.
@@ -30,37 +30,11 @@ The Metadata class is a wrapper on the Metadata Store, which has exposed a REST 
 
 - `aquarius_url`: Url of the aquarius instance.
 
-#### get\_service\_endpoint
-
-```python
- | @enforce_types
- | def get_service_endpoint() -> str
-```
-
-Retrieve the endpoint with the ddo for a given did.
-
-**Returns**:
-
-Return the url of the the ddo location
-
-#### get\_encrypt\_endpoint
-
-```python
- | @enforce_types
- | def get_encrypt_endpoint() -> str
-```
-
-Retrieve the endpoint for DDO encrption
-
-**Returns**:
-
-Return the url of the the Aquarius ddo encryption endpoint
-
 #### get\_asset\_ddo
 
 ```python
  | @enforce_types
- | def get_asset_ddo(did: str) -> Optional[V3Asset]
+ | def get_asset_ddo(did: str) -> Optional[Asset]
 ```
 
 Retrieve asset ddo for a given did.
@@ -71,7 +45,7 @@ Retrieve asset ddo for a given did.
 
 **Returns**:
 
-V3Asset instance
+Asset instance
 
 #### ddo\_exists
 
@@ -94,7 +68,7 @@ bool
 
 ```python
  | @enforce_types
- | def get_asset_metadata(did: str) -> list
+ | def get_asset_metadata(did: str) -> dict
 ```
 
 Retrieve asset metadata for a given did.
@@ -130,35 +104,22 @@ Example: query_search({"price":[0,10]})
 
 **Returns**:
 
-List of V3Asset instance
+List of Asset instance
 
-#### validate\_metadata
+#### validate\_asset
 
 ```python
  | @enforce_types
- | def validate_metadata(metadata: dict) -> Tuple[bool, Union[list, dict]]
+ | def validate_asset(asset: Asset) -> Tuple[bool, Union[list, dict]]
 ```
 
-Validate that the metadata of your ddo is valid.
+Validate the asset.
 
 **Arguments**:
 
-- `metadata`: conforming to the Metadata accepted by Ocean Protocol, dict
+- `asset`: conforming to the asset accepted by Ocean Protocol, Asset
 
 **Returns**:
 
 bool
-
-#### encrypt
-
-```python
- | @enforce_types
- | def encrypt(text: str) -> bytes
-```
-
-Encrypt the contents of an asset.
-
-**Returns**:
-
-Return the encrypted asset string.
 

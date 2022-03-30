@@ -3,8 +3,8 @@ title: contract_base
 slug: ocean_lib/web3_internal/contract_base
 app: ocean.py
 module: ocean_lib.web3_internal.contract_base
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/web3_internal/contract_base.py
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/web3_internal/contract_base.py
+version: 1.0.0-alpha.1
 ---
 All contracts inherit from `ContractBase` class.
 
@@ -102,42 +102,6 @@ Validate the address provided.
 
 address, hex str
 
-#### get\_tx\_receipt
-
-```python
- | @staticmethod
- | @enforce_types
- | def get_tx_receipt(web3: Web3, tx_hash: Union[str, HexBytes], timeout: Optional[int] = 120) -> Optional[AttributeDict]
-```
-
-Get the receipt of a tx.
-
-**Arguments**:
-
-- `tx_hash`: hash of the transaction
-- `timeout`: int in seconds to wait for transaction receipt
-
-**Returns**:
-
-Tx receipt
-
-#### is\_tx\_successful
-
-```python
- | @enforce_types
- | def is_tx_successful(tx_hash: str) -> bool
-```
-
-Check if the transaction is successful.
-
-**Arguments**:
-
-- `tx_hash`: hash of the transaction
-
-**Returns**:
-
-bool
-
 #### get\_event\_signature
 
 ```python
@@ -228,7 +192,7 @@ Finds the event arguments by `event_name`.
  | def deploy(cls, web3: Web3, deployer_wallet: Wallet, *args) -> str
 ```
 
-Deploy the DataTokenTemplate and DTFactory contracts to the current network.
+Deploy the ERCTokenTemplate contract to the current network.
 
 **Arguments**:
 

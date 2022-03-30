@@ -3,13 +3,13 @@ title: btoken
 slug: ocean_lib/models/btoken
 app: ocean.py
 module: ocean_lib.models.btoken
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/models/btoken.py
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/models/btoken.py
+version: 1.0.0-alpha.1
 ---
-## BToken
+## BTokenBase
 
 ```python
-class BToken(ContractBase)
+class BTokenBase(ContractBase)
 ```
 
 #### symbol
@@ -45,6 +45,28 @@ int
 
 int
 
+#### increase\_approval
+
+```python
+ | @enforce_types
+ | def increase_approval(dst: str, amt: int, from_wallet: Wallet) -> str
+```
+
+**Returns**:
+
+hex str transaction hash
+
+#### decrease\_approval
+
+```python
+ | @enforce_types
+ | def decrease_approval(dst: str, amt: int, from_wallet: Wallet)
+```
+
+**Returns**:
+
+hex str transaction hash
+
 #### approve
 
 ```python
@@ -61,6 +83,17 @@ hex str transaction hash
 ```python
  | @enforce_types
  | def transfer(dst_address: str, amt: int, from_wallet: Wallet) -> str
+```
+
+**Returns**:
+
+hex str transaction hash
+
+#### transfer\_from
+
+```python
+ | @enforce_types
+ | def transfer_from(src: str, dst: str, amt: int, from_wallet: Wallet) -> str
 ```
 
 **Returns**:

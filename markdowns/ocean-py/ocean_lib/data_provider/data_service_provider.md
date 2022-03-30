@@ -3,8 +3,8 @@ title: data_service_provider
 slug: ocean_lib/data_provider/data_service_provider
 app: ocean.py
 module: ocean_lib.data_provider.data_service_provider
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/data_provider/data_service_provider.py
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/data_provider/data_service_provider.py
+version: 1.0.0-alpha.1
 ---
 Provider module.
 
@@ -40,99 +40,43 @@ Get the http client.
 
 Set the http client to something other than the default `requests`.
 
-#### get\_order\_requirements
-
-```python
- | @staticmethod
- | @enforce_types
- | def get_order_requirements(did: str, service_endpoint: str, consumer_address: str, service_id: Union[str, int], service_type: str, token_address: str, userdata: Optional[Dict] = None) -> Optional[OrderRequirements]
-```
-
-**Arguments**:
-
-- `did`: 
-- `service_endpoint`: 
-- `consumer_address`: hex str the ethereum account address of the consumer
-- `service_id`: 
-- `service_type`: 
-- `token_address`: 
-
-**Returns**:
-
-OrderRequirements instance -- named tuple (amount, data_token_address, receiver_address, nonce),
-
-#### download\_service
-
-```python
- | @staticmethod
- | @enforce_types
- | def download_service(did: str, service_endpoint: str, wallet: Wallet, files: List[Dict[str, Any]], destination_folder: Union[str, Path], service_id: int, token_address: str, order_tx_id: str, index: Optional[int] = None, userdata: Optional[Dict] = None) -> None
-```
-
-Call the provider endpoint to get access to the different files that form the asset.
-
-**Arguments**:
-
-- `did`: str id of the asset
-- `service_endpoint`: Url to consume, str
-- `wallet`: hex str Wallet instance of the consumer signing this request
-- `files`: List containing the files to be consumed, list
-- `destination_folder`: Path, str
-- `service_id`: integer the id of the service inside the DDO's service dict
-- `token_address`: hex str the data token address associated with this asset/service
-- `order_tx_id`: hex str the transaction hash for the required data token
-transfer (tokens of the same token address above)
-- `index`: Index of the document that is going to be downloaded, int
-
-**Returns**:
-
-True if was downloaded, bool
-
 #### start\_compute\_job
 
 ```python
  | @staticmethod
- | @enforce_types
- | def start_compute_job(did: str, service_endpoint: str, consumer_address: str, signature: str, service_id: int, order_tx_id: str, algorithm_did: Optional[str] = None, algorithm_meta: Optional[AlgorithmMetadata] = None, algorithm_tx_id: Optional[str] = None, algorithm_data_token: Optional[str] = None, output: Optional[dict] = None, input_datasets: Optional[list] = None, job_id: Optional[str] = None, userdata: Optional[dict] = None, algouserdata: Optional[dict] = None) -> Dict[str, Any]
+ | def start_compute_job(dataset_compute_service: Any, consumer: Wallet, dataset: ComputeInput, compute_environment: str, algorithm: Optional[ComputeInput] = None, algorithm_meta: Optional[AlgorithmMetadata] = None, algorithm_custom_data: Optional[str] = None, input_datasets: Optional[List[ComputeInput]] = None) -> Dict[str, Any]
 ```
+
+Start a compute job.
+
+Either algorithm or algorithm_meta must be defined.
 
 **Arguments**:
 
-- `did`: id of asset starting with `did:op:` and a hex str without 0x prefix
-- `service_endpoint`: 
-- `consumer_address`: hex str the ethereum address of the consumer executing the compute job
-- `signature`: hex str signed message to allow the provider to authorize the consumer
-- `service_id`: 
-- `order_tx_id`: hex str id of the token transfer transaction
-- `algorithm_did`: str -- the asset did (of `algorithm` type) which consist of `did:op:` and
-the assetId hex str (without `0x` prefix)
-- `algorithm_meta`: see `OceanCompute.execute`
-- `algorithm_tx_id`: transaction hash of algorithm StartOrder tx (Required when using `algorithm_did`)
-- `algorithm_data_token`: datatoken address of this algorithm (Required when using `algorithm_did`)
-- `output`: see `OceanCompute.execute`
-- `input_datasets`: list of ComputeInput
-- `job_id`: str id of compute job that was started and stopped (optional, use it
-here to start a job after it was stopped)
-
-**Returns**:
-
-job_info dict with jobId, status, and other values
+- `dataset_compute_service`: 
+- `consumer`: hex str the ethereum address of the consumer executing the compute job
+- `dataset`: ComputeInput dataset with a compute service
+- `compute_environment`: str compute environment id
+- `algorithm`: ComputeInput algorithm witha download service.
+- `algorithm_meta`: AlgorithmMetadata algorithm metadata
+- `algorithm_custom_data`: dict customizable algo parameters (ie. no of iterations, etc)
+- `input_datasets`: List[ComputeInput] additional input datasets
+:return job_info dict
 
 #### stop\_compute\_job
 
 ```python
  | @staticmethod
  | @enforce_types
- | def stop_compute_job(did: str, job_id: str, service_endpoint: str, consumer_address: str, signature: str) -> Dict[str, Any]
+ | def stop_compute_job(did: str, job_id: str, dataset_compute_service: Any, consumer: Wallet) -> Dict[str, Any]
 ```
 
 **Arguments**:
 
 - `did`: hex str the asset/DDO id
 - `job_id`: str id of compute job that was returned from `start_compute_job`
-- `service_endpoint`: str url of the provider service endpoint for compute service
-- `consumer_address`: hex str the ethereum address of the consumer's account
-- `signature`: hex str signed message to allow the provider to authorize the consumer
+- `dataset_compute_service`: 
+- `consumer`: Wallet of the consumer's account
 
 **Returns**:
 
@@ -143,16 +87,15 @@ bool whether the job was stopped successfully
 ```python
  | @staticmethod
  | @enforce_types
- | def delete_compute_job(did: str, job_id: str, service_endpoint: str, consumer_address: str, signature: str) -> Dict[str, str]
+ | def delete_compute_job(did: str, job_id: str, dataset_compute_service: Any, consumer: Wallet) -> Dict[str, str]
 ```
 
 **Arguments**:
 
 - `did`: hex str the asset/DDO id
 - `job_id`: str id of compute job that was returned from `start_compute_job`
-- `service_endpoint`: str url of the provider service endpoint for compute service
-- `consumer_address`: hex str the ethereum address of the consumer's account
-- `signature`: hex str signed message to allow the provider to authorize the consumer
+- `dataset_compute_service`: 
+- `consumer`: Wallet of the consumer's account
 
 **Returns**:
 
@@ -163,16 +106,15 @@ bool whether the job was deleted successfully
 ```python
  | @staticmethod
  | @enforce_types
- | def compute_job_status(did: str, job_id: str, service_endpoint: str, consumer_address: str, signature: str) -> Dict[str, Any]
+ | def compute_job_status(did: str, job_id: str, dataset_compute_service: Any, consumer: Wallet) -> Dict[str, Any]
 ```
 
 **Arguments**:
 
 - `did`: hex str the asset/DDO id
 - `job_id`: str id of compute job that was returned from `start_compute_job`
-- `service_endpoint`: str url of the provider service endpoint for compute service
-- `consumer_address`: hex str the ethereum address of the consumer's account
-- `signature`: hex str signed message to allow the provider to authorize the consumer
+- `dataset_compute_service`: 
+- `consumer`: Wallet of the consumer's account
 
 **Returns**:
 
@@ -184,37 +126,15 @@ status for each job_id that exist for the did
 ```python
  | @staticmethod
  | @enforce_types
- | def compute_job_result(did: str, job_id: str, service_endpoint: str, consumer_address: str, signature: str) -> Dict[str, Any]
-```
-
-**Arguments**:
-
-- `did`: hex str the asset/DDO id
-- `job_id`: str id of compute job that was returned from `start_compute_job`
-- `service_endpoint`: str url of the provider service endpoint for compute service
-- `consumer_address`: hex str the ethereum address of the consumer's account
-- `signature`: hex str signed message to allow the provider to authorize the consumer
-
-**Returns**:
-
-dict of job_id to result urls. When job_id is not provided, this will return
-result for each job_id that exist for the did
-
-#### compute\_job\_result\_file
-
-```python
- | @staticmethod
- | @enforce_types
- | def compute_job_result_file(job_id: str, index: int, service_endpoint: str, consumer_address: str, signature: str) -> Dict[str, Any]
+ | def compute_job_result(job_id: str, index: int, dataset_compute_service: Any, consumer: Wallet) -> Dict[str, Any]
 ```
 
 **Arguments**:
 
 - `job_id`: str id of compute job that was returned from `start_compute_job`
 - `index`: int compute result index
-- `service_endpoint`: str url of the provider service endpoint for compute service
-- `consumer_address`: hex str the ethereum address of the consumer's account
-- `signature`: hex str signed message to allow the provider to authorize the consumer
+- `dataset_compute_service`: 
+- `consumer`: Wallet of the consumer's account
 
 **Returns**:
 
@@ -248,12 +168,12 @@ Url, str
 
 Return the service endpoints from the provider URL.
 
-#### get\_c2d\_address
+#### get\_c2d\_environments
 
 ```python
  | @staticmethod
  | @enforce_types
- | def get_c2d_address(provider_uri: str) -> Optional[str]
+ | def get_c2d_environments(provider_uri: str) -> Optional[str]
 ```
 
 Return the provider address

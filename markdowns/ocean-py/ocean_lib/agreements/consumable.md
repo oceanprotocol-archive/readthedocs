@@ -1,10 +1,10 @@
 ---
 title: consumable
-slug: ocean_lib/common/agreements/consumable
+slug: ocean_lib/agreements/consumable
 app: ocean.py
-module: ocean_lib.common.agreements.consumable
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/common/agreements/consumable.py
-version: 0.8.5
+module: ocean_lib.agreements.consumable
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/agreements/consumable.py
+version: 1.0.0-alpha.1
 ---
 ## ConsumableCodes
 

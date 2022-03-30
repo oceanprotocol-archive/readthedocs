@@ -3,8 +3,8 @@ title: ocean_assets
 slug: ocean_lib/ocean/ocean_assets
 app: ocean.py
 module: ocean_lib.ocean.ocean_assets
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/ocean/ocean_assets.py
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/ocean/ocean_assets.py
+version: 1.0.0-alpha.1
 ---
 Ocean module.
 
@@ -14,71 +14,105 @@ Ocean module.
 class OceanAssets()
 ```
 
-Ocean assets class.
+Ocean asset class for V4.
 
 #### \_\_init\_\_
 
 ```python
  | @enforce_types
- | def __init__(config: Config, web3: Web3, data_provider: Type[DataServiceProvider], ddo_registry_address: str) -> None
+ | def __init__(config: Config, web3: Web3, data_provider: Type[DataServiceProvider]) -> None
 ```
 
 Initialises OceanAssets object.
 
-#### create
+#### validate
 
 ```python
  | @enforce_types
- | def create(metadata: dict, publisher_wallet: Wallet, services: Optional[list] = None, owner_address: Optional[str] = None, data_token_address: Optional[str] = None, provider_uri: Optional[str] = None, dt_name: Optional[str] = None, dt_symbol: Optional[str] = None, dt_blob: Optional[str] = None, dt_cap: Optional[int] = None, encrypt: Optional[bool] = False) -> Optional[V3Asset]
+ | def validate(asset: Asset) -> Tuple[bool, list]
+```
+
+Validate that the asset is ok to be stored in aquarius.
+
+**Arguments**:
+
+- `asset`: Asset.
+
+**Returns**:
+
+(bool, list) list of errors, empty if valid
+
+#### create
+
+```python
+ | def create(metadata: dict, publisher_wallet: Wallet, encrypted_files: Optional[str] = None, services: Optional[list] = None, credentials: Optional[dict] = None, provider_uri: Optional[str] = None, erc721_address: Optional[str] = None, erc721_name: Optional[str] = None, erc721_symbol: Optional[str] = None, erc721_template_index: Optional[int] = 1, erc721_additional_erc_deployer: Optional[str] = None, erc721_additional_metadata_updater: Optional[str] = None, erc721_uri: Optional[str] = None, erc20_templates: Optional[List[int]] = None, erc20_names: Optional[List[str]] = None, erc20_symbols: Optional[List[str]] = None, erc20_minters: Optional[List[str]] = None, erc20_fee_managers: Optional[List[str]] = None, erc20_publish_market_order_fee_addresses: Optional[List[str]] = None, erc20_publish_market_order_fee_tokens: Optional[List[str]] = None, erc20_caps: Optional[List[int]] = None, erc20_publish_market_order_fee_amounts: Optional[List[int]] = None, erc20_bytess: Optional[List[List[bytes]]] = None, deployed_erc20_tokens: Optional[List[ERC20Token]] = None, encrypt_flag: Optional[bool] = False, compress_flag: Optional[bool] = False) -> Optional[Asset]
 ```
 
 Register an asset on-chain.
 
-Creating/deploying a DataToken contract and in the Metadata store (Aquarius).
+Creating/deploying a ERC721NFT contract and in the Metadata store (Aquarius).
 
 **Arguments**:
 
 - `metadata`: dict conforming to the Metadata accepted by Ocean Protocol.
-- `publisher_wallet`: Wallet of the publisher registering this asset
+- `publisher_wallet`: Wallet of the publisher registering this asset.
+- `encrypted_files`: str of the files that need to be encrypted before publishing.
 - `services`: list of Service objects.
-- `owner_address`: hex str the ethereum address to assign asset ownership to. After
-registering the asset on-chain, the ownership is transferred to this address
-- `data_token_address`: hex str the address of the data token smart contract. The new
-asset will be associated with this data token address.
+- `credentials`: credentials dict necessary for the asset.
 - `provider_uri`: str URL of service provider. This will be used as base to
 construct the serviceEndpoint for the `access` (download) service
-- `dt_name`: str name of DataToken if creating a new one
-- `dt_symbol`: str symbol of DataToken if creating a new one
-- `dt_blob`: str blob of DataToken if creating a new one. A `blob` is any text
-to be stored with the ERC20 DataToken contract for any purpose.
-- `dt_cap`: int amount of DataTokens to mint, denoted in wei
+- `erc721_address`: hex str the address of the ERC721 token. The new
+asset will be associated with this ERC721 token address.
+- `erc721_name`: str name of ERC721 token if creating a new one
+- `erc721_symbol`: str symbol of ERC721 token  if creating a new one
+- `erc721_template_index`: int template index of the ERC721 token, by default is 1.
+- `erc721_additional_erc_deployer`: str address of an additional ERC20 deployer.
+- `erc721_additional_metadata_updater`: str address of an additional metadata updater.
+- `erc721_uri`: str URL of the ERC721 token.
+- `erc20_templates`: list of templates indexes for deploying ERC20 tokens if deployed_erc20_tokens is None.
+- `erc20_names`: list of names for ERC20 tokens if deployed_erc20_tokens is None.
+- `erc20_symbols`: list of symbols for ERC20 tokens if deployed_erc20_tokens is None.
+- `erc20_minters`: list of minters for ERC20 tokens if deployed_erc20_tokens is None.
+- `erc20_fee_managers`: list of fee managers for ERC20 tokens if deployed_erc20_tokens is None.
+- `erc20_publish_market_order_fee_addresses`: list of publishing market addresses for ERC20 tokens if deployed_erc20_tokens is None.
+- `erc20_publish_market_order_fee_tokens`: list of fee tokens for ERC20 tokens if deployed_erc20_tokens is None.
+- `erc20_caps`: list of cap values for ERC20 tokens if deployed_erc20_tokens is None.
+- `erc20_publish_market_order_fee_amounts`: list of fee values for ERC20 tokens if deployed_erc20_tokens is None.
+- `erc20_bytess`: list of arrays of bytes for deploying ERC20 tokens, default empty (currently not used, useful for future) if deployed_erc20_tokens is None.
+- `deployed_erc20_tokens`: list of ERC20 tokens which are already deployed.
+- `encrypt_flag`: bool for encryption of the DDO.
+- `compress_flag`: bool for compression of the DDO.
 
 **Returns**:
 
 DDO instance
 
-#### resolve
+#### update
 
 ```python
  | @enforce_types
- | def resolve(did: str) -> V3Asset
+ | def update(asset: Asset, publisher_wallet: Wallet, provider_uri: Optional[str] = None, encrypt_flag: Optional[bool] = False, compress_flag: Optional[bool] = False) -> Optional[Asset]
 ```
 
-When you pass a did retrieve the ddo associated.
+Update an asset on-chain.
 
 **Arguments**:
 
-- `did`: DID, str
+- `asset`: The updated asset to update on-chain
+- `publisher_wallet`: Wallet of the publisher updating this asset.
+- `provider_uri`: str URL of service provider. This will be used as base to construct the serviceEndpoint for the `access` (download) service
+- `encrypt_flag`: bool for encryption of the DDO.
+- `compress_flag`: bool for compression of the DDO.
 
 **Returns**:
 
-Asset instance
+Optional[Asset] the updated Asset or None if updated asset not found in metadata cache
 
 #### search
 
 ```python
  | @enforce_types
- | def search(text: str, metadata_cache_uri: Optional[str] = None) -> list
+ | def search(text: str) -> list
 ```
 
 Search an asset in oceanDB using aquarius.
@@ -86,8 +120,6 @@ Search an asset in oceanDB using aquarius.
 **Arguments**:
 
 - `text`: String with the value that you are searching
-- `metadata_cache_uri`: Url of the aquarius where you want to search. If there is not
-provided take the default
 
 **Returns**:
 
@@ -97,7 +129,7 @@ List of assets that match with the query
 
 ```python
  | @enforce_types
- | def query(query: dict, metadata_cache_uri: Optional[str] = None) -> list
+ | def query(query: dict) -> list
 ```
 
 Search an asset in oceanDB using search query.
@@ -106,135 +138,8 @@ Search an asset in oceanDB using search query.
 
 - `query`: dict with query parameters
 (e.g.) https://github.com/oceanprotocol/aquarius/blob/develop/docs/for_api_users/API.md
-- `metadata_cache_uri`: Url of the aquarius where you want to search. If there is not
-provided take the default
 
 **Returns**:
 
 List of assets that match with the query.
-
-#### order
-
-```python
- | @enforce_types
- | def order(did: str, consumer_address: str, service_index: Optional[int] = None, service_type: Optional[str] = None, userdata: Optional[dict] = None) -> OrderRequirements
-```
-
-Request a specific service from an asset, returns the service requirements that
-must be met prior to consuming the service.
-
-**Arguments**:
-
-- `did`: 
-- `consumer_address`: 
-- `service_index`: 
-- `service_type`: 
-
-**Returns**:
-
-OrderRequirements instance -- named tuple (amount, data_token_address, receiver_address, nonce),
-
-#### pay\_for\_service
-
-```python
- | @staticmethod
- | @enforce_types
- | def pay_for_service(web3: Web3, amount: int, token_address: str, did: str, service_id: int, fee_receiver: str, from_wallet: Wallet, consumer: str) -> str
-```
-
-Submits the payment for chosen service in DataTokens.
-
-**Arguments**:
-
-- `amount`: 
-- `token_address`: 
-- `did`: 
-- `service_id`: 
-- `fee_receiver`: 
-- `from_wallet`: Wallet instance
-- `consumer`: str the address of consumer of the service
-
-**Returns**:
-
-hex str id of transfer transaction
-
-#### download
-
-```python
- | @enforce_types
- | def download(did: str, service_index: int, consumer_wallet: Wallet, order_tx_id: str, destination: Union[str, Path], index: Optional[int] = None, userdata: Optional[dict] = None) -> str
-```
-
-Consume the asset data.
-
-Using the service endpoint defined in the ddo's service pointed to by service_definition_id.
-Consumer's permissions is checked implicitly by the secret-store during decryption
-of the contentUrls.
-The service endpoint is expected to also verify the consumer's permissions to consume this
-asset.
-This method downloads and saves the asset datafiles to disk.
-
-**Arguments**:
-
-- `did`: DID, str
-- `service_index`: identifier of the service inside the asset DDO, str
-- `consumer_wallet`: Wallet instance of the consumer
-- `order_tx_id`: hex str id of the token transfer transaction
-- `destination`: str path
-- `index`: Index of the document that is going to be downloaded, int
-
-**Returns**:
-
-str path to saved files
-
-#### validate
-
-```python
- | @enforce_types
- | def validate(metadata: dict) -> Tuple[bool, list]
-```
-
-Validate that the metadata is ok to be stored in aquarius.
-
-**Arguments**:
-
-- `metadata`: dict conforming to the Metadata accepted by Ocean Protocol.
-
-**Returns**:
-
-(bool, list) list of errors, empty if valid
-
-#### owner
-
-```python
- | @enforce_types
- | def owner(did: str) -> str
-```
-
-Return the owner of the asset.
-
-**Arguments**:
-
-- `did`: DID, str
-
-**Returns**:
-
-the ethereum address of the owner/publisher of given asset did, hex-str
-
-#### owner\_assets
-
-```python
- | @enforce_types
- | def owner_assets(owner_address: str) -> list
-```
-
-List of Asset objects published by ownerAddress
-
-**Arguments**:
-
-- `owner_address`: ethereum address of owner/publisher, hex-str
-
-**Returns**:
-
-list of dids
 

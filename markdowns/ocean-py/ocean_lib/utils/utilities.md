@@ -3,38 +3,44 @@ title: utilities
 slug: ocean_lib/utils/utilities
 app: ocean.py
 module: ocean_lib.utils.utilities
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/utils/utilities.py
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/utils/utilities.py
+version: 1.0.0-alpha.1
 ---
 Utilities class
 
-#### generate\_new\_id
+#### to\_lpad\_32byte
 
 ```python
 @enforce_types
-def generate_new_id() -> str
+def to_lpad_32byte(val: Primitives) -> bytes
 ```
 
-Generate a new id without prefix.
+ecrecover in Solidity expects v as a native uint8, but r and s as left-padded bytes32
+This convenience method will add the padding
 
-**Returns**:
+Adapted from https://web3py.readthedocs.io/en/stable/web3.eth.account.html#prepare-message-for-ecrecover-in-solidity
 
-Id, str
-
-#### to\_32byte\_hex
+#### to\_lpad\_32byte\_hex
 
 ```python
 @enforce_types
-def to_32byte_hex(val: Any) -> str
+def to_lpad_32byte_hex(val: Primitives) -> HexStr
 ```
 
-**Arguments**:
+ecrecover in Solidity expects v as a native uint8, but r and s as left-padded bytes32
+Remix / web3.js expect r and s to be encoded to hex
+This convenience method will add the padding and encode to hex
 
-- `val`: 
+Copied from https://web3py.readthedocs.io/en/stable/web3.eth.account.html#prepare-message-for-ecrecover-in-solidity
 
-**Returns**:
+#### prepare\_message\_for\_ecrecover\_in\_solidity
 
+```python
+@enforce_types
+def prepare_message_for_ecrecover_in_solidity(signed_message: SignedMessage) -> Tuple[HexStr, int, str, str]
+```
 
+Copied from https://web3py.readthedocs.io/en/stable/web3.eth.account.html#prepare-message-for-ecrecover-in-solidity
 
 #### convert\_to\_bytes
 
@@ -81,15 +87,6 @@ def convert_to_text(data: bytes) -> str
 
 
 
-#### checksum
-
-```python
-@enforce_types
-def checksum(seed: Dict[str, Any]) -> str
-```
-
-Calculate the hash3_256.
-
 #### create\_checksum
 
 ```python
@@ -100,13 +97,4 @@ def create_checksum(text: str) -> str
 **Returns**:
 
 str
-
-#### get\_timestamp
-
-```python
-@enforce_types
-def get_timestamp() -> str
-```
-
-Return the current system timestamp.
 

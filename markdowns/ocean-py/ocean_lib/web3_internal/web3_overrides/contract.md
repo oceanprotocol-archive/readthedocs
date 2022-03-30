@@ -3,19 +3,19 @@ title: contract
 slug: ocean_lib/web3_internal/web3_overrides/contract
 app: ocean.py
 module: ocean_lib.web3_internal.web3_overrides.contract
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/web3_internal/web3_overrides/contract.py
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/web3_internal/web3_overrides/contract.py
+version: 1.0.0-alpha.1
 ---
 ## CustomContractFunction
 
 ```python
-@enforce_types
 class CustomContractFunction()
 ```
 
 #### \_\_init\_\_
 
 ```python
+ | @enforce_types
  | def __init__(contract_function)
 ```
 
@@ -24,6 +24,7 @@ Initializes CustomContractFunction.
 #### transact
 
 ```python
+ | @enforce_types
  | def transact(transaction: Dict[str, Any], block_confirmations: int, transaction_timeout: int) -> HexBytes
 ```
 

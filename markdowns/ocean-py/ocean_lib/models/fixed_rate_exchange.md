@@ -3,15 +3,6 @@ title: fixed_rate_exchange
 slug: ocean_lib/models/fixed_rate_exchange
 app: ocean.py
 module: ocean_lib.models.fixed_rate_exchange
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/models/fixed_rate_exchange.py
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/models/fixed_rate_exchange.py
+version: 1.0.0-alpha.1
 ---
-## FixedRateExchange
-
-```python
-class FixedRateExchange(ContractBase)
-```
-
-Note: all operations accept and return integer values, denoted in wei
-Its up to the caller to convert to/from wei as necessary.
-
