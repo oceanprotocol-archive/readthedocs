@@ -3,8 +3,8 @@ title: fixed-rate-exchange-flow.md
 slug: READMEs/fixed-rate-exchange-flow.md
 app: ocean.py
 module: READMEs.fixed-rate-exchange-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/READMEs/fixed-rate-exchange-flow.md
-version: 1.0.0-alpha.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.2-1-g9fb6083/READMEs/fixed-rate-exchange-flow.md
+version: 1.0.0-alpha.2
 ---
 <!--
 Copyright 2022 Ocean Protocol Foundation
@@ -90,15 +90,13 @@ exchanges for a certain datatoken, it can be searched by
 providing the datatoken address.
 
 ```python
-# Search for exchange_id from a specific block retrieved at 3rd step
-# for a certain datatoken address (e.g. datatoken_address). Choose
-# one from the list.
+# Get a list exchange addresses and ids with a given datatoken and exchange owner.
 datatoken_address = erc20_token.address
 nft_factory = ocean.get_nft_factory()
-logs = nft_factory.search_exchange_by_datatoken(ocean.fixed_rate_exchange, datatoken_address)
-# Optional: Filtering the logs by the exchange owner.
-logs = nft_factory.search_exchange_by_datatoken(ocean.fixed_rate_exchange, datatoken_address, alice_wallet.address)
-print(logs)
+exchange_addresses_and_ids = nft_factory.search_exchange_by_datatoken(ocean.fixed_rate_exchange, datatoken_address)
+# Optional: Filtering by the exchange owner.
+exchange_addresses_and_ids = nft_factory.search_exchange_by_datatoken(ocean.fixed_rate_exchange, datatoken_address, alice_wallet.address)
+print(exchange_addresses_and_ids)
 ```
 
 Use the `exchange_id` for buying at fixed rate.

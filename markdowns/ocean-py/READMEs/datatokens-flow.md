@@ -3,8 +3,8 @@ title: datatokens-flow.md
 slug: READMEs/datatokens-flow.md
 app: ocean.py
 module: READMEs.datatokens-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/READMEs/datatokens-flow.md
-version: 1.0.0-alpha.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.2-1-g9fb6083/READMEs/datatokens-flow.md
+version: 1.0.0-alpha.2
 ---
 <!--
 Copyright 2022 Ocean Protocol Foundation

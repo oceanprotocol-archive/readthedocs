@@ -3,8 +3,8 @@ title: asset_downloader
 slug: ocean_lib/assets/asset_downloader
 app: ocean.py
 module: ocean_lib.assets.asset_downloader
-source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/assets/asset_downloader.py
-version: 1.0.0-alpha.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.2-1-g9fb6083/ocean_lib/assets/asset_downloader.py
+version: 1.0.0-alpha.2
 ---
 #### download\_asset\_files
 

@@ -3,8 +3,8 @@ title: ocean_assets
 slug: ocean_lib/ocean/ocean_assets
 app: ocean.py
 module: ocean_lib.ocean.ocean_assets
-source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/ocean/ocean_assets.py
-version: 1.0.0-alpha.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.2-1-g9fb6083/ocean_lib/ocean/ocean_assets.py
+version: 1.0.0-alpha.2
 ---
 Ocean module.
 
@@ -45,7 +45,7 @@ Validate that the asset is ok to be stored in aquarius.
 #### create
 
 ```python
- | def create(metadata: dict, publisher_wallet: Wallet, encrypted_files: Optional[str] = None, services: Optional[list] = None, credentials: Optional[dict] = None, provider_uri: Optional[str] = None, erc721_address: Optional[str] = None, erc721_name: Optional[str] = None, erc721_symbol: Optional[str] = None, erc721_template_index: Optional[int] = 1, erc721_additional_erc_deployer: Optional[str] = None, erc721_additional_metadata_updater: Optional[str] = None, erc721_uri: Optional[str] = None, erc20_templates: Optional[List[int]] = None, erc20_names: Optional[List[str]] = None, erc20_symbols: Optional[List[str]] = None, erc20_minters: Optional[List[str]] = None, erc20_fee_managers: Optional[List[str]] = None, erc20_publish_market_order_fee_addresses: Optional[List[str]] = None, erc20_publish_market_order_fee_tokens: Optional[List[str]] = None, erc20_caps: Optional[List[int]] = None, erc20_publish_market_order_fee_amounts: Optional[List[int]] = None, erc20_bytess: Optional[List[List[bytes]]] = None, deployed_erc20_tokens: Optional[List[ERC20Token]] = None, encrypt_flag: Optional[bool] = False, compress_flag: Optional[bool] = False) -> Optional[Asset]
+ | def create(metadata: dict, publisher_wallet: Wallet, encrypted_files: Optional[str] = None, services: Optional[list] = None, credentials: Optional[dict] = None, provider_uri: Optional[str] = None, erc721_address: Optional[str] = None, erc721_name: Optional[str] = None, erc721_symbol: Optional[str] = None, erc721_template_index: Optional[int] = 1, erc721_additional_erc_deployer: Optional[str] = None, erc721_additional_metadata_updater: Optional[str] = None, erc721_uri: Optional[str] = None, erc721_transferable: Optional[bool] = None, erc721_owner: Optional[str] = None, erc20_templates: Optional[List[int]] = None, erc20_names: Optional[List[str]] = None, erc20_symbols: Optional[List[str]] = None, erc20_minters: Optional[List[str]] = None, erc20_fee_managers: Optional[List[str]] = None, erc20_publish_market_order_fee_addresses: Optional[List[str]] = None, erc20_publish_market_order_fee_tokens: Optional[List[str]] = None, erc20_caps: Optional[List[int]] = None, erc20_publish_market_order_fee_amounts: Optional[List[int]] = None, erc20_bytess: Optional[List[List[bytes]]] = None, deployed_erc20_tokens: Optional[List[ERC20Token]] = None, encrypt_flag: Optional[bool] = False, compress_flag: Optional[bool] = False) -> Optional[Asset]
 ```
 
 Register an asset on-chain.

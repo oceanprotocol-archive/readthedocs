@@ -3,8 +3,8 @@ title: ocean
 slug: ocean_lib/ocean/ocean
 app: ocean.py
 module: ocean_lib.ocean.ocean
-source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/ocean/ocean.py
-version: 1.0.0-alpha.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.2-1-g9fb6083/ocean_lib/ocean/ocean.py
+version: 1.0.0-alpha.2
 ---
 Ocean module.
 
@@ -54,7 +54,7 @@ An instance of Ocean is parameterized by a `Config` instance.
 
 ```python
  | @enforce_types
- | def create_erc721_nft(name: str, symbol: str, from_wallet: Wallet, token_uri: Optional[str] = "https://oceanprotocol.com/nft/", template_index: Optional[int] = 1, additional_erc20_deployer: Optional[str] = None, additional_metadata_updater: Optional[str] = None) -> ERC721NFT
+ | def create_erc721_nft(name: str, symbol: str, from_wallet: Wallet, token_uri: Optional[str] = "https://oceanprotocol.com/nft/", template_index: Optional[int] = 1, additional_erc20_deployer: Optional[str] = None, additional_metadata_updater: Optional[str] = None, transferable: bool = True, owner: Optional[str] = None) -> ERC721NFT
 ```
 
 This method deploys a ERC721 token contract on the blockchain.
