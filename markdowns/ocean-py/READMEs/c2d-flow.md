@@ -3,8 +3,8 @@ title: c2d-flow.md
 slug: READMEs/c2d-flow.md
 app: ocean.py
 module: READMEs.c2d-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/READMEs/c2d-flow.md
-version: 1.0.0-alpha.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.2-1-g9fb6083/READMEs/c2d-flow.md
+version: 1.0.0-alpha.2
 ---
 <!--
 Copyright 2022 Ocean Protocol Foundation

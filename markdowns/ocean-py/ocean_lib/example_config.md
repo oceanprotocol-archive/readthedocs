@@ -3,8 +3,8 @@ title: example_config
 slug: ocean_lib/example_config
 app: ocean.py
 module: ocean_lib.example_config
-source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/example_config.py
-version: 1.0.0-alpha.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.2-1-g9fb6083/ocean_lib/example_config.py
+version: 1.0.0-alpha.2
 ---
 ## ExampleConfig
 

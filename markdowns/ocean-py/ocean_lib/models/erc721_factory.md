@@ -3,8 +3,8 @@ title: erc721_factory
 slug: ocean_lib/models/erc721_factory
 app: ocean.py
 module: ocean_lib.models.erc721_factory
-source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.1/ocean_lib/models/erc721_factory.py
-version: 1.0.0-alpha.1
+source: https://github.com/oceanprotocol/ocean.py/blob/v1.0.0-alpha.2-1-g9fb6083/ocean_lib/models/erc721_factory.py
+version: 1.0.0-alpha.2
 ---
 ## ERC721FactoryContract
 
@@ -16,7 +16,7 @@ class ERC721FactoryContract(ERCTokenFactoryBase)
 
 ```python
  | @enforce_types
- | def verify_nft(nft: str) -> bool
+ | def verify_nft(nft_address: str) -> bool
 ```
 
 Checks that a token was registered.
@@ -40,13 +40,4 @@ An order contains the following keys:
 - v, int
 - r, bytes
 - s, bytes
-
-#### get\_token\_created\_event
-
-```python
- | @enforce_types
- | def get_token_created_event(from_block: int, to_block: int, token_address: str) -> [AttributeDict]
-```
-
-Retrieves event log of token registration.
 
