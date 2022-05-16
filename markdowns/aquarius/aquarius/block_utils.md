@@ -3,8 +3,8 @@ title: block_utils
 slug: aquarius/block_utils
 app: aquarius
 module: aquarius.block_utils
-source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/block_utils.py
-version: 3.0.1
+source: https://github.com/oceanprotocol/aquarius/blob/v3.1.4/aquarius/block_utils.py
+version: 3.1.4
 ---
 ## BlockProcessingClass
 

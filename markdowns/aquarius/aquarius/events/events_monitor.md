@@ -3,8 +3,8 @@ title: events_monitor
 slug: aquarius/events/events_monitor
 app: aquarius
 module: aquarius.events.events_monitor
-source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/events/events_monitor.py
-version: 3.0.1
+source: https://github.com/oceanprotocol/aquarius/blob/v3.1.4/aquarius/events/events_monitor.py
+version: 3.1.4
 ---
 ## EventsMonitor
 
