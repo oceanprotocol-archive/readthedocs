@@ -3,8 +3,8 @@ title: asset
 slug: ocean_provider/utils/asset
 app: provider
 module: ocean_provider.utils.asset
-source: https://github.com/oceanprotocol/provider/blob/v0.4.17-69-g5a60369/ocean_provider/utils/asset.py
-version: 0.4.17
+source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/utils/asset.py
+version: 1.0.9
 ---
 ## Asset
 
@@ -62,4 +62,14 @@ Lists addresesses that are explicitly denied in credentials.
 ```
 
 Checks whether an asset is consumable and returns a ConsumableCode.
+
+#### get\_asset\_from\_metadatastore
+
+```python
+def get_asset_from_metadatastore(metadata_url, document_id)
+```
+
+**Returns**:
+
+`Asset` instance or None
 

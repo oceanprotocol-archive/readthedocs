@@ -3,8 +3,8 @@ title: currency
 slug: ocean_provider/utils/currency
 app: provider
 module: ocean_provider.utils.currency
-source: https://github.com/oceanprotocol/provider/blob/v0.4.17-69-g5a60369/ocean_provider/utils/currency.py
-version: 0.4.17
+source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/utils/currency.py
+version: 1.0.9
 ---
 #### MAX\_UINT256
 
@@ -35,19 +35,19 @@ The minimum possible token amount on Ethereum-compatible blockchains, denoted in
 
 The maximum possible token amount on Ethereum-compatible blockchains, denoted in ether
 
-#### to\_wei
+#### parse\_units
 
 ```python
-def to_wei(amount_in_ether: Union[Decimal, str, int], decimals: int = DECIMALS_18) -> int
+def parse_units(amount: Union[Decimal, str, int], unit_name: Union[str, int] = DECIMALS_18) -> int
 ```
 
-Convert token amount to wei from ether, quantized to the specified number of decimal places
+Convert token amount from a formatted unit to an EVM-compatible integer.
 float input is purposfully not supported
 
-#### normalize\_and\_validate\_ether
+#### normalize\_and\_validate\_unit
 
 ```python
-def normalize_and_validate_ether(amount_in_ether: Union[Decimal, str, int]) -> Decimal
+def normalize_and_validate_unit(amount: Union[Decimal, str, int], decimals: int = DECIMALS_18) -> Decimal
 ```
 
 Returns an amount in ether, encoded as a Decimal

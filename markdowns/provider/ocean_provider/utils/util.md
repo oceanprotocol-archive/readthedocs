@@ -3,30 +3,38 @@ title: util
 slug: ocean_provider/utils/util
 app: provider
 module: ocean_provider.utils.util
-source: https://github.com/oceanprotocol/provider/blob/v0.4.17-69-g5a60369/ocean_provider/utils/util.py
-version: 0.4.17
+source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/utils/util.py
+version: 1.0.9
 ---
-#### decode\_from\_data
+#### sign\_tx
 
 ```python
-def decode_from_data(data, key, dec_type="list")
+def sign_tx(web3, tx, private_key)
 ```
 
-Retrieves a dictionary key as a decoded dictionary or list.
+**Arguments**:
 
-#### check\_environment\_exists
+- `web3`: Web3 object instance
+- `tx`: transaction
+- `private_key`: Private key of the account
+
+**Returns**:
+
+rawTransaction (str)
+
+#### sign\_and\_send
 
 ```python
-def check_environment_exists(envs, env_id)
+def sign_and_send(web3: Web3, transaction: TxParams, from_account: LocalAccount) -> Tuple[HexStr, TxReceipt]
 ```
 
-Checks if environment with id exists in environments list.
+Returns the transaction id and transaction receipt.
 
-#### get\_environment
+#### sign\_send\_and\_wait\_for\_receipt
 
 ```python
-def get_environment(envs, env_id)
+def sign_send_and_wait_for_receipt(web3: Web3, transaction: TxParams, from_account: LocalAccount) -> Tuple[HexStr, TxReceipt]
 ```
 
-Gets environment with id exists in environments list.
+Returns the transaction id and transaction receipt.
 

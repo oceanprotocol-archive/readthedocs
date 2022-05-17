@@ -3,8 +3,8 @@ title: config
 slug: ocean_provider/config
 app: provider
 module: ocean_provider.config
-source: https://github.com/oceanprotocol/provider/blob/v0.4.17-69-g5a60369/ocean_provider/config.py
-version: 0.4.17
+source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/config.py
+version: 1.0.9
 ---
 Config data.
 
@@ -56,6 +56,15 @@ URL of the evm network. (e.g.): http://localnetwork:8545.
 ```
 
 URL of the operator service component. (e.g.): http://myoperatorservice:8050.
+
+#### allow\_non\_public\_ip
+
+```python
+ | @property
+ | def allow_non_public_ip()
+```
+
+Allow non public ip.
 
 #### storage\_path
 
