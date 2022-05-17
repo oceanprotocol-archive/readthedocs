@@ -3,8 +3,8 @@ title: accounts
 slug: ocean_provider/utils/accounts
 app: provider
 module: ocean_provider.utils.accounts
-source: https://github.com/oceanprotocol/provider/blob/v0.4.17-69-g5a60369/ocean_provider/utils/accounts.py
-version: 0.4.17
+source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/utils/accounts.py
+version: 1.0.9
 ---
 #### verify\_signature
 
@@ -14,7 +14,7 @@ def verify_signature(signer_address, signature, original_msg, nonce)
 
 **Returns**:
 
-True if signature is valid
+True if signature is valid, throws InvalidSignatureError otherwise
 
 #### get\_private\_key
 
@@ -22,13 +22,15 @@ True if signature is valid
 def get_private_key(wallet)
 ```
 
-Returns private key of the given wallet
+Returns the private key of the given wallet.
 
 #### sign\_message
 
 ```python
 def sign_message(message, wallet)
 ```
+
+Signs the message with the private key of the given Wallet
 
 **Arguments**:
 
@@ -37,5 +39,5 @@ def sign_message(message, wallet)
 
 **Returns**:
 
-`hex` value of the signed message
+signature
 

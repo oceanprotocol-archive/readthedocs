@@ -3,11 +3,11 @@ title: README.md
 slug: README.md
 app: provider
 module: README
-source: https://github.com/oceanprotocol/provider/blob/v0.4.17-69-g5a60369/README.md
-version: 0.4.17
+source: https://github.com/oceanprotocol/provider/blob/v1.0.9/README.md
+version: 1.0.9
 ---
 <!--
-Copyright 2021 Ocean Protocol Foundation
+Copyright 2022 Ocean Protocol Foundation
 SPDX-License-Identifier: Apache-2.0
 -->
 [![banner](https://raw.githubusercontent.com/oceanprotocol/art/master/github/repo-banner%402x.png)](https://oceanprotocol.com)
@@ -89,7 +89,7 @@ Add the corresponding environment variables in your `.env` file. Here is an exam
 FLASK_APP=ocean_provider/run.py
 PROVIDER_CONFIG_FILE=config.ini
 PROVIDER_ADDRESS=your ethereum address goes here
-PROVIDER_KEY=the private key
+PROVIDER_PRIVATE_KEY=the private key
 PROVIDER_FEE_TOKEN = address of ERC20 token used to get fees
 ```
 
@@ -106,6 +106,8 @@ Refer to the [API.md](API.md) file for endpoints and payloads.
 * `OPERATOR_SERVICE_URL` defines connection to C2D
 * `LOG_CFG` and `LOG_LEVEL` define the location of the log file and logging leve, respectively
 * `IPFS_GATEWAY` defines ipfs gateway for resolving urls
+* `AUTHORIZED_DECRYPTERS` list of authorized addresses that are allowed to decrypt chain data. Use it to restrict access only to certain callers (e.g. custom Aquarius instance). Empty by default, meaning all decrypters are authorized.
+* `USE_CHAIN_PROOF` or `USE_HTTP_PROOF` set a mechanism for saving proof-of-download information. For any present true-ish value of `USE_CHAIN_PROOF`, the proof is sent on-chain. When defining `USE_HTTP_PROOF` the env var must configure a HTTP endpoint that accepts a POST request.
 
 
 #### Before you commit

@@ -3,8 +3,8 @@ title: basics
 slug: ocean_provider/utils/basics
 app: provider
 module: ocean_provider.utils.basics
-source: https://github.com/oceanprotocol/provider/blob/v0.4.17-69-g5a60369/ocean_provider/utils/basics.py
-version: 0.4.17
+source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/utils/basics.py
+version: 1.0.9
 ---
 #### get\_config
 
@@ -36,13 +36,19 @@ def get_web3(network_url: Optional[str] = None) -> Web3
 
 `Web3` instance
 
-#### get\_asset\_from\_metadatastore
+#### send\_ether
 
 ```python
-def get_asset_from_metadatastore(metadata_url, document_id)
+def send_ether(web3, from_wallet: Account, to_address: str, amount: int)
 ```
 
-**Returns**:
+Sends ether from wallet to the address.
 
-`Ddo` instance
+#### validate\_timestamp
+
+```python
+def validate_timestamp(value)
+```
+
+Checks whether a timestamp is valid (correctly formed and in the future).
 

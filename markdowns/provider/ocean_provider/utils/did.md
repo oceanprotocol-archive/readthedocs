@@ -3,8 +3,8 @@ title: did
 slug: ocean_provider/utils/did
 app: provider
 module: ocean_provider.utils.did
-source: https://github.com/oceanprotocol/provider/blob/v0.4.17-69-g5a60369/ocean_provider/utils/did.py
-version: 0.4.17
+source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/utils/did.py
+version: 1.0.9
 ---
 #### compute\_did\_from\_data\_nft\_address\_and\_chain\_id
 
