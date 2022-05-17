@@ -3,8 +3,8 @@ title: chains
 slug: aquarius/app/chains
 app: aquarius
 module: aquarius.app.chains
-source: https://github.com/oceanprotocol/aquarius/blob/main/aquarius/app/chains.py
-version: 3.0.1
+source: https://github.com/oceanprotocol/aquarius/blob/v3.1.4/aquarius/app/chains.py
+version: 3.1.4
 ---
 #### get\_chains\_list
 
