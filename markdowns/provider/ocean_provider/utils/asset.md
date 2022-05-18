@@ -3,8 +3,8 @@ title: asset
 slug: ocean_provider/utils/asset
 app: provider
 module: ocean_provider.utils.asset
-source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/utils/asset.py
-version: 0.4.19
+source: https://github.com/oceanprotocol/provider/blob/v0.4.24/ocean_provider/utils/asset.py
+version: 0.4.24
 ---
 ## Asset
 
@@ -68,7 +68,7 @@ Return encryptedFiles field in the base metadata.
 #### get\_service
 
 ```python
- | def get_service(service_type: str)
+ | def get_service(service_type: str) -> Service
 ```
 
 Return a service using.

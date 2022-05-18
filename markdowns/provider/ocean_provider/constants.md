@@ -3,8 +3,8 @@ title: constants
 slug: ocean_provider/constants
 app: provider
 module: ocean_provider.constants
-source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/constants.py
-version: 0.4.19
+source: https://github.com/oceanprotocol/provider/blob/v0.4.24/ocean_provider/constants.py
+version: 0.4.24
 ---
 ## ConfigSections
 
@@ -15,7 +15,6 @@ class ConfigSections()
 This class stores values for:
 
 - `RESOURCES`
-- `OSMOSIS`
 
 ## BaseURLs
 

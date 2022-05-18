@@ -3,8 +3,8 @@ title: basics
 slug: ocean_provider/utils/basics
 app: provider
 module: ocean_provider.utils.basics
-source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/utils/basics.py
-version: 0.4.19
+source: https://github.com/oceanprotocol/provider/blob/v0.4.24/ocean_provider/utils/basics.py
+version: 0.4.24
 ---
 #### get\_config
 
@@ -25,16 +25,6 @@ def get_provider_wallet(web3: Optional[Web3] = None)
 **Returns**:
 
 Wallet instance
-
-#### get\_datatoken\_minter
-
-```python
-def get_datatoken_minter(datatoken_address)
-```
-
-**Returns**:
-
-Eth account address of the Datatoken minter
 
 #### get\_artifacts\_path
 
