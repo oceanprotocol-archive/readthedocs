@@ -3,11 +3,11 @@ title: developers.md
 slug: READMEs/developers.md
 app: ocean.py
 module: READMEs.developers
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/READMEs/developers.md
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.6/READMEs/developers.md
+version: 0.8.6
 ---
 <!--
-Copyright 2021 Ocean Protocol Foundation
+Copyright 2022 Ocean Protocol Foundation
 SPDX-License-Identifier: Apache-2.0
 -->
 

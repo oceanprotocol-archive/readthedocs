@@ -3,8 +3,8 @@ title: utils
 slug: ocean_lib/web3_internal/web3_overrides/utils
 app: ocean.py
 module: ocean_lib.web3_internal.web3_overrides.utils
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/web3_internal/web3_overrides/utils.py
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.6/ocean_lib/web3_internal/web3_overrides/utils.py
+version: 0.8.6
 ---
 #### wait\_for\_transaction\_receipt\_and\_block\_confirmations
 
