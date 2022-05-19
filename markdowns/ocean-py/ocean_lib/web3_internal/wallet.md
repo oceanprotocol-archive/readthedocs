@@ -3,8 +3,8 @@ title: wallet
 slug: ocean_lib/web3_internal/wallet
 app: ocean.py
 module: ocean_lib.web3_internal.wallet
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/web3_internal/wallet.py
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.6/ocean_lib/web3_internal/wallet.py
+version: 0.8.6
 ---
 ## Wallet
 

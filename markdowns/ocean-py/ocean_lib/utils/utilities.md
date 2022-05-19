@@ -3,8 +3,8 @@ title: utilities
 slug: ocean_lib/utils/utilities
 app: ocean.py
 module: ocean_lib.utils.utilities
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/ocean_lib/utils/utilities.py
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.6/ocean_lib/utils/utilities.py
+version: 0.8.6
 ---
 Utilities class
 

@@ -3,11 +3,11 @@ title: marketplace-flow.md
 slug: READMEs/marketplace-flow.md
 app: ocean.py
 module: READMEs.marketplace-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/READMEs/marketplace-flow.md
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.6/READMEs/marketplace-flow.md
+version: 0.8.6
 ---
 <!--
-Copyright 2021 Ocean Protocol Foundation
+Copyright 2022 Ocean Protocol Foundation
 SPDX-License-Identifier: Apache-2.0
 -->
 

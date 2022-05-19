@@ -3,8 +3,8 @@ title: models
 slug: ocean_provider/models
 app: provider
 module: ocean_provider.models
-source: https://github.com/oceanprotocol/provider/blob/v0.4.19/ocean_provider/models.py
-version: 0.4.19
+source: https://github.com/oceanprotocol/provider/blob/v0.4.24/ocean_provider/models.py
+version: 0.4.24
 ---
 ## UserNonce
 

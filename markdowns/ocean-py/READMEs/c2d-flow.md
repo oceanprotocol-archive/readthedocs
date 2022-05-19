@@ -3,11 +3,11 @@ title: c2d-flow.md
 slug: READMEs/c2d-flow.md
 app: ocean.py
 module: READMEs.c2d-flow
-source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.5-1-g11c361d/READMEs/c2d-flow.md
-version: 0.8.5
+source: https://github.com/oceanprotocol/ocean.py/blob/v0.8.6/READMEs/c2d-flow.md
+version: 0.8.6
 ---
 <!--
-Copyright 2021 Ocean Protocol Foundation
+Copyright 2022 Ocean Protocol Foundation
 SPDX-License-Identifier: Apache-2.0
 -->
 
@@ -268,8 +268,8 @@ You can find more information about how to do this in the [Ocean tutorials](http
 
 In the same Python console:
 ```python
-from ocean_lib.assets import utils
-utils.add_publisher_trusted_algorithm(DATA_ddo, ALG_ddo.did, config.metadata_cache_uri)
+from ocean_lib.assets.trusted_algorithms import add_publisher_trusted_algorithm
+add_publisher_trusted_algorithm(DATA_ddo, ALG_ddo.did, config.metadata_cache_uri)
 ocean.assets.update(DATA_ddo, publisher_wallet=alice_wallet)
 ```
 
