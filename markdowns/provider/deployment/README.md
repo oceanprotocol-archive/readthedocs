@@ -3,8 +3,8 @@ title: README.md
 slug: deployment/README.md
 app: provider
 module: deployment.README
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/deployment/README.md
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/deployment/README.md
+version: 1.0.16
 ---
 
 

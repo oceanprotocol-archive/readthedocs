@@ -3,8 +3,8 @@ title: services
 slug: ocean_provider/utils/services
 app: provider
 module: ocean_provider.utils.services
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/utils/services.py
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/ocean_provider/utils/services.py
+version: 1.0.16
 ---
 ## Service
 

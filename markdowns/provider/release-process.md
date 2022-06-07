@@ -3,8 +3,8 @@ title: release-process.md
 slug: release-process.md
 app: provider
 module: release-process
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/release-process.md
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/release-process.md
+version: 1.0.16
 ---
 <!--
 Copyright 2021 Ocean Protocol Foundation

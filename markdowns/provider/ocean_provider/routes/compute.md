@@ -3,8 +3,8 @@ title: compute
 slug: ocean_provider/routes/compute
 app: provider
 module: ocean_provider.routes.compute
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/routes/compute.py
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/ocean_provider/routes/compute.py
+version: 1.0.16
 ---
 #### initializeCompute
 

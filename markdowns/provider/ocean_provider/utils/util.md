@@ -3,8 +3,8 @@ title: util
 slug: ocean_provider/utils/util
 app: provider
 module: ocean_provider.utils.util
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/utils/util.py
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/ocean_provider/utils/util.py
+version: 1.0.16
 ---
 #### sign\_tx
 

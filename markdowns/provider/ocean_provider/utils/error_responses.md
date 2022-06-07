@@ -3,8 +3,8 @@ title: error_responses
 slug: ocean_provider/utils/error_responses
 app: provider
 module: ocean_provider.utils.error_responses
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/utils/error_responses.py
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/ocean_provider/utils/error_responses.py
+version: 1.0.16
 ---
 #### error\_response
 

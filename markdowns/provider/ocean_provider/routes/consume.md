@@ -3,8 +3,8 @@ title: consume
 slug: ocean_provider/routes/consume
 app: provider
 module: ocean_provider.routes.consume
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/routes/consume.py
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/ocean_provider/routes/consume.py
+version: 1.0.16
 ---
 #### nonce
 
@@ -75,7 +75,8 @@ return:
         "datatoken": <data-token-contract-address>,
         "nonce": <nonce-used-in-consumer-signature>,
         "providerFee": <object containing provider fees>,
-        "computeAddress": <compute address>
+        "computeAddress": <compute address>,
+        "transferTxId": <optional tx_id just to check an existing order>
     }
     ```
 

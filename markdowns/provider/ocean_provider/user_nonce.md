@@ -3,8 +3,8 @@ title: user_nonce
 slug: ocean_provider/user_nonce
 app: provider
 module: ocean_provider.user_nonce
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/user_nonce.py
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/ocean_provider/user_nonce.py
+version: 1.0.16
 ---
 #### get\_nonce
 

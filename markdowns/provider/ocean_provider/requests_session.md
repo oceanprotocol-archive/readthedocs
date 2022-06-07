@@ -3,8 +3,8 @@ title: requests_session
 slug: ocean_provider/requests_session
 app: provider
 module: ocean_provider.requests_session
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/requests_session.py
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/ocean_provider/requests_session.py
+version: 1.0.16
 ---
 #### get\_requests\_session
 
