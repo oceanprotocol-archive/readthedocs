@@ -3,8 +3,8 @@ title: consumable
 slug: ocean_provider/utils/consumable
 app: provider
 module: ocean_provider.utils.consumable
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/utils/consumable.py
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/ocean_provider/utils/consumable.py
+version: 1.0.16
 ---
 ## ConsumableCodes
 

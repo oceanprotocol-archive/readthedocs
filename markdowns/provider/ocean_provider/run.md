@@ -3,8 +3,8 @@ title: run
 slug: ocean_provider/run
 app: provider
 module: ocean_provider.run
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/run.py
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/ocean_provider/run.py
+version: 1.0.16
 ---
 #### get\_provider\_address
 

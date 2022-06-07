@@ -3,8 +3,8 @@ title: data_nft
 slug: ocean_provider/utils/data_nft
 app: provider
 module: ocean_provider.utils.data_nft
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/utils/data_nft.py
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/ocean_provider/utils/data_nft.py
+version: 1.0.16
 ---
 #### get\_data\_nft\_contract
 

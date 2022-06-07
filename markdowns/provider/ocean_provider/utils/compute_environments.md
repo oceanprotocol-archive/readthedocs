@@ -3,8 +3,8 @@ title: compute_environments
 slug: ocean_provider/utils/compute_environments
 app: provider
 module: ocean_provider.utils.compute_environments
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/utils/compute_environments.py
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/ocean_provider/utils/compute_environments.py
+version: 1.0.16
 ---
 #### check\_environment\_exists
 

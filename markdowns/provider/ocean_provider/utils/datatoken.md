@@ -3,8 +3,8 @@ title: datatoken
 slug: ocean_provider/utils/datatoken
 app: provider
 module: ocean_provider.utils.datatoken
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/utils/datatoken.py
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/ocean_provider/utils/datatoken.py
+version: 1.0.16
 ---
 #### get\_datatoken\_contract
 

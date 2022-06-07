@@ -3,8 +3,8 @@ title: credentials
 slug: ocean_provider/utils/credentials
 app: provider
 module: ocean_provider.utils.credentials
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/utils/credentials.py
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/ocean_provider/utils/credentials.py
+version: 1.0.16
 ---
 ## AddressCredential
 

@@ -3,8 +3,8 @@ title: encrypt
 slug: ocean_provider/routes/encrypt
 app: provider
 module: ocean_provider.routes.encrypt
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/ocean_provider/routes/encrypt.py
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/ocean_provider/routes/encrypt.py
+version: 1.0.16
 ---
 #### encrypt
 

@@ -3,8 +3,8 @@ title: README.md
 slug: README.md
 app: provider
 module: README
-source: https://github.com/oceanprotocol/provider/blob/v1.0.9/README.md
-version: 1.0.9
+source: https://github.com/oceanprotocol/provider/blob/v1.0.16/README.md
+version: 1.0.16
 ---
 <!--
 Copyright 2022 Ocean Protocol Foundation
@@ -16,12 +16,26 @@ SPDX-License-Identifier: Apache-2.0
 [![Test Coverage](https://api.codeclimate.com/v1/badges/6f5987cfdd2fd265047b/test_coverage)](https://codeclimate.com/github/oceanprotocol/provider/test_coverage)
 [![GitHub contributors](https://img.shields.io/github/contributors/oceanprotocol/provider.svg)](https://github.com/oceanprotocol/provider/graphs/contributors)
 
-# provider
+# Provider
 REST API for provider of data services
 
 This is part of the Ocean Protocol V3 tools.
 
 This is feature complete and is a BETA version.
+
+## What Provider does:
+
+- The only component that can access your data
+- Performs checks on chain for buyer permissions and payments
+- Encrypts the URL and metadata during publish
+- Decrypts the URL when the dataset is downloaded or a compute job is started
+- Provides access to data assets by streaming data (and never the URL)
+- Provides compute services (connects to C2D environment)
+- Typically run by the Data Provider
+
+### Technology used:
+
+Python Flask HTTP server
 
 ## Starting the server locally
 
